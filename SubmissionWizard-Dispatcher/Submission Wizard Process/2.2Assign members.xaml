@@ -1,0 +1,375 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Assign_members" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_Assignmembers" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_Membername" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <this:Sequence_Assign_members.in_str_Membername>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Sequence_Assign_members.in_str_Membername>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1408.8,3355.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Assign_members_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="88">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Workflow to assign multiple members to a binder created." DisplayName="Sequence_Assign_members" sap:VirtualizedContainerService.HintSize="794.4,3290.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[in_str_Assignmembers=&quot;&quot;]" DisplayName="Bifurcation to invoke assign member workflow" sap:VirtualizedContainerService.HintSize="732,3170.4" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence DisplayName="Assignmember field is blank" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;No additional members are assigned to the binder&quot;]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Assigning members" sap:VirtualizedContainerService.HintSize="698.4,2754.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="636,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot; Assiging the following members : &quot;+in_str_Assignmembers+&quot; to the binder.&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="636,480.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="aa6c963e-9f92-4972-b409-20a4e0a633b5" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DelayBefore="2" DisplayName="Click 'Member Button'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aa6c963e-9f92-4972-b409-20a4e0a633b5" Timeout="2" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="584, 126, 16, 16" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl idx='2' role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='' role='graphic' /&gt;" Guid="f0ce4022-0c6e-418a-845c-2958bd59ace8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVDhPzdFfSFNRHAfwE0Ybls1K2iwUVwYO1K1GGCFCEVRKkb4o9O/BhrPBcHMWNQsqyArpISGwF1tLqVFIbW3e3Wlbei3EEAUrtZz44EPRlDBDKL6de6G1eS91pZcufDmHc87vc88fEpwE5OTh+CzyQueg6bL8MbLAwOQPlERuioq/fV8E/80uziOXtcsHzw9xImxkbhpTXz8J/ZmFGAZiH4S+LLDqZXsSthRJxGWBReGmJIzPskBPfxTpKhWytVpkZaqxvedyEsZnWaBOV4A01ToQQlBeoEBFvysJW4r89Q4L9HqkUKy2aj/e0VdMuyIG+ch+ZeWa1VhFweGxtyCOj1hx8AEy3GdFoFQkQd/wZ+G4bmYQSlsUG6r92FTvgdpXJ4kkRhIMjMTQ2mRCC/cFZOdT6KzdyLVyWHnYDWPomiT0K0lgs8uL1FSlsLujpfvAeF3YWDcOcoQFqfBivW0MwSd3sedMOdIbD0DddlxAdCEnyrg7qH/d8xtkRmMClG/YIbQKmmi4BUPzACl+DLK7A4NzwPvwLWGOX5NnNApt8E0svqk4aKAvy0/yaXUewwR9PY1jGtvMHlztfIXrnQPYaumAxjaDKTp3u7E6vl5faBCD9yMTMFmdYNtvILJAJ3b1gpR5QSpZZJj80JzyI6WyG6SUjhWF0Ed3ztxrhsVxCW3sqBhMDDkUpsd8hBz7C2San2PtCQ6KkxzUtWFssdMfFXvovfaJ6oRaqcGSiywKG8LIrgnQMMgxh6A9zWCz2YesmmfIb+jF3gusqI6PJPgv+d9B4CeNuo7hbbmBnwAAAABJRU5ErkJggg==" InformativeScreenshot="dc74deab0a97d38a4ea8aee6917891a9.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Visible">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="520, 125, 60, 18" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblassignMemb' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='lblassignMemb' role='text' check:text='Members:' /&gt;" Guid="098e451c-6702-4f52-a346-540eb6e24b50" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAWCAYAAABwvpo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKCSURBVFhH7ZWxaypBEIff/5QmjY2FCIKICBaihViYItiIhYiFhYWFhYWFIChY2NgopBAiIliktEgQhAcKiqAgNhZp9vGNt8cipw/yQnjg/eBwZ3ZuZvfb2fOXulMNf58fF4Bl351cAC6A/wTAeDxWHx8flvVzcgRQLBbVw8OD6na7luesz89P9fj4KHPr9dryfo9isZiqVCqW9XO6CSCdTlues4bDofjvBsDlRp38QPF6vSoQCCiPx6P6/b7tJy4SidjvPD09qWQyaduZTEZiEQB4n4e5UCiklsulzK1WKxWPx5XP55MOLBQK4kc6Fj8A6VrWEwwGZU3Y8/lc4i47Gl0FwIJI2mq1xHc4HMROJBKSDADa12w2JabRaIiNNAB9r3u9ntjcdfT29iY2cYh6+XxenU4ntdlslN/vtzswl8tJXa7g+/u7vDcajWSOcbValfcQ9VmHKdb58vLi+I25CoDiujAaDAayqFqtJkUBQFLG+qT04iCuAehO0acwnU7FRtj6VC6vgK7DpvntdDrWjFLRaNSGbuZA4XBY1rzf7y3Pbd0EwKYpsFgsBEapVJLC+NiYHtNquuWw2eS/AtC5iedXtzUPp6xjzRyIztLXzrxG13QTgG7xer0uv7SdCYDCjJ2KfEcHsGlyE2d2gCkzhymuETmz2azlcdZNAHpMEdofICaA2Wwm43a7LbFou93K71cAlMtlGe92O6lHxyHaOpVKyXVAx+PRvvNmjks9Pz8LANbNdeVjeqm/AtAb0adjAkAU5+vMQ3vypWfuKwB0Hk6ePIBAfFu49/xDUIPx6+urzJk5EDYx5CBuMpnYtZ1AOQK4J7kAXAAuABeAC8AFoNQfyGQX3h5eMCIAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="199, 7, 968, 714" FilePath="[in_Config(&quot;App_File_Path&quot;).ToString]" IconBase64="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" InformativeScreenshot="8968ac0289e3eeb5f9b2eaa9f24ec88e.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <uix:NCheckState DisplayName="Check App State 'Note: Assigning'" sap:VirtualizedContainerService.HintSize="636,357.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="556d0276-9577-44f3-a250-f15a4db09241" Timeout="2" Version="V3">
+            <uix:NCheckState.IfNotExists>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c051e176-d8d0-400a-8559-87aedcbd661a" InformativeScreenshot="01afd1efc5c4c3509f8ce2168e09cd8d" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;&lt;ctrl automationid='4' /&gt;&lt;ctrl idx='2' role='graphic' /&gt;" TimeoutMS="2000">
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+            </uix:NCheckState.IfNotExists>
+            <uix:NCheckState.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="321, 55, 15, 15" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;ctrl idx='3' role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='graphic' /&gt;" Guid="375869b0-f21b-4a7a-a18b-3f229027a14c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVDhP1ZPbLgNxEMale+hun0XEU3gJb+EFiLM4VosQrTpGIkJCHKJItKkoRUul2qpT4wLBravPzDikm65KcMF3s9ud2V/n+/6zZfhF/UNY6OIeNUsJVHrX4aydlyv/5uefyRbmjmShNK9B98Rg+E5hjp3DGEpC696G0rgidTsVwbhR6wjBDGThmryGOX4Jc5RgI1kB631x+qOgLdACYws8kRk4I1AeFTN55B6e36qAL3YL5yBN2LsHR/1SkWULjDNxemNwTeXhmriCP/4oz6tmL+Dfv5P76rksTXcIpW1T+gtlgXHIhj9TYC/3am/4VKZiVc9moHn2oXZGpL9QFhifGk/ksuSUxmr6Sepd4Tx074HYVHt2pL9QxZP5UnJ6nJvhT6N8PCO1mcTdGygGrScKpT1UejLOQHNHCUT2yK4xnIJz6AT6wJHkxPY09y7U7h0oTcHSmclpNq0SIClrwKCq6bTUfNEbApE9Aqk0laNuofRpsnh/1NYN6P1xWoNjuiY+cmJ7anuY1mL56z17Fzc6GpbpxS0ByEQdESgtQZpo0RbEsoWx2AJnwiH/6Nv8rv4qDHgBBiLmNxrogPQAAAAASUVORK5CYII=" InformativeScreenshot="50f0de36e6968e57e7c0d639e21cdbaf.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <uix:Target DesignTimeRectangle="11, 39, 320, 36" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Note: Assigning one or more members will restrict access to this*' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Note: Assigning one or more members will restrict access to this*' role='text' automationid='' check:text='Note: Assigning one or more members will restrict access to this binder and the associated client' /&gt;" Guid="830fbbff-1c41-4bc5-b7b4-1f1cca73a568" ImageBase64="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" SearchSteps="Selector" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NCheckState.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NCheckState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Assign Member" sap:VirtualizedContainerService.HintSize="636,1652.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="556d0276-9577-44f3-a250-f15a4db09241" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1338.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="scg:List(x:String)" Name="str_Splitnames" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="529.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[in_str_Assignmembers]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Assignmembers").ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="529.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="scg:List(x:String)">[str_Splitnames]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="scg:List(x:String)">[in_str_Assignmembers.Split({";"},stringsplitoptions.None).ToList]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="529.6,647.2" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[str_Splitnames]">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="x:String">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,500.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="556d0276-9577-44f3-a250-f15a4db09241" Text="[item + &quot;[k(tab)][k(tab)][k(enter)]&quot;]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="114, 82, 187, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='txtSearch' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtSearch' role='editable text' /&gt;" Guid="8c681f81-191e-48f4-97dd-37960e5f827c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAAUCAYAAADcMewrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJBCoRAEATB+f97VdDDtCysr8gIqEPdc53XOcd1mOW2nuces+LW3nt+g4qv+fX/kCN+ssRPlvjJEj9Z4idL/GSJnyzxkyV+ssRPlvjJEj9Z4idL/GSJnyzxEzXzAuTaVKullvJ2AAAAAElFTkSuQmCC" InformativeScreenshot="24fdededb7643b1fb045c324a1b27733.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="11, 82, 40, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Search:' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Search:' role='text' automationid='' check:text='Search:' /&gt;" Guid="83998c21-abbf-492a-aa7a-6f2d9c2a8011" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAUCAYAAAD2rd/BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVEhL7ZS/y0FRGMfvZDIYDLIZlKwWm7/AX6CU1aL8A7KYKQa7silisQiZlFFRLFIGC0khHr7Pe87JufF6e3PfH3U/des+5zk/Pvec5x7jdDrR+Xymy+VC/wFb2GpsYav5deHNZkPNZlNEr9GEe70eeb1e8vv96tntdqKrNUynUzIMg8W/ghI+HA7kcDio3++L1M/wbeHJZMID1+u1SOlkMhkKhUIUjUbJ5/PReDzm9m63q07D6XRSuVzmdhAOhykQCHD/YrFIw+GQY9kfpSCF0Qdt2LR8Pi9muAnecrVaTUSmkggGgxSPx2m73Yr0B4PBgHPyY3K5HIubQUlhAVlGEK5UKvx+PB7J7XZriwMpvFqtOB6NRhwvFguOl8ul5qMJQwg7iYmxE9gRUCgUKJlM8jvApC6XS0Q6WAx5AGEpiDbsoPnoH5XE/RxmNOF7Go0GD5zP5yyLHU6n0/wkEgm1CHamVCqp3DPhdrvNwmbeJgzkgqlUirLZrGjVwYfIYwfPhFFWj07lbcLYOfwAGFiv18nj8XAdmkGfTqcjoufCGIu+rVaLY4DafCWMGt7v9/wOlPBsNlN/Lx7cxzhqCWobt4DMx2IxbsetABG0RSIRrv9HwgA/JfLyRqhWqy+F8X4/x6cl8Rexha3GFrYWoivRuIe1INKd/gAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[in_str_Membername]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[item]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NCheckState DisplayName="Check No Records" sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="556d0276-9577-44f3-a250-f15a4db09241" Timeout="2" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,617.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="str_Businessexception" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[item+&quot; does not exist in the domain&quot;]" />
+                                <Throw Exception="[new BusinessRuleException(item+&quot; does not exist in the domain&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[str_Businessexception]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">The member does not exist</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:AddLogFields DisplayName="Add Log Fields" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
+                                  <ui:AddLogFields.Fields>
+                                    <InArgument x:TypeArguments="x:String" x:Key="BusinessException">[str_Businessexception]</InArgument>
+                                  </ui:AddLogFields.Fields>
+                                </ui:AddLogFields>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Patil, Ruchita'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NCheck_5" ScopeIdentifier="556d0276-9577-44f3-a250-f15a4db09241" Version="V3">
+                                <uix:NCheck.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="117, 142, 215, 16" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='Row_*' /&gt;&lt;ctrl name='{0}' role='check box' /&gt;&quot;, in_str_Membername)]" FuzzySelectorArgument="[string.Format(&quot;&lt;ctrl automationid='Row_*' /&gt;&lt;ctrl name='{0}' role='check box' automationid='' check:fulltext='{0}' /&gt;&quot;, in_str_Membername)]" Guid="a1bbdc48-2292-4003-a9d3-b498b546a419" ImageBase64="" InformativeScreenshot="83065c973b113e049816cba6c4b9a91b.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                </uix:NCheck.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NCheck>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="122, 140, 114, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='Row_0' /&gt;&lt;ctrl name='No records to display' role='text' /&gt;&lt;ctrl name='No records to display' role='text' /&gt;" FuzzyAccuracy="0.89" FuzzySelectorArgument="&lt;ctrl automationid='Row_0' /&gt;&lt;ctrl name='No records to display' role='text' /&gt;&lt;ctrl name='No records to display' role='text' automationid='' check:text='No records to display' /&gt;" Guid="4fa72aea-842f-4e94-b5dc-70ffc4b69adb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAATCAYAAABFnvn4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQpSURBVGhD7Zg/KHZRHMdNJoPBIFkMSgaLlJJFySAWSlJiUFgUg1ikZMCiWClZLEoxUCKSgQyUJEkZpBgYDJbz9vm993f73fPc6+VRXj3dTz11/p/v+X3POff05LmUnCQ1NkdJjc1RUmNzlNTYHCXnjL26unKnp6dB7udgTub+LUSMfX5+lp/l7e3NPT4+Brnfz+Liouvs7Axy/2ZsbMxtb28HuewZHBx009PTYforGnyGh4fdw8NDkMuOiLEIysvLc9fX10GJczs7O668vDzI/X6+amxtba1bX18Pctljjf0ueHB2dhbksiPD2Pz8fNfU1BSUZBo7MzPjysrKpKyoqMidnJwENVEQV1VVJW03NzfdxMSEq66udi0tLVJ2eXkp7e7u7lxdXV045sLCgnt/f3f9/f1Sxq+iokLaAcaVlpZKeUNDg7Tt6uoK+6NfjT06OnIlJSVSzg8dlvb2dmmvbc7Pz0UXesizvoGBAZnD5+npSeZXjYyjxtrNlaRB46PzdHR0SDlYY1dWVsK+BQUF4gd66ENamZ2djWzoDGNHR0clcGtra1Jmjd3Y2HCVlZWyKKAOES8vL5K3UH58fCxpFmf7EQAMhsbGxoydjkjqNaAESjWQbmtrC+t0QbatLrC5uTlcRxL+iUXn8vKypBmzvr4+9iR2d3e7ycnJIBc9sZ/RQHz0UPC5I+arq6uSt8ZalpaWRB8wV19fn6SB8q2trSAXYywddnd3ZXCMsMaOj4+L8Rbq7M5RrLj5+XkZW6G8sLBQNgTt7u/vg5q/EAwNLmg7PhE2aODPb+sJPosncElYY/mu+Xqoo43F6lGSjE3SYOMD9NUY+XUK81HH/NwupNFMmhOsBwdijdU0oqyxtl5J+kZZcfRjR/Eo4Nfb2xvWq1BL3Jja3jfWzgO2noVypXOFtba2Rhau2Lls4BS7fiWunY3NZzR8pNvW3dzcyOfPxk3n5bbjlHNr2dMLicYigOuBsu+e2KGhoci1pcSdEPjKiWWnHh4eBrlogBSuVBaODp9sTmxcuyRjFV+DjQ/Y2God6+bbrZ80f0OpNg6N70GiscCdzUBqLN9YJtJdx+T+FaBY4fQrLi4Ov4MWhHFVK6+vr7IDEavtdQHk/aCRtrt1bm4uI6jAxmJ9PvS18zOvjQFj2XqFmNjynp6eD40Fq8HGh/gRRzVQ625vbyWtD0ffWDWevlqmfGgssHB7FSGagSjjVbe3txfURLHCgVcx1xH9+PGSBV6hvHr15Tg1NSUGjoyMhPPwSr24uJD2ftD8/jU1NWE9r16dD61xfyDwnlBd+/v74Sud8XjtoiNu4x4cHIg+fY0zfpyxSRqIj66Pueij2NgxP+bRjgelNRbYUP4tChFjU34Of+NnAxvOXtWW1Nj/xHeN5SbgxHOi40iNzVFSY3MS5/4AK9OAEA8sWBEAAAAASUVORK5CYII=" InformativeScreenshot="bae153b82d2035024ad382417a31fbc5.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ForEach>
+                  <uix:NCheck Action="Check" AlterIfDisabled="True" DisplayName="Check Notify members " sap:VirtualizedContainerService.HintSize="529.6,189.6" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="556d0276-9577-44f3-a250-f15a4db09241" Version="V3">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="115, 337, 221, 14" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;ctrl automationid='ChkBxNotifyUser' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ChkBxNotifyUser' role='check box' /&gt;" Guid="bd1504d0-79a4-4fc9-8edc-8d2c59345af0" InformativeScreenshot="10545170aec3d24c818457194d754a36.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                    </uix:NCheck.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheck>
+                  <uix:NClick ActivateBefore="True" AlterIfDisabled="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="529.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="556d0276-9577-44f3-a250-f15a4db09241" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="171, 374, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnSave' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnSave' role='push button' check:text='Save' /&gt;" Guid="55b2b537-9c30-484d-b1c9-727f5b45b7ec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAdCAYAAADrcjF6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJpSURBVGhD7ZZNaxNRFIb9GS4EcaHr4tKlIOjCvat2IboRwVJ3WkSQKoUuRMGCHxsVQVsopQtbI6RomxJME6i1X9a2JDXVpGnTpPmYzMzrnAMn2CQLvSZTC+cJL4S5d27Cwzln5hAUY1TeP1CVd/jtFc0fRlB5BhFUnkEElWcQQeUZRFB5BhFUnkEElWcQQeUZRPBV3qkPt5EoZuB6H2Fic7Hh3v85gq/yItsrsBwbXZ9fNlw/KBF8lRcvbCJbKaAteKNu7VUihLxdQtG2YLk2ZncSOB7owpa1i9VCqrrvefwjKq6DW/ODuL88ioJd5tjetWD6y54zWxXBV3nj6Xn+rVh2DWdDvQ33UAbWw7yve+4NQpkllBwLpyd6eO1rfgM/yzt8P8meycZxZPQqRjaiPA7OT/XVndfsCL7KO/auE8PJaa4Ugqrwcuxp3b4Lnx5yew9+D7NAx3XxbG0cJ4M3+V6ak71LI3zGnYUhvqdjup8rlqqx9rxmR/BV3u+5uzjMlZMu53AicB2PVgLIWHm+tusJoioieSScWnchl8SDb2MsiFp2KBnh/01tXntPo99rZoR9k0ehBwjNr/ZIPwuIbq/i6Ni1PZVH+6h1c5Uiz0FqWZqZNPsIqTw/I/gqj15V5PuZyXtcUT9KWVyMPmZZ71OzvFYrT1qXIq82l2JPWDzNT5p5dO2cNwdJPn1vZQRf5dHTVqAWS3lV1D03wGvhrWW+RjON2pfEiDxpXXnKynmv16e4XctOhSuXqrJz5kV1vVUR9rVtD2oElWcQQeUZRFB5BhFUnkEElWcQQeUZRKjKU/4elWcM8Av4uIJ7GKG8pgAAAABJRU5ErkJggg==" InformativeScreenshot="77560b525449c5023d44b6791c3170b8.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="510, 157, 347, 415" FilePath="[in_Config(&quot;App_File_Path&quot;).ToString]" IconBase64="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" InformativeScreenshot="42a9a0219f97120ee7b73673f20ae2f9.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Assign Member' /&gt;" Title="Assign Member" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

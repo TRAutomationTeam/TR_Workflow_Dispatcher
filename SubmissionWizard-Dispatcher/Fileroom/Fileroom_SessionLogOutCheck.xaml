@@ -1,0 +1,150 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Session_Log_Out_Check" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1336.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Session_Log_Out_Check_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="82">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Session_Log_Out_Check" sap:VirtualizedContainerService.HintSize="995.2,1272" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="932.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Check If System has logged Out&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Browser Chrome: https://production.sureprep.com" sap:VirtualizedContainerService.HintSize="932.8,1008.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="c0474dd1-62bb-4b4a-a952-55a2c7f91034" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="899.2,768.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Session Expired'" sap:VirtualizedContainerService.HintSize="836.8,678.4" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="c0474dd1-62bb-4b4a-a952-55a2c7f91034" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,435.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Session Expired&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fileroom_LaunchAndLogin - Invoke Workflow File (SubmissionWizard-Dispatcher\Fileroom\Fileroom_LaunchAndLogin.xaml)" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Fileroom\Fileroom_LaunchAndLogin.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Session has not expired&quot;]" />
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable Accuracy="1" BrowserURL="https://production.sureprep.com/" DesignTimeRectangle="680, 160, 95, 25" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='login-tbl' tag='TABLE' /&gt;&lt;webctrl id='errorHeader' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-tbl' tag='TABLE' /&gt;&lt;webctrl id='errorHeader' type='' tag='SPAN' class='field-validation-error-header' aaname='Session Expired' check:innerText='Session Expired' /&gt;" Guid="4f68c94f-b7c4-45ff-880f-f93c74d1ad85" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAdCAYAAAC+E9IkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVGhD7Zc9a+NAEIb1L1y6VOlSpUuVKl26dKnSP0GlSiMQCAzGKQyGQHCKgMBwOJ0gEBxIIQgEBVIIAkGBFO/Nfkjyp5Kczd3C7QMCr1b7MfPOzK4NaJRBi6EQWgyF0GIohBZDIbQYCqHFUAgthkJoMRRCi6EQWoy/RZHhMV7jTTYP8bUYRYKbnoWw20Ukn6uV7DsDD56BwI3xIdunk2Hp0JxWvd+o28cyld0/ZoVLw8A8LmT7D8mmmBgu7hqm+VKMB6+FsZ/gXbbVR4hxsvPOzeliCMNmiyMzpAvMnS4uXBcTisCxv+KifSQjTCxrI5PY+AyJayMsI7Y/xTO9fZ06dWZQFsYDW/RbJsJ+hCe5NP/OsjGxWb+FoG3LeXc5LsbLtIegO8KTbKc+7XEYI5djItuRa7cROBFSPsX2fOU+xqUNR3zAeFm44jt6QrOF4NTMeI5sWnyIJNudJcftoIXZPBfNIsa81cH1mr0/IGDiU6mrHVFSi1HgbriZhQVlJTldCsW/GywqQ99jF4HpY7/6NGVGimWP1ohoFO0nIrvu+PZ3gy7jtoWjNf+9JwbtQ9T+Yz6g32mEccdFIrvOUqaYU14WI8xsk0fjfLqWDmG11MEy4w2CnOkauJhn3KkhRdzWYcU2Z/QQi3CrqMVIcN3p4jrZ6KcxkeHhgX7W30mOGiecF5giIsssfJG9SNk4ivy2RQ6uPLUn4AcT25ni9ZAY1T6O+SCnIKZs8Fbf2G/NN8So+cxjXFoGJuRwMXkHk6GPK188M5tSnUVdscat10fYbiMc1KUmX0lRTRuX0hG1ccywLonFXws2DPipGIczg5EjocwNTCGy4MCYlUclLaJS2iBGgw/YxYT7ouTcYjCqzWRzmnyAzUDeJ8f9sIPAS2Rb8EkRP6Es+UWa1saxzDApM+RHDJYZHXIarXEuMd5XQ4SOh6uyXHH2x7wtBgj6c8ruJjGO+yD1Owip5FacXwyKKrc0IkVMUcBSsomn0U66MooFZjK9a+PEmcF+l+cCO6/CoTgQzyJGQdlHhy8vhcyRLVtm4u4YOlscOgsWzLYGMRp8wMtca4h72RZl+iQx6CBzN2ov3ZDG7rQqO/w2ZVP9re70fdwk6fYY2xOHP92wqnf0zEYJP1O2jKPytmQ3Llnvx26ER2nnT8XYOjPoYTcvdiHYvKbz25VdlyJ2jrD/UyHZeUG3IrF0kxjEQR+wb5kf6PJDc/L3fedUMf4XdjPj36DF4GgxNDtoMRRCi6EQWgyF0GIohBZDIbQYygD8Bns5wZBizZ42AAAAAElFTkSuQmCC" InformativeScreenshot="f37f94de66a07479405996144692affb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='https://production.sureprep.com' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK3SURBVDhPbdNPSBRRHAfwZxRUhIcoIQhsf29mhDp36FJgRHRJqEMQQea6bgVqq61htqaVpSm2q2ttq+vu7B+16A87OzOrlB0ikMCLdK2Q6pAGgqCVkLy+M7v5Jzx8YQbe7/N+7/F7TDHqctG9yHUm6827ZL21Qs60paRMxwcp0zXFM4EwN4Jn+HC4kC6pBeRWt9FFO4X/Ay4A3wAIAAIA0iUACJ4NCh7tj1GV+hqFH5EvyJW1QAcAAQBZARYALHLDL7jWN03e2BtyqQIdCHKq75FCVmJ4kDoXAKEYAEyfkMduDsnmnSNStr1YGu3chw6O092BEFXGf9nFl9U5uh8/RN0JhuLaIiCzit4glEzTnDxyu0LqDjDue8x4b5DxwENGnugO7Gy1be38m/xqhkaTrxzm0BYANVUlpge7e2ektp5H5I6HyZkYwG5NCLNTpT6xi632m2PjpMc+k5YSjvTwMQDVL9CBUMbql6RA5ymqSM7ai3M5iZSt/FeqbykSLSczJihtASM+C/iEOxBK9uq8nGrZjg5KsXg5XzSD/LC/3eoCVasKPR8spkzsTx6IrQKGd17RrxVxb5iRKxHIA6txqh66FWNkDu4nbR1Q88w+gt6wrIw2HJRD9xiOYQ3J5EqxW32JMEoNMjIiZwH8O8INC6jMA+iiMaUYTYy34OadyQMoWkK+kjNexLsijJvhTaQNTKwBjgKo3Q3guw1Yg2T46mSjlUldQeso59BBKe8NMYxyAc+EAqRFBGnoKp2adKSHNgOwB+mCPUj/JtFofYpBKuXRB3ukpH8vz/rLMInjXAuh2AZwB8nDjnSSYYzrc9G9bYreuH6UzfZFyez8ab8FrQ+xgWUAbkonmJW1ANJYDmB6w8eUA6YAnABgF28EWM95J4DzAPoBTAB4B6AHwGkAWwGwVSDB/gI9JeCBjrDG4gAAAABJRU5ErkJggg==" InformativeScreenshot="36236c023329f69f965423818f8a462d.jpg" Selector="&lt;html app='chrome.exe' title='https://production.sureprep.com' /&gt;" Title="https://production.sureprep.com" Url="[in_Config(&quot;in_str_URLPath&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

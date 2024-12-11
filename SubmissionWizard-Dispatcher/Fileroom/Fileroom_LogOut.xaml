@@ -1,0 +1,156 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Fileroom_Log_Out" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1408.8,720.8" sap2010:WorkflowViewState.IdRef="Sequence_Fileroom_Log_Out_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="56">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence_Fileroom_Log_Out" sap:VirtualizedContainerService.HintSize="496,656" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Logging Out of Fileroom&quot;]" />
+    <TryCatch DisplayName="Try Catch - Fileroom Logout" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Chrome: FileRoom Binder Listing" sap:VirtualizedContainerService.HintSize="449.6,969.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Sequence Log Out" sap:VirtualizedContainerService.HintSize="416,752.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:UiElement" Name="out_ui_Logout" />
+                  <Variable x:TypeArguments="x:String" Name="out_str_LogoutLabel" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NHover DisplayName="Hover 'Akshay Naik'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V3">
+                  <uix:NHover.Target>
+                    <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1108, 93, 120, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl idx='4' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='left-pad-five' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='left-pad-five' type='' tag='TD' aaname='                                                                              ' check:innerText='Akshay Naik' /&gt;" Guid="ea2cd2b0-880c-4050-9a69-817a5e373219" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAYCAYAAAA4e5nyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUJSURBVGhD7ZcxbJxIFIbptnRJSUlJSUlji5KSElmKsm4iKovCbSSqaC03lFukQKmwlILiCppIXEfJdVxHE4VItoSiRPrvn4Fdw9re9Z0S3SrwSyub2WUY3vfe/2YUzJqUZuAT0wx8YpqBT0wz8IlpBj4xzcAnphn4xPQy4G2NPI2RFk0/INSiSkMEUY7h6HNqyxhhEKNs+4GfqaZEliTIq+HkDcosQVoeWl2LMg7hrzLU4upXrvMI9CLgbRHBURQs3PUgEC2KyIGxTGSgDqnJQ1hWgOwl2fEv1VYxPFWB6g1AtRViz4C7rrjSfWpR5wmStJSJ+yvXeQx6AfAGxcqGppvQNQdRsY3oGDhdoCpLVA2/5/8FqyuOY35SiCKTgTSWiLMMKcfTvBo4Qxf07vesVN4gntI2FcqqHgF7cqwHrigqvLgH/Ag434MuJZ+RZCjrhxnaukJVdasZA2/kO5X170P/MPAmR2ib8BmkNQNor4oe1APwqi74nQ7dowMweLGn4cRw4HoevGWIhFYrAmnSJRTVguM68n/DT9HFvUEe+fD4e9exoCoawbHiyjVc3cYq7wPOREqWJqxw3EYkcNOB7zvQmFTieY+A0/bjgOsRz7A0KCciecUs48TdAq/ZxlYOVNPv5vtNdBB4nQV9ANizkyUMK0QX/y5QuhMgZGA1J+rG6xS+SUijfj8IZD8sr80l0kf9gD117cIQ7YPV3AHOJOC2SrB8Ym4J3PIQF0w8V5OJVPHeZy29Txx7JRLnCeCGxz7uQuff+Mib+fv37/H69Wt8+vSpH3nQ7e0tHMfB9fV1P3IQeI3UN2CwcvOipCWu4GgmgkyERgTKpo2yanWC21QBKyvhPcrChOtHSIrOfneBt6xex2RA5X3cYKURguWmAlUo1gqCayMSTiQGLbeKPRhMrF0GW+CcS8zrsv1IR3IHwLmubB1iKVzHc2HrdJhAJNJj4NKJFBOhfM/j1qtXr3B6eoqzszN8+PBBjv348QM3NzdyXHx835fjQnuBy4oyVJiOK0HIQBmLzop74CcqE+JEhRttrF6o2yFHokpo4cKS9wFv8hUsWre/TplYOZKQewa7A46mQOQQXMT5PCbRuuwADjQELp4tAKqczza0HrhwDdo9EydKcxRFipWrw3wO+EKDqS/Yoo5/t/7582ecn59v4b579w5BEIxg39/f978+AHxTUUMHFRZvyj7ZBdZYxtygrWCrrKp0xz63fbTkpux54HXqw9wApsbX4tjksa8LJ9lAHWsMnJJJIqpUgSOBc48QWrAIuKtZcW3L6yctnetMiwSBqcJmOzn2Ov/y5cu20oefy8tLtO04XnuBC0t0op2KEps4S+em6i/8uQkUJxVQdN3F+o+P7OmdI0hrVjlGcvsqvGXfD0weqyxu9FjNsk30li4l9gW0YE0+qx8b6BFwqimYhFvgYtm8XtDG6VaOeSKf8Zylb9bZiOOoZmDJDeQTjz0qff36FRcXF1vYV1dX+PbtW//tg/ZXeFk9GeCm6o4q4jhT9scZUYm1GK/+RlVkSOTRqz+mya95bBsep1r25IpHs80AN1lFnsm9QsUd8ui3ciNo0EGeqbXduaS69WyfT7V1iZzHwkK8lziK9cet0XvsrLPhPWU5WMsR6+7uDm/evMHbt2/x/fv3fnSsA5u2/1l1jnUYsHpVqDutZdZ/03EDn/XTNQOfmGbgE9MMfGKagU9KwD8MOgG5Ynzl0gAAAABJRU5ErkJggg==" InformativeScreenshot="2e187f465d20e4c49e7e4620e9baa9e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NHover.Target>
+                </uix:NHover>
+                <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" OutUiElement="[out_ui_Logout]" ScopeIdentifier="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1093, 151, 38, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblchangepassword' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblchangepassword' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Logout' check:innerText='Logout' /&gt;" Guid="523b818f-71a9-4ab4-b844-4c19eb57e858" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAATCAYAAADmtp8+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG+SURBVEhL7ZQrs4MwEIXzL5CVSCQyMhKJRCIj+xMiIyupQ1YikZHISiQSiTx3Q8Kr996ZTh/TYaZnJp1stmy+PSQw7ERf0FfrC/pq7RR06NEPfv5BNZpDGx94bUCNYuBF66NPqUOZMMh669h9oEODIhfgnIPHIcKswHWqQ7lTFiOOXS4Ilk3aWiG1z9AIQwFV9+M6uhIJk1hYDBTjKNoOlaT/Uo2DrcczlB7nDtAB9TGA0A3NXGxUDCbrMW50hFgZOISVG20BEeS4eDa0JdLAwtD8X1A7f9jRBjqiM9OsHiQIzhSVv80tm/RVDpZdfANW1LBkSMruXaDrIl7zRre5ZZOuTGbXJ8313+doSK750Mo6GpGjQ4uCM9Cb9/qoo+6MBit32kIgOpoxtmeU5ZUD6g00gY+b2DPKxOL2UEMGibscds6iVfMGx9WbMUfb0JbjFyg7xO52T8N+0IYrSino5ro1IQs0k1WUu6hsXM+kQj6BknqjkYYh4rFWCl21S7OVBA8OLpekEHTWJ9Ch0RAHm0tw8s1sQJ+XPSYCp/nb9TrNoIyRm08OzgVkeR1d+yv/yDifz45v/N2BdgIK/AB2LvoMPHAtWAAAAABJRU5ErkJggg==" InformativeScreenshot="f189cc6c378873a60a882c9ab435b507.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logged Out of Fileroom&quot;]" />
+                <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="353.6,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK3SURBVDhPbdNPSBRRHAfwZxRUhIcoIQhsf29mhDp36FJgRHRJqEMQQea6bgVqq61htqaVpSm2q2ttq+vu7B+16A87OzOrlB0ikMCLdK2Q6pAGgqCVkLy+M7v5Jzx8YQbe7/N+7/F7TDHqctG9yHUm6827ZL21Qs60paRMxwcp0zXFM4EwN4Jn+HC4kC6pBeRWt9FFO4X/Ay4A3wAIAAIA0iUACJ4NCh7tj1GV+hqFH5EvyJW1QAcAAQBZARYALHLDL7jWN03e2BtyqQIdCHKq75FCVmJ4kDoXAKEYAEyfkMduDsnmnSNStr1YGu3chw6O092BEFXGf9nFl9U5uh8/RN0JhuLaIiCzit4glEzTnDxyu0LqDjDue8x4b5DxwENGnugO7Gy1be38m/xqhkaTrxzm0BYANVUlpge7e2ektp5H5I6HyZkYwG5NCLNTpT6xi632m2PjpMc+k5YSjvTwMQDVL9CBUMbql6RA5ymqSM7ai3M5iZSt/FeqbykSLSczJihtASM+C/iEOxBK9uq8nGrZjg5KsXg5XzSD/LC/3eoCVasKPR8spkzsTx6IrQKGd17RrxVxb5iRKxHIA6txqh66FWNkDu4nbR1Q88w+gt6wrIw2HJRD9xiOYQ3J5EqxW32JMEoNMjIiZwH8O8INC6jMA+iiMaUYTYy34OadyQMoWkK+kjNexLsijJvhTaQNTKwBjgKo3Q3guw1Yg2T46mSjlUldQeso59BBKe8NMYxyAc+EAqRFBGnoKp2adKSHNgOwB+mCPUj/JtFofYpBKuXRB3ukpH8vz/rLMInjXAuh2AZwB8nDjnSSYYzrc9G9bYreuH6UzfZFyez8ab8FrQ+xgWUAbkonmJW1ANJYDmB6w8eUA6YAnABgF28EWM95J4DzAPoBTAB4B6AHwGkAWwGwVSDB/gI9JeCBjrDG4gAAAABJRU5ErkJggg==" InformativeScreenshot="b5e25c9f4bb2a2051b3d1451fff387de.jpg" Selector="&lt;html app='chrome.exe' url='https://qa.sureprep.com/Fileroom/Fileroom/Listing' /&gt;" Title="FileRoom" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,205.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - chrome" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

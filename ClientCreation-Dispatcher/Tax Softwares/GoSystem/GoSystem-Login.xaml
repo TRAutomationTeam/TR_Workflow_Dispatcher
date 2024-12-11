@@ -1,0 +1,598 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GoSystem" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="Exist_WrongCredentials" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="Dict_Credential" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <this:GoSystem.Dict_Credential>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+  </this:GoSystem.Dict_Credential>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>624,702</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GoSystem_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Testing.Enums</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="GoSystem-Login" sap:VirtualizedContainerService.HintSize="1065.6,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="Out_Exception" />
+      <Variable x:TypeArguments="x:Boolean" Name="isGoSystemLoggedIn" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.3999999999999986</av:Point>
+        <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">294.8,52 294.8,82 255.2,82 255.2,133.5</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID4</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">40,464</av:Point>
+          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser -Chrome for process" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0e002fe5-9b22-448b-ac6d-487fe777175d" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,196" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="Exist_FailedMessage" />
+                <Variable x:TypeArguments="x:String" Name="Client_Id" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Loging in sequence" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Boolean" Name="isCaptchaAppeared" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Login ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NTypeInto_96" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Text="[Dict_Credential(&quot;GoSystem User Name&quot;).ToString]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/" CvType="Text" DesignTimeRectangle="746, 680, 182, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' name='LoginID' /&gt;" Guid="a0311322-3d1f-46dd-88d6-591e2f948092" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAAdCAYAAAAdF3anAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJFSURBVHhe7ZhbcoQgEEXdIKtyJ25jvvzOJlyGfwSFZgS6eUyRh3K76lQl0MMjHpiOk0YgBgiIjhgiIDpiiPCiv14vAB4HRSD6vu8APAaIDoYAooMhgOhgCCA6GAKIDoYAooMhKIu+LVpNk57mNfhgyKrnS862KD1NSi8bk7vOps/kTrNe4z4aJ56P1lDBvJp8N8f5czC+Jbc+2xeNqxa9RXnvXGGfhN+vgDA26EvVjb7Ox0PhxHREYokC0EOXDs3Zr7RShfkM55okST4SnQ5Z3L7p5VxPOl6L6NJawO9QJXrpYcUHgRWgJLnBy1shR2/R7R5kabl+iH4f6kSn244Vy/apZfNtiQA15Y/LseOEpRBHV9GDucNcD5MD0e9DpejyQ+Xag7YayQ3xOPYGlcuXnqLb30sypoed23sCRP8XVIvO33qufo2E8wKsTnJJSA8zTuGWrRE9Tyx6QVhfqxdKtJjSWop/G9CDetEbZKQb8kr2Rms4RET/G/1nRceN/rc0iC4JkpYXtp3EpbcZJfFsTgovEkoX0EKT6GG97W44pvZOBSDZOSky/3hmypeeopfKpBMmB6LfhzbRDadgxy2eeYCsAHRI4vasCGm5QHQV3WD3JUvr931pg+j3oVl0enCWVMADUQAv+/tznEABgii9RZe/deiwpeNB9PvQLvql5pZeGWYF8AfF9H858bOvHvnSpr/o175jfReEedjcC+f8fr8C0h5AVz4QHYD7AdHBEEB0MAQQHQyBKDoAT4PCi45APDe0/gbkbie9iWjsGAAAAABJRU5ErkJggg==" InformativeScreenshot="6c5d860aca975cebb4ea470f9b59fb54.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArgument="Login ID" CvType="Text" DesignTimeRectangle="654, 684, 56, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='loginid' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='loginid' type='' tag='LABEL' class='' aaname='Login ID' check:innerText='Login ID' /&gt;" Guid="9ce12036-dd70-40e8-b93c-9f4099edab77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAVCAYAAAAaX42MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEYSURBVFhH7ZUBDoMgDAD3ST7DU/gJ/+ATvKLDFqQWMGETJeolZOkQ6NFufuBhvMJ35xW+O08W9mC1Am19jEfgwCgFxsWwG5kjxSrsKUfL42Thf6kLlznTxarKzd5UOOAt6CAtnfuFndlvnXhQmjd2iTXQY9uWdoaqgJ9pjbYhkxYdwoG0P6dL2FsdkkrJ4xcol9eQkIzzmoowi8v1kj5hzFdcYIdwfZ5vWjuAOmJHWDxfq0rmVOFtsitYZRNmG8ni/H5Lc+YXxgrOKbzsJeeub+lRwpuLzlz/pzVEOJ5b2acQXl8PfPCqDXgtcX4R5vmkUV4CwYQHgRdAv/EZOFSYWp7LxQo0K3Y+h1cYW5K310SyC+NbeioAviQ+YWZ9Dhd1AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="LogMessage_64" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The login ID entered&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Firm'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NTypeInto_97" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Text="[Dict_Credential(&quot;Firm&quot;).ToString]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/" CvType="Text" DesignTimeRectangle="746, 709, 182, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' name='Firm' /&gt;" Guid="b9c1b619-f5e8-45be-a867-58f092f1c033" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAAdCAYAAAAdF3anAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHJSURBVHhe7ZhBjsMgDADzwbyKn+QbPfGTPKM3NiVACDZdspUqbTyWRlWMS3oYOzRTIAgDgeiEiUB0wkQU0R+PB8DtyHES/fl8AtwGRAcTIDqYANHBBIgOJkB0MAGigwn+ILoPbprCVJjDsrY1a1jmumbD+aYm0+43hXlZuzVybWdd5vR9F7yyDra5JHqWyXm5dpAkn5ewllwSVciu5NclzELouhk0kX9bB+uMi+7dJpE2vRt6dUp+bxwppsznhnDxs53qud45RAedQdHTlO4ePw58TzYxqbXJn4hNUT85jskv99/3ee3bvTeYZ0z0JKnz9RFh5zxd38grjintdYVoiqq2/JZUG5tilxvRoceY6GnCColyvsj6BdG36yh0vMcxzUse0UHhkujan9D9fJzP3t8RvUz17cxen/sRHXp8LPp57Uuib+xSazlEB8mY6EK8iqYJurKJPd40hWgspSlizfktDqJDjzHR30gp5FIE7OWvv15Upn8FokOPQdE30pSVU7Wd9FpT9ERV8urTA9HhM8ZFf5EkjMJHlMkdSbJXteqxJ5IkrpD/BRAdPuOa6AD/FEQHEyA6mADRwQRd0QHuRo4iOkHcN0L4AcolfnEva+SrAAAAAElFTkSuQmCC" InformativeScreenshot="2c9e5e724b1a109378536ac565a7a364.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArgument="Firm" CvType="Text" DesignTimeRectangle="654, 713, 30, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='account' tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='account' type='' tag='LABEL' class='' aaname='Firm' check:innerText='Firm' /&gt;" Guid="98c39997-9c5b-4d2b-b566-fb0c7f8340ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAVCAYAAAAjODzXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACXSURBVEhL7ZLRDYAgDERdkmU6SjfpHizBFLVAQCh8mGAUk15ioheufXoevIkMRMtAtHYECUzg2Ln5BRTkjGeUe/Q58aQGkLzwff0VpK8mELBDqpXGbPJAPGyqTYGcLZ6udx1EDS1enROIIS1HSRcrnrmeo+79rHXTDKQfOHqTF/Q45Na/iNTQJkbPQAzkcZBvZSBam4Awn6INd4rZ8UBrAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The Firm &quot;+ Dict_Credential(&quot;Firm&quot;).ToString+&quot; is entered&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Location'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NTypeInto_98" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Text="[Dict_Credential(&quot;Location&quot;).ToString]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/" CvType="Text" DesignTimeRectangle="746, 738, 182, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' rowName='Location' /&gt;" Guid="4af94c77-b535-446b-bd58-ca8ec091cefe" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAAdCAYAAAAdF3anAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIeSURBVHhe7ZdbcsMgDEW9QVbFTthGvtiJl5E/ig0iPIRjiNMJ5mrmTFsQqpgeNM1iEIgJAqIjpgiIjpgiguiPxwOA20GRiP58PgG4DRAdTAFEB1MA0cEUQHQwBRAdTAFEB1NwUvTVKLGYZbFIne15tHT7izBqpXVt5NGZVRlh94Vaw9qqhK8jjY5zA75m9VxJnFfge6jmhXudrAd+knbRE5Hf7X8iOi9Ubd+tM715UWty0jmx9S+UWZmc1/1qjw/8Om2iC2nk9jUXd5dJGClz2XpFp1q5WK6ekLJ6rnyEvgdWYn8v21/9fJQH0YelUXRlNCOEljVZ+kVXutxzD8rKdnSuJjrXg5/2UtvvmZovIProNIu+0lQlIXZBnGCXim5r7A8oTGLXw57bIHr9Afj6Qd74jnkuRB+dDtFJHvdHp2m+5V0tOu3vE5em+eG5TUYOTlCmt3jCJ7kQfXS6RCdJ6H9lEuNy0e3Pbqpnnw0aJvqGm9yZwKzUtX4h+uh0ih5N0GLtWtEph1s7KzrXB8nPkwsN0UenW3SSLZ6IpWz+XE10ZqqeqtErOvXPnA+wkx6ij06/6AycbOkHvhSXn+4dC+v5cKI3PYodiD46XxedF8fiJ2c+Va8XnSSlvfd3KWtB9NH5B9E3SJQYXubPRM9/hyfuu/LAEuL6Pj/m8Cz4SU6KDsDYQHQwBRAdTAFEB1NQFR2Au0ERREcg7hvG/AEinXHb4DsPFQAAAABJRU5ErkJggg==" InformativeScreenshot="e352f358fdc7f4b5221637d8abd85258.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArgument="Location" CvType="Text" DesignTimeRectangle="654, 742, 57, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='Label1' tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='Label1' type='' tag='LABEL' class='' aaname='Location' check:innerText='Location' /&gt;" Guid="e5cd6226-dc5d-41f3-a9fb-939186467ef8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAAVCAYAAAD1neayAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFASURBVFhH7ZQNDsMgCIV3SS/jUbyJ9/ASPQWr4A9Q1tluzZbYl5isQ+R9SPuACXVDz6IbehbNDr1A9A58XMrzj5QSpPITlgjeefi2pf+CTgGcCx36It3QQ9BozLW13Z8gsLiEoBo8v8XVuSH/aYx3CjzXiK2JYo+Pa1WpQ9BL9LIQmuI5BRgdk9BAKVxNdan9+qYFdGkYg9B+KmwvQedrpgPQdhwLVyMnxlM0Yg/a/KhJT7zBVdtGH4Kmrqn8YoaMigbsiG6IbgXXCPSLhuJZJd8CvAaamXkHjQYQtJsXpk5A8/wLoD8db6tpdOYQ9Oh4fxc6181jyQqjEZ5jfDgayDaGhvLNV1MaTDyXBrFJ0n5OQ4t3rS4+sgjRY9smEVzfo2+OxVYzZLzu6R7wXON2W6NwGbFj0PPohp5FE0IDPAH3q7AZLCfrjQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Location is entered&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NTypeInto_99" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Text="[Dict_Credential(&quot;GoSystem Password&quot;).ToString]" Version="V3">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/" CvType="InputBox" DesignTimeRectangle="746, 767, 182, 25" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tag='INPUT' rowName='Password' /&gt;" Guid="82842ae2-3bc9-4fc6-8375-6a551cf21d0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAAdCAYAAAAdF3anAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGbSURBVHhe7dw7bsJAEIBhH4Ee8bgMD4mCMkqTi1DQcQYaWm5g8SqjUKBUFFG4AEqZE2SSgbW9VrwJFEjs7j/S14zt2MUfyY1JhGEiGEJnohhCZ6KYUuhpmkq325Vmsym1Wg3wjrarDS+XS1P1efLQF4tF5YWAr1arlanbCl3/C/Tgw+OTPO/e5OPzC/COtqsNa8vadDZ56PV6/XSQyOE7bVhbbrfbpm4rdD2gqi4EfJP1nA2hI0iEjigQOqJA6IgCoSMKhI4oEDqicEXoR5kOEkkSNZE0329ldNr9GMxln+03E3NuIv3Z0Zzr3u9nw3w/2phznfe87bMgPBeHbodoh5GOi506R2oFd5LF6Ngf5tK39yZS1z1v+iwIEqH/2iNEF4deel2wXwvsYMbb4nzrtaB4FXHvi3iHMj1ke9c9b/ssCM8VoQP+InREgdARBUJHFAgdUXCGrl9j6AG+MILv/vzCyP5m9OX1vfIPAPfu329G+RUAhGa9Xpu6rdB1NPZOpyONRqPyQuDetVot6fV6pZ+60CmFzjBhjsg3pN6NTd0Wbb8AAAAASUVORK5CYII=" InformativeScreenshot="4016602cfe4271b9d88ea94870b0d2bb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArgument="Password" CvType="Text" DesignTimeRectangle="654, 771, 66, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' type='' tag='LABEL' class='' aaname='Password' check:innerText='Password' /&gt;" Guid="d927e222-b5d2-4c70-9fea-507e047601ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGhSURBVFhH7ZXbjcQgDEW3yTRDKXRCH2kiVXgwtsHGRpGiaD8iroQ0BD8Pj/mDrVAbzEIbzEIbzEIbzEIbzEIKzAUlHXAc0UhQLjb7oK6S4EilEhhyYFJAoDkeGU6ef02PwUBFkuvJyR8l8x6Yq0AyV60OQ43sx7o9bXQCx7rk9AUGNZ3ZxmtzHwvV4uXSnwiTp/tkKE/BnJkCUDHB6eHi6JuP0/zFYW6sQeY3TP9GyQaoZDoWNejtZwC+VuUjYO/ADJJ63L0vGhb9jgCjqNhVPAsVbVMpNV60KfFGtvjcpM8V+zTYz65SJA9SdkZ2KoZqr1nYGAfCgvNJedqndiIiSErKRkMixT7e7hEY1VjPsChS2zpAXBCv97z9qqHvaBDXNbRlTnVV/xfM/Eag+G57MKIVOJItjG1zzSMOGD9lyKa+uF4dyzcc+7xzlebHixvBXac+aG7izLtowPq8rVATQ3LovBLr5vGdGnb1t/kbYKqoICqegJCv2WG1PjckjfcxHyUHn33mJlHSGA9dfwgGZXxu/663tDaYhTaYhTaYUAA/ewBWAf7Q2nsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NTypeInto.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NTypeInto>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The password entered&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <uix:NCheckState DisplayName="Check Captcha" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NCheckState_4" Timeout="3" Version="V3">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,167" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NCheckState DisplayName="Check App State 'I'm not a robot'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Timeout="300" Version="V3">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_110" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Captcha Verified&quot;]" />
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="450,388" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_106" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed to verify captcha on time&quot;]" />
+                            <Throw Exception="[new System.Exception(&quot;Failed to verify captcha on time&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_6" />
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcFSAoUAAAAAJt3z1ocpsSwM5uScgITwdBH5Hsk&amp;co=aHR0cHM6Ly9nb3N5c3RlbXJzLmZhc3R0YXguY29tOjQ0Mw..&amp;hl=en&amp;v=vm_YDiq1BiI3a8zfbIPZjtF2&amp;size=normal&amp;cb=d9yc6kkwx3r0" DesignTimeRectangle="1027, 632, 152, 74" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='IFRAME' aria-role='presentation' parentclass='*captcha' /&gt;&lt;webctrl tag='LABEL' visibleinnertext='I&amp;apos;m not a robot' /&gt;" Guid="4a332b79-bc6a-4c87-bf79-e30d85912a0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAABOCAYAAADVTn9pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS3SURBVHhe7ZxLK21hGMf3FzDxBXwBGRgYSClyLREyIYlETEzEQFFKopgYGBBhIpcMMJFIKQMDkdxyGUhyv19Gz+n/1rPOti1snXMep/Z/16+1vZfledf7W8+73jXYAeGHH8NPYGNjQwixIvD6+iqEWEHhiCkUjphC4YgpFI6YQuGIKRSOmELhiCkUjphC4YgpFI6YQuGIKRSOmELhiCkUjphC4YgpFI6YQuGIKRSOmELhiCkUjphC4YgpFI6YQuGIKRSOmELhiCkUjphC4YgpFI6YQuGIKRSOmPKhcIODgw6/ukiiubmZ1+Ev4gl3c3MjlZWV3sX9X4TDj9ilpaW5o1/9v+ZPhUN/4FcXiVC4L6Bwf5cPhVNOTk6kqKhIent7JSkpSaKioqSiokJ2dnakqalJoqOjJTY2VsbGxuTl5eVNXwBRCgsLZXx83PVHe/S7urpy9eiztLQk2dnZEggE3HF5ednVIRaUKX4T//j4KMPDw5KQkOBiKygokM3NzXftgMbS1dUlMTExsrCwIM/PzzI5OemNraSkRLa2trw+kKW9vd2NGfVoh3i1/uLiQtra2tz5AL5jbLhu6enpXuz4jjLtF6mEJRwuFiQ5PT2Vg4MDJ2B8fLybqNvbW5mZmZGUlBTZ3d190xdgkuPi4lz/s7Mz2d7elqysLJmYmHD1q6urkpycLPPz806e2dlZJw/Ktf9nGW5qakpyc3Nlb2/PyTMwMCBlZWWe0MFoLI2NjbK/vy/39/cyPT0tGRkZsra2Jg8PD9Lf3y+pqalunOgD4RAPJMNY+/r6XDxHR0cu3oaGBqmvr3fXBlRVVbky1Gl/ZrjfhCUcssL6+rpXhkkpLy+X6+trrw2kRMbQNgomOS8vTw4PD70yTEBra6vLbi0tLdLR0eFlRxzxN8rx/SvhLi8vHfo32kEgvywXGouOeXR01Gtzd3cntbW13nVArBiv1iOjFRcXuxsG58PNg5tI6/WG0ngp3FvCXlKDJxxt0BZ9tM1nwqE/2miZToL+T2TI4D6YTD0/+n8mHAQZGhpyWUiXL2Qxv/ahseAIATWbKp2dnZ4kOAZfE9wEyNYow3ghHyTUemTx/Px871roWLU+0vkvhRsZGQlbOMSSk5Pjnim/yoihsXwkHLKvSoLjd4TDsooMR+H8+VHhMHl/uqSGCoGlH89gfu1DY9Exc0m140eFw3dkFwiFh3I8aM/NzUliYqKXdY6Pj72MgYd2PYfS3d0tpaWlbhMAqqurw15SATYN2BnjmQ+bBux48Qz4nU0DMt75+bnLbnV1dW82DZC1pqbG1WtZJPPjwiGLLS4uul0unr8w+ZhczXhPT0/S09PjXqdgqdNzKNiNYsJRj1cWECIzM/PdMgn8YsHOFhlOX6vgtUjwhgNxBr8WQZwrKytePTIe/n/wa5HgJRavWDAm7Oo/el0TSXjCEWIBhSOmUDhiCoUjplA4YgqFI6ZQOGIKhSOmUDhiCoUjplA4YgqFI6ZQOGIKhSOmUDhiCoUjplA4YgqFI6ZQOGIKhSOmUDhiCoUjplA4YgqFI6ZQOGIKhSOmUDhiCoUjplA4YgqFI6ZQOGIKhSOmBPAjfYRYEcDPjBJiw4P8AsSoYTOoGZE/AAAAAElFTkSuQmCC" InformativeScreenshot="d2b2dd3c5baab25f7a9ab197d3860ec1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NCheckState.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NCheckState>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_115">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_107" Message="[&quot;No captcha verification required&quot;]" />
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl tag='IFRAME' aria-role='presentation' parentclass='*captcha' /&gt;&lt;webctrl tag='LABEL' visibleinnertext='I&amp;apos;m not a robot' /&gt;" Guid="ea860ccd-eb7d-4c26-9c45-d16af325d4bc" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT btnlogin'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/" CvType="Text" DesignTimeRectangle="746, 801, 81, 29" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' name='btnlogin' /&gt;" Guid="b4e2a7c3-0255-48dd-8785-8b1eab9bd6d5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAhCAYAAACoRueNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQZSURBVGhD7Zh5TM9xGMfd9zHmvm/GHBtmmGEY5pr5xzHHsDnGGDPmD+bYHGNzlBCFSqFI5SiikiO3rIWSMOSMEGHenrfHr370bVPrm8rns723+n6e76fn8/o8n+d5vpWAGfk+DFQbhoFqw8iCurUssLmkSB4Z5U5k5173F0gDNX9koNogA9UGGag2yEC1QQaqDTJQbVChhOpaEdhWBXApbz2fqVJiU0FtXSsBW0pb2PwDFUqo+7sChwcCXu2t5x0iTO+OanugF7C9RuEAWyBQufkT44GkYCB8hrXNrvpA2BTgYRjwOg5ITQBe3tJ3TowDdtRSO/rl0RQ4M1NsQ4E38Wqbek/sY4Gzs4E9rYCgEboW19xeE7i0Anh8Fri6TvypKvAlyrkeD+7cIuDFDWBvm999yqsKBKpbNSBiHvD2vmxuefZ5Xt3AwcCj07LxM0DMKiBS7K9tlN/D9fmhPnrVM4EKsLu+wOXVahu1UN5bqVHLDYVNBt4/AaIXAzvrAHGewNd04PlV4NgY8am6/m3fbsCNTbpnn87ZfcuLCgXUva2BC0uBD0/Vzl2i9udziZzoJcDnVAW3u5FAGwAknwSeXtAIpvO05bXfWVtvxZYy1lC/fwPSXwIPQoCDvcW2cjGGGjhEN50SI2mgYVZepA/72ukVv70D8O+r6YPwGc0eTbKv5ZAV1M9v1YcvHyUNrBeInQC/HsUUauhEIOGwXOf9GmnOc+71JK8Gyby/5Ms5wJU1sk4iECJXmLnS2dZZVlBfXNeUwvyZlixpZBZwZFAxhUoAiUeAeC+9ks5zdI5ziQI9cr5GGAtT8Cit9g67XQ0E2AZJCWMBz+bWUFMkn9KPoOEK9sFxPaRiCZWA4r21KBEA+08+ZxrY01JgXFYoQSOlIC2QKHushYkgHWuwiqc91MLl0yVnqKemqT8Xl0lePi9wb2p+5iiyUBlNLEQOsVU60FMiZi3wLknAOUUg59mKfXyuEFi4ggVsyhXgfqAWLTdpj2hLIByMOhafnKCyxaK9Vwcg1k0Pgl0BR5GFmhAAnJyQpcChshkpGKGTZIOPJK/6SUHqp61TyGjNpR+e6c/sL9ns82DYl/IgHLZch+NvoVJHh+nhfMvQd4ssVG4g432WnkTp9WfDzmhk5Hx6rW3Up1cC766C2d1Y13KRT1hvOQTmQoLNeKe2GWnqd26gslcNl573zR19t0hBZW5kq8T2hW2Rs3zlk5QpgN/5BMdUcHq65k5GL9/hu1vL/VpPfOL/BjyaAQH9JUdOVduIudq3sgVjRHNTXItrci/72urnL7uJTL8kd/N3v+7qy59FMq8qEKi5FXOpZwuJMGnmreYdImhGIW3Zs/5X3/7/mwxUG2Sg2iAD1QYZqDbIQLVBBqoNyhGqGfk0gB/7XaEASBbMHQAAAABJRU5ErkJggg==" InformativeScreenshot="5d7ea4d15fd0f757cc70cf5b7715cf05.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArgument="Password" CvType="Text" DesignTimeRectangle="654, 771, 66, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' type='' tag='LABEL' class='' aaname='Password' check:innerText='Password' /&gt;" Guid="4749d771-9fb8-4b5d-a1f0-e2c9d648928a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGhSURBVFhH7ZXbjcQgDEW3yTRDKXRCH2kiVXgwtsHGRpGiaD8iroQ0BD8Pj/mDrVAbzEIbzEIbzEIbzEIbzEIKzAUlHXAc0UhQLjb7oK6S4EilEhhyYFJAoDkeGU6ef02PwUBFkuvJyR8l8x6Yq0AyV60OQ43sx7o9bXQCx7rk9AUGNZ3ZxmtzHwvV4uXSnwiTp/tkKE/BnJkCUDHB6eHi6JuP0/zFYW6sQeY3TP9GyQaoZDoWNejtZwC+VuUjYO/ADJJ63L0vGhb9jgCjqNhVPAsVbVMpNV60KfFGtvjcpM8V+zTYz65SJA9SdkZ2KoZqr1nYGAfCgvNJedqndiIiSErKRkMixT7e7hEY1VjPsChS2zpAXBCv97z9qqHvaBDXNbRlTnVV/xfM/Eag+G57MKIVOJItjG1zzSMOGD9lyKa+uF4dyzcc+7xzlebHixvBXac+aG7izLtowPq8rVATQ3LovBLr5vGdGnb1t/kbYKqoICqegJCv2WG1PjckjfcxHyUHn33mJlHSGA9dfwgGZXxu/663tDaYhTaYhTaYUAA/ewBWAf7Q2nsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="LogMessage_105" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Click on Login button&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <uix:NCheckState DisplayName="Check App State 'Returns'" sap:VirtualizedContainerService.HintSize="954,424" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="0e002fe5-9b22-448b-ac6d-487fe777175d" Timeout="120" Version="V3">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message - Login into Gosystem" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_108" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logged in to the Go system.&quot;]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,167" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NCheckState_6" Timeout="5" Version="V3">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,388" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed to Login GoTax due to invalid creds&quot;]" />
+                            <Throw DisplayName="Throw wrong credentials exception" Exception="[New BusinessRuleException(&quot;Invalid Login.&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Throw>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,388" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_111" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed to Login GoTax&quot;]" />
+                            <Throw Exception="[new System.Exception(&quot;Failed to Login Gotax&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_7" />
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl tag='B' visibleinnertext='Invalid Login, Please Try Again...' /&gt;" Guid="f52c4e55-68ee-47c5-a0a4-7695fa90540d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS Login' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                        </uix:NCheckState.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NCheckState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/TopMenu.asp" DesignTimeRectangle="79, 181, 61, 28" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='FRAME' name='ATopMenu' /&gt;&lt;webctrl tag='A' innertext='Returns' /&gt;" Guid="a76d8c51-3112-4959-abca-bf12ff531af0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAgCAYAAABNXxW6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVGhD7ZTbkYQgEEU3J9IiFKIhFNIwiJ6LPGwQZ1Bn/Zi6p4oPeXYfWv6ECCUASgCUACgBUAKgBEAJgBIAJQBKABMSFvHWiDGDZj1GZwnijBU/v+AxpiW4kD8rWc5+4ICflACCQ0U4pFfoqqZWShSw9a97LV5sJyU4jOeDFm/Fel/Xxe44rvvqXpm4pvSbE8K/KCHNs+pknVQSoQKbkNAnso6rvjQnn99fyO6Cjvne7xAP3b0ROvELErr9WqlA73Ei6Z57D6MKqC1F3R6S0MWpp33iUiWMSnUUdMt/S9hY5zUX8J7Lv0M66Mw/+JyERIpbv1FH3HgTYlIIqgaay1FPbMR0EvL6GuSa0A0J/SW8FdRyQwLoAi+Jbe9BWxmlTGvia+B5LhIOMfGrEkDZv7RhzAMmJPw+lAAoAVACoARACYASACUASgCUAChBRF70iA9JUopMggAAAABJRU5ErkJggg==" InformativeScreenshot="d7b0e6205ddc26202d41675f2973e73f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGOSURBVDhPrZPrkcIwDIRVQkqgBEqgBEqghCvBIeFxXB5cBSmBEiiBUq4E8a1sAgN/TzMaK6tdWZYdezfvbemDrXy0G641x8LIFdqn+ckW+NU7CnS2KvBswiInDtwCZ/M94r1t/GBjfP9CHG1kxxFy8qNNvis5OMFFo+8wbyG19hfxmeRoKeLOKv/BdxRswbfmgcOVRrEBKnHxhi4GiL2t6aAi3iBO7DSRu3kCr8ES3C08adAa4IQ7Xvm3XaLoGfLwbBHRMoR5vcaaNZOSX/g62pQjpPV10c4GeROeYsMUGrQq4OEtU24ADxTcf15X5HfktnAa4qJ7dqCqOo5mUlP5zbgJzWSBWAPVUUoHjxm8ni/F0OYu4o10DEzxkVloXvMMHrdQQ8oFdD4N6cZOFwSJnbP4FF2s4Feh0S1E4vUd1BRpIKrNY9xMFXgPh6uN+PUdyGL6+XWNDLEiOUWcd9eLTDyuZeSEi4umyLOx0wLXO482CzxbtK6cOHAL/Gnxw/SQB4j6A7NfAyNXaP9lZncLoFDhFQW9IwAAAABJRU5ErkJggg==" Selector="&lt;html app='chrome.exe' title='GoSystem Tax RS Login*' /&gt;&lt;webctrl tag='HTML' /&gt;" Title="Logout" Url="[Dict_Credential(&quot;URL&quot;).ToString]" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,133.5</av:Point>
+          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">255.2,203.9 255.2,224</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message loging in" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Opening Browser and logging into Go system&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,224</av:Point>
+              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">255.2,294.4 290.5,294.4 290.5,317.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NCheckState DisplayName="Check App State 'Returns'" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NCheckState_8" Timeout="5" Version="V3">
+            <uix:NCheckState.IfExists>
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,380" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_113" Message="[&quot;GoSystem is already logged in&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[isGoSystemLoggedIn]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </uix:NCheckState.IfExists>
+            <uix:NCheckState.IfNotExists>
+              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Boolean">[isGoSystemLoggedIn]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </uix:NCheckState.IfNotExists>
+            <uix:NCheckState.Target>
+              <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/TopMenu.asp" CvTextArea="125, 354, 75, 19" CvType="Text" DesignTimeRectangle="106, 78, 92, 42" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='FRAME' name='ATopMenu' /&gt;&lt;webctrl tag='A' aaname='Returns' /&gt;" Guid="8e203beb-3ea5-4c0a-9a1c-1a22050790d4" InformativeScreenshot="500ab286e37af7d05767024a22f8c4fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
+            </uix:NCheckState.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NCheckState>
+          <FlowStep.Next>
+            <FlowDecision x:Name="__ReferenceID1" Condition="[Not isGoSystemLoggedIn]" DisplayName="Not Logged In" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">260.5,317.5</av:Point>
+                  <av:Size x:Key="ShapeSize">60,60</av:Size>
+                  <av:PointCollection x:Key="TrueConnector">260.5,347.5 95.2,347.5 95.2,464</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">320.5,347.5 435.2,347.5 435.2,464</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowDecision.False>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">380,464</av:Point>
+                      <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_112" Message="[&quot;GoSystem is logged In&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </FlowStep>
+              </FlowDecision.False>
+            </FlowDecision>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">40,564</av:Point>
+          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NCheckState_9" Version="V3">
+        <uix:NCheckState.IfExists>
+          <Sequence DisplayName="Target appears" sap2010:WorkflowViewState.IdRef="Sequence_123">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </uix:NCheckState.IfExists>
+        <uix:NCheckState.IfNotExists>
+          <Sequence DisplayName="Target does not appear" sap2010:WorkflowViewState.IdRef="Sequence_124">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </uix:NCheckState.IfNotExists>
+      </uix:NCheckState>
+    </FlowStep>
+  </Flowchart>
+</Activity>
