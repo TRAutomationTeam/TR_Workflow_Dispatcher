@@ -3,6 +3,7 @@
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Used during transitions between states to represent exceptions other than business exceptions." Name="out_SystemException" Type="InArgument(s:Exception)" />
+    <x:Property Name="out_strBinderID" Type="OutArgument(x:String)" />
   </x:Members>
   <this:Sequence_Get_Binder_ID.out_SystemException>
     <InArgument x:TypeArguments="s:Exception" />
@@ -10,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,596.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,2372.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Get_Binder_ID_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="88">
@@ -116,19 +117,18 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Get_Binder_ID" sap:VirtualizedContainerService.HintSize="536,428.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Get_Binder_ID" sap:VirtualizedContainerService.HintSize="715.2,2308" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strTaxSoftware" />
       <Variable x:TypeArguments="x:String" Default="workflow" Name="strSPClientID" />
       <Variable x:TypeArguments="x:String" Default="2021" Name="strTaxYear" />
-      <Variable x:TypeArguments="x:String" Name="strBinderID" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="473.6,340" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652.8,2219.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <Sequence sap:VirtualizedContainerService.HintSize="616,1964.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
@@ -199,7 +199,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NGetText DelayBefore="8" DisplayName="Get Text 'Binder ID: '" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="ff7caa24-2188-4cd4-8c32-0b2cabc82051" TextString="[strBinderID]" Version="V3">
+                          <uix:NGetText DelayBefore="8" DisplayName="Get Text 'Binder ID: '" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="ff7caa24-2188-4cd4-8c32-0b2cabc82051" TextString="[out_strBinderID]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="27, 94, 111, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='tbkBinderId' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;ctrl automationid='tbkBinderId' role='text' /&gt;" Guid="d1cb5296-be92-4368-82d3-9f3261f1c9a3" ImageBase64="" InformativeScreenshot="fc7ac1357665ab74df4e40d3978b4ee3.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Jobs in Queue' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
                             </uix:NGetText.Target>
@@ -210,7 +210,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NGetText>
-                          <ui:IsMatch BuilderPattern="\d" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[strBinderID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d" RegexOption="IgnoreCase, Compiled" Result="[Is_BinderID]" />
+                          <ui:IsMatch BuilderPattern="\d" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[out_strBinderID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d" RegexOption="IgnoreCase, Compiled" Result="[Is_BinderID]" />
                         </Sequence>
                       </ActivityAction>
                     </ui:RetryScope.ActivityBody>
@@ -226,7 +226,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
-                  <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="457.6,369.6" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[strBinderID]" SourceText="[strBinderID]">
+                  <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="457.6,369.6" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[out_strBinderID]" SourceText="[out_strBinderID]">
                     <ui:ModifyText.Body>
                       <ActivityAction>
                         <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,144" sap2010:WorkflowViewState.IdRef="Sequence_14">
@@ -262,10 +262,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,152.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="619.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>

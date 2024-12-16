@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="Fileroom_LaunchAndLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -6,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1005.5999999999999,3243.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,3283.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Launch_and_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -105,7 +104,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Linear workflow for launching environment specific fileroom application and logging in with the specific credentials." DisplayName="Fileroom_LaunchAndLogin" sap:VirtualizedContainerService.HintSize="639.2,3178.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Linear workflow for launching environment specific fileroom application and logging in with the specific credentials." DisplayName="Fileroom_LaunchAndLogin" sap:VirtualizedContainerService.HintSize="639.2,3218.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="boolExistSignIn" />
     </Sequence.Variables>
@@ -115,17 +114,17 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="576.8,2878.4" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="576.8,2918.4" sap2010:WorkflowViewState.IdRef="RetryScope_1">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Fileroom Launch and Login" sap:VirtualizedContainerService.HintSize="535.2,2555.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Fileroom Launch and Login" sap:VirtualizedContainerService.HintSize="535.2,2595.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Fileroom Application Login" sap:VirtualizedContainerService.HintSize="472.8,2466.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="721a8b2f-5e21-44c9-8822-ab8c96efec1a" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Fileroom Application Login" sap:VirtualizedContainerService.HintSize="472.8,2506.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="721a8b2f-5e21-44c9-8822-ab8c96efec1a" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -173,7 +172,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NCheckState DisplayName="Check App State 'Sign in the old way'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="376.8,408" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="721a8b2f-5e21-44c9-8822-ab8c96efec1a" Timeout="60" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Sign in the old way'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="376.8,408" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="721a8b2f-5e21-44c9-8822-ab8c96efec1a" Version="V3">
                       <uix:NCheckState.IfExists>
                         <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Sign in the old way'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="721a8b2f-5e21-44c9-8822-ab8c96efec1a" Version="V3">
                           <uix:NClick.Target>
