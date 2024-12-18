@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1005.5999999999999,844</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,844</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -245,9 +245,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="642,2208" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="640,2306.4" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="596,1736" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="595.2,1830.4" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -255,7 +255,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="558,1488" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="558.4,1580.8" sap2010:WorkflowViewState.IdRef="Sequence_55">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="str_BinderID" />
                         <Variable x:TypeArguments="s:DateTime" Name="dt_StartTime" />
@@ -266,7 +266,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="496,114" sap2010:WorkflowViewState.IdRef="Assign_25">
+                      <Assign DisplayName="Assign BusinessException" sap:VirtualizedContainerService.HintSize="496,113.6" sap2010:WorkflowViewState.IdRef="Assign_25">
                         <Assign.To>
                           <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
                         </Assign.To>
@@ -274,7 +274,7 @@
                           <InArgument x:TypeArguments="ui:BusinessRuleException">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -326,7 +326,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Input File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Input File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="in_strRefKey">[TransactionItem.Reference]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_filePath">[str_InputFilePath]</InArgument>
@@ -340,7 +340,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reporter File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reporter File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="in_strRefKey">[TransactionItem.Reference]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_filePath">[str_ReporterFilePath]</InArgument>
@@ -354,7 +354,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
-                      <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                      <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="Sequence_67">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -375,9 +375,9 @@
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                        <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                       </Sequence>
-                      <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                      <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="Sequence_74">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -406,9 +406,9 @@
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                        <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                       </Sequence>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="496,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="496,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Framework\Process.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[TransactionItem]</InArgument>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
@@ -422,14 +422,14 @@
                           <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFileName" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                      <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="540.8,408" sap2010:WorkflowViewState.IdRef="Sequence_69">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -451,51 +451,9 @@
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,430" sap2010:WorkflowViewState.IdRef="Sequence_75">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign Performer Queue" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_36">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dic_PerfomerQueue]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" xml:space="preserve">[(From i In Enumerable.Range(0, dt_InputDataUpdated(0).ItemArray.Count)
-Let name  = dt_InputDataUpdated(0).Table.Columns(i).ColumnName
-Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x) x.Item1, Function (x) x.Item2)]</InArgument>
-                                </Assign.Value>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Assign>
-                              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" ContinueOnError="False" DisplayName="Add Queue Item" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,194" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" ItemInformationCollection="[dic_PerfomerQueue]" Priority="Normal" QueueType="[Config(&quot;OrchestratorQueueName_SW&quot;).ToString]" Reference="[TransactionID]">
-                                <ui:AddQueueItem.ItemInformation>
-                                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                                </ui:AddQueueItem.ItemInformation>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:AddQueueItem>
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:CommentOut>
+                        <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                       </Sequence>
-                      <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                      <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="Sequence_59">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -540,7 +498,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                             </scg:List>
                           </ui:MultipleAssign.AssignOperations>
                         </ui:MultipleAssign>
-                        <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                        <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                       </Sequence>
                       <Sequence DisplayName="Add Performer Queue" sap:VirtualizedContainerService.HintSize="496,452" sap2010:WorkflowViewState.IdRef="Sequence_76">
                         <Sequence.Variables>
@@ -701,7 +659,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                   </scg:List>
                                 </ui:MultipleAssign.AssignOperations>
                               </ui:MultipleAssign>
-                              <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                             </Sequence>
                             <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="541,476" sap2010:WorkflowViewState.IdRef="Sequence_71">
                               <sap:WorkflowViewStateService.ViewState>
@@ -748,7 +706,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                   </scg:List>
                                 </ui:MultipleAssign.AssignOperations>
                               </ui:MultipleAssign>
-                              <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                             </Sequence>
                           </Sequence>
                           <TryCatch DisplayName="Try Catch Set Transaction Status (BRE)" sap:VirtualizedContainerService.HintSize="603.2,344.8" sap2010:WorkflowViewState.IdRef="TryCatch_11">
@@ -890,7 +848,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                         </scg:List>
                                       </ui:MultipleAssign.AssignOperations>
                                     </ui:MultipleAssign>
-                                    <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                                    <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                                   </Sequence>
                                   <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="540.8,510.4" sap2010:WorkflowViewState.IdRef="Sequence_73">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -945,7 +903,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                         </scg:List>
                                       </ui:MultipleAssign.AssignOperations>
                                     </ui:MultipleAssign>
-                                    <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                    <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                   </Sequence>
                                 </Sequence>
                               </Sequence>
@@ -1004,7 +962,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">234.79999999999998,432.79999999999995</av:Point>
-                  <av:Size x:Key="ShapeSize">231.2,188</av:Size>
+                  <av:Size x:Key="ShapeSize">230.4,194.4</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">197</x:Double>
                   <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -1015,7 +973,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                 <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">304.15999999999997,620.8 304.15999999999997,634.7466666666667 506.59999999999997,634.7466666666667 506.59999999999997,64.74666666666666 476.6,64.74666666666666</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">303.92,627.1999999999999 303.92,657.1999999999999 506.5999999999999,657.1999999999999 506.5999999999999,64.74666666666666 476.6,64.74666666666666</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">23</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1023,7 +981,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="594.4,3159.2" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="253.6,105.6" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="549.6,2739.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -1058,9 +1016,6 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
                                   <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="416,1707.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="SubWizardQueueItems" />
-                                    </Sequence.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1425,7 +1380,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                 <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="448.8,540.8" sap2010:WorkflowViewState.IdRef="Transition_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">361.96,620.8 361.96,646.653333333333 504.733333333333,646.653333333333 504.733333333333,256.653333333333 474.733333333333,256.653333333333</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">361.52,627.1999999999999 361.52,646.653333333333 504.733333333333,646.653333333333 504.733333333333,256.653333333333 474.733333333333,256.653333333333</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1440,7 +1395,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                 <Transition sap2010:Annotation.AnnotationText="There is no need for any action in case of successful transaction.&#xA;The process should simply go to next transaction." DisplayName="Success" sap:VirtualizedContainerService.HintSize="452,553.6" sap2010:WorkflowViewState.IdRef="Transition_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">408.19999999999993,620.8 408.19999999999993,632.413333333333 504.733333333333,632.413333333333 504.733333333333,302.413333333333 474.733333333333,302.413333333333</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">407.6,627.1999999999999 407.6,657.1999999999999 504.733333333333,657.1999999999999 504.733333333333,302.413333333333 474.733333333333,302.413333333333</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">59</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">52</x:Int32>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1504,7 +1459,6 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Transaction ID used for information and logging purposes. Ideally, the ID should be unique for each transaction. " Name="TransactionID" />
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="Used in case transactions are stored in a DataTable, for example, after being retrieved from a spreadsheet." Name="dt_TransactionData" />
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Used to control the number of consecutive system exceptions." Default="0" Name="ConsecutiveSystemExceptions" />
-      <Variable x:TypeArguments="x:Int32" Name="intRowsAffected" />
       <Variable x:TypeArguments="x:String" Name="str_InputFilePath" />
       <Variable x:TypeArguments="x:String" Name="str_InputSheetname" />
       <Variable x:TypeArguments="x:String" Name="str_ReporterSheetName" />

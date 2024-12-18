@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,2372.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,2372.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Get_Binder_ID_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="88">
@@ -183,7 +183,7 @@
                 </ActivityAction.Argument>
                 <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,1144.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="Is_BinderID" />
+                    <Variable x:TypeArguments="x:Boolean" Name="isBinderID" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -210,13 +210,13 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NGetText>
-                          <ui:IsMatch BuilderPattern="\d" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[out_strBinderID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d" RegexOption="IgnoreCase, Compiled" Result="[Is_BinderID]" />
+                          <ui:IsMatch BuilderPattern="\d" DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="353.6,83.2" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[out_strBinderID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d" RegexOption="IgnoreCase, Compiled" Result="[isBinderID]" />
                         </Sequence>
                       </ActivityAction>
                     </ui:RetryScope.ActivityBody>
                     <ui:RetryScope.Condition>
                       <ActivityFunc x:TypeArguments="x:Boolean">
-                        <ui:CheckTrue DisplayName="Check True" ErrorMessage="[new SystemException(&quot;Binder ID has not been generated.&quot;).ToString]" Expression="[Is_BinderID=True]" sap:VirtualizedContainerService.HintSize="333.6,131.2" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
+                        <ui:CheckTrue DisplayName="Check True" ErrorMessage="[new SystemException(&quot;Binder ID has not been generated.&quot;).ToString]" Expression="[isBinderID=True]" sap:VirtualizedContainerService.HintSize="333.6,131.2" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
                       </ActivityFunc>
                     </ui:RetryScope.Condition>
                     <sap:WorkflowViewStateService.ViewState>

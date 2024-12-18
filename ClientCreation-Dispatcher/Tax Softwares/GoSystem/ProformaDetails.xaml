@@ -3,7 +3,7 @@
     <x:Property Name="currentrow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_ClientId" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1005.5999999999999,6782.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,6784</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,13 +129,13 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Sequence- Proforma details" sap:VirtualizedContainerService.HintSize="796,6717.6" sap2010:WorkflowViewState.IdRef="Sequence_87">
+  <Sequence DisplayName="Sequence- Proforma details" sap:VirtualizedContainerService.HintSize="754.4,6719.2" sap2010:WorkflowViewState.IdRef="Sequence_87">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="733.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Proforma details are filling.&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="692,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Proforma details are filling.&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -143,7 +143,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <If Condition="[CurrentRow(&quot;Proforma Details&quot;).ToString.tolower.Contains(&quot;yes&quot;)]" DisplayName="If- Check for proforma" sap:VirtualizedContainerService.HintSize="733.6,6572" sap2010:WorkflowViewState.IdRef="If_23">
+    <If Condition="[CurrentRow(&quot;Proforma Details&quot;).ToString.tolower.Contains(&quot;yes&quot;)]" DisplayName="If- Check for proforma" sap:VirtualizedContainerService.HintSize="692,6573.6" sap2010:WorkflowViewState.IdRef="If_23">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,22 +151,18 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="700,6305.6" sap2010:WorkflowViewState.IdRef="Sequence_85">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:Boolean" Name="Str_ElementExit" />
-            <Variable x:TypeArguments="x:String" Name="abc" />
-          </Sequence.Variables>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="658.4,6307.2" sap2010:WorkflowViewState.IdRef="Sequence_85">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:IfElseIf DisplayName="Else If- 1040 and 1041" sap:VirtualizedContainerService.HintSize="637.6,6216.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+          <ui:IfElseIf DisplayName="Else If- 1040 and 1041" sap:VirtualizedContainerService.HintSize="596,6218.4" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
             <ui:IfElseIf.ConditionBlocks>
               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                 <ui:IfElseIfBlock BlockType="If" Condition="[Cint(CurrentRow(&quot;Type&quot;).ToString)=1040]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                   <ui:IfElseIfBlock.Then>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome:  Individual (1040)" sap:VirtualizedContainerService.HintSize="304,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" InteractionMode="DebuggerApi" ScopeGuid="c467701a-810a-424e-b706-d239cc384d5f" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome:  Individual (1040)" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" InteractionMode="DebuggerApi" ScopeGuid="c467701a-810a-424e-b706-d239cc384d5f" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -1078,7 +1074,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_86">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_86">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

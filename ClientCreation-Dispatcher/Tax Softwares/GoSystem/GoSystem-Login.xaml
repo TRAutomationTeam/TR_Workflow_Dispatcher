@@ -129,9 +129,8 @@
       <AssemblyReference>UiPath.Testing</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="GoSystem-Login" sap:VirtualizedContainerService.HintSize="1065.6,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="GoSystem-Login" sap:VirtualizedContainerService.HintSize="1468.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="Out_Exception" />
       <Variable x:TypeArguments="x:Boolean" Name="isGoSystemLoggedIn" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -159,10 +158,6 @@
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
             <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,196" sap2010:WorkflowViewState.IdRef="Sequence_9">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:Boolean" Name="Exist_FailedMessage" />
-                <Variable x:TypeArguments="x:String" Name="Client_Id" />
-              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -170,9 +165,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="Loging in sequence" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                <Sequence.Variables>
-                  <Variable x:TypeArguments="x:Boolean" Name="isCaptchaAppeared" />
-                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -566,33 +558,5 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">40,564</av:Point>
-          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NCheckState_9" Version="V3">
-        <uix:NCheckState.IfExists>
-          <Sequence DisplayName="Target appears" sap2010:WorkflowViewState.IdRef="Sequence_123">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Sequence>
-        </uix:NCheckState.IfExists>
-        <uix:NCheckState.IfNotExists>
-          <Sequence DisplayName="Target does not appear" sap2010:WorkflowViewState.IdRef="Sequence_124">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Sequence>
-        </uix:NCheckState.IfNotExists>
-      </uix:NCheckState>
-    </FlowStep>
   </Flowchart>
 </Activity>

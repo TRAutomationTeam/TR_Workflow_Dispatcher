@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>994.4000000000001,5320</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,5320</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Select_Application_Tax_Return_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -561,7 +561,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1223.2,1363.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
+          <Sequence sap:VirtualizedContainerService.HintSize="1223.2,1361.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -575,20 +575,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1127.2,857.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="528.8,857.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIf DisplayName="Else If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="1064.8,768.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                  <ui:IfElseIf DisplayName="Else If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="466.4,768.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                     <ui:IfElseIf.ConditionBlocks>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                         <ui:IfElseIfBlock BlockType="If" Condition="[strScanVerifyPlus=&quot;Yes&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_7">
                           <ui:IfElseIfBlock.Then>
                             <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
                               <Sequence.Variables>
-                                <Variable x:TypeArguments="x:Boolean" Name="bool_ScanVerifyPlus" />
+                                <Variable x:TypeArguments="x:Boolean" Name="isScanVerifyPlus" />
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -596,7 +596,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NCheckState DisplayName="Check App State 'Select these'" EnableIfNotExists="False" Exists="[bool_ScanVerifyPlus]" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Timeout="2" Version="V3">
+                              <uix:NCheckState DisplayName="Check App State 'Select these'" EnableIfNotExists="False" Exists="[isScanVerifyPlus]" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Timeout="2" Version="V3">
                                 <uix:NCheckState.IfExists>
                                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,448.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                     <sap:WorkflowViewStateService.ViewState>

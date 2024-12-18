@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,6328</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,6288</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Select_Demo_Document_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -108,7 +108,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Select_Demo_Document" sap:VirtualizedContainerService.HintSize="747.2,6263.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Select_Demo_Document" sap:VirtualizedContainerService.HintSize="747.2,6223.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strCombinedpath" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="strSplitpathlist" />
@@ -390,7 +390,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="684.8,1125.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" ScopeGuid="23ae4e6e-f054-4280-a824-4a2765c1f43d" Timeout="1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="684.8,1085.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" ScopeGuid="23ae4e6e-f054-4280-a824-4a2765c1f43d" Timeout="1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -398,14 +398,14 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="555.2,762.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <Sequence.Variables>
-              <Variable x:TypeArguments="ui:UiElement" Name="ui_element" />
+              <Variable x:TypeArguments="ui:UiElement" Name="uiElement" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'OK'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,672" sap2010:WorkflowViewState.IdRef="NCheckState_1" OutUiElement="[ui_element]" ScopeIdentifier="23ae4e6e-f054-4280-a824-4a2765c1f43d" Timeout="1" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'OK'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,672" sap2010:WorkflowViewState.IdRef="NCheckState_1" OutUiElement="[uiElement]" ScopeIdentifier="23ae4e6e-f054-4280-a824-4a2765c1f43d" Timeout="1" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,428.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
@@ -414,7 +414,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot; Path does not exst pop has appeared &quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="NClick_13" InUiElement="[ui_element]" KeyModifiers="None" MouseButton="Left" Version="V3" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,162.4" sap2010:WorkflowViewState.IdRef="NClick_13" InUiElement="[uiElement]" KeyModifiers="None" MouseButton="Left" Version="V3" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>

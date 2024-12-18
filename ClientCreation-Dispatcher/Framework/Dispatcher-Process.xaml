@@ -131,7 +131,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="5480.8,2968" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1468.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_SubmissionWizardQueueItem" />
       <Variable x:TypeArguments="x:String" Name="ApplicationName" />
@@ -139,7 +139,6 @@
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_Credentials" />
       <Variable x:TypeArguments="x:String" Default="[Nothing]" Name="ClientID" />
       <Variable x:TypeArguments="sd:DataRow" Name="dr_ClientCreation" />
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_QueueItem" />
       <Variable x:TypeArguments="ui:QueueItem" Name="ti_QueueItem" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="Counter" />
       <Variable x:TypeArguments="x:Boolean" Name="isRowFound" />
@@ -147,7 +146,6 @@
       <Variable x:TypeArguments="x:String" Name="str_InputSheetname" />
       <Variable x:TypeArguments="x:String" Name="str_ReporterFilePath" />
       <Variable x:TypeArguments="x:String" Name="str_ReporterSheetName" />
-      <Variable x:TypeArguments="x:Int32" Name="intRowsAffected" />
       <Variable x:TypeArguments="s:DateTime" Name="dt_StartTime" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputDataUpdated" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ReporterDataUpdated" />
@@ -158,9 +156,9 @@
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">4100,32.66666666666666</av:Point>
-        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        <av:PointCollection x:Key="ConnectorLocation">4130,107.66666666666666 4130,137.66666666666666 4130.5,137.66666666666666 4130.5,167.66666666666666</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">4124.8,82.26666666666665 4124.8,112.26666666666665 4130.1,112.26666666666665 4130.1,167.66666666666666</av:PointCollection>
         <x:Double x:Key="Width">5447</x:Double>
         <x:Double x:Key="Height">2855</x:Double>
       </scg:Dictionary>
@@ -218,7 +216,7 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
               </Sequence>
               <FlowStep.Next>
                 <FlowStep x:Name="__ReferenceID52" sap2010:WorkflowViewState.IdRef="FlowStep_2">
@@ -226,7 +224,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">3350,768.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,83.2</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">3450,851.7 3450,913.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">3450,851.7 3450,881.7 3405.2,881.7 3405.2,913.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_87">
@@ -250,18 +248,18 @@
                         </scg:List>
                       </ui:MultipleAssign.AssignOperations>
                     </ui:MultipleAssign>
-                    <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                    <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                   </Sequence>
                   <FlowStep.Next>
                     <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">3350,913.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">3450,965.5 3450,1028.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">3405.2,983.9 3405.2,1013.9 3288.2,1013.9 3288.2,1028.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Create Client ID&quot;]">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Create Client ID&quot;]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -273,11 +271,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">3233,1028.5</av:Point>
-                              <av:Size x:Key="ShapeSize">433.6,81.6</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">3450,1110.5 3450,1168.5</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">3288.2,1098.9 3288.2,1128.9 3405.2,1128.9 3405.2,1168.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Assign ApplicationName" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign DisplayName="Assign ApplicationName" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[ApplicationName]</OutArgument>
                             </Assign.To>
@@ -295,19 +293,19 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">3350,1168.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,83.2</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">3450,1251.7 3450,1281.7 3450.3,1281.7 3450.3,1296.5</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">3405.2,1238.9 3405.2,1268.9 3419.5,1268.9 3419.5,1296.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Sequence converting credentials to dictionary" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                              <Sequence DisplayName="Sequence converting credentials to dictionary" sap:VirtualizedContainerService.HintSize="496,544.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_LoginDetails]" DisplayName="Read Range Workbook login credentials" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[in_Config(&quot;LoginCredentialSheet&quot;).ToString]" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]" />
-                                <Assign DisplayName="Assign Initialising Credential dictionary" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_LoginDetails]" DisplayName="Read Range Workbook login credentials" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[in_Config(&quot;LoginCredentialSheet&quot;).ToString]" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]" />
+                                <Assign DisplayName="Assign Initialising Credential dictionary" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dic_Credentials]</OutArgument>
                                   </Assign.To>
@@ -315,19 +313,19 @@
                                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(of String, Object)]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_LoginDetails]" DisplayName="For Each Row in Credential Data Table" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_LoginDetails]" DisplayName="For Each Row in Credential Data Table" sap:VirtualizedContainerService.HintSize="625.6,714.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                   <ui:ForEachRow.Body>
                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,522.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,548.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If Condition="[String.IsNullOrEmpty(CurrentRow(&quot;GoTaxFields&quot;).ToString)]" DisplayName="If key is not null" sap:VirtualizedContainerService.HintSize="510,435.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+                                        <If Condition="[String.IsNullOrEmpty(CurrentRow(&quot;GoTaxFields&quot;).ToString)]" DisplayName="If key is not null" sap:VirtualizedContainerService.HintSize="529.6,460" sap2010:WorkflowViewState.IdRef="If_1">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -335,7 +333,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <If.Then>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="300,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -344,13 +342,13 @@
                                             </Sequence>
                                           </If.Then>
                                           <If.Else>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Assign DisplayName="Assign adding values in dictionary" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                              <Assign DisplayName="Assign adding values in dictionary" sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:Object">[dic_Credentials(CurrentRow("GoTaxFields").ToString)]</OutArgument>
                                                 </Assign.To>
@@ -371,10 +369,10 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ForEachRow>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_31" Message="[&quot;Tax app : &quot; + ApplicationName]" />
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_31" Message="[&quot;Tax app : &quot; + ApplicationName]" />
                               </Sequence>
                               <FlowStep.Next>
-                                <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID7" DisplayName="Tax Application Name" Expression="[ApplicationName]" sap:VirtualizedContainerService.HintSize="122.4,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+                                <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID7" DisplayName="Tax Application Name" Expression="[ApplicationName]" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                                   <FlowSwitch.Default>
                                     <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_7">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -395,12 +393,12 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">3389.5,1296.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">122.4,87.2</av:Size>
-                                      <av:PointCollection x:Key="Default">3389.5,1318.25 860,1318.25 860,1363.3333333333333</av:PointCollection>
-                                      <av:PointCollection x:Key="CCH Axcess TaxConnector">3511.5,1318.25 3541.5,1318.25 3541.5,1320 4103,1320</av:PointCollection>
-                                      <av:PointCollection x:Key="GoSystem Tax RSConnector">3481.3,1383.7 3481.3,1413.7 3479.8,1413.7 3479.8,1460.5</av:PointCollection>
-                                      <av:PointCollection x:Key="UltraTax CSConnector">3419.75,1383.5 3419.75,1413.5 2370,1413.5 2370,1468.5</av:PointCollection>
-                                      <av:PointCollection x:Key="LacerteConnector">3389.5,1361.75 1320,1361.75 1320,1458.5</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                      <av:PointCollection x:Key="Default">3389.5,1326.5 3359.5,1326.5 3359.5,1389.7333333333333 960,1389.7333333333333</av:PointCollection>
+                                      <av:PointCollection x:Key="CCH Axcess TaxConnector">3449.5,1326.5 3479.5,1326.5 3479.5,1319.8 4103,1319.8</av:PointCollection>
+                                      <av:PointCollection x:Key="GoSystem Tax RSConnector">3419.5,1356.5 3419.5,1386.5 3479.8,1386.5 3479.8,1460.5</av:PointCollection>
+                                      <av:PointCollection x:Key="UltraTax CSConnector">3419.5,1296.5 3419.5,1269.3 2616.6,1269.3 2616.6,1509.3 2586.6,1509.3</av:PointCollection>
+                                      <av:PointCollection x:Key="LacerteConnector">3389.5,1326.5 1566.6,1326.5 1566.6,1499.3 1536.6,1499.3</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <FlowStep x:Key="CCH Axcess Tax" x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_8">
@@ -554,7 +552,7 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                             </ActivityAction.Argument>
-                                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_20" ResizeWindow="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
+                                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_20" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
                                                               <ueab:ExcelApplicationCard.Body>
                                                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                                   <ActivityAction.Argument>
@@ -655,7 +653,7 @@
                                                                   </scg:List>
                                                                 </ui:MultipleAssign.AssignOperations>
                                                               </ui:MultipleAssign>
-                                                              <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_10" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                                              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="479,116" sap2010:WorkflowViewState.IdRef="WriteRange_10" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                                             </Sequence>
                                                             <FlowStep.Next>
                                                               <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_17">
@@ -754,7 +752,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                                   </scg:List>
                                                                                 </ui:MultipleAssign.AssignOperations>
                                                                               </ui:MultipleAssign>
-                                                                              <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_11" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                                                              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_11" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                                                             </Sequence>
                                                                             <FlowStep.Next>
                                                                               <FlowStep x:Name="__ReferenceID58" sap2010:WorkflowViewState.IdRef="FlowStep_5">
@@ -809,7 +807,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                                       </scg:List>
                                                                                     </ui:MultipleAssign.AssignOperations>
                                                                                   </ui:MultipleAssign>
-                                                                                  <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_12" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                                                                                  <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_12" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                                                                                 </Sequence>
                                                                               </FlowStep>
                                                                             </FlowStep.Next>
@@ -962,7 +960,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                           </scg:List>
                                                                         </ui:MultipleAssign.AssignOperations>
                                                                       </ui:MultipleAssign>
-                                                                      <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_9" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                                                      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_9" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                                                     </Sequence>
                                                                     <FlowStep.Next>
                                                                       <FlowStep x:Name="__ReferenceID59" sap2010:WorkflowViewState.IdRef="FlowStep_7">
@@ -1009,7 +1007,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                               </scg:List>
                                                                             </ui:MultipleAssign.AssignOperations>
                                                                           </ui:MultipleAssign>
-                                                                          <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_13" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                                                                          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_13" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                                                                         </Sequence>
                                                                       </FlowStep>
                                                                     </FlowStep.Next>
@@ -1109,7 +1107,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                         </ActivityAction.Argument>
-                                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_19" ResizeWindow="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
+                                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_19" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
                                                           <ueab:ExcelApplicationCard.Body>
                                                             <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                               <ActivityAction.Argument>
@@ -1302,7 +1300,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                       </scg:List>
                                                                     </ui:MultipleAssign.AssignOperations>
                                                                   </ui:MultipleAssign>
-                                                                  <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                                                  <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                                                 </Sequence>
                                                                 <FlowStep.Next>
                                                                   <FlowStep x:Name="__ReferenceID60" sap2010:WorkflowViewState.IdRef="FlowStep_9">
@@ -1333,7 +1331,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                           </scg:List>
                                                                         </ui:MultipleAssign.AssignOperations>
                                                                       </ui:MultipleAssign>
-                                                                      <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_14" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                                                                      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_14" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                                                                     </Sequence>
                                                                   </FlowStep>
                                                                 </FlowStep.Next>
@@ -1481,7 +1479,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                         </ActivityAction.Argument>
-                                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_21" ResizeWindow="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
+                                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_21" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
                                                           <ueab:ExcelApplicationCard.Body>
                                                             <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                               <ActivityAction.Argument>
@@ -1698,7 +1696,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                       </scg:List>
                                                                     </ui:MultipleAssign.AssignOperations>
                                                                   </ui:MultipleAssign>
-                                                                  <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                                                  <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                                                 </Sequence>
                                                                 <FlowStep.Next>
                                                                   <FlowStep x:Name="__ReferenceID61" sap2010:WorkflowViewState.IdRef="FlowStep_11">
@@ -1729,7 +1727,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                           </scg:List>
                                                                         </ui:MultipleAssign.AssignOperations>
                                                                       </ui:MultipleAssign>
-                                                                      <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_15" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                                                                      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_15" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                                                                     </Sequence>
                                                                   </FlowStep>
                                                                 </FlowStep.Next>
@@ -1872,7 +1870,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                         </ActivityAction.Argument>
-                                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_24" ResizeWindow="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
+                                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,1018.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_24" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
                                                           <ueab:ExcelApplicationCard.Body>
                                                             <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                               <ActivityAction.Argument>
@@ -2089,7 +2087,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                       </scg:List>
                                                                     </ui:MultipleAssign.AssignOperations>
                                                                   </ui:MultipleAssign>
-                                                                  <ui:WriteRange AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
+                                                                  <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_ReporterDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[str_ReporterSheetName]" StartingCell="[&quot;A&quot; + str_ReporterRowIndex]" WorkbookPath="[str_ReporterFilePath]" />
                                                                 </Sequence>
                                                                 <FlowStep.Next>
                                                                   <FlowStep x:Name="__ReferenceID62" sap2010:WorkflowViewState.IdRef="FlowStep_13">
@@ -2120,7 +2118,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                                                                           </scg:List>
                                                                         </ui:MultipleAssign.AssignOperations>
                                                                       </ui:MultipleAssign>
-                                                                      <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_16" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+                                                                      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_16" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
                                                                     </Sequence>
                                                                   </FlowStep>
                                                                 </FlowStep.Next>
@@ -2301,14 +2299,9 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:WriteRange AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
         </Sequence>
         <Sequence DisplayName="Update Data" sap:VirtualizedContainerService.HintSize="635.2,1647.2" sap2010:WorkflowViewState.IdRef="Sequence_72">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="db_Connection" />
-            <Variable x:TypeArguments="sd:DataTable" Name="dt_Output" />
-            <Variable x:TypeArguments="sd:DataTable" Name="dt_Temp" />
-          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2409,7 +2402,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[dr_TempRow.ItemArray]" DataTable="[dt_ReporterDataUpdated]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                  <ui:AppendRange DataTable="[dt_ReporterDataUpdated]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="[str_ReporterSheetName]" WorkbookPath="[str_ReporterFilePath]" />
+                  <ui:AppendRange WorkbookPathResource="{x:Null}" DataTable="[dt_ReporterDataUpdated]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="[str_ReporterSheetName]" WorkbookPath="[str_ReporterFilePath]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reporter File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_strRefKey">[in_TransactionID]</InArgument>

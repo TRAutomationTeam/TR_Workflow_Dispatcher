@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,5688.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,5688.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Selecting_Binder_Template_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
@@ -234,8 +234,8 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="766.4,4520.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="ui:UiElement" Name="ui_BinderTemplate" />
-              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_children" />
+              <Variable x:TypeArguments="ui:UiElement" Name="uiBinderTemplate" />
+              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="uiElementCollection" />
               <Variable x:TypeArguments="ui:UiElement" Name="ui_Targetelement" />
               <Variable x:TypeArguments="x:Int32" Name="int_Taxyearindex" />
               <Variable x:TypeArguments="x:Int32" Name="int_Taxsoftwareindex" />
@@ -294,7 +294,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:FindRelative DisplayName="Find Relative Element 'column header  TAX YEAR'" sap:VirtualizedContainerService.HintSize="608,139.2" sap2010:WorkflowViewState.IdRef="FindRelative_1" RelativeElement="[ui_BinderTemplate]">
+                  <ui:FindRelative DisplayName="Find Relative Element 'column header  TAX YEAR'" sap:VirtualizedContainerService.HintSize="608,139.2" sap2010:WorkflowViewState.IdRef="FindRelative_1" RelativeElement="[uiBinderTemplate]">
                     <ui:FindRelative.CursorPosition>
                       <ui:CursorPosition OffsetY="15" Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -313,9 +313,9 @@
                       </ui:Target>
                     </ui:FindRelative.Target>
                   </ui:FindRelative>
-                  <ui:FindChildren Children="[ui_children]" DisplayName="Find Children 'list item'" Filter="&lt;ctrl name='20*' /&gt;" sap:VirtualizedContainerService.HintSize="608,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
+                  <ui:FindChildren Children="[uiElementCollection]" DisplayName="Find Children 'list item'" Filter="&lt;ctrl name='20*' /&gt;" sap:VirtualizedContainerService.HintSize="608,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
                     <ui:FindChildren.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[ui_BinderTemplate]" Id="11906007-539c-4674-a390-8c2379ab0053" InformativeScreenshot="ebcce0ec647b5b2f936f11aa954d55da">
+                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[uiBinderTemplate]" Id="11906007-539c-4674-a390-8c2379ab0053" InformativeScreenshot="ebcce0ec647b5b2f936f11aa954d55da">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -325,7 +325,7 @@
                       </ui:Target>
                     </ui:FindChildren.Target>
                   </ui:FindChildren>
-                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="608,961.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ui_children]">
+                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="608,961.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[uiElementCollection]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="ui:UiElement">
                         <ActivityAction.Argument>
@@ -469,7 +469,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:FindRelative DisplayName="Find Relative Element 'column header  TAX YEAR'" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindRelative_2" RelativeElement="[ui_BinderTemplate]">
+                  <ui:FindRelative DisplayName="Find Relative Element 'column header  TAX YEAR'" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindRelative_2" RelativeElement="[uiBinderTemplate]">
                     <ui:FindRelative.CursorPosition>
                       <ui:CursorPosition OffsetY="15" Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -488,9 +488,9 @@
                       </ui:Target>
                     </ui:FindRelative.Target>
                   </ui:FindRelative>
-                  <ui:FindChildren Children="[ui_children]" DisplayName="Find Children 'list item'" Filter="&lt;ctrl  /&gt;" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_CHILDREN">
+                  <ui:FindChildren Children="[uiElementCollection]" DisplayName="Find Children 'list item'" Filter="&lt;ctrl  /&gt;" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_CHILDREN">
                     <ui:FindChildren.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[ui_BinderTemplate]" Id="11906007-539c-4674-a390-8c2379ab0053" InformativeScreenshot="ebcce0ec647b5b2f936f11aa954d55da">
+                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[uiBinderTemplate]" Id="11906007-539c-4674-a390-8c2379ab0053" InformativeScreenshot="ebcce0ec647b5b2f936f11aa954d55da">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -500,7 +500,7 @@
                       </ui:Target>
                     </ui:FindChildren.Target>
                   </ui:FindChildren>
-                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="545.6,558.4" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[ui_children]">
+                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="545.6,558.4" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[uiElementCollection]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="ui:UiElement">
                         <ActivityAction.Argument>
@@ -644,7 +644,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:FindRelative DisplayName="Find Relative Element 'column header  TAX YEAR'" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindRelative_3" RelativeElement="[ui_BinderTemplate]">
+                  <ui:FindRelative DisplayName="Find Relative Element 'column header  TAX YEAR'" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindRelative_3" RelativeElement="[uiBinderTemplate]">
                     <ui:FindRelative.CursorPosition>
                       <ui:CursorPosition OffsetY="15" Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -671,9 +671,9 @@
                       <InArgument x:TypeArguments="x:String">["&lt;ctrl name='"+in_str_BinderTemplate+"' /&gt;"]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:FindChildren Children="[ui_children]" DisplayName="Find Children 'list item'" Filter="[strFilterText]" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_CHILDREN">
+                  <ui:FindChildren Children="[uiElementCollection]" DisplayName="Find Children 'list item'" Filter="[strFilterText]" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_CHILDREN">
                     <ui:FindChildren.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[ui_BinderTemplate]" Id="11906007-539c-4674-a390-8c2379ab0053" InformativeScreenshot="ebcce0ec647b5b2f936f11aa954d55da">
+                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[uiBinderTemplate]" Id="11906007-539c-4674-a390-8c2379ab0053" InformativeScreenshot="ebcce0ec647b5b2f936f11aa954d55da">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -683,7 +683,7 @@
                       </ui:Target>
                     </ui:FindChildren.Target>
                   </ui:FindChildren>
-                  <If Condition="[ui_children.Count =0]" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="If_7">
+                  <If Condition="[uiElementCollection.Count =0]" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="If_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -721,7 +721,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="545.6,606.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ui_children]">
+                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each item" sap:VirtualizedContainerService.HintSize="545.6,606.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[uiElementCollection]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="ui:UiElement">
                         <ActivityAction.Argument>

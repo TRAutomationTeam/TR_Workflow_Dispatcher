@@ -3,7 +3,7 @@
     <x:Property Name="out_CurrentRow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="out_ClientID" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1408.8,3567.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,2961.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -131,26 +131,26 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="584,3502.4" sap2010:WorkflowViewState.IdRef="Sequence_339">
+  <Sequence sap:VirtualizedContainerService.HintSize="585.6,2896.8" sap2010:WorkflowViewState.IdRef="Sequence_339">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="521.6,3365.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="523.2,2760" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard x:Key="1040" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [Input Screen     Ct" sap:VirtualizedContainerService.HintSize="481.6,3082.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_37" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
+      <uix:NApplicationCard x:Key="1040" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [Input Screen     Ct" sap:VirtualizedContainerService.HintSize="451.2,2965.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_37" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2916" sap2010:WorkflowViewState.IdRef="Sequence_315">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,2800.8" sap2010:WorkflowViewState.IdRef="Sequence_315">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,93 +311,6 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,640.8" sap2010:WorkflowViewState.IdRef="Sequence_341">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="387.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="52">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ab67716f-6832-4bbd-baf4-951cbc346c7a">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                    </ui:TypeInto>
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="387.2,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(tab)][u(hk)]" Version="V3" />
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="387.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="52">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ab67716f-6832-4bbd-baf4-951cbc346c7a">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                    </ui:TypeInto>
-                  </Sequence>
-                </ui:CommentOut.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:CommentOut>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,255" sap2010:WorkflowViewState.IdRef="Sequence_340">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Broker'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_74" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable CvElementArea="401, 104, 106, 31" CvTextArea="432, 111, 56, 16" CvTextArgument="Broker" CvType="Button" DesignTimeRectangle="401, 107, 106, 26" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;ctrl name='W2*' role='page tab' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;ctrl name='Broker  ' role='page tab' automationid='' check:text='Broker' /&gt;" Guid="e8d2f43e-b3b1-421e-973a-d9c4f92a44ad" InformativeScreenshot="12b5c208e577b01da7aaa8258cc789e8.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
-                      </uix:NClick.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Employer's name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NTypeInto_56" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="[out_CurrentRow(&quot;Div Name&quot;).ToString+ &quot;[k(Down)]&quot;]" Version="V3">
-                      <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable CvElementArea="724, 294, 731, 39" CvType="InputBox" DesignTimeRectangle="724, 294, 731, 39" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="273bb8f8-31dc-4029-a1d3-e044a4597daf" ImageBase64="" InformativeScreenshot="70e07b008b6318b0b0a7e4a03d225711.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CvTextArea="471, 298, 233, 32" CvTextArgument="Employer's name" CvType="Text" DesignTimeRectangle="471, 298, 233, 32" ElementType="Text" Guid="1c557739-6243-4abb-bd97-39acbffc6f81" SearchSteps="CV" TargetType="ComputerVisionBased" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NTypeInto.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NTypeInto>
-                  </Sequence>
-                </ui:CommentOut.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:CommentOut>
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Broker'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_78" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CvElementArea="401, 104, 106, 31" CvTextArea="432, 111, 56, 16" CvTextArgument="Broker" CvType="Button" DesignTimeRectangle="401, 107, 106, 26" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;ctrl name='W2*' role='page tab' idx='1' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;ctrl name='Broker  ' role='page tab' automationid='' check:text='Broker' /&gt;" Guid="e8d2f43e-b3b1-421e-973a-d9c4f92a44ad" InformativeScreenshot="12b5c208e577b01da7aaa8258cc789e8.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
@@ -482,7 +395,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '10 Dependent'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,49.6" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '10 Dependent'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CvElementArea="1660, 579, 150, 40" CvType="InputBox" DesignTimeRectangle="1660, 579, 150, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="41fb1ebb-cd00-40a2-a98e-3de669c35f50" ImageBase64="" InformativeScreenshot="03c4fcf29b2ce0d5cc880cff6bcb7482.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -512,24 +425,24 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard x:Key="1041" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1041 [ULAB2812238 TrustABC] - [Input Screen     Ctrl+I]" sap:VirtualizedContainerService.HintSize="577.6,2922.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_39" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
+      <uix:NApplicationCard x:Key="1041" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1041 [ULAB2812238 TrustABC] - [Input Screen     Ctrl+I]" sap:VirtualizedContainerService.HintSize="483.2,2516.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_39" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2716" sap2010:WorkflowViewState.IdRef="Sequence_338">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2350.4" sap2010:WorkflowViewState.IdRef="Sequence_338">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Income'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_75" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Income'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_75" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CvTextArea="46, 281, 67, 17" CvTextArgument="Income" CvType="Text" DesignTimeRectangle="46, 278, 69, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTreeView32' /&gt;&lt;ctrl name='Income' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTreeView32' /&gt;&lt;ctrl name='Income' role='outline item' automationid='' check:text='Income' /&gt;" Guid="d939d0ec-8c37-4161-9b87-0bc30caf2e50" ImageBase64="" InformativeScreenshot="031a31512cffcc9b9181248a885c1647.png" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Broker'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Broker'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CvElementArea="401, 105, 78, 28" CvTextArea="407, 111, 56, 16" CvTextArgument="Broker" CvType="Button" DesignTimeRectangle="401, 107, 79, 26" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTabControl32' idx='3' /&gt;&lt;ctrl name='Broker  ' role='page tab' /&gt;" FuzzyAccuracy="0.91" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTabControl32' /&gt;&lt;ctrl name='Broker  ' role='page tab' automationid='' check:text='Broker' /&gt;" Guid="7a6ec606-09d1-4121-8a66-aed9b203a21d" InformativeScreenshot="be890268e8715600c26addf1e9995b18.png" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -540,7 +453,7 @@
                   </uix:TargetAnchorable>
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Consolidated Broker'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_57" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="[out_CurrentRow(&quot;Div Name&quot;).ToString+ &quot;[k(Down)]&quot;]" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Consolidated Broker'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_57" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="[out_CurrentRow(&quot;Div Name&quot;).ToString+ &quot;[k(Down)]&quot;]" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CvElementArea="723, 295, 730, 38" CvType="InputBox" DesignTimeRectangle="723, 295, 730, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="d9f53b7c-1f6b-4c2f-a047-7f7bc4f19ff3" ImageBase64="" InformativeScreenshot="b8b363a87a791e5126faeb5d18abbe8a.png" IsResponsive="True" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -551,7 +464,7 @@
                   </uix:TargetAnchorable>
                 </uix:NTypeInto.Target>
               </uix:NTypeInto>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click W2" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_83" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click W2" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_83" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CvElementArea="430, 135, 67, 30" CvTextArea="436, 142, 53, 15" CvTextArgument="Income" CvType="Button" DesignTimeRectangle="431, 136, 66, 29" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;ctrl name='Income' role='page tab' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTabControl32' /&gt;&lt;ctrl name='Income' role='page tab' automationid='' check:text='Income' /&gt;" Guid="e147fe8c-4fcd-45be-a80d-d5a3a654ffe2" InformativeScreenshot="2d848b86561cbd8b0d775b06c29b2f78.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -562,7 +475,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NClick>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="387.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="45">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="387.2,167.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="45">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="00f86856-e9ec-4164-a625-9208445d028a">
                     <ui:Target.TimeoutMS>
@@ -574,42 +487,7 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,330.4" sap2010:WorkflowViewState.IdRef="Sequence_342">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Dividends (including'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_74" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="49" Version="V3">
-                      <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable CvElementArea="1618, 387, 232, 40" CvType="InputBox" DesignTimeRectangle="1618, 387, 232, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="57e65a36-0554-4908-86ee-d2da81955127" ImageBase64="" InformativeScreenshot="65c9caf027770530becee0fec1a36642.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
-                              <uix:Target CvTextArea="327, 391, 480, 33" CvTextArgument="Dividends (including foreign source)" CvType="Text" DesignTimeRectangle="327, 391, 480, 33" ElementType="Text" Guid="fc019ffc-aac3-406e-8cb1-4da2b8543bb2" SearchSteps="CV" TargetType="ComputerVisionBased" />
-                              <uix:Target CvTextArea="1603, 398, 11, 16" CvTextArgument="S" CvType="Text" DesignTimeRectangle="1603, 398, 11, 16" ElementType="Text" Guid="877962d5-73d2-4ced-8762-59ad7b76fbad" SearchSteps="CV" TargetType="ComputerVisionBased" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NTypeInto.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NTypeInto>
-                  </Sequence>
-                </ui:CommentOut.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:CommentOut>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Extraordinary dividends'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_72" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="66" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Extraordinary dividends'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_72" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="66" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CvElementArea="1598, 427, 252, 40" CvType="InputBox" DesignTimeRectangle="1598, 427, 252, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="a58c7076-9291-46c2-9d3a-01080b0904ea" ImageBase64="" InformativeScreenshot="4e2ce3875512975f325c84bd3b1de848.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -730,7 +608,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Switch>
-    <ui:LogMessage DisplayName="Log Message (Proforma information)" sap:VirtualizedContainerService.HintSize="521.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Proforma details are entered.&quot;]">
+    <ui:LogMessage DisplayName="Log Message (Proforma information)" sap:VirtualizedContainerService.HintSize="523.2,48" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Proforma details are entered.&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
