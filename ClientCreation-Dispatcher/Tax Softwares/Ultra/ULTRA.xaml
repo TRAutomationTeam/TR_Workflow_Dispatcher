@@ -157,7 +157,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="ULTRA" sap:VirtualizedContainerService.HintSize="1439,778" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="ULTRA" sap:VirtualizedContainerService.HintSize="1853,778" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
       <Variable x:TypeArguments="x:String" Name="LastClientIdCreated" />
@@ -481,13 +481,13 @@
                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="1176,29412" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V2">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="1176,11271" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V2">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1142,29121" sap2010:WorkflowViewState.IdRef="Sequence_287">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1142,10980" sap2010:WorkflowViewState.IdRef="Sequence_287">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:Decimal" Name="OutNumber" />
                                         <Variable x:TypeArguments="x:Boolean" Name="Bool_ElementExits" />
@@ -500,7 +500,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NCheckState DisplayName="Check App State 'User: 6125716'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1080,446" sap2010:WorkflowViewState.IdRef="NCheckState_15" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Timeout="20" Version="V3">
+                                      <uix:NCheckState DisplayName="Check App State 'User: 6125716'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1080,406" sap2010:WorkflowViewState.IdRef="NCheckState_15" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Timeout="20" Version="V3">
                                         <uix:NCheckState.IfExists>
                                           <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_102" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V3">
                                             <uix:NClick.Target>
@@ -518,7 +518,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </uix:NCheckState>
-                                      <uix:NCheckState DisplayName="Check App State 'UltraTax CS'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1080,989" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Timeout="10" Version="V3">
+                                      <uix:NCheckState DisplayName="Check App State 'UltraTax CS'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="1080,949" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Timeout="10" Version="V3">
                                         <uix:NCheckState.IfExists>
                                           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,700" sap2010:WorkflowViewState.IdRef="Sequence_351">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -570,7 +570,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </uix:NCheckState>
-                                      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1080,558" sap2010:WorkflowViewState.IdRef="RetryScope_5" NumberOfRetries="4" RetryInterval="00:00:04">
+                                      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1080,478" sap2010:WorkflowViewState.IdRef="RetryScope_5" NumberOfRetries="4" RetryInterval="00:00:04">
                                         <ui:RetryScope.ActivityBody>
                                           <ActivityAction>
                                             <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_11" Shortcuts="[d(hk)][d(ctrl)]n[u(ctrl)][u(hk)]" Version="V3" />
@@ -607,9 +607,9 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:LogMessage>
-                                      <ui:InterruptibleDoWhile Condition="[bool_DuplicateClient]" CurrentIndex="[indx_Duplicate]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1080,7068" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
+                                      <ui:InterruptibleDoWhile Condition="[bool_DuplicateClient]" CurrentIndex="[indx_Duplicate]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1080,5165" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
                                         <ui:InterruptibleDoWhile.Body>
-                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1046,6922" sap2010:WorkflowViewState.IdRef="Sequence_238">
+                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1046,5019" sap2010:WorkflowViewState.IdRef="Sequence_238">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="s:String[]" Default="[{&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;0&quot;}]" Name="Arr_Alphabates" />
                                             </Sequence.Variables>
@@ -683,16 +683,16 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NTypeInto>
-                                            <ui:IfElseIf DisplayName="Else If- Checking for Type" sap:VirtualizedContainerService.HintSize="984,5193" sap2010:WorkflowViewState.IdRef="IfElseIf_11">
+                                            <ui:IfElseIf DisplayName="Else If- Checking for Type" sap:VirtualizedContainerService.HintSize="984,3290" sap2010:WorkflowViewState.IdRef="IfElseIf_11">
                                               <ui:IfElseIf.ConditionBlocks>
                                                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                   <ui:IfElseIfBlock BlockType="If" Condition="[out_CurrentRow(&quot;Type&quot;).ToString= &quot;1040&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                                                     <ui:IfElseIfBlock.Then>
-                                                      <Sequence DisplayName="Body- For Individual" sap:VirtualizedContainerService.HintSize="416,1260" sap2010:WorkflowViewState.IdRef="Sequence_233">
+                                                      <Sequence DisplayName="Body- For Individual" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_233">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The client type 1040 is selected&quot;]">
@@ -768,11 +768,11 @@
                                                   </ui:IfElseIfBlock>
                                                   <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_CurrentRow(&quot;Type&quot;).ToString= &quot;1041&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
                                                     <ui:IfElseIfBlock.Then>
-                                                      <Sequence DisplayName="Body- For fudiciary" sap:VirtualizedContainerService.HintSize="416,693" sap2010:WorkflowViewState.IdRef="Sequence_235">
+                                                      <Sequence DisplayName="Body- For fudiciary" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_235">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_53" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The client type 1041 is selected&quot;]">
@@ -932,12 +932,12 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </uix:NClick>
-                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'EIN / SSN'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NClick_95" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V3">
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'EIN / SSN'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NClick_104" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V3">
                                                           <uix:NClick.Target>
-                                                            <uix:TargetAnchorable CvElementArea="200, 593, 99, 29" CvType="InputBox" DesignTimeRectangle="205, 597, 91, 21" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1140' /&gt;&lt;ctrl name='EIN / SSN:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Preparer address block: ' cls='#32770' /&gt;&lt;wnd cls='#32770' title='Federal' /&gt;&lt;wnd ctrlid='1140' /&gt;&lt;ctrl name='EIN / SSN:' role='editable text' automationid='' /&gt;" Guid="e20e0bf4-6c25-4830-aa73-63e2ce170cef" InformativeScreenshot="b75fe840a52592b013cf2e2be9c2f2b7.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='utw*.exe' title='New Client' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                            <uix:TargetAnchorable CVScreenId="61337358-f6ec-46b9-918f-85824ec2b46b" DesignTimeRectangle="195, 538, 96, 26" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1140' /&gt;" Guid="b455523e-645e-482a-9b41-5bd9a977eb0a" InformativeScreenshot="c58b5b3fd5e67e78249ac4b8b8809cc0.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='New Client' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                                                               <uix:TargetAnchorable.Anchors>
                                                                 <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                                  <uix:Target CvTextArea="115, 597, 69, 18" CvTextArgument="EIN / SSN:" CvType="Text" DesignTimeRectangle="117, 598, 70, 17" ElementType="Text" FullSelectorArgument="&lt;ctrl name='EIN / SSN:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Preparer address block: ' cls='#32770' /&gt;&lt;wnd cls='#32770' title='Federal' /&gt;&lt;wnd aaname='EIN / SSN:' cls='Static' title='EI&amp;amp;N / SSN:' /&gt;&lt;ctrl name='EIN / SSN:' role='text' automationid='' check:text='EIN / SSN:' /&gt;" Guid="310c03aa-5d5f-4f6f-93d4-2baa42545395" ImageBase64="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" SearchSteps="Selector" />
+                                                                  <uix:Target CVScreenId="61337358-f6ec-46b9-918f-85824ec2b46b" DesignTimeRectangle="110, 541, 70, 16" ElementType="Text" FullSelectorArgument="&lt;ctrl name='EIN / SSN:' role='text' /&gt;" Guid="e7d6f2db-c2ab-4e96-bd50-c8cf4583adc9" SearchSteps="Selector" />
                                                                 </scg:List>
                                                               </uix:TargetAnchorable.Anchors>
                                                             </uix:TargetAnchorable>
@@ -1091,19 +1091,19 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:LogMessage>
-                                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1080,18899" sap2010:WorkflowViewState.IdRef="IfElseIf_14">
+                                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1080,2821" sap2010:WorkflowViewState.IdRef="IfElseIf_14">
                                         <ui:IfElseIf.ConditionBlocks>
                                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                             <ui:IfElseIfBlock BlockType="If" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.Contains(&quot;1040&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_15">
                                               <ui:IfElseIfBlock.Then>
-                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="705,10388" sap2010:WorkflowViewState.IdRef="Sequence_261">
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_261">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="uc:CvString" Name="FillingStatus" />
                                                   </Sequence.Variables>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.9" DisplayName="Click 'Filing Status'" sap:VirtualizedContainerService.HintSize="643,189" sap2010:WorkflowViewState.IdRef="NClick_64" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V3">
@@ -4621,11 +4621,11 @@
                                             </ui:IfElseIfBlock>
                                             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.Contains(&quot;1041&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_16">
                                               <ui:IfElseIfBlock.Then>
-                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="576,2915" sap2010:WorkflowViewState.IdRef="Sequence_266">
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_266">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll- For Activite Screen" sap:VirtualizedContainerService.HintSize="514,169" sap2010:WorkflowViewState.IdRef="NMouseScroll_20" InteractionMode="HardwareEvents" MovementUnits="1" Version="V3">
@@ -5318,11 +5318,11 @@
                                             </ui:IfElseIfBlock>
                                             <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.Contains(&quot;1065&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_17">
                                               <ui:IfElseIfBlock.Then>
-                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,2850" sap2010:WorkflowViewState.IdRef="Sequence_361">
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_361">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <uix:NCheckState DisplayName="Check App State 'Add Selected State'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,710" sap2010:WorkflowViewState.IdRef="NCheckState_19" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Timeout="10" Version="V4">
@@ -5336,7 +5336,7 @@
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Don't ask this question…'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V4">
                                                           <uix:NCheck.Target>
-                                                            <uix:TargetAnchorable CVScreenId="734c2e1f-60c7-49b4-96d0-7eeb877102e4" CvElementArea="27, 394, 19, 18" CvTextArea="47, 395, 174, 17" CvTextArgument="Don't ask this question again." CvType="CheckBox" DesignTimeRectangle="29, 396, 216, 16" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;wnd ctrlid='20546' title='&amp;amp;Don&amp;apos;t ask this question again.' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='20546' title='&amp;amp;Don&amp;apos;t ask this question again.' check:fulltext='Don&amp;apos;t ask this question again.' /&gt;" Guid="81c3ecd2-529c-4ce0-bfb8-7916a42c95d8" ImageBase64="" InformativeScreenshot="9eb69d926d95c215a156f547214902bd.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='Add Selected State ' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                            <uix:TargetAnchorable CVScreenId="df8cdd7f-c7d9-45d8-8179-a7c25cb2558f" CvElementArea="22, 316, 15, 15" CvTextArea="38, 317, 139, 14" CvTextArgument="Don't ask this question again." CvType="CheckBox" DesignTimeRectangle="23, 317, 173, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;wnd ctrlid='20546' title='&amp;amp;Don&amp;apos;t ask this question again.' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='20546' title='&amp;amp;Don&amp;apos;t ask this question again.' check:fulltext='Don&amp;apos;t ask this question again.' /&gt;" Guid="3cb4291a-1e92-4931-92c6-d394210b181a" InformativeScreenshot="0b96af3bae3cda558a5b5190734bdf1e.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='Add Selected State ' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                           </uix:NCheck.Target>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -5346,7 +5346,7 @@
                                                         </uix:NCheck>
                                                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="NClick_101" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V4">
                                                           <uix:NClick.Target>
-                                                            <uix:TargetAnchorable CVScreenId="00f47d17-5f45-4d6a-849e-ef1e30f765c8" CvElementArea="342, 375, 93, 28" CvTextArea="374, 381, 26, 15" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="342, 376, 94, 29" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="b2d7ddb4-d38f-4a67-a8cd-094a8aa813d3" InformativeScreenshot="898e40b97b606451fb6ad39dacf16a32.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='Add Selected State ' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                                            <uix:TargetAnchorable CVScreenId="00f47d17-5f45-4d6a-849e-ef1e30f765c8" DesignTimeRectangle="274, 301, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Yes' /&gt;" Guid="b2d7ddb4-d38f-4a67-a8cd-094a8aa813d3" InformativeScreenshot="d09fef06e66e0d8c9cd677d95c7dac64.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='Add Selected State ' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                                           </uix:NClick.Target>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -5357,13 +5357,7 @@
                                                       </Sequence>
                                                     </uix:NCheckState.IfExists>
                                                     <uix:NCheckState.Target>
-                                                      <uix:TargetAnchorable DesignTimeRectangle="0, 0, 574, 435" DesignTimeScaleFactor="1.25" Guid="bd56f59d-1921-4774-9339-6b669d820adc" InformativeScreenshot="9cfeab44d7778f47a845d16e4cf3d279.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='Add Selected State ' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
-                                                        <uix:TargetAnchorable.FuzzySelectorArgument>
-                                                          <InArgument x:TypeArguments="x:String">
-                                                            <Literal x:TypeArguments="x:String" Value="" />
-                                                          </InArgument>
-                                                        </uix:TargetAnchorable.FuzzySelectorArgument>
-                                                      </uix:TargetAnchorable>
+                                                      <uix:TargetAnchorable CVScreenId="2fc53482-7d19-4f92-bcf2-9d06088f448a" CvTextArea="16, 9, 101, 12" CvTextArgument="Add Selected State" CvType="Text" DesignTimeRectangle="16, 9, 101, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="7f03103a-b1a2-477d-97e7-e2ecf22b5edb" ImageBase64="" InformativeScreenshot="f371cadbb4d1d411435978c797166765.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='#32770' title='Add Selected State ' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
                                                     </uix:NCheckState.Target>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
