@@ -2,8 +2,9 @@
   <x:Members>
     <x:Property Name="currentrow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_ClientId" Type="InArgument(x:String)" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1408.8,6784</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>951.2,5446.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +49,9 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -122,6 +126,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -129,13 +134,13 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Sequence- Proforma details" sap:VirtualizedContainerService.HintSize="754.4,6719.2" sap2010:WorkflowViewState.IdRef="Sequence_87">
+  <Sequence DisplayName="Sequence- Proforma details" sap:VirtualizedContainerService.HintSize="961.6,5381.6" sap2010:WorkflowViewState.IdRef="Sequence_87">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="692,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Proforma details are filling.&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="899.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Proforma details are filling.&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -143,7 +148,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <If Condition="[CurrentRow(&quot;Proforma Details&quot;).ToString.tolower.Contains(&quot;yes&quot;)]" DisplayName="If- Check for proforma" sap:VirtualizedContainerService.HintSize="692,6573.6" sap2010:WorkflowViewState.IdRef="If_23">
+    <If Condition="[CurrentRow(&quot;Proforma Details&quot;).ToString.tolower.Contains(&quot;yes&quot;)]" DisplayName="If- Check for proforma" sap:VirtualizedContainerService.HintSize="899.2,5236" sap2010:WorkflowViewState.IdRef="If_23">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,31 +156,31 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="658.4,6307.2" sap2010:WorkflowViewState.IdRef="Sequence_85">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="768,1932" sap2010:WorkflowViewState.IdRef="Sequence_85">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:IfElseIf DisplayName="Else If- 1040 and 1041" sap:VirtualizedContainerService.HintSize="596,6218.4" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+          <ui:IfElseIf DisplayName="Else If- 1040 and 1041" sap:VirtualizedContainerService.HintSize="705.6,1843.2" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
             <ui:IfElseIf.ConditionBlocks>
               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                 <ui:IfElseIfBlock BlockType="If" Condition="[Cint(CurrentRow(&quot;Type&quot;).ToString)=1040]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                   <ui:IfElseIfBlock.Then>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome:  Individual (1040)" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" InteractionMode="DebuggerApi" ScopeGuid="c467701a-810a-424e-b706-d239cc384d5f" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome:  Individual (1040)" sap:VirtualizedContainerService.HintSize="655.2,1473.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" InteractionMode="DebuggerApi" ScopeGuid="c467701a-810a-424e-b706-d239cc384d5f" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,821.6" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="621.6,1267.2" sap2010:WorkflowViewState.IdRef="Sequence_114">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Source Documents'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_90" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Source Documents'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_90" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/e7bb346b-8812-4d06-a173-3f1d570a9563/600M/600M#!/97/335/0/0,0,0,0,0" CvType="Text" DesignTimeRectangle="57, 512, 334, 34" DesignTimeScaleFactor="1.1299999952316284" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='Source Documents (W-2, 1099s, 1098)' /&gt;" Guid="a715beb6-d2ec-4db3-951b-e095b523215c" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -192,7 +197,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1099-DIV'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_93" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1099-DIV'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_93" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/e7bb346b-8812-4d06-a173-3f1d570a9563/600M/600M#!/97/335/0/0,0,0,0,0" CvType="Text" DesignTimeRectangle="82, 651, 313, 34" DesignTimeScaleFactor="1.1299999952316284" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='1099-DIV' tag='SPAN' /&gt;" Guid="ccff339f-ce06-4f88-b8a8-f91765a6ee82" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT0AAAAmCAYAAAC2/UxxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJUSURBVHhe7dnLbcJAFEbhdEU2qckL+gDRC6IRKIMeJp6XPb7zsFDIhv98khVhc8deHY3DlwMAIUQPgBSiB0AK0QMghegBkEL0AEghegCkED0AUogeAClED4AUogdACtEDIIXoAZDSjd7zenSH8yN9Ktwv7vD9sxynezqfhLnl+tFdn+lCtjNfMd9fj4uzo/fzfD4888Od/Hdaz5+E7zbWAPDZmtFbwmWj8by5aT6/hCoEaQ1bnCtCF75ffE4BW0MX4zQMX5ip41Tda7ZGL1/vRS3ed6qKDODTmeg93XXyO6Cjm/xfE70yKtl6Ls7akIT4pJnWfIjadJunOzrR88J6xexm/RToZthMrAHo2EavCFAdqHbU1pnOrm253pkPcRq8Zg6iZ3eS9pltFKMUdhtfABK6/9OrozeIWojSYKeXolWvOQvzg13XKHrmmar1W2vbV3QAUt4YvRy4MjJxZolW+G65Rtp1/Vf0Gru68IzV7g+AirdGz4vh8yHzx3zeRiuFLx5z7O7mxw7rT9HLz5PnO6/YAGS8EL1OMHyUBjun3Z3VErW8K8xHCtUoeub/ga3obcI4DCgABS9Eb//cXihbAWyHqjAIlZ3trZXP794LwMd7KXrVjwAhSMWrqfm8fbWc7c23dKIX197OdqOW7ut3kNXrOQApr0XPCxGKAWlFJMYoX2/s0DbzO8HzzP3Wo167v5NLP2jwAwYgrxs9APhERA+AFKIHQArRAyCF6AGQQvQASCF6AKQQPQBSiB4AKUQPgBSiB0AK0QMghegBkEL0AAhx7hdAI9yZ1DQwdAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -209,7 +214,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="2" DisplayName="Click Add new Payer" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_94" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="2" DisplayName="Click Add new Payer" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_94" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/e7bb346b-8812-4d06-a173-3f1d570a9563/600M/600M#!/0/0/0/0,0,0,0,0" CvType="Text" DesignTimeRectangle="74, 594, 261, 30" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Add new Payer' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add new Payer' tag='SPAN' type='' class='bento-tree-item-cta ng-binding navtree-add-node' check:text='Add new Payer' /&gt;" Guid="6dbc07a4-e336-4104-aa9a-2cfcf5229916" InformativeScreenshot="45661985c3284bf2434a8f6c7a6c662d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -236,7 +241,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add new Payer'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_109" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="[currentrow(&quot;Div Name&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add new Payer'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_109" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="[currentrow(&quot;Div Name&quot;).ToString]" Version="V3">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/e7bb346b-8812-4d06-a173-3f1d570a9563/600M/600M#!/0/0/0/0,0,0,0,0" DesignTimeRectangle="789, 222, 176, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' name='newnode' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='newnode' type='text' class='ng-pristine ng-valid ng-empty ng-valid-maxlength has-visited ng-touched' aaname='' /&gt;" Guid="82aa85ea-8562-4e70-84ac-3fbe333ab2a0" InformativeScreenshot="1f09e69bcdbc11a24ae3650df7e006df.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -253,7 +258,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NTypeInto>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_101" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_101" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/135fbc2e-8946-42d4-bc20-43861c998b0b/600M/600M#!/0/0/0/0,0,0,0,0" CvElementArea="786, 293, 83, 34" CvTextArea="812, 305, 31, 10" CvTextArgument="SAVE" CvType="Button" DesignTimeRectangle="789, 283, 79, 30" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Save' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Save' type='' class='btn btn-primary ng-isolate-scope' check:text='Save' /&gt;" Guid="5a8ec115-a92b-4c5b-b5a2-d72ac5a1e568" InformativeScreenshot="e550eef9afa235f394f502e896161dd2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -270,14 +275,14 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <Sequence DisplayName="Sequence - Div" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_127">
+                            <Sequence DisplayName="Sequence - Div" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_127">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'checked'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_125" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'checked'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_125" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/7b96d546-14be-490f-84c0-7c1d846c3d01/600M/600M#!/97/335/0/0,0,0,0,0" CvElementArea="535, 503, 22, 22" CvType="RadioButton" DesignTimeRectangle="539, 507, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl id='53_5' tag='INPUT' tabindex='3' /&gt;" FuzzySelectorArgument="&lt;webctrl id='53_5' tag='INPUT' tabindex='3' type='radio' /&gt;" Guid="df4de57a-f23d-4a9e-9b38-94f0fd5c6094" InformativeScreenshot="ccb07b4f1380aaf8618335c11ff47b53.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -410,7 +415,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NTypeInto>
                             </Sequence>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Collapse All'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_98" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Collapse All'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_98" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/135fbc2e-8946-42d4-bc20-43861c998b0b/600M/600M#!/0/0/0/0,0,0,0,0" CvElementArea="368, 263, 17, 17" CvTextArea="285, 265, 82, 16" CvTextArgument="Collapse All" CvType="Button" DesignTimeRectangle="286, 250, 108, 34" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='collapseNavTree' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='collapseNavTree' tag='DIV' type='' class='pull-right-collapse-all text-bold ng-scope' aaname='Collapse All ' check:innerText='Collapse All' /&gt;" Guid="ca64379b-8991-42c7-b7de-25f0640b52a3" InformativeScreenshot="481a28ffe7840ceaca7cf8cef0dd05c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
                               </uix:NClick.Target>
@@ -421,7 +426,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Click 'Source Documents'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_102" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="0.5" DisplayName="Click 'Source Documents'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_102" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/e7bb346b-8812-4d06-a173-3f1d570a9563/600M/600M#!/97/335/0/0,0,0,0,0" CvType="Text" DesignTimeRectangle="51, 439, 298, 30" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='Source Documents (W-2, 1099s, 1098)' /&gt;" Guid="a715beb6-d2ec-4db3-951b-e095b523215c" InformativeScreenshot="d22d1506a7ca546de21c80ab00df658a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -438,7 +443,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'W-2'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_116" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'W-2'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_116" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/4c1ebff2-2ec1-43cf-a424-5722f439e72e/600M/600M#!/0/0/0/0,0,0,0,0" DesignTimeRectangle="90, 657, 350, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='W-2' id='-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='W-2' id='-label' tag='SPAN' type='' class='bento-tree-item-cta ng-binding navtree-has-data' aaname='W-2' check:innerText='W-2' /&gt;" Guid="f6aa8d35-874f-4669-8ba5-4ee23c27d4f7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWIAAAAqCAYAAACJIFHPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHgSURBVHhe7dtBbqMwFIDhuVVn00OxyEGi5CJVepAq6iUqtWfwAAFjGxo6s+iTpt8nWapMyfKX9YBfCYBQQgwQTIgBggkxQDAhBggmxADBhBggmBADBBNigGBCDBBMiAGCCTFAMCEGCCbEAMFyiN8vh/Tw+zE9dM/pfdob5P1+HV+mzdFHeuq29luv6Tjdf1uH9PQ2XQKgOBG/nKdQntN12hpcT0VET6/Tbu/tOXV7Yc3/0y4xBpgtId4Ma3OaLU/Ln4S7tD5lL6foKuoAP1gxI14i2V0+bltzbLvDKtI5sp8GdeP3evv3Afws1cO6PIaYIjlHcwjpfO02D96O7L5/vQ/g/1WFuB4lLNEc4zufjsdIzyOLv5v15t83IwbIqhAvc+JzupZ/7137giXCTsMApTrExcO546k8AQ/mE3J/mr3Ms+ONh3DT2pwLD8tsGKDShLh5Xe1eUKtrd0Kc365wEgbYsgpxHdtmlltEdVj3P+To5RFGv5yEATatQlzFtvnKrn6veP+BW3u6rpYwA4zWIS5juxHLHNdVpFvNxyDtEmKA0UaIAfhOQgwQTIgBggkxQDAhBggmxADBhBggmBADBBNigGBCDBBMiAGCCTFAMCEGCCbEAMGEGCCYEAOESukPrSMlD52zo0AAAAAASUVORK5CYII=" InformativeScreenshot="52fbbba4cd22b34ca0d80c2f141af4dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.PointOffset>
@@ -453,7 +458,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add new Employer'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_117" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add new Employer'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_117" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/4c1ebff2-2ec1-43cf-a424-5722f439e72e/600M/600M#!/0/0/0/0,0,0,0,0" DesignTimeRectangle="92, 770, 326, 38" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl aria-label='Add new Employer' id='-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Add new Employer' id='-label' tag='SPAN' type='' class='bento-tree-item-cta ng-binding navtree-add-node' aaname='Add new Employer' check:innerText='Add new Employer' /&gt;" Guid="d63f43fa-d1d0-46e6-8973-e6512f4975cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAqCAYAAADVqhLrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVuSURBVHhe7ZwxSyQ9GIC/X+V9hXei4m+wE0TEUrYQLMRCrAQL8RrlFAQROxEPRAttxE7QQ9BeQUUPxOKKgzO3mUmyk+Sdycjpnbs8DwSdzJtMkuF9Njvr+p8CAIBKECUAQAJECQCQAFECACRAlAAACRAlAEACRAkAkABRAgAkQJQAAAkQJQBAAkQJAJCgUpR3d3dqc3NTzczMqPHxcTU3N6d2d3fVjx8/TAQAQOcjivL29lZNTU2prq4usfT09KgvX76onz9/mhYAAJ1LJMqzszM1MDAgCjIsIyMj6unpybQEAOhMPFFeX1+rvr4+UYplZWxsTP369cv08DIedibUh/8/qg+L56YmzbfFZnzjq3owxxJ1Yt4L2Vj1GpSUxs53E/l2ZPehTdYL4F/gRPn8/KyGhoYiEeq32ZaLi4vovC7r6+sm4iV8V9uNj2ph8XNTCBNq+85UJ+hIUf7jsSJKgGqcKA8PD0UJ9vb2mgilLi8vS2Ne/Lzy1AryXC28YOeEKF8fRAlQjRPl9PR0qQQtZaLU5fj42ETVoyiIKllk5+xb0WbMthBbJ8Yjk/Rn9S372Wq7cGrOO3KJF/tu9SkJXqiz1zKHIbVFefdVNfQLy6n+2RpTdq3snK3zd+dZ/4vn0RoVryeJ0j0WMaU4p/xcOKf8HULxMUrYh7++5h3FTmvs8foDvA+cKIeHhz3x3d/fmzMye3t7Xvza2po5U4dAKG53mR9a8uRuJaRLvEJS14mJsIKs6MdJspD4YUx2XHy+avsNZVExlqyPqrFanAyD64t1QowbkxFa4ZrhGPM2hfthru3ulzn2xBbU5fehog87DuG+A7w3nCgHBwc98T08VKfu/v6+Fz8/P2/O1CASYywlMRnDJK8TIyGJWUz0ojg1vuDDGC2YRqMonXwsxd1YSEt2UqkSTRMjZm/+wdxCcWZIc61c03CuZo3DFwR3XthZN0n1AfBecaIcHR31xHdwcKBOTk7U6WkrY/Qfmus6XZaWlrz45eVlE5VCTpBQOnnCBwneJEt8m9R1YiSkdp4gypM469vWZ22slHSb5u/ZW2NT552XSY7VIglM6l8SZTSPfH6e8L01FcYcXL9SepV92Hp/DADvGSfK2dlZT3y21H1GqXeYtTAJF++e8iInYotiUteJEakrymBsrjjxFJJdt8+umddl/ejrJCT4PkUZr2l8/XzXmB2H57I+CuvlFUQJ7YcT5dHRkSjAOqLs7u6u/bXGMrk5OXm7kjjOE0udGAmpnZfswVgqcCLSfZp4WydLyic5VsurilJ4hOCtadCnRriW7Tu6p2V9eCBKaB+cKDX6mzahBD99+uTebm9tbUXndVlZWTE9pKgWUJ5wJsEkMdj2NqnrxEgkRVkmMCG5TV8LzXjbNhfPhDC2mL8iSnGurRhPlOKalrzAFebu3dOSPvx1R5TQPniivLq6evE3c/SzzdrfzMkSpUIeJsFs8oRJnierL5Y6MRFewhqi5I4/YBJlYeOKwjJ9xbExf0eUxXnEL1aeKJvkbeL5xFKzcy8Ta3Fs/i4WUUI74YlSoz+86e/vF6UYFr0DfXx8NC3ThFKLiXeDLtF1ada/6t9RmsMMSUQFEeRFGns8ZkmyZXhjl4rt909EadfE9hmMKxSlxr3gmBKK0FJ1T8M+fCkiSmgfIlFqbm5u1OTkpChHXfTXGldXV/nvQW2AFWXpi8YfEe9OAToRUZQWLcyNjY3sT39s0Z9u8/8o24c3FaW0owXoQCpFCe3P24iy/NkkQCeCKAEAEiBKAIAEiBIAIAGiBABIgCgBABIgSgCABIgSACABogQASIAoAQASIEoAgASIEgAgAaIEAEiAKAEAKlHqNxvDdiXsVc6fAAAAAElFTkSuQmCC" InformativeScreenshot="396c38e2be0f66dcdb189de0e7589e76.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.PointOffset>
@@ -468,7 +473,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT newnode'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_117" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="[currentrow(&quot;W-2 Name&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT newnode'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_117" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="[currentrow(&quot;W-2 Name&quot;).ToString]" Version="V3">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/135fbc2e-8946-42d4-bc20-43861c998b0b/600M/600M#!/0/0/0/0,0,0,0,0" CvElementArea="788, 233, 177, 23" CvType="InputBox" DesignTimeRectangle="789, 234, 176, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='newnode' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='newnode' tag='INPUT' type='text' class='ng-pristine ng-valid ng-empty ng-valid-maxlength has-visited ng-touched' aaname='' /&gt;" Guid="159c6ee6-7937-4265-8afe-c6db2adb17d9" InformativeScreenshot="e208b835583882e1c109c9803e7cfa33.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
                               </uix:NTypeInto.Target>
@@ -479,7 +484,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NTypeInto>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_118" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="559.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_118" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/135fbc2e-8946-42d4-bc20-43861c998b0b/600M/600M#!/0/0/0/0,0,0,0,0" CvElementArea="786, 293, 83, 34" CvTextArea="812, 305, 31, 10" CvTextArgument="SAVE" CvType="Button" DesignTimeRectangle="745, 367, 98, 38" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Save' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Save' type='' class='btn btn-primary ng-isolate-scope' check:text='Save' /&gt;" Guid="5a8ec115-a92b-4c5b-b5a2-d72ac5a1e568" InformativeScreenshot="1a4a8657c105d129571e8f1df8b7fb31.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -496,14 +501,14 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <Sequence sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Sequence_126">
+                            <Sequence sap:VirtualizedContainerService.HintSize="559.2,495.2" sap2010:WorkflowViewState.IdRef="Sequence_126">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_124" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="496.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_124" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/7b96d546-14be-490f-84c0-7c1d846c3d01/600M/600M#!/81/268/0/0,0,0,0,0" CvElementArea="527, 625, 21, 22" CvType="RadioButton" DesignTimeRectangle="530, 629, 16, 16" DesignTimeScaleFactor="1.25" ElementType="RadioButton" FullSelectorArgument="&lt;webctrl id='1_10' tag='INPUT' tabindex='4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='1_10' tag='INPUT' tabindex='4' type='radio' /&gt;" Guid="2cd26cd9-d827-4118-b791-d252d18d6d8b" InformativeScreenshot="6ed5a8ed4799af332707e9bdbaa48c37.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -513,84 +518,208 @@
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NClick.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
                               </uix:NClick>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Wages'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_127" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="11" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='34' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
+                              <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_TransactionItem(&quot;TaxYear&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="496.8,190.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Federal Income'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_128" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="12" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='35' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social security wages" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_129" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="13" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='36' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social Security Tax Withheld'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_130" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="14" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='37' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medicare Wages and Tips'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_131" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="15" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='38' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medicare Tax Withheld'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_132" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="16" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='39' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Dependent Care Benefits'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_133" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="17" Version="V3">
-                                <uix:NTypeInto.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='42' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                                </uix:NTypeInto.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </uix:NTypeInto>
+                                <Sequence x:Key="2023" DisplayName="Sequence_2023" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_131">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Wages'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_127" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="11" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='34' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Federal Income'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_128" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="12" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='35' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social security wages" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_129" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="13" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='36' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social Security Tax Withheld'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_130" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="14" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='37' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medicare Wages and Tips'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_131" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="15" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='38' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medicare Tax Withheld'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_132" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="16" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='39' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Dependent Care Benefits'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="NTypeInto_133" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="17" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='42' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                                <Sequence x:Key="2024" DisplayName="Sequence_2024" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_132">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Wages'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_173" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="11" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="dc-organizertoweb.fasttax.com/Home/Locator/0d2228da-eb99-4d6c-94e1-ca054aa4c009/600M/600M/2024" CVScreenId="d90322c3-bffa-4b24-bfc2-c1df6f7965a4" CvElementArea="1066, 443, 101, 35" CvType="InputBox" DesignTimeRectangle="1070, 694, 97, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='27' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_7' tag='INPUT' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4' aaname='' /&gt;" Guid="35bab463-d456-4c8f-8ae0-f4c5a0c41940" InformativeScreenshot="9acb7e4cffe6bf7641c5408031cdc72d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Federal Income'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_174" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="12" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" DesignTimeRectangle="1518, 727, 97, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='28' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="a50c23f1711766a1137d816a28b8dc23.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social security wages" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_175" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="13" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" DesignTimeRectangle="1068, 853, 98, 32" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='29' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="69c8a524c4b9d131831c3ff21d740507.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Social Security Tax Withheld'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_176" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="14" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" DesignTimeRectangle="1517, 853, 97, 32" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='30' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="b9afcf74602f266f542b052767a87d54.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medicare Wages and Tips'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_177" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="15" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" DesignTimeRectangle="1068, 975, 98, 32" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='31' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="c5ca65bdb7543cd853fc2398229611d1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Medicare Tax Withheld'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_178" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="16" Version="V3">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" DesignTimeRectangle="1517, 760, 97, 32" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='32' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="67644eef0c09b37c4bb5878bf194423e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NTypeInto.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NTypeInto>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="353.6,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_133">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Dependent Care Benefits'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NTypeInto_179" ScopeIdentifier="c467701a-810a-424e-b706-d239cc384d5f" Text="17" Version="V3">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="9, 145, 0, 0" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='42' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="f7a1e6f9bbd30e71bc4909293d0d1c11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                          </uix:NTypeInto.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NTypeInto>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                </Sequence>
+                              </Switch>
                             </Sequence>
                           </Sequence>
                         </ActivityAction>
@@ -600,7 +729,7 @@
                       </uix:NApplicationCard.TargetApp>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -609,13 +738,13 @@
                 </ui:IfElseIfBlock>
                 <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Cint(CurrentRow(&quot;Type&quot;).ToString)=1041]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
                   <ui:IfElseIfBlock.Then>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome:  Fiduciary (1041)" sap:VirtualizedContainerService.HintSize="545.6,5848.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" InteractionMode="DebuggerApi" ScopeGuid="538d1b51-1ec9-415d-b766-0398c4659415" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome:  Fiduciary (1041)" sap:VirtualizedContainerService.HintSize="299.2,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" InteractionMode="DebuggerApi" ScopeGuid="538d1b51-1ec9-415d-b766-0398c4659415" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,5682.4" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1664" sap2010:WorkflowViewState.IdRef="Sequence_119">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -658,19 +787,19 @@
                             <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3">
                               <ui:RetryScope.ActivityBody>
                                 <ActivityAction>
-                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_122">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Add new Payer" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NClick_108" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Add new Payer" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_108" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/8645ca8e-9aa1-412b-9343-e330211d6875/600M/600M#!/0/0/0/0,0,0,0,0" CvTextArea="92, 644, 150, 16" CvTextArgument="Add new 1099-DIV Payer" CvType="Text" DesignTimeRectangle="74, 637, 261, 30" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-label='Add new 1099-DIV Payer' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Add new 1099-DIV Payer' tag='SPAN' type='' class='bento-tree-item-cta ng-binding navtree-add-node' aaname='Add new 1099-DIV Payer' check:text='Add new 1099-DIV Payer' /&gt;" Guid="de755daa-cab2-4b48-b96f-c26365397948" InformativeScreenshot="ed0385c33024b669f7185c7f232c5518.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                       </uix:NClick.Target>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
@@ -705,7 +834,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NTypeInto>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_109" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_109" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/e7bb346b-8812-4d06-a173-3f1d570a9563/600M/600M#!/0/0/0/0,0,0,0,0" CvElementArea="732, 336, 92, 37" CvTextArea="759, 347, 35, 11" CvType="Button" DesignTimeRectangle="734, 337, 88, 34" DesignTimeScaleFactor="1.1299999952316284" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" Guid="7b6d79fd-a407-4010-b9e0-6d19cf3be0a1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAmCAYAAABJVvz/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOjSURBVGhD7ZrNT9swGMb3p46NAi1tw8eAjQISsB047cL4aEqhdAKk7cJhfwCHSUjVxIfGYHwMODAxKDCxAwcEXp/UBsd52yYtaRH1Iz0ScW0n/tm8cfLmGdOqqjTwKksDr7LKBr6yssamplKst3eQRaPd7GVjmD1vCD5JY2wYY29sMDfmWbayus4peJcn4KenWRY3p62LaG5pc1xYvViMHSyyZ+ecjju5An5zc8MmJpO5ExmOk9e7m5oNNhmfthi5UUngOzt7LNTayRpehMgTagctNq3hTra/f8ipFVZR4D82f1ozSJ1E2+lAUzS3QH9xerQKAs9kvukQUoYR31eL3FRJ4MfHf6zZojrULm2wOzk55TTtcgBH8A9HXpEdabt3ONLFbm9vOdV7OYCPjk6SHWh7N3Z2qmzAsc/WN8mHM1ieKft0G3DTnCEbapdvMzHD6eZlA0410K7csu6A491IqLWDbOCHFxe/sOvra372vJaWvjrqbWxssqurKxbPPc2JspGR99YuAH3IdY+Oflv18Tfqo50stZ9qOBjqYGtr3/kVSMBTqTmygR8GsPPzCxtglKkwUAaIBweHjskAWAEXRlv0KfpQj2vp2fQCpywBj8WGyMp+uNAKVQ3IAI56qI924je1TNQVvz8m4H39w5yyBDxqdJOV/bIIKXAh8AAIkNQEqWWirvgdoNWQggmQJ61aBluhO+C1ep8NAAChgldXqBpC5DJqNVNltTLYCt0BbwzUNoGA1SmvQByrkn+HMUFY5cvLGVs4gR8T8MZAhI9AAm4YPWRlvzw//9l2jJUqQ1NDhPhPUMsAHKFDLocfE3CjrYdTloD39b8lK/thgMLOQ5a8ZcPKvbz854ClToooo7Z7OFZjeLH7hZ8eGHjHr0ACnv64QFbWrtxzc584ZQk4EqPVfPCpF+PBZ32dePCBqAbalRnpN1k24OMTU2Qj7fJtmilONy8bcKT8dVrt4YzXsxcXfzndvGzAoUQixQJNEbIDbffG3juZTHOq93IAR4qtrf012Ym2e7d3vHGXYoOQ+annL6sqNZXpESKBQ/gASMdz724JtrPdvcLfphQEDm1tbevPJTwY977t7V1Oj1ZR4BDeVUSiXeQJtO+NT0uy2TNOrbBKAocQ/D+MmXr3Qhi7kbHxBHmDpOQKuBBuBHGe2dfxHRn5lGOfXUqegMtCYjQ5nWaxviEro/GUP8jHKo4aPbmxDltjlt+NeFXZwLXKEWP/AfoVo7WXalEKAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                                   <uix:TargetAnchorable.Anchors>
@@ -718,15 +847,15 @@
                               </uix:NClick.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <Sequence DisplayName="1041 Sequence - Div" sap:VirtualizedContainerService.HintSize="449.6,2988" sap2010:WorkflowViewState.IdRef="Sequence_130">
+                            <Sequence DisplayName="1041 Sequence - Div" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_130">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -742,6 +871,27 @@
                                   </ui:Target>
                                 </ui:Activate.Target>
                               </ui:Activate>
+                              <uix:NMouseScroll KeyModifiers="{x:Null}" DelayBefore="10" Direction="Down" DisplayName="Mouse Scroll 'Payer Information'" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_4" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Timeout="30" Version="V4">
+                                <uix:NMouseScroll.SearchedElement>
+                                  <uix:SearchedElement>
+                                    <uix:SearchedElement.Target>
+                                      <uix:TargetAnchorable BrowserURL="dc-organizertoweb.fasttax.com/Home/Locator/c95ab0fe-be8d-437b-b3dd-30ec9b8ae499/600M/600M/2024" CVScreenId="fe2d3118-927f-4774-b8aa-35ec312e9da9" DesignTimeRectangle="570, 672, 98, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='25' /&gt;" Guid="fea8cb3a-1a47-4944-9979-0fd358de82f5" InformativeScreenshot="bbbe802b320be9962b5a972b9106f685.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' title='2024 | 1041 | 8059XT | ABC' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:SearchedElement.Target>
+                                    <uix:SearchedElement.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:SearchedElement.Timeout>
+                                  </uix:SearchedElement>
+                                </uix:NMouseScroll.SearchedElement>
+                                <uix:NMouseScroll.Target>
+                                  <uix:TargetAnchorable BrowserURL="dc-organizertoweb.fasttax.com/Home/Locator/c95ab0fe-be8d-437b-b3dd-30ec9b8ae499/600M/600M/2024" CVScreenId="fe2d3118-927f-4774-b8aa-35ec312e9da9" CvTextArea="549, 555, 166, 13" CvTextArgument="PAYER INFORMATION" CvType="Text" DesignTimeRectangle="531, 545, 709, 36" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Payer Information' class='panel-heading' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Payer Information' class='panel-heading' tag='DIV' type='' check:innerText='PAYER INFORMATION' /&gt;" Guid="048c9f01-23ec-40fd-9ceb-5a37c20c57b4" ImageBase64="" InformativeScreenshot="eabca7c5170ce9ac31e711e128b5fccc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                </uix:NMouseScroll.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NMouseScroll>
                               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Ordinary Dividends'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_162" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Text="11" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="571, 714, 115, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='25' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="1c12b420bb53e1c90aee69bc647936dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
@@ -901,7 +1051,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1099-INT'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_119" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1099-INT'" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_119" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/25d2a095-1b0b-45b1-80b4-851bc8009c95/600M/600M#!/0/0/0/0,0,0,0,0" DesignTimeRectangle="90, 657, 350, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-label='1099-INT' id='-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='1099-INT' id='-label' tag='SPAN' type='' class='bento-tree-item-cta ng-binding' aaname='1099-INT' check:innerText='1099-INT' /&gt;" Guid="c79d227f-a25c-4b06-8e3c-9c6af08ea615" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWIAAAAqCAYAAACJIFHPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIxSURBVHhe7dpBToNAFIBhb6UbD9WFBzF6EVMPYkwvYaJnGCkMpeAMQmN9LL4vIRF4Q+vmD5n0JgEQSogBggkxQDAhBggmxADBhBggmBADBBNigGBCDBBMiAGCCTFAMCEGCCbEAMGEGCDYTIi/0svuPj2+5dORQ3q8u0+3/fF0yNfPfLym3dnMbv+Vb5xZMlPw/jT5zLfnmfXd/9HPt2vPPrN0LP0eAH+hGuI+WD9D3EV4iNX0vJEDO1zrYrh6pqIW4tu7h/Tyka+djEM8NncP4H8UQjx+252G+HP/0Fx/Tu/5vNWGcLjWhnL3mj7zeasN7xDKJTM19RAXninEwMZNQpwjfIxZfmOdhvhHBFvdum629ma7dqauHOIm4PsuyOP1QgxsW32PuBji+YB21/9qpq4a4uZNur03emMXYmDbrhDiHMPitsO6mZq5EPfPGO4LMbBtVwlxv2c7zOXgrZ2pmA1xo9vH7r+7EAPbdp0QH+XQdscxkhfOFPwW4iHqxy0KIQa2bWWICxFsdQGdzo5UnjdyPpP/Hoe6G/s9xI28frc/CDGwaatDfOnP16brlszULApxo9+iaA8hBjZqdYj7t98hXvUth9Pa09vpypmKpSEetiiEGNiuC0J8lGPcH6WQ5dD2R/E5S2YKloe40X+GEAMbVQ8xAP9CiAGCCTFAMCEGCCbEAMGEGCCYEAMEE2KAYEIMEEyIAYIJMUAwIQYIJsQAwYQYIJgQAwQTYoBQKX0DUOWMfBka4gEAAAAASUVORK5CYII=" InformativeScreenshot="d6d1c1a6df195cad644c1251f23cf38b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.PointOffset>
@@ -911,23 +1061,23 @@
                               </uix:NClick.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add new 1099-INT Payer'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_120" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add new 1099-INT Payer'" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_120" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/25d2a095-1b0b-45b1-80b4-851bc8009c95/600M/600M#!/0/0/0/0,0,0,0,0" DesignTimeRectangle="92, 695, 326, 38" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl aria-label='Add new 1099-INT Payer' id='-label' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Add new 1099-INT Payer' id='-label' tag='SPAN' type='' class='bento-tree-item-cta ng-binding navtree-add-node' aaname='Add new 1099-INT Payer' check:innerText='Add new 1099-INT Payer' /&gt;" Guid="98cf3c5c-a9bf-46fc-83f6-af1b1d22debd" ImageBase64="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" InformativeScreenshot="5212bf2bede726e7533d01405350dbf1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add new'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_118" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Text="[currentrow(&quot;Int Name&quot;).ToString]" Version="V3">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Add new'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="449.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_118" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Text="[currentrow(&quot;Int Name&quot;).ToString]" Version="V3">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/8645ca8e-9aa1-412b-9343-e330211d6875/600M/600M#!/0/0/0/0,0,0,0,0" CvElementArea="788, 295, 178, 22" CvType="InputBox" DesignTimeRectangle="789, 296, 176, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='newnode' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='newnode' tag='INPUT' type='text' class='*' aaname='' /&gt;" Guid="dc8fad50-38b5-4083-a907-85bebc1681ae" InformativeScreenshot="56e460f4b5bb9a81e97a3bf3c277d17a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -939,7 +1089,7 @@
                               </uix:NTypeInto.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -961,10 +1111,10 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <Sequence DisplayName="1041 Sequence - Int" sap:VirtualizedContainerService.HintSize="449.6,1728.8" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                            <Sequence DisplayName="1041 Sequence - Int" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="Sequence_129">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -980,6 +1130,27 @@
                                   </ui:Target>
                                 </ui:Activate.Target>
                               </ui:Activate>
+                              <uix:NMouseScroll KeyModifiers="{x:Null}" DelayBefore="10" Direction="Down" DisplayName="Mouse Scroll 'Payer Information'" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Timeout="30" Version="V4">
+                                <uix:NMouseScroll.SearchedElement>
+                                  <uix:SearchedElement>
+                                    <uix:SearchedElement.Target>
+                                      <uix:TargetAnchorable BrowserURL="dc-organizertoweb.fasttax.com/Home/Locator/c95ab0fe-be8d-437b-b3dd-30ec9b8ae499/600M/600M/2024" CVScreenId="fe2d3118-927f-4774-b8aa-35ec312e9da9" DesignTimeRectangle="570, 672, 98, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='25' /&gt;" Guid="fea8cb3a-1a47-4944-9979-0fd358de82f5" InformativeScreenshot="bbbe802b320be9962b5a972b9106f685.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' title='2024 | 1041 | 8059XT | ABC' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:SearchedElement.Target>
+                                    <uix:SearchedElement.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:SearchedElement.Timeout>
+                                  </uix:SearchedElement>
+                                </uix:NMouseScroll.SearchedElement>
+                                <uix:NMouseScroll.Target>
+                                  <uix:TargetAnchorable BrowserURL="dc-organizertoweb.fasttax.com/Home/Locator/c95ab0fe-be8d-437b-b3dd-30ec9b8ae499/600M/600M/2024" CVScreenId="fe2d3118-927f-4774-b8aa-35ec312e9da9" CvTextArea="549, 555, 166, 13" CvTextArgument="PAYER INFORMATION" CvType="Text" DesignTimeRectangle="531, 545, 709, 36" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Payer Information' class='panel-heading' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Payer Information' class='panel-heading' tag='DIV' type='' check:innerText='PAYER INFORMATION' /&gt;" Guid="048c9f01-23ec-40fd-9ceb-5a37c20c57b4" ImageBase64="" InformativeScreenshot="eabca7c5170ce9ac31e711e128b5fccc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                </uix:NMouseScroll.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NMouseScroll>
                               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Interest income not included in box 3'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_156" ScopeIdentifier="538d1b51-1ec9-415d-b766-0398c4659415" Text="11" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://dc-organizertoweb.fasttax.com/Home/Locator/c56ffae4-caa4-4cdf-ba97-860eb59af981/600M/600M#!/133/557/0/0,0,0,0,0" CvElementArea="1067, 842, 147, 36" CvType="InputBox" DesignTimeRectangle="570, 675, 98, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' tabindex='25' /&gt;" FuzzySelectorArgument="&lt;webctrl id='otw_textbox_1' tag='INPUT' tabindex='12' type='text' class='otw-control otw-textbox form-control bento-icon-arrow-right4 edit-import-text-color' aaname='' /&gt;" Guid="c9367bc6-490e-4940-95c2-e3d964e7d05c" ImageBase64="" InformativeScreenshot="d63982174fd867e496496627d7a7e3a0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='organizer' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
@@ -1055,7 +1226,7 @@
                       </uix:NApplicationCard.TargetApp>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>

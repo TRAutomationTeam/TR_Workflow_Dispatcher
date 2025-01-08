@@ -4,6 +4,7 @@
     <x:Property Name="in_ClientId" Type="InArgument(x:String)" />
     <x:Property Name="in_dr_CurrentRow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_Dic_Credential" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
   </x:Members>
   <this:GoSystem_UpdateBasicInfo.in_Dic_Credential>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
@@ -11,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,596.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,489.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GoSystem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,6 +65,7 @@
       <x:String>UiPath.UIAutomationNext.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -140,13 +142,13 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="GoSystem-UpdateBasicInfo" sap:VirtualizedContainerService.HintSize="416,424.8" sap2010:WorkflowViewState.IdRef="Sequence_192">
+  <Sequence DisplayName="GoSystem-UpdateBasicInfo" sap:VirtualizedContainerService.HintSize="1010.4000000000001,5384.8" sap2010:WorkflowViewState.IdRef="Sequence_192">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: Activate" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Timeout="5" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: Activate" sap:VirtualizedContainerService.HintSize="948,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Timeout="5" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -176,7 +178,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: GoSystem Tax RS" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" ScopeGuid="d7098346-0313-4378-92e0-6ced79be39ed" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: GoSystem Tax RS" sap:VirtualizedContainerService.HintSize="948,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" ScopeGuid="d7098346-0313-4378-92e0-6ced79be39ed" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -305,7 +307,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_187" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Basic information fields are filling&quot;]">
+    <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="948,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_187" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Basic information fields are filling&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -313,10 +315,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - Engagement Type" Expression="[in_dr_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - Engagement Type" Expression="[in_dr_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="948,5008" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -327,7 +329,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_290" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Separate tab has been open for filling client details.&quot;]">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_290" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Separate tab has been open for filling client details.&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -335,13 +337,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: 2022 | 1040 | 0485VP | Anderson, Jack" sap:VirtualizedContainerService.HintSize="845.6,8653.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: 2022 | 1040 | 0485VP | Anderson, Jack" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="812,8413.6" sap2010:WorkflowViewState.IdRef="Sequence_166">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="812,6233.6" sap2010:WorkflowViewState.IdRef="Sequence_166">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -484,7 +486,7 @@
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="749.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_298" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The payers date of birth is &quot;+in_dr_CurrentRow(&quot;DOB&quot;).ToString+&quot; entered.&quot;]" />
-                <If Condition="[in_dr_CurrentRow(&quot;Filing Status&quot;).ToString.ToLower.Contains(&quot;married&quot;)]" DisplayName="If filling status is married" sap:VirtualizedContainerService.HintSize="749.6,2236.8" sap2010:WorkflowViewState.IdRef="If_31">
+                <If Condition="[in_dr_CurrentRow(&quot;Filing Status&quot;).ToString.ToLower.Contains(&quot;married&quot;)]" DisplayName="If filling status is married" sap:VirtualizedContainerService.HintSize="749.6,56.8" sap2010:WorkflowViewState.IdRef="If_31">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -779,6 +781,7 @@
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="sd:DataRow" x:Key="currentrow">[in_dr_CurrentRow]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_ClientId">[in_ClientId]</InArgument>
+                    <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Compute'" sap:VirtualizedContainerService.HintSize="749.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_108" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b72b3d29-5f29-48ef-8a03-825422e05052" Version="V3">
@@ -813,20 +816,20 @@
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </uix:NApplicationCard>
       </Sequence>
-      <Sequence x:Key="1041" DisplayName="Sequence-1041" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="Sequence_169">
+      <Sequence x:Key="1041" DisplayName="Sequence-1041" sap:VirtualizedContainerService.HintSize="908,4704" sap2010:WorkflowViewState.IdRef="Sequence_169">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_310" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;The separate tab has been opened for filling trust fields.&quot;]">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_310" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;The separate tab has been opened for filling trust fields.&quot;]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -834,7 +837,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: " sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: " sap:VirtualizedContainerService.HintSize="845.6,4558.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -1130,6 +1133,7 @@
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="sd:DataRow" x:Key="currentrow">[in_dr_CurrentRow]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_ClientId">[in_ClientId]</InArgument>
+                    <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1184,7 +1188,7 @@
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
