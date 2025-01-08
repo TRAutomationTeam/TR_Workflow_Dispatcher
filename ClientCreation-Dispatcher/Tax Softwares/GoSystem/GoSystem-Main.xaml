@@ -55,6 +55,7 @@
       <x:String>UiPath.Excel.Model</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -116,9 +117,10 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="GoSystem_Main" sap:VirtualizedContainerService.HintSize="1468.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="GoSystem_Main" sap:VirtualizedContainerService.HintSize="1468.8,20" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientData" />
       <Variable x:TypeArguments="x:Int32" Name="int_IndexCount" />
@@ -266,7 +268,7 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">70,554</av:Point>
                           <av:Size x:Key="ShapeSize">200,52</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">170,606 170,636 171.5,636 171.5,656</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">170,606 170,636 115.2,636 115.2,656</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch DisplayName="TryCatch - Create Return ID" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
@@ -321,20 +323,21 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">60,656</av:Point>
-                              <av:Size x:Key="ShapeSize">223.2,52</av:Size>
+                              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="TryCatch - Update Basic Info" sap:VirtualizedContainerService.HintSize="434,322" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                          <TryCatch DisplayName="TryCatch - Update Basic Info" sap:VirtualizedContainerService.HintSize="436.8,551.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <TryCatch.Try>
-                              <ui:RetryScope DisplayName="Retry Scope - Update Basic Info" sap:VirtualizedContainerService.HintSize="376,288" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+                              <ui:RetryScope DisplayName="Retry Scope - Update Basic Info" sap:VirtualizedContainerService.HintSize="376,320" sap2010:WorkflowViewState.IdRef="RetryScope_2">
                                 <ui:RetryScope.ActivityBody>
                                   <ActivityAction>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GoSystem - UpdateBasicInfo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ClientCreation-Dispatcher\Tax Softwares\GoSystem\GoSystem - UpdateBasicInfo.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GoSystem - UpdateBasicInfo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ClientCreation-Dispatcher\Tax Softwares\GoSystem\GoSystem - UpdateBasicInfo.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ClientId">[out_ClientId]</InArgument>
                                         <InArgument x:TypeArguments="sd:DataRow" x:Key="in_dr_CurrentRow">[out_ExecuteRow]</InArgument>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Dic_Credential">[in_Dic_Credential]</InArgument>
+                                        <InArgument x:TypeArguments="sd:DataRow" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -355,10 +358,10 @@
                               </ui:RetryScope>
                             </TryCatch.Try>
                             <TryCatch.Catches>
-                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,159" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -366,7 +369,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exceptionDetails" />
                                   </ActivityAction.Argument>
-                                  <Throw DisplayName="Throw - Failed to return ID" Exception="[new System.Exception(&quot;Failed to update basic info with exception : &quot; + exceptionDetails.Message)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                                  <Throw DisplayName="Throw - Failed to return ID" Exception="[new System.Exception(&quot;Failed to update basic info with exception : &quot; + exceptionDetails.Message)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
                                 </ActivityAction>
                               </Catch>
                             </TryCatch.Catches>
