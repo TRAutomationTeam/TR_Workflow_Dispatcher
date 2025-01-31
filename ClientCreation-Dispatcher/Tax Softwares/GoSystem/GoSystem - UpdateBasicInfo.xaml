@@ -135,6 +135,8 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -142,19 +144,19 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="GoSystem-UpdateBasicInfo" sap:VirtualizedContainerService.HintSize="1010.4000000000001,5384.8" sap2010:WorkflowViewState.IdRef="Sequence_192">
+  <Sequence DisplayName="GoSystem-UpdateBasicInfo" sap:VirtualizedContainerService.HintSize="1156,7475.2" sap2010:WorkflowViewState.IdRef="Sequence_192">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: Activate" sap:VirtualizedContainerService.HintSize="948,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Timeout="5" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: Activate" sap:VirtualizedContainerService.HintSize="1019.2,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_14" InteractionMode="DebuggerApi" ScopeGuid="b72b3d29-5f29-48ef-8a03-825422e05052" Timeout="5" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="Activate_3">
+          <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="400,86.4" sap2010:WorkflowViewState.IdRef="Activate_3">
             <ui:Activate.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7b855939-70e2-49c8-bda1-3f674db4a801">
                 <ui:Target.TimeoutMS>
@@ -178,13 +180,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: GoSystem Tax RS" sap:VirtualizedContainerService.HintSize="948,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" ScopeGuid="d7098346-0313-4378-92e0-6ced79be39ed" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: GoSystem Tax RS" sap:VirtualizedContainerService.HintSize="1019.2,2064.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" InteractionMode="DebuggerApi" ScopeGuid="d7098346-0313-4378-92e0-6ced79be39ed" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1014.4,1844.8" sap2010:WorkflowViewState.IdRef="Sequence_149">
+          <Sequence sap:VirtualizedContainerService.HintSize="985.6,1776" sap2010:WorkflowViewState.IdRef="Sequence_149">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,7 +197,7 @@
                 <uix:TargetAnchorable BrowserURL="https://gosystemrs.fasttax.com/TopMenu.asp#" CvElementArea="114, 202, 100, 45" CvTextArea="123, 215, 81, 19" CvType="Button" DesignTimeRectangle="115, 204, 97, 42" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='FRAME' name='ATopMenu' /&gt;&lt;webctrl tag='A' aaname='Returns' /&gt;" Guid="cb6c9e5e-7d4d-4368-abe6-cfcd7d091699" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAuCAYAAAAx49dgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZoSURBVHhe7ZjrTxNpFMb3f5oPs4lsoh80wXpbFGOkFIyoa9ZlBQqU/bDZNcEbgtwqXtDVRbalqS1YSpsCS+kFKGExaIzGaIxGjdE/4tlpmXPet2UK46cxZp7kl7jnOefMO/O0U9fvYOurkx3KVyg7lK9QHMrnz59tLIbEoXz69MnGYkgcysePH20shsShfPjwwcZiSBzK+/fvbSyGxKG8e/fOxmJIHMrbt29tLIbEobx588bGYkgcyuvXr20shsShvHr1ysZiSBzKy5cvbSyGxKG8ePHCxmJIHMrz589tLIbEoTx79swUizeOQVGUTfgBe348idbBEBYN5m3KQ+JQnj59aors9XqDIIz5vv46kgY7vpisDx09E8beNwSJQ3ny5IkpMkPmQ8lzYjhnuMccOUSHfsWe/K6OcQP/24LEoTx+/NgU6Wt1/MDrrqU39vyXxmRfHVS9Rzl9F0ulPWYJe/haiids3PMNQeJQ1tbWTJHySqF4U4Y9aykv6uhh1nmRKvFTY104Xb1DD07FjurT6Bor3hXy6POl6PuEXwdvSt6fgrfOyCuph+7DU11R+O8KRwvuLxZf0xPKn/M8GhzrPUqFAw3nxzbcy9raIiI3PWg4QPejoe7AgQYPbkYWS3o3h8ShPHr0yBTJQRcf3DWY3NizPA1/ezX3qO1ByV/GRGe1OHwJDq13We8Nthv3KK5BJIt8FwaTtD9PEoMuI0+u74LDoep/1qi+iumSazoOHDA8p9rs5zPm7yfY7tjQI6jAL3eyeu/WkDiU1dVVU8wNiFC2xoHOcWl+vBMO3XO0+ZAp1DMYv+rib02TLyf6g21iV1tQ1DWCbXpde/ADc6K+ujqHASkU4cl1jUOdCGby9QwSc+vXFDs1VBeujmcK9Yyvjc+tKE34O6fvnBuAi+quq4jq9VziOn5S9fquTowXrr81JA5lZWXFFLP9JkNR9+PMcFyaXcRoE306m3B3Ud47ilaaOzWMFNUDrWJfa0DqX0GgVa9rD75/VtRXVmbRL4UiPLmu4NRwSppZR+zU3gL9s5JXZmfgN/Ft2n0G/eFZLPLMl0PiUJaXl00x3VfLBzdmN872+RHLls4+xJX9Rv0lqB3w04xfDkV7bUj7/PwAa9E3LerL2uuzr9bIk+v7ceWhPLOO2Kmg1S97Wfx1ljxpZ9aP1p1ipkDFIZzs6IM/lpXmzUHiUHK5nCkSvSKU2t7Eej0zhZGOg+JTU3EMVyYyJbN+uMnfFDf8NON3i7rbX7TP76b+WvQmRD2XS6BXCkV45eoCsVOB21/OK5md8uLn/dLvk0TFETe8G55DeUgcytLSkikSvU6+qFMLRXhp+Ny7xaFUJwYT8mwQ5/hT5YaP65vg84ig3b4iz8cPyak9JGlmSXv4TiOvXF0gdmqh+Mp5xrPpaBB3ej04eWQfttPvSYGD6Ipu7DeCxKEsLCyYIt4jhdITL/ED+LNSHEh1DiDO3jyGG8nbh8thaS58GftopmVU1OM9cOp1Ra5rjLbQLgUto6K+sDCKFn4oTvTEqR5HjxSKqAvK75Q949li5hHo3Me7Nj4nY0gcSjabNUWsKJTYxp7QJVTpfv5vUyeGptlL3m3kT77qvISx6Xw9hv4T9PWvxB9j0q6YFEp9v/Y7pe1IJgte6JK46Z2NQwUvv+tWYyXXCw9Qe7ev74sVh8J1wWgz+QqaR8t5Yna6X/zrRmXjLTxM6v3Jhxhq3Mle4631M28FiUNJp9OmiHbX8MVquqOGPcGLVdyjqA24liDvX4w0yw9NRkXVxWDRnnR6BM1FrwKNmm5E8160DzWlXh61EpX8mqxBd5R2RdFdY1QXjMihjJTz5NkJ9NXr/3NZBlU774S0ZzNIHMr8/LwpIl1H+YJHuyKGPfPzAVyokg525gZmJD9y+xyOH67EtoKvYvveOvx+23jXTKALZ6q26bu2ofLwBQSKvO3r3z51O6qOn8PtSBhdR+naR9EVoV2RMnXBvSbyFTTdK+eVzsYRuJG/n73Sb4l2Tu2emnr/QVzasRUkDiX/WrCxFhKHMjc3Z2MxJA5ldnbWxmJIHMrMzIyNxZA4lEQiYWMxJA4lHo/bWAyJQ4nFYjYWQ+JQpqambCyGxKFMTk7aWAyJQ4lEIjYWQ+JQJiYmbCyGxKGEw2EbiyFxKKFQyMZiSBzKgwcPbCyGxKHY+loE/A9KsYNT/lzLUQAAAABJRU5ErkJggg==" InformativeScreenshot="ce903e5ca645ba934e390f6676f52028.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='GoSystem Tax RS' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Anderson, Jack'" sap:VirtualizedContainerService.HintSize="952,1564.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d7098346-0313-4378-92e0-6ced79be39ed" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Anderson, Jack'" sap:VirtualizedContainerService.HintSize="952,1524.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d7098346-0313-4378-92e0-6ced79be39ed" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,462.4" sap2010:WorkflowViewState.IdRef="Sequence_150">
                   <sap:WorkflowViewStateService.ViewState>
@@ -298,16 +300,16 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 2576, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="30fcac853a3580ea133a5798d7cdaf5b.jpg" Selector="&lt;html app='chrome.exe' url='https://gosystemrs.fasttax.com/*' /&gt;" Title="GoSystem Tax RS" Url="[in_Dic_Credential(&quot;URL&quot;).ToString + &quot;*&quot;]" />
+        <uix:TargetApp Area="-8, -8, 2576, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="30fcac853a3580ea133a5798d7cdaf5b.jpg" Selector="&lt;html app='chrome.exe' url='https://gosystemrs.fasttax.com/*' /&gt;" Title="GoSystem Tax RS" Url="[in_Config(&quot;GoSystem_URL&quot;).ToString + &quot;*&quot;]" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="948,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_187" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Basic information fields are filling&quot;]">
+    <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="1019.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_187" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Basic information fields are filling&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -315,14 +317,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch - Engagement Type" Expression="[in_dr_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="948,5008" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch - Engagement Type" Expression="[in_dr_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1019.2,5156" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <Switch.Default>
+        <Sequence DisplayName="Default" sap2010:WorkflowViewState.IdRef="Sequence_193" />
+      </Switch.Default>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="1040" DisplayName="Sequence-1040" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_167">
+      <Sequence x:Key="1040" DisplayName="Sequence-1040" sap:VirtualizedContainerService.HintSize="879.2,24.8" sap2010:WorkflowViewState.IdRef="Sequence_167">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -822,7 +827,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </uix:NApplicationCard>
       </Sequence>
-      <Sequence x:Key="1041" DisplayName="Sequence-1041" sap:VirtualizedContainerService.HintSize="908,4704" sap2010:WorkflowViewState.IdRef="Sequence_169">
+      <Sequence x:Key="1041" DisplayName="Sequence-1041" sap:VirtualizedContainerService.HintSize="879.2,4675.2" sap2010:WorkflowViewState.IdRef="Sequence_169">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
