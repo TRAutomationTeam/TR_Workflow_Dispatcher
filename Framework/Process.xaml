@@ -20,7 +20,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1379,2915</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>630.4,2933.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -135,21 +135,21 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the Submission wizard binder creation process through fileroom implemented by invoking the following workflows.&#xA;1.Selecting service and engagement type&#xA;2.Flowchart binder options&#xA;3.Selecting binder template&#xA;4.Select demo document&#xA;5.Selecting application tax return&#xA;6.State machine binder ID&#xA;7.Jobs in Queue&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="641,2850" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the Submission wizard binder creation process through fileroom implemented by invoking the following workflows.&#xA;1.Selecting service and engagement type&#xA;2.Flowchart binder options&#xA;3.Selecting binder template&#xA;4.Select demo document&#xA;5.Selecting application tax return&#xA;6.State machine binder ID&#xA;7.Jobs in Queue&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="640.8,2868.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="579,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="579,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="579,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="578.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="578.4,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="578.4,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:MultipleAssign DisplayName="Assign CaptureData, TaxSoftwareName and Filepath" sap:VirtualizedContainerService.HintSize="579,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Assign CaptureData, TaxSoftwareName and Filepath" sap:VirtualizedContainerService.HintSize="578.4,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -185,16 +185,16 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="579,1922" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="578.4,1925.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="541,1627" sap2010:WorkflowViewState.IdRef="Sequence_32">
+        <Sequence sap:VirtualizedContainerService.HintSize="541.6,1627.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Multiple Assign TaxSoftwareMandatory" sap:VirtualizedContainerService.HintSize="479,210" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+          <ui:MultipleAssign DisplayName="Multiple Assign TaxSoftwareMandatory" sap:VirtualizedContainerService.HintSize="479.2,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -230,17 +230,17 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <Sequence DisplayName="Data Validation" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="Sequence_57">
+          <Sequence DisplayName="Data Validation" sap:VirtualizedContainerService.HintSize="608,1083.2" sap2010:WorkflowViewState.IdRef="Sequence_57">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[in_str_AccountNumber = &quot;&quot; OR in_str_ClientId = &quot;&quot;]" DisplayName="CheckBlank_AccountNumber&amp;Clientid" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[in_str_AccountNumber = &quot;&quot; OR in_str_ClientId = &quot;&quot;]" DisplayName="CheckBlank_AccountNumber&amp;Clientid" sap:VirtualizedContainerService.HintSize="545.6,832.8" sap2010:WorkflowViewState.IdRef="If_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -290,7 +290,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[in_str_TaxFileName = &quot;&quot; OR in_str_TaxFilePath = &quot;&quot;]" DisplayName="CheckBlank_TaxFilePath&amp;TaxFileName" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="If_6">
+            <If Condition="[in_str_TaxFileName = &quot;&quot; OR in_str_TaxFilePath = &quot;&quot;]" DisplayName="CheckBlank_TaxFilePath&amp;TaxFileName" sap:VirtualizedContainerService.HintSize="545.6,56.8" sap2010:WorkflowViewState.IdRef="If_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -343,7 +343,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Trim.Equals(&quot;1041&quot;) And&#xA;in_TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim.Equals(&quot;Simplified Leadsheets&quot;)]" DisplayName="If Invalid LeadsheetOption Throw Exception" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="If_9">
+            <If Condition="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString.Trim.Equals(&quot;1041&quot;) And&#xA;in_TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim.Equals(&quot;Simplified Leadsheets&quot;)]" DisplayName="If Invalid LeadsheetOption Throw Exception" sap:VirtualizedContainerService.HintSize="449.6,620" sap2010:WorkflowViewState.IdRef="If_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -351,21 +351,27 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,359" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,376.8" sap2010:WorkflowViewState.IdRef="Sequence_58">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Simplified lead sheet service is not applicable to 1041 engagement type.&quot;]" />
-                  <Throw DisplayName="Throw Invalid LeadsheetOption" Exception="[new BusinessRuleException(&quot;Simplified lead sheet service is not applicable to 1041 engagement type.&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Simplified lead sheet service is not applicable to 1041 engagement type.&quot;]" />
+                  <Throw DisplayName="Throw Invalid LeadsheetOption" Exception="[new BusinessRuleException(&quot;Simplified lead sheet service is not applicable to 1041 engagement type.&quot;)]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_4" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_59" />
+                <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
               </If.Else>
             </If>
-            <If Condition="[in_TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Trim.Equals(&quot;Outsource Offshore&quot;) And&#xA;in_TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim.Equals(&quot;None&quot;)]" DisplayName="If Invalid LeadsheetOption Throw Exception" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="If_10">
+            <If Condition="[in_TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Trim.Equals(&quot;Outsource Offshore&quot;) And&#xA;in_TransactionItem.SpecificContent(&quot;LeadsheetOption&quot;).ToString.Trim.Equals(&quot;None&quot;)]" DisplayName="If Invalid LeadsheetOption Throw Exception" sap:VirtualizedContainerService.HintSize="545.6,48" sap2010:WorkflowViewState.IdRef="If_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -388,13 +394,13 @@
               </If.Else>
             </If>
           </Sequence>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke - EngagementTypeSelection" sap:VirtualizedContainerService.HintSize="479,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\1.EngagementTypeSelection.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke - EngagementTypeSelection" sap:VirtualizedContainerService.HintSize="479.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\1.EngagementTypeSelection.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke - BinderOptionSelection" sap:VirtualizedContainerService.HintSize="479,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\2.1BinderOptionSelection.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke - BinderOptionSelection" sap:VirtualizedContainerService.HintSize="479.2,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\2.1BinderOptionSelection.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>

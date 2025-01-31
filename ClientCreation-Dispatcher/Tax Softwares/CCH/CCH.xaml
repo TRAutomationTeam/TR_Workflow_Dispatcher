@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,801.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>807.1999999999999,801.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CCH_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,6 +74,7 @@
       <x:String>UiPath.UIAutomationNext.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -151,6 +152,8 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -164,7 +167,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1468.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+    <Flowchart sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="Flowchart_2">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
         <Variable x:TypeArguments="x:Boolean" Default="False" Name="Exist_LoggedIn" />
@@ -198,7 +201,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,2123.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,1596.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="int_IndexCount" />
                 </Sequence.Variables>
@@ -208,7 +211,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="625.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Reading filed for the client id creation&quot;]" />
-                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="625.6,583.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
+                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="625.6,56.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
                   <ueab:ExcelApplicationCard.Body>
                     <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                       <ActivityAction.Argument>
@@ -226,8 +229,8 @@
                   </ueab:ExcelApplicationCard.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ueab:ExcelApplicationCard>
@@ -238,6 +241,14 @@
                         <ui:FilterOperationArgument.Column>
                           <InArgument x:TypeArguments="x:String">["ID Created"]</InArgument>
                         </ui:FilterOperationArgument.Column>
+                      </ui:FilterOperationArgument>
+                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                        <ui:FilterOperationArgument.Column>
+                          <InArgument x:TypeArguments="x:String">["Year"]</InArgument>
+                        </ui:FilterOperationArgument.Column>
+                        <ui:FilterOperationArgument.Operand>
+                          <InArgument x:TypeArguments="x:String">[in_TransactionItem("TaxYear").ToString.Trim]</InArgument>
+                        </ui:FilterOperationArgument.Operand>
                       </ui:FilterOperationArgument>
                     </scg:List>
                   </ui:FilterDataTable.Filters>
@@ -427,7 +438,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1872,16382.400000000001" sap2010:WorkflowViewState.IdRef="Sequence_267">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1872,12804.8" sap2010:WorkflowViewState.IdRef="Sequence_267">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="Element_Exist" />
                                       <Variable x:TypeArguments="x:Boolean" Name="bool_CloseReturn" />
@@ -438,7 +449,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" sap:VirtualizedContainerService.HintSize="1809.6,961.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_61" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" sap:VirtualizedContainerService.HintSize="1809.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_61" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
                                       <uix:NApplicationCard.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
@@ -495,19 +506,19 @@
                                       </uix:NApplicationCard.TargetApp>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NApplicationCard>
-                                    <ui:RetryScope DisplayName="Retry Scope - Click new return" sap:VirtualizedContainerService.HintSize="1809.6,1055.2" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="5">
+                                    <ui:RetryScope DisplayName="Retry Scope - Click new return" sap:VirtualizedContainerService.HintSize="1809.6,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="5">
                                       <ui:RetryScope.ActivityBody>
                                         <ActivityAction>
-                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,676" sap2010:WorkflowViewState.IdRef="Sequence_281">
+                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_281">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" sap:VirtualizedContainerService.HintSize="449.6,587.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_69" ScopeGuid="bd695471-8530-4704-a6e0-611fc8b35b5a" Version="V2">
@@ -574,45 +585,45 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:RetryScope>
-                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="1809.6,14109.6" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="1809.6,12433.6" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                       <uix:NCheckState.IfExists>
-                                        <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="1307.2,13859.2" sap2010:WorkflowViewState.IdRef="Sequence_247">
+                                        <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="1307.2,12183.2" sap2010:WorkflowViewState.IdRef="Sequence_247">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1244.8,12624.8" sap2010:WorkflowViewState.IdRef="RetryScope_11" NumberOfRetries="5">
+                                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1244.8,10948.8" sap2010:WorkflowViewState.IdRef="RetryScope_11" NumberOfRetries="5">
                                             <ui:RetryScope.ActivityBody>
                                               <ActivityAction>
-                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1203.2,12416.8" sap2010:WorkflowViewState.IdRef="Sequence_244">
+                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="826.4,10740.8" sap2010:WorkflowViewState.IdRef="Sequence_244">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Element_Exist]" DisplayName="Do While - Check client exists or not " sap:VirtualizedContainerService.HintSize="1140.8,1692.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_13">
+                                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Element_Exist]" DisplayName="Do While - Check client exists or not " sap:VirtualizedContainerService.HintSize="764,56.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_13">
                                                     <ui:InterruptibleDoWhile.Body>
-                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1107.2,1546.4" sap2010:WorkflowViewState.IdRef="Sequence_236">
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,444" sap2010:WorkflowViewState.IdRef="Sequence_236">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <TryCatch DisplayName="Try Catch : Assign client id" sap:VirtualizedContainerService.HintSize="1044.8,578.4" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                                                        <TryCatch DisplayName="Try Catch : Assign client id" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                                                           <TryCatch.Variables>
                                                             <Variable x:TypeArguments="s:String[]" Default="[{&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;0&quot;}]" Name="Arr_Alphabates" />
                                                           </TryCatch.Variables>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <TryCatch.Try>
@@ -649,7 +660,7 @@
                                                             </Catch>
                                                           </TryCatch.Catches>
                                                         </TryCatch>
-                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Type Into 'Client'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1044.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_104" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Text="[out_ClientId]" Version="V3">
+                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="2" DisplayName="Type Into 'Client'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_104" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Text="[out_ClientId]" Version="V3">
                                                           <uix:NTypeInto.Target>
                                                             <uix:TargetAnchorable CvTextArea="680, 207, 217, 20" CvTextArgument="Search by client name or ID" CvType="Text" DesignTimeRectangle="668, 197, 564, 43" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='clientDropDown' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='clientDropDown' tag='DIV' type='' class='ng-select-container' aaname='' /&gt;" Guid="ff3bb76d-88cd-4f1c-8195-17e452ac1252" InformativeScreenshot="153b2be74a62fd4fef4194f0655d50a6.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Interactive">
                                                               <uix:TargetAnchorable.Anchors>
@@ -669,7 +680,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </uix:NTypeInto>
-                                                        <uix:NCheckState DisplayName="Check App State Client id already exists or not" sap:VirtualizedContainerService.HintSize="1044.8,628.8" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                                        <uix:NCheckState DisplayName="Check App State Client id already exists or not" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                                           <uix:NCheckState.IfExists>
                                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,387.2" sap2010:WorkflowViewState.IdRef="Sequence_317">
                                                               <sap:WorkflowViewStateService.ViewState>
@@ -722,7 +733,7 @@
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </uix:NCheckState>
@@ -730,12 +741,12 @@
                                                     </ui:InterruptibleDoWhile.Body>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InterruptibleDoWhile>
-                                                  <TryCatch DisplayName="Try Catch - Add client" sap:VirtualizedContainerService.HintSize="1140.8,10635.2" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                                                  <TryCatch DisplayName="Try Catch - Add client" sap:VirtualizedContainerService.HintSize="764,10595.2" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -743,18 +754,18 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <TryCatch.Try>
-                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Add Client" sap:VirtualizedContainerService.HintSize="727.2,9881.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_63" OpenMode="Never" ScopeGuid="76bc84e7-7956-4176-a559-a838bd1964d8" Timeout="10" Version="V2">
+                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Add Client" sap:VirtualizedContainerService.HintSize="580,9841.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_63" OpenMode="Never" ScopeGuid="76bc84e7-7956-4176-a559-a838bd1964d8" Timeout="10" Version="V2">
                                                         <uix:NApplicationCard.Body>
                                                           <ActivityAction x:TypeArguments="x:Object">
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                             </ActivityAction.Argument>
-                                                            <ui:IfElseIf DisplayName="Else If- Type of taxpayer" sap:VirtualizedContainerService.HintSize="693.6,9590.4" sap2010:WorkflowViewState.IdRef="IfElseIf_10">
+                                                            <ui:IfElseIf DisplayName="Else If- Type of taxpayer" sap:VirtualizedContainerService.HintSize="546.4,9550.4" sap2010:WorkflowViewState.IdRef="IfElseIf_10">
                                                               <ui:IfElseIf.ConditionBlocks>
                                                                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                                   <ui:IfElseIfBlock BlockType="If" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.ToLower.Contains(&quot;individual&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                                                                     <ui:IfElseIfBlock.Then>
-                                                                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2a264080-8b93-488f-897a-d0bc1267f231" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="483.2,3213.6" sap2010:WorkflowViewState.IdRef="CVScope_24" SendOnPremData="False" Version="V6">
+                                                                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2a264080-8b93-488f-897a-d0bc1267f231" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="483.2,3173.6" sap2010:WorkflowViewState.IdRef="CVScope_24" SendOnPremData="False" Version="V6">
                                                                         <p:CVScope.Body>
                                                                           <ActivityAction x:TypeArguments="x:Object">
                                                                             <ActivityAction.Argument>
@@ -3285,7 +3296,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="616,2536.8" sap2010:WorkflowViewState.IdRef="Sequence_230">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,492" sap2010:WorkflowViewState.IdRef="Sequence_230">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="str_Captcha" />
                                       <Variable x:TypeArguments="x:Boolean" Name="Exist_phonenumber" />
@@ -3296,14 +3307,15 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="553.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The CCH Application started&quot;]" />
-                                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="553.6,2108" sap2010:WorkflowViewState.IdRef="RetryScope_21" NumberOfRetries="3">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The CCH Application started&quot;]" />
+                                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_21" NumberOfRetries="3">
                                       <ui:RetryScope.ActivityBody>
                                         <ActivityAction>
-                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,1900" sap2010:WorkflowViewState.IdRef="Sequence_334">
+                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_334">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Exist_LoggedIn  and Exist_phonenumber&lt;&gt;True]" DisplayName="Do While- Login purpose" sap:VirtualizedContainerService.HintSize="449.6,1811.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_12">
@@ -3404,8 +3416,14 @@
                                       <ui:RetryScope.Condition>
                                         <ActivityFunc x:TypeArguments="x:Boolean" />
                                       </ui:RetryScope.Condition>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ui:RetryScope>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="553.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;The CCH appication logged in&quot;]">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;The CCH appication logged in&quot;]">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

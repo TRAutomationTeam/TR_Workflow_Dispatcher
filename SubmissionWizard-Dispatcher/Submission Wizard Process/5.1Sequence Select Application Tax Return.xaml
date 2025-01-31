@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1112.8,6282.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>941.6,1910.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Select_Application_Tax_Return_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -107,7 +107,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Sequence bifurcating the flow for selection of specific tax file path based on tax software." DisplayName="Sequence_Select_Application_Tax_Return" sap:VirtualizedContainerService.HintSize="721.6,6217.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Sequence bifurcating the flow for selection of specific tax file path based on tax software." DisplayName="Sequence_Select_Application_Tax_Return" sap:VirtualizedContainerService.HintSize="608,1845.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strAccountReturn" />
       <Variable x:TypeArguments="x:String" Name="strSPClientID" />
@@ -127,8 +127,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="659.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;-----------------------------------------------------------------------------------------------------------------------------------------------&quot;]" />
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initializing variables required for the consecutive workflows from the Orchestrator Transaction item variable." DisplayName="Multiple Assign Tax File Selection Detail" sap:VirtualizedContainerService.HintSize="659.2,505.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="545.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;-----------------------------------------------------------------------------------------------------------------------------------------------&quot;]" />
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initializing variables required for the consecutive workflows from the Orchestrator Transaction item variable." DisplayName="Multiple Assign Tax File Selection Detail" sap:VirtualizedContainerService.HintSize="545.6,505.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -229,37 +229,37 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="659.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot; Creating binder for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]" />
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Selecting the sequence to be executed based on the tax software input using Else If activity." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659.2,2750.4" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="545.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot; Creating binder for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]" />
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Selecting the sequence to be executed based on the tax software input using Else If activity." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="545.6,132.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[strTaxSoftware = &quot;GoSystem Tax RS&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="GoSystem Tax RS Binder Creation" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="GoSystem Tax RS Binder Creation" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ui:UiElement" Name="ui_Createbinderapp" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" OutUiElement="[ui_Createbinderapp]" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="449.6,410.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" OutUiElement="[ui_Createbinderapp]" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence sap2010:Annotation.AnnotationText="Invoking sequence for Go Tax file selection." sap:VirtualizedContainerService.HintSize="512,1585" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence sap2010:Annotation.AnnotationText="Invoking sequence for Go Tax file selection." sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Account'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strAccountNumber]" Timeout="3" Version="V1">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'Account'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strAccountNumber]" Timeout="3" Version="V1">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="126, 475, 96, 22" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='5' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="f579cc23-788c-4a0c-aeee-36c748a042f8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAaCAYAAABByvnlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7dOxCcBADATB77/BL0e2ErfgDWbgQPmiM6QIEiNIjCAx59471tmZ8z7Jjl9tjCVIhCAxgsQIEiNIjCAxgsQIEiNIjCAxgsQIEiNIjCAxgsQIEvMF2cM68xoxgsQIkjLzAKAC0DYhZi/3AAAAAElFTkSuQmCC" InformativeScreenshot="03f78dbce11be8f3e82b472364f71f83.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -276,11 +276,11 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NTypeInto>
-                        <If Condition="[strAccountReturn=&quot;&quot;]" DisplayName="If - Client_ID is not mentioned" sap:VirtualizedContainerService.HintSize="450,214" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If Condition="[strAccountReturn=&quot;&quot;]" DisplayName="If - Client_ID is not mentioned" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="If_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
@@ -320,11 +320,11 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <If Condition="[strSPClientID=&quot;&quot;]" DisplayName="If - SPClient_ID is blank" sap:VirtualizedContainerService.HintSize="450,214" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[strSPClientID=&quot;&quot;]" DisplayName="If - SPClient_ID is blank" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="If_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
@@ -364,7 +364,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'PS Project #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="450,243" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strPsProject]" Timeout="3" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'PS Project #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strPsProject]" Timeout="3" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="335, 582, 140, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtpsproject' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtpsproject' role='editable text' /&gt;" Guid="06958f84-73f6-46a7-8011-15649ccc4138" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAXCAYAAADk88bYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dSxCcAwEARB9d+gypGdyOBAINh0Bi74fPmxIBAQyRfQnNPsetsvoDXecw8OBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEiOAZndbvNqSAREsNYDvPKWZXnIC5MAAAAASUVORK5CYII=" InformativeScreenshot="674b94c6c10044a59ce5c3d3f58077c8.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
                               <uix:TargetAnchorable.Anchors>
@@ -389,8 +389,8 @@
                   </uix:NApplicationCard.TargetApp>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NApplicationCard>
@@ -399,15 +399,15 @@
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strTaxSoftware = &quot;CCH Axcess Tax&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
             <ui:IfElseIfBlock.Then>
-              <Sequence sap2010:Annotation.AnnotationText="Invoking sequence for CCH Axcess tax file selection." DisplayName="CCH Axcess Tax" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap2010:Annotation.AnnotationText="Invoking sequence for CCH Axcess tax file selection." DisplayName="CCH Axcess Tax" sap:VirtualizedContainerService.HintSize="416,287.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sequence Select CCH Tax Return - Invoke Workflow File (SubmissionWizard_Process\Sequence Select CCH Tax Return.xaml)" sap:VirtualizedContainerService.HintSize="354,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\5.2SelectCCHTaxReturn.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sequence Select CCH Tax Return - Invoke Workflow File (SubmissionWizard_Process\Sequence Select CCH Tax Return.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\5.2SelectCCHTaxReturn.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_AccountNumber">[strAccountNumber]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_AccountReturn">[strAccountNumber]</InArgument>
@@ -439,7 +439,6 @@
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFilePath">[strTaxFilePath]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFileName" />
                     <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
-                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -470,20 +469,20 @@
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strTaxSoftware = &quot;&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,1284" sap2010:WorkflowViewState.IdRef="Sequence_38">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,1247.2" sap2010:WorkflowViewState.IdRef="Sequence_38">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="530,1196" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="529.6,1158.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Never" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence sap2010:Annotation.AnnotationText="Invoking sequence for Go Tax file selection." sap:VirtualizedContainerService.HintSize="496,842" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <Sequence sap2010:Annotation.AnnotationText="Invoking sequence for Go Tax file selection." sap:VirtualizedContainerService.HintSize="496,844" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -491,7 +490,7 @@
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assigning SPClientID " sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign DisplayName="Assigning SPClientID " sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[strSPClientID]</OutArgument>
                           </Assign.To>
@@ -499,7 +498,7 @@
                             <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("SPClientID").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="Assigning PsProject" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign DisplayName="Assigning PsProject" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[strPsProject]</OutArgument>
                           </Assign.To>
@@ -507,7 +506,7 @@
                             <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("PsProject").ToString]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SP Client ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strSPClientID]" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SP Client ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strSPClientID]" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="112, 582, 140, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtclientid' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtclientid' role='editable text' /&gt;" Guid="1160b06a-61a1-4630-a05f-d5a3568f0989" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAXCAYAAADk88bYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dSxCcAwEARB9d+gypGdyOBAINh0Bi74fPmxIBAQyRfQnNPsetsvoDXecw8OBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEiOAZndbvNqSAREsNYDvPKWZXnIC5MAAAAASUVORK5CYII=" InformativeScreenshot="196d7be56774588bb146e131f9dfe3ee.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Visible">
                               <uix:TargetAnchorable.Anchors>
@@ -524,7 +523,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NTypeInto>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'PS Project #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,243" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strPsProject]" Timeout="2" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'PS Project #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[strPsProject]" Timeout="2" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="335, 582, 140, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtpsproject' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtpsproject' role='editable text' /&gt;" Guid="06958f84-73f6-46a7-8011-15649ccc4138" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAXCAYAAADk88bYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dSxCcAwEARB9d+gypGdyOBAINh0Bi74fPmxIBAQyRfQnNPsetsvoDXecw8OBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEiOAZndbvNqSAREsNYDvPKWZXnIC5MAAAAASUVORK5CYII=" InformativeScreenshot="674b94c6c10044a59ce5c3d3f58077c8.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
                               <uix:TargetAnchorable.Anchors>
@@ -557,42 +556,42 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:IfElseIf>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="659,2445" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="487575b6-6830-4460-9475-5640bb0b6b09" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="545.6,690.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="487575b6-6830-4460-9475-5640bb0b6b09" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="625,2082" sap2010:WorkflowViewState.IdRef="Sequence_34">
+          <Sequence sap:VirtualizedContainerService.HintSize="416,367.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[strTaxSoftware = &quot;CCH Axcess Tax&quot; OR strTaxSoftware = &quot;GoSystem Tax RS&quot;]" DisplayName="If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="563,1051" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[strTaxSoftware = &quot;CCH Axcess Tax&quot; OR strTaxSoftware = &quot;GoSystem Tax RS&quot;]" DisplayName="If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="529,856" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="668,857.6" sap2010:WorkflowViewState.IdRef="Sequence_46">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIf DisplayName="Else If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="467,768" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                  <ui:IfElseIf DisplayName="Else If (Scan Verify + Options)" sap:VirtualizedContainerService.HintSize="605.6,768.8" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
                     <ui:IfElseIf.ConditionBlocks>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                         <ui:IfElseIfBlock BlockType="If" Condition="[strScanVerifyPlus=&quot;Yes&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_7">
                           <ui:IfElseIfBlock.Then>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Boolean" Name="isScanVerifyPlus" />
                               </Sequence.Variables>
@@ -602,7 +601,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NCheckState DisplayName="Check App State 'Select these'" EnableIfNotExists="False" Exists="[isScanVerifyPlus]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Timeout="2" Version="V3">
+                              <uix:NCheckState DisplayName="Check App State 'Select these'" EnableIfNotExists="False" Exists="[isScanVerifyPlus]" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Timeout="2" Version="V3">
                                 <uix:NCheckState.IfExists>
                                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,448.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -658,14 +657,14 @@
                         </ui:IfElseIfBlock>
                         <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strScanVerifyPlus=&quot;No&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_8">
                           <ui:IfElseIfBlock.Then>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NCheckState DisplayName="Check App State 'Select these'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Timeout="2" Version="V3">
+                              <uix:NCheckState DisplayName="Check App State 'Select these'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Timeout="2" Version="V3">
                                 <uix:NCheckState.IfExists>
                                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,448.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -721,7 +720,7 @@
                         </ui:IfElseIfBlock>
                         <ui:IfElseIfBlock BlockType="ElseIf" Condition="[strScanVerifyPlus=&quot;NA&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_9">
                           <ui:IfElseIfBlock.Then>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_45">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -743,7 +742,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -753,27 +752,27 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[strEngagementType = &quot;1065&quot; OR strEngagementType = &quot;1120&quot; OR strEngagementType = &quot;1120S&quot;]" DisplayName="If EngagementType-1065,1120,1120s" sap:VirtualizedContainerService.HintSize="563,777" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[strEngagementType = &quot;1065&quot; OR strEngagementType = &quot;1120&quot; OR strEngagementType.ToUpper = &quot;1120S&quot;]" DisplayName="If EngagementType-1065,1120,1120s" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,504" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,506.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Client Name has appeared&quot;]" />
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Client Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,241" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Text="[strClientName]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Client Name has appeared&quot;]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Client Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Text="[strClientName]" Version="V3">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="570, 619, 116, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='7' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="5ecb5b99-32ed-4e13-9710-3caf9afcd69c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAaCAYAAAB8WJiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVGhD7dPBCURRCARB80/wheNfLxtEUwUD3htnSRM4TuA4gePmvbfW3ez8nvhGysU9AkcJHCdwnMBxAscJHCdwnMBxAscJHCdwnMBxAscJHCdwnMBx/8B3WHdeN07gOIHTdj8UUNXOwovIqAAAAABJRU5ErkJggg==" InformativeScreenshot="fd26d2414fb4364242706d6b6b775bd3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Visible">
+                      <uix:TargetAnchorable DesignTimeRectangle="713, 774, 145, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="5ecb5b99-32ed-4e13-9710-3caf9afcd69c" InformativeScreenshot="938f2212a0a11dbf17b68d25abc5f30a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="485, 622, 76, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name='Client Name: ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name='Client Name: ' role='text' automationid='' check:text='Client Name:' /&gt;" Guid="5883b4f5-8c0f-42d2-bd24-102bcbae6cd2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFAAAAAXCAYAAACcTMh5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM3SURBVFhH7ZbPSzJBGMff/0koQUoSgij0IEKXLnoIT146RRHhxZOQXvISHpIOgVIGEUUFQQVBIYKCQQUlRCpBRiQhPfF93p1ldmOtnKDLfGHZ3Wd+PM985nlm9x9pKUkDVJQGqCgNUFEaoKI0QEVZAD49PVEikaCRkRFyuVx8TU1Ncdv29jYtLy/z88bGBrndbiqVSvzer+LxOK2urhpvVr2/v1O9XqfHx0fD8l/NZvOT7S9lAnx7e6NwOEyBQID29vao2+2yvdVq8T2dTlMoFOLnl5cXXlyn0+H3fvT6+srzZTIZw2IVNhMb6PV66f7+3rASzczM0OzsrPH29zIBXlxc0MDAAOXzecNilQwQfeUM3NzcJJ/PR+Pj43zf399nu8jUYDDIMDD/wsICg49Go9w2OjrKm7a7u8tjhARAXPPz84b1M0BkMcajauBf+BYxyr4jkQhNT0+zHTYkjEiU4+NjnmdiYoI8Hg/lcjm2f1VtJsCVlRUaHh6mm5sbw2KVE8C7uzt+Xl9f57alpSUOAoJzzFkul/n98PCQAz89Pf12BgI0Fn9wcMB2pwxEycNuj/Ho6Ijf4XtwcJBjArTLy0szblSU3++nZDLJfZFEiPv29paurq74+JKrQJYJEICwi41Gw7BY5QQQzuQyOzs7MzcCwcpzCigI6LsAi8UiQxwbG6N2u92zhGV/9iqRfUOyf8SMvufn59yGc1Zs9FdSzkDYkSHYQZQAyki0/QZA9L2+vuY5kSEyQGQS4oZfXDgO+gGIONGGTcI8WIvct5dMgDiDeg1yAogF2A96od8CCK2trbFP+BIAT05O+LzCHeo3A7F2lDfG/FQmQEw4OTnJH4FKpcI2fGnF4e4EEMEjsEKhwG3Qw8MD33sBhGKxGC0uLvKzXfa+4i8BNgFwa2uLhoaG+JyC+gUozvFUKsVtEMoYGY65d3Z26Pn52WixygQIARgWhcngDCk9NzfHATkBhLLZLJePKAGUGcZ8BRC/S2jHWKevsOgLVatV9isA4kwEVGQh/OKftR+AECDh+BF/Bfha12o1XoM8j10WgFo/lwaoKA1QURqgojRARWmAitIAFaUBKonoA1q6l4jakvhLAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="606, 778, 95, 23" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name='Client Name: ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name='Client Name: ' role='text' automationid='' check:text='Client Name:' /&gt;" Guid="5883b4f5-8c0f-42d2-bd24-102bcbae6cd2" SearchSteps="Selector, FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -788,7 +787,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_48">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -797,7 +796,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SP Client ID'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="563,57" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Text="[strSPClientID]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SP Client ID'" EmptyFieldMode="MultiLine" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Text="[strSPClientID]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="112, 597, 140, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtclientid' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtclientid' role='editable text' /&gt;" Guid="2d7104f1-2e8b-437f-9fb1-a52607ce0002" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAXCAYAAADk88bYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dSxCcAwEARB9d+gypGdyOBAINh0Bi74fPmxIBAQyRfQnNPsetsvoDXecw8OBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEiOAZndbvNqSAREsNYDvPKWZXnIC5MAAAAASUVORK5CYII=" InformativeScreenshot="0bb17abd30867f88e75cac073bcdb47f.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
                   <uix:TargetAnchorable.Anchors>
@@ -814,7 +813,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="563,57" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Version="V1">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="572, 675, 41, 15" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Submit' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnSubmit' /&gt;&lt;ctrl name='Submit' role='text' automationid='' check:text='Submit' /&gt;" Guid="0fea3baf-28d3-49f1-bcb9-cd0eec52dce3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAATCAYAAAAEaoRHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVEhL7ZTPK0RRFMf9GVY2dlZSNpRsKGVpZysWFgplQfIjhWyULPyIxWSHiJIRM2P8SH6F8psZg2GMn2MeM/PmHe976r7e02D8mqg507fm3nPuOZ9z3703IXGilP6b4tCxUhw6VvoR6MqtAep1WiL6fkMG6Aq1+H1IImGK+ms7GDcsiCSrd4ce5WfKmK2P6I9WufMtJMkB2no45XHn8RR5Ag+Ubq01xGnQSZNl5A34OCjL3mgI+kg/BQ2GgqV2yplv5vFbeTVo0eW278wQoPeZPZvaHBoUO4Lk+CqBcIi/UEgJ0/D5Mvv6nFaS1TGKwxB38XzH6/Ef5pKuGVifd+Jyg4JhmcKKwmsd0pVW23A8Tp9uuOCoe5VSLdXafDTQT3KQitd7KdlcTnuPbgYtWuvRoOt3hjgWuQHSf2Jj0Jb9MYY3ueYi5n13p6HM2QZavXMwOBI5JS+lWWqigtYnr90e5B0EiIBGA/CVqI3BOo7MPH6d+9PQQtitEfcKF1tTm/gstABDfMyghZAA5++rO93lmP5daJwv/dOCMxhUZFq+PaKU6Sp+Cg/9Ho7LsNXRbdBvSO5XC2fbm9i/63MzSP5i27egTS47MxSudPJYSIMWi4XhXAMyb6GV/bg4mIMhDpB6aNx0CC8IGux2zLDvO9Dw4QnGetwvzEHvHo+/qjh0rPQPoUvpBfKIlxYhV5MgAAAAAElFTkSuQmCC" InformativeScreenshot="7cdc2449e286ea3ad96ff0b64d59aead.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -825,7 +824,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Client ID'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="563,50" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Client ID'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="353.6,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="487575b6-6830-4460-9475-5640bb0b6b09" Version="V3">
               <uix:NCheckState.IfExists>
                 <Throw Exception="[new BusinessRuleException(&quot;SP Client ID: &quot;+strSPClientID+&quot; is already created&quot;)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_5" />
               </uix:NCheckState.IfExists>
@@ -852,7 +851,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="659,48" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot; Binder has been created for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]">
+    <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="545.6,48" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot; Binder has been created for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

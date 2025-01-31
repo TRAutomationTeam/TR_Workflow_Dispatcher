@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Lacerte_Sign_in_Prompt" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Lacerte_Sign_in_Prompt" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_str_TaxSoftware" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1792.8,4550.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1745.6,4680.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -38,6 +38,7 @@
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -90,9 +91,13 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <If Condition="[in_str_TaxSoftware=&quot;Lacerte&quot;]" sap:VirtualizedContainerService.HintSize="1756,4485.6" sap2010:WorkflowViewState.IdRef="If_1">
+  <If Condition="[in_str_TaxSoftware=&quot;Lacerte&quot;]" sap:VirtualizedContainerService.HintSize="1756,4616" sap2010:WorkflowViewState.IdRef="If_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -100,15 +105,15 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <If.Then>
-      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1722.4,4244" sap2010:WorkflowViewState.IdRef="Sequence_27">
+      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1722.4,4374.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Parallel sap:VirtualizedContainerService.HintSize="1660,4155.2" sap2010:WorkflowViewState.IdRef="Parallel_1">
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="241.6,4085.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" OpenMode="Never" ScopeGuid="839d6433-0481-486a-87c1-891cf275ea43" Version="V2">
+        <Parallel sap:VirtualizedContainerService.HintSize="1660,4285.6" sap2010:WorkflowViewState.IdRef="Parallel_1">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="241.6,4216" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" OpenMode="Never" ScopeGuid="839d6433-0481-486a-87c1-891cf275ea43" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -186,27 +191,32 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uix:NApplicationCard>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1324.8,4085.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" OpenMode="Never" ScopeGuid="12624e58-b215-433c-a1fb-a0c3c57bffd5" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1324.8,4216" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" OpenMode="Never" ScopeGuid="12624e58-b215-433c-a1fb-a0c3c57bffd5" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1251.2,3794.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1251.2,3924.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="strLacerteUsername" />
+                    <Variable x:TypeArguments="ss:SecureString" Name="ssLacertePassword" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NCheckState DisplayName="Check App State 'Sign In'" sap:VirtualizedContainerService.HintSize="1188.8,1397.6" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Timeout="30" Version="V3">
+                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Lacerte_Login" CacheStrategy="None" DisplayName="Get Credential - Lacerte_Login" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="1188.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ssLacertePassword]" Username="[strLacerteUsername]" />
+                  <uix:NCheckState DisplayName="Check App State 'Sign In'" sap:VirtualizedContainerService.HintSize="1188.8,1354.4" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Timeout="30" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="555.2,1107.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="555.2,1104" sap2010:WorkflowViewState.IdRef="Sequence_31">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NCheckState DisplayName="Check App State 'Sign In'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,1016.8" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Version="V3">
+                        <uix:NCheckState DisplayName="Check App State 'Sign In'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="492.8,1015.2" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Version="V3">
                           <uix:NCheckState.IfExists>
                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,773.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
                               <sap:WorkflowViewStateService.ViewState>
@@ -215,7 +225,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email or User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Text="[in_Config(&quot;Lacerte_UserID&quot;).ToString]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email or User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Text="[strLacerteUsername]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable CvElementArea="165, 306, 399, 52" CvTextArea="174, 320, 267, 25" CvType="InputBox" DesignTimeRectangle="165, 306, 398, 52" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;html app='*tax.exe' title='Intuit Accounts - Sign In' /&gt;&lt;webctrl tag='INPUT' name='Email or User ID' /&gt;" Guid="c1c3bfc6-ef24-41a6-8b8d-9bc89b8c6eea" InformativeScreenshot="222eb2cd2a6b17eb0ccae959ab28dfb8.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='accountserver.exe' title='Intuit Accounts - Sign in' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -232,7 +242,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" Text="[in_Config(&quot;Lacerte_Password&quot;).ToString]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="12624e58-b215-433c-a1fb-a0c3c57bffd5" SecureText="[ssLacertePassword]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable CvElementArea="163, 428, 402, 56" CvType="InputBox" DesignTimeRectangle="163, 428, 402, 56" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="0442ed88-3c0c-4264-9b49-fdc77041ffc3" InformativeScreenshot="151a0806fc46a5f123d60bb8bcc76a75.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='accountserver.exe' title='Intuit Accounts - Sign in' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
