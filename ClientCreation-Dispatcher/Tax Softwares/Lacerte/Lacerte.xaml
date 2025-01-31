@@ -153,7 +153,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="Lacerte" sap:VirtualizedContainerService.HintSize="1172.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Lacerte" sap:VirtualizedContainerService.HintSize="1468.8000000000002,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
       <Variable x:TypeArguments="x:Int32" Name="indx_Duplicate" />
@@ -3438,16 +3438,16 @@
                               <av:PointCollection x:Key="ConnectorLocation">350,889.2 110.4,889.2</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1324.8,4093.6000000000004" sap2010:WorkflowViewState.IdRef="RetryScope_3">
+                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1296,4064.8" sap2010:WorkflowViewState.IdRef="RetryScope_3">
                             <ui:RetryScope.ActivityBody>
                               <ActivityAction>
-                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1283.2,3917.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" OpenMode="Always" ScopeGuid="9348849c-3832-460d-a5d2-5ff72700715e" Version="V2">
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1254.4,3888.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" OpenMode="Always" ScopeGuid="9348849c-3832-460d-a5d2-5ff72700715e" Version="V2">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1249.6,3626.4" sap2010:WorkflowViewState.IdRef="Sequence_170">
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1220.8,3597.6" sap2010:WorkflowViewState.IdRef="Sequence_170">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Name="Str_OTP" />
                                           <Variable x:TypeArguments="x:Boolean" Name="Bool_OtpExpired" />
@@ -3461,7 +3461,7 @@
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Lacerte_Login" CacheStrategy="None" DisplayName="Get Credential - Lacerte_Login" FolderPath="in_Config(&quot;OrchestratorQueueFolder&quot;).ToString" sap:VirtualizedContainerService.HintSize="1187.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ssLacertePassword]" Username="[strLacerteUsername]" />
+                                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Lacerte_Login" CacheStrategy="None" DisplayName="Get Credential - Lacerte_Login" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1187.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ssLacertePassword]" Username="[strLacerteUsername]" />
                                         <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="1187.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
                                         <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email or User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1187.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_71" ScopeIdentifier="9348849c-3832-460d-a5d2-5ff72700715e" Text="[strLacerteUsername]" Version="V3">
                                           <uix:NTypeInto.Target>

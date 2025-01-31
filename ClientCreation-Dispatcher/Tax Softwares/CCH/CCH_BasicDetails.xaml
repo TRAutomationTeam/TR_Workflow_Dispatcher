@@ -141,20 +141,20 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Sequence-Basic details" sap:VirtualizedContainerService.HintSize="752,5533.6" sap2010:WorkflowViewState.IdRef="Sequence_339">
+  <Sequence DisplayName="Sequence-Basic details" sap:VirtualizedContainerService.HintSize="1156,6024.8" sap2010:WorkflowViewState.IdRef="Sequence_339">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch- Client Type" Expression="[out_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="689.6,5444.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch- Client Type" Expression="[out_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="651.2,6001.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard x:Key="Individual" AttachMode="ByInstance" DisplayName="Use Application: Individual (1040)" sap:VirtualizedContainerService.HintSize="272.8,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_88" ScopeGuid="30337b6c-e763-40da-87dc-48025f80e5e1" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard x:Key="Individual" AttachMode="ByInstance" DisplayName="Use Application: Individual (1040)" sap:VirtualizedContainerService.HintSize="649.6,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_88" ScopeGuid="30337b6c-e763-40da-87dc-48025f80e5e1" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -636,13 +636,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard x:Key="Fiduciary" AttachMode="ByInstance" DisplayName="Use Application - Fiduciary" sap:VirtualizedContainerService.HintSize="238.4,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_79" ScopeGuid="0a023a66-a763-4036-8425-9f5c4cbe1d9b" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard x:Key="Fiduciary" AttachMode="ByInstance" DisplayName="Use Application - Fiduciary" sap:VirtualizedContainerService.HintSize="649.6,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_79" ScopeGuid="0a023a66-a763-4036-8425-9f5c4cbe1d9b" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1186.4" sap2010:WorkflowViewState.IdRef="Sequence_301">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1155.2" sap2010:WorkflowViewState.IdRef="Sequence_301">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_entity_type" />
               </Sequence.Variables>
@@ -675,7 +675,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:RetryScope>
-              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_26">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_26">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[str_entity_type]</OutArgument>
                 </Assign.To>
@@ -931,14 +931,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <Switch x:TypeArguments="x:String" x:Key="Corporation" DisplayName="Switch- Return type" Expression="[out_CurrentRow(&quot;Return type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,271.2" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <Switch x:TypeArguments="x:String" x:Key="Corporation" DisplayName="Switch- Return type" Expression="[out_CurrentRow(&quot;Return type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="649.6,362.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <uix:NApplicationCard x:Key="1120 Corporation" AttachMode="ByInstance" DisplayName="Use Application: Individual 1120 Corporation" sap:VirtualizedContainerService.HintSize="332,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_92" ScopeGuid="30337b6c-e763-40da-87dc-48025f80e5e1" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard x:Key="1120 Corporation" AttachMode="ByInstance" DisplayName="Use Application: Individual 1120 Corporation" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_92" ScopeGuid="30337b6c-e763-40da-87dc-48025f80e5e1" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -1286,7 +1286,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </uix:NApplicationCard>
-        <uix:NApplicationCard x:Key="1120S Corporation" AttachMode="ByInstance" DisplayName="Use Application: Individual 1120S Corporation" sap:VirtualizedContainerService.HintSize="338.4,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_95" ScopeGuid="30337b6c-e763-40da-87dc-48025f80e5e1" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard x:Key="1120S Corporation" AttachMode="ByInstance" DisplayName="Use Application: Individual 1120S Corporation" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_95" ScopeGuid="30337b6c-e763-40da-87dc-48025f80e5e1" Version="V2" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
