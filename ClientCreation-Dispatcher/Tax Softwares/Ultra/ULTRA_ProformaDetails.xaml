@@ -1,7 +1,8 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ULTRA_ProformaDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<Activity mc:Ignorable="sap sap2010" x:Class="ULTRA_ProformaDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_CurrentRow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="out_ClientID" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>1408.8,2961.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -54,6 +55,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -129,15 +131,17 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1452.0000000000002,5801.6" sap2010:WorkflowViewState.IdRef="Sequence_339">
+  <Sequence sap:VirtualizedContainerService.HintSize="1452.0000000000002,5774.4" sap2010:WorkflowViewState.IdRef="Sequence_339">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="523.2,5730.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[out_CurrentRow(&quot;Type&quot;).ToString]" sap:VirtualizedContainerService.HintSize="523.2,5703.2" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <Sequence DisplayName="Default" sap2010:WorkflowViewState.IdRef="Sequence_340" />
       </Switch.Default>
@@ -147,13 +151,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard x:Key="1040" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [Input Screen     Ct" sap:VirtualizedContainerService.HintSize="483.2,2938.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_37" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
+      <uix:NApplicationCard x:Key="1040" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [Input Screen     Ct" sap:VirtualizedContainerService.HintSize="521.6,2940" sap2010:WorkflowViewState.IdRef="NApplicationCard_37" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2772" sap2010:WorkflowViewState.IdRef="Sequence_315">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="488,2773.6" sap2010:WorkflowViewState.IdRef="Sequence_315">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -364,7 +368,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NClick>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Wages, tips'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_66" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Wages, tips'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_66" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CvElementArea="1202, 258, 252, 40" CvType="InputBox" DesignTimeRectangle="1202, 258, 252, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="b081e5da-afc7-4f8a-9e93-c12950440f9b" ImageBase64="" InformativeScreenshot="f71f9df667ba9f0a4f519fbe49f53f14.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -381,7 +385,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fed W/H'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_67" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fed W/H'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_67" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CvElementArea="1557, 258, 252, 40" CvType="InputBox" DesignTimeRectangle="1557, 258, 252, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="41818c42-f222-48e9-a78b-f2c682581e94" ImageBase64="" InformativeScreenshot="3a187ccdad007bb5ee422c75d35daf49.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -398,7 +402,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '10 Dependent'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '10 Dependent'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,49.6" sap2010:WorkflowViewState.IdRef="NTypeInto_68" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Text="56" Version="V3">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CvElementArea="1660, 579, 150, 40" CvType="InputBox" DesignTimeRectangle="1660, 579, 150, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" Guid="41fb1ebb-cd00-40a2-a98e-3de669c35f50" ImageBase64="" InformativeScreenshot="03c4fcf29b2ce0d5cc880cff6bcb7482.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -419,7 +423,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\WinCSI\UT22\utw22.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARbSURBVFhHlZdZSJRRFMe/h3oQgl56iKCHCDQiCISiiEKiECIjiKCJaIOaFlotjWrQlMpCrabNrGRsM6V0Whmzsk0y20RKKVu1QoSJop0eTvfce84391vHDvw5M/fq/f3P+c4334zBUf86DsX3u2BNrNNTK6++6JOC0TZYefGZYw21ub4Djj98B4RVgeBAbTsM298MA4pug7HtelL1y4tZZGy9ql5vvmBd31Qr9zDj+5QtdTCq9BqMPXBLmTjZ1gPTq9okuF+BO0yXfrgEMFgXmiDpBlhyfUMNrDrRAMaCaIes3A8uQZRZDLZU7iIdjFBdgxcVgpEReeJZvQ5k2cGyIpEzKlrktS1rUZIt9oFLTVulDCBcN8AwL9nhmHNj7aDHgqoH3mDUutNgTF1KBvKvWQC63GCOLFqdc+ExoVUETrd4g4X6rz1BBkTrkhlwNUHXl6+1awcEUII4E5jlbgAPpNcM1F9j1g1wZfYOoAEd7ib/DpARO1AH4/0cvvcKnvd8Jaw1vvz8AzWt7yG9+IoTHiwDY/IiMqABZbbJYkKA8cMEJ/5/ovLRWwtcZocBmxjMFbOizz/SsSriP347uvCoKy47oAeaMOFmB8rv/Rc8q+IuHQfw889fCJxsksPluAsit2Dg+ohjfVJxVMG9DLhBdWEVHHg4tzU3+pBWVaABBuGccIQbn3kbkBAPuGybyHfe9NJRABnhetOAWwcQgnvp28/RKkB9e7eCL96rGcg97wDaxSDdwLLqZnPd0YFj4kHDlQrhnYBGUkNnFBzXJ83zN8CH69LbicPHlSYzYEL1zAb6CkelFtbK4dMDjbyPf6N3KkwDDLTDTQPiOiYDG6srVRb/jDmrrEFC/QINVbV0wpLKGzA0uzwB1SUNHBEt9KkY4VIElxWI93iL7Yi1wpveL4T0j8YXH2B0nngQLSxJiDtgh7IYZoG7aEhOJVQ0dRDKPwKHLicMjJ/tbgAPNYFkwFeinfYhxNZnltZBSeyxZWbw9YBgWHwVK7YawIOSwQdlR+SthBq6SezhdcQ9kXPONRFCRaBMPMapUpyB+PdftCP2Dl50GnDAXYSTzYEDZg6TnwEECWEnOAqj98GYt5MM7LnsC9WFn+McWJFpQIAcBrhKlIDtuNRMO6C+DesG3GCmEEA5ZflhyxMuVCcqoTZ7GhAgvOadPZ9pByBzd3UfDWhwlh109GYrpOef8jSQHopAY0cXrYI0IuFswPJ49IDqSgnuhzsvrd8HMPQhw2jr7nV8RuAdMGGbGF6Ezw5RB0rEU5ABPmBuNQpbGm54Ssf2LR68/gTj8iKJ6rPWw+Apc8HA1smDvaCcWTxYQsM3lsuJxsPdAtfxEmUWVSXAWDlVv7ygVP0+HLlil3Qk/0CH6WIw/o09C+WebSSsCjkDtGfMKVAZwfhraMwMSJs6y/oLeeO+CkjLmg/GyIlKIyb4K3WcJS8NFUHnu25T04PZas+mtMkzYU1+EcEN4x+dQxI3PmW5bwAAAABJRU5ErkJggg==" InformativeScreenshot="495732a42ab12b641998f5205dbbc3d3.png" Selector="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" Title="2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [*" />
+          <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="[in_Config(&quot;Ultra_FilePath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARbSURBVFhHlZdZSJRRFMe/h3oQgl56iKCHCDQiCISiiEKiECIjiKCJaIOaFlotjWrQlMpCrabNrGRsM6V0Whmzsk0y20RKKVu1QoSJop0eTvfce84391vHDvw5M/fq/f3P+c4334zBUf86DsX3u2BNrNNTK6++6JOC0TZYefGZYw21ub4Djj98B4RVgeBAbTsM298MA4pug7HtelL1y4tZZGy9ql5vvmBd31Qr9zDj+5QtdTCq9BqMPXBLmTjZ1gPTq9okuF+BO0yXfrgEMFgXmiDpBlhyfUMNrDrRAMaCaIes3A8uQZRZDLZU7iIdjFBdgxcVgpEReeJZvQ5k2cGyIpEzKlrktS1rUZIt9oFLTVulDCBcN8AwL9nhmHNj7aDHgqoH3mDUutNgTF1KBvKvWQC63GCOLFqdc+ExoVUETrd4g4X6rz1BBkTrkhlwNUHXl6+1awcEUII4E5jlbgAPpNcM1F9j1g1wZfYOoAEd7ib/DpARO1AH4/0cvvcKnvd8Jaw1vvz8AzWt7yG9+IoTHiwDY/IiMqABZbbJYkKA8cMEJ/5/ovLRWwtcZocBmxjMFbOizz/SsSriP347uvCoKy47oAeaMOFmB8rv/Rc8q+IuHQfw889fCJxsksPluAsit2Dg+ohjfVJxVMG9DLhBdWEVHHg4tzU3+pBWVaABBuGccIQbn3kbkBAPuGybyHfe9NJRABnhetOAWwcQgnvp28/RKkB9e7eCL96rGcg97wDaxSDdwLLqZnPd0YFj4kHDlQrhnYBGUkNnFBzXJ83zN8CH69LbicPHlSYzYEL1zAb6CkelFtbK4dMDjbyPf6N3KkwDDLTDTQPiOiYDG6srVRb/jDmrrEFC/QINVbV0wpLKGzA0uzwB1SUNHBEt9KkY4VIElxWI93iL7Yi1wpveL4T0j8YXH2B0nngQLSxJiDtgh7IYZoG7aEhOJVQ0dRDKPwKHLicMjJ/tbgAPNYFkwFeinfYhxNZnltZBSeyxZWbw9YBgWHwVK7YawIOSwQdlR+SthBq6SezhdcQ9kXPONRFCRaBMPMapUpyB+PdftCP2Dl50GnDAXYSTzYEDZg6TnwEECWEnOAqj98GYt5MM7LnsC9WFn+McWJFpQIAcBrhKlIDtuNRMO6C+DesG3GCmEEA5ZflhyxMuVCcqoTZ7GhAgvOadPZ9pByBzd3UfDWhwlh109GYrpOef8jSQHopAY0cXrYI0IuFswPJ49IDqSgnuhzsvrd8HMPQhw2jr7nV8RuAdMGGbGF6Ezw5RB0rEU5ABPmBuNQpbGm54Ssf2LR68/gTj8iKJ6rPWw+Apc8HA1smDvaCcWTxYQsM3lsuJxsPdAtfxEmUWVSXAWDlVv7ygVP0+HLlil3Qk/0CH6WIw/o09C+WebSSsCjkDtGfMKVAZwfhraMwMSJs6y/oLeeO+CkjLmg/GyIlKIyb4K3WcJS8NFUHnu25T04PZas+mtMkzYU1+EcEN4x+dQxI3PmW5bwAAAABJRU5ErkJggg==" InformativeScreenshot="495732a42ab12b641998f5205dbbc3d3.png" Selector="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" Title="2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [*" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -428,24 +432,24 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard x:Key="1041" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1041 [ULAB2812238 TrustABC] - [Input Screen     Ctrl+I]" sap:VirtualizedContainerService.HintSize="483.2,2516.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_39" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
+      <uix:NApplicationCard x:Key="1041" AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS  / 1041 [ULAB2812238 TrustABC] - [Input Screen     Ctrl+I]" sap:VirtualizedContainerService.HintSize="521.6,2488" sap2010:WorkflowViewState.IdRef="NApplicationCard_39" ScopeGuid="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2350.4" sap2010:WorkflowViewState.IdRef="Sequence_338">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,2321.6" sap2010:WorkflowViewState.IdRef="Sequence_338">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Income'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_75" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Income'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_75" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CvTextArea="46, 281, 67, 17" CvTextArgument="Income" CvType="Text" DesignTimeRectangle="46, 278, 69, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTreeView32' /&gt;&lt;ctrl name='Income' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTreeView32' /&gt;&lt;ctrl name='Income' role='outline item' automationid='' check:text='Income' /&gt;" Guid="d939d0ec-8c37-4161-9b87-0bc30caf2e50" ImageBase64="" InformativeScreenshot="031a31512cffcc9b9181248a885c1647.png" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Broker'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Broker'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_76" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f150c5a6-f30d-4238-a8cb-f099cda0df68" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable CvElementArea="401, 105, 78, 28" CvTextArea="407, 111, 56, 16" CvTextArgument="Broker" CvType="Button" DesignTimeRectangle="401, 107, 79, 26" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTabControl32' idx='3' /&gt;&lt;ctrl name='Broker  ' role='page tab' /&gt;" FuzzyAccuracy="0.91" FuzzySelectorArgument="&lt;wnd cls='AfxFrameOrView140' title='Input Screen     Ctrl+I' /&gt;&lt;wnd cls='SysTabControl32' /&gt;&lt;ctrl name='Broker  ' role='page tab' automationid='' check:text='Broker' /&gt;" Guid="7a6ec606-09d1-4121-8a66-aed9b203a21d" InformativeScreenshot="be890268e8715600c26addf1e9995b18.png" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                     <uix:TargetAnchorable.Anchors>
@@ -601,7 +605,7 @@
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-10, -10, 1940, 1050" FilePath="C:\WinCSI\UT22\utw22.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARbSURBVFhHlZdZSJRRFMe/h3oQgl56iKCHCDQiCISiiEKiECIjiKCJaIOaFlotjWrQlMpCrabNrGRsM6V0Whmzsk0y20RKKVu1QoSJop0eTvfce84391vHDvw5M/fq/f3P+c4334zBUf86DsX3u2BNrNNTK6++6JOC0TZYefGZYw21ub4Djj98B4RVgeBAbTsM298MA4pug7HtelL1y4tZZGy9ql5vvmBd31Qr9zDj+5QtdTCq9BqMPXBLmTjZ1gPTq9okuF+BO0yXfrgEMFgXmiDpBlhyfUMNrDrRAMaCaIes3A8uQZRZDLZU7iIdjFBdgxcVgpEReeJZvQ5k2cGyIpEzKlrktS1rUZIt9oFLTVulDCBcN8AwL9nhmHNj7aDHgqoH3mDUutNgTF1KBvKvWQC63GCOLFqdc+ExoVUETrd4g4X6rz1BBkTrkhlwNUHXl6+1awcEUII4E5jlbgAPpNcM1F9j1g1wZfYOoAEd7ib/DpARO1AH4/0cvvcKnvd8Jaw1vvz8AzWt7yG9+IoTHiwDY/IiMqABZbbJYkKA8cMEJ/5/ovLRWwtcZocBmxjMFbOizz/SsSriP347uvCoKy47oAeaMOFmB8rv/Rc8q+IuHQfw889fCJxsksPluAsit2Dg+ohjfVJxVMG9DLhBdWEVHHg4tzU3+pBWVaABBuGccIQbn3kbkBAPuGybyHfe9NJRABnhetOAWwcQgnvp28/RKkB9e7eCL96rGcg97wDaxSDdwLLqZnPd0YFj4kHDlQrhnYBGUkNnFBzXJ83zN8CH69LbicPHlSYzYEL1zAb6CkelFtbK4dMDjbyPf6N3KkwDDLTDTQPiOiYDG6srVRb/jDmrrEFC/QINVbV0wpLKGzA0uzwB1SUNHBEt9KkY4VIElxWI93iL7Yi1wpveL4T0j8YXH2B0nngQLSxJiDtgh7IYZoG7aEhOJVQ0dRDKPwKHLicMjJ/tbgAPNYFkwFeinfYhxNZnltZBSeyxZWbw9YBgWHwVK7YawIOSwQdlR+SthBq6SezhdcQ9kXPONRFCRaBMPMapUpyB+PdftCP2Dl50GnDAXYSTzYEDZg6TnwEECWEnOAqj98GYt5MM7LnsC9WFn+McWJFpQIAcBrhKlIDtuNRMO6C+DesG3GCmEEA5ZflhyxMuVCcqoTZ7GhAgvOadPZ9pByBzd3UfDWhwlh109GYrpOef8jSQHopAY0cXrYI0IuFswPJ49IDqSgnuhzsvrd8HMPQhw2jr7nV8RuAdMGGbGF6Ezw5RB0rEU5ABPmBuNQpbGm54Ssf2LR68/gTj8iKJ6rPWw+Apc8HA1smDvaCcWTxYQsM3lsuJxsPdAtfxEmUWVSXAWDlVv7ygVP0+HLlil3Qk/0CH6WIw/o09C+WebSSsCjkDtGfMKVAZwfhraMwMSJs6y/oLeeO+CkjLmg/GyIlKIyb4K3WcJS8NFUHnu25T04PZas+mtMkzYU1+EcEN4x+dQxI3PmW5bwAAAABJRU5ErkJggg==" InformativeScreenshot="9f8c7c350dfe6695039c26b2fdf488f5.png" Selector="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" Title="2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [*" />
+          <uix:TargetApp Area="-10, -10, 1940, 1050" FilePath="[in_Config(&quot;Ultra_FilePath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARbSURBVFhHlZdZSJRRFMe/h3oQgl56iKCHCDQiCISiiEKiECIjiKCJaIOaFlotjWrQlMpCrabNrGRsM6V0Whmzsk0y20RKKVu1QoSJop0eTvfce84391vHDvw5M/fq/f3P+c4334zBUf86DsX3u2BNrNNTK6++6JOC0TZYefGZYw21ub4Djj98B4RVgeBAbTsM298MA4pug7HtelL1y4tZZGy9ql5vvmBd31Qr9zDj+5QtdTCq9BqMPXBLmTjZ1gPTq9okuF+BO0yXfrgEMFgXmiDpBlhyfUMNrDrRAMaCaIes3A8uQZRZDLZU7iIdjFBdgxcVgpEReeJZvQ5k2cGyIpEzKlrktS1rUZIt9oFLTVulDCBcN8AwL9nhmHNj7aDHgqoH3mDUutNgTF1KBvKvWQC63GCOLFqdc+ExoVUETrd4g4X6rz1BBkTrkhlwNUHXl6+1awcEUII4E5jlbgAPpNcM1F9j1g1wZfYOoAEd7ib/DpARO1AH4/0cvvcKnvd8Jaw1vvz8AzWt7yG9+IoTHiwDY/IiMqABZbbJYkKA8cMEJ/5/ovLRWwtcZocBmxjMFbOizz/SsSriP347uvCoKy47oAeaMOFmB8rv/Rc8q+IuHQfw889fCJxsksPluAsit2Dg+ohjfVJxVMG9DLhBdWEVHHg4tzU3+pBWVaABBuGccIQbn3kbkBAPuGybyHfe9NJRABnhetOAWwcQgnvp28/RKkB9e7eCL96rGcg97wDaxSDdwLLqZnPd0YFj4kHDlQrhnYBGUkNnFBzXJ83zN8CH69LbicPHlSYzYEL1zAb6CkelFtbK4dMDjbyPf6N3KkwDDLTDTQPiOiYDG6srVRb/jDmrrEFC/QINVbV0wpLKGzA0uzwB1SUNHBEt9KkY4VIElxWI93iL7Yi1wpveL4T0j8YXH2B0nngQLSxJiDtgh7IYZoG7aEhOJVQ0dRDKPwKHLicMjJ/tbgAPNYFkwFeinfYhxNZnltZBSeyxZWbw9YBgWHwVK7YawIOSwQdlR+SthBq6SezhdcQ9kXPONRFCRaBMPMapUpyB+PdftCP2Dl50GnDAXYSTzYEDZg6TnwEECWEnOAqj98GYt5MM7LnsC9WFn+McWJFpQIAcBrhKlIDtuNRMO6C+DesG3GCmEEA5ZflhyxMuVCcqoTZ7GhAgvOadPZ9pByBzd3UfDWhwlh109GYrpOef8jSQHopAY0cXrYI0IuFswPJ49IDqSgnuhzsvrd8HMPQhw2jr7nV8RuAdMGGbGF6Ezw5RB0rEU5ABPmBuNQpbGm54Ssf2LR68/gTj8iKJ6rPWw+Apc8HA1smDvaCcWTxYQsM3lsuJxsPdAtfxEmUWVSXAWDlVv7ygVP0+HLlil3Qk/0CH6WIw/o09C+WebSSsCjkDtGfMKVAZwfhraMwMSJs6y/oLeeO+CkjLmg/GyIlKIyb4K3WcJS8NFUHnu25T04PZas+mtMkzYU1+EcEN4x+dQxI3PmW5bwAAAABJRU5ErkJggg==" InformativeScreenshot="9f8c7c350dfe6695039c26b2fdf488f5.png" Selector="[string.Format(&quot;&lt;wnd app='utw*.exe' cls='CSIUTW*' title='*{0}*' /&gt;&quot;, out_ClientID)]" Title="2022 UltraTax CS  / 1040 [ULAB2612236 Anderson, Jack &amp; Jill] - [*" />
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">

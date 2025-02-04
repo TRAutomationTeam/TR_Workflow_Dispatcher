@@ -3,6 +3,7 @@
     <x:Property Name="out_CurrentRow" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_DictCredentials" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_out_ClientId" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>1408.8,3500</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -53,6 +54,7 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -132,27 +134,29 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence-Proforma details" sap:VirtualizedContainerService.HintSize="658.4,3435.2" sap2010:WorkflowViewState.IdRef="Sequence_338">
+  <Sequence DisplayName="Sequence-Proforma details" sap:VirtualizedContainerService.HintSize="1156,6084" sap2010:WorkflowViewState.IdRef="Sequence_338">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:IfElseIf DisplayName="Else If- Proforma details" sap:VirtualizedContainerService.HintSize="596,3346.4" sap2010:WorkflowViewState.IdRef="IfElseIf_17">
+    <ui:IfElseIf DisplayName="Else If- Proforma details" sap:VirtualizedContainerService.HintSize="596,6060.8" sap2010:WorkflowViewState.IdRef="IfElseIf_17">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.ToLower.Contains(&quot;individual&quot;) and out_CurrentRow(&quot;Proforma Details&quot;).ToString.ToLower.Contains(&quot;yes&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
             <ui:IfElseIfBlock.Then>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Individual (1040)" sap:VirtualizedContainerService.HintSize="545.6,2976.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_86" OpenMode="Never" ScopeGuid="31398c1f-9e40-4e6a-b1b5-6b33f39b6f72" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Individual (1040)" sap:VirtualizedContainerService.HintSize="545.6,2879.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_86" OpenMode="Never" ScopeGuid="31398c1f-9e40-4e6a-b1b5-6b33f39b6f72" Version="V2" WindowResize="Maximize">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2770.4" sap2010:WorkflowViewState.IdRef="Sequence_327">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,2712.8" sap2010:WorkflowViewState.IdRef="Sequence_327">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -352,7 +356,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NTypeInto>
-                      <Sequence DisplayName="Sequence- W2" sap:VirtualizedContainerService.HintSize="449.6,2176" sap2010:WorkflowViewState.IdRef="Sequence_343">
+                      <Sequence DisplayName="Sequence- W2" sap:VirtualizedContainerService.HintSize="449.6,2147.2" sap2010:WorkflowViewState.IdRef="Sequence_343">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -412,7 +416,7 @@
                             <uix:TargetAnchorable CvElementArea="583, 305, 354, 28" CvType="InputBox" DesignTimeRectangle="1254, 495, 140, 25" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='_0_11' role='editable text' /&gt;" Guid="1c37921d-d6b3-48c0-8e50-7dd7e65ff49f" ImageBase64="" InformativeScreenshot="c458365b28fc85ee3bc0d5cbb9b3da80.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NTypeInto.Target>
                         </uix:NTypeInto>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Dependent care benefits" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_178" ScopeIdentifier="31398c1f-9e40-4e6a-b1b5-6b33f39b6f72" Text="56" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Dependent care benefits" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_178" ScopeIdentifier="31398c1f-9e40-4e6a-b1b5-6b33f39b6f72" Text="56" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable CvElementArea="583, 305, 354, 28" CvType="InputBox" DesignTimeRectangle="1254, 605, 140, 25" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='_0_19' role='editable text' /&gt;" Guid="1c37921d-d6b3-48c0-8e50-7dd7e65ff49f" ImageBase64="" InformativeScreenshot="038ec2e3103a50b576570ed80912e5ed.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NTypeInto.Target>
@@ -430,7 +434,7 @@
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
                 <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="420, 88, 1250, 875" FilePath="[in_DictCredentials(&quot;Application Path&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPDSURBVGhD7ZlZTxNRGIb5aYIoq+wQb/QHeGm88cbEC68FZDFCEYhEkEWw0CJLQGSVLQbLJmDYEQSCsqt8nrftmUzbr2XanimQ2OQJ03aG731mzplzzjQq+mkzubBSdK74K7jm3o551ko3X3ygpFejlNYwQ9m2FcppXTNMtn3VdKKicxHWqoWWAhwx+XaKt/RRau2kIRmuoGqiEAxn3xUysACQkrg6iRVDlNG0wIYHXEHV+G1C/pD76Ikr6XE1MfEPL1DAjQiEK+EP7/B60F/SG2YjK8Cd5UBwwb2Js/RS5rtvbEHVeAqgM7s7tD+4wCx5Lc67Fzo7V1gVXldANhX9Z544w+mbUoBt7H+juJPSG+fY4iowpQlJtGPE1UiuGmcDhIt5TUjgfSzuVlnNS2yQUDG9CXkTW9hOGY3zbJhQiEgT8gYjelr9NBsoWMRUgi+uAi68JDq3hVJqJthQwcAKJBe1UvXIHH2cW1dC18wqPbKOMBLNdOv1ZzaYUVgBFFTxOjs70/greNAwqFyCFdg7OnFHCO+lFwBvRud9BKRESnVozYkV+HV86o5A1Da5QpWDsyEzt7mnCdSOLbACAH0itW6KDRmIcwXu1w/4fG8UBLM7lgwJgJh8m7jFBjdqXyoBcL2wTQx2i2xYjksnADBic2E5Lkwgq6Rd2/YGxxqdO0VcAJ8XdDtoX9S4V93rE16CTm2kP0RUoE4IFPU4nGMC3u8eHNPdii6f8BJMxc9bT7BzIQjIohDg9jGKXmDj56EWHjjWdiil+D17HMBJSK4aY4NLIiqg54sIjykLd4yemDwbZVr9L08vRGBiddtQeEl8WR8bHpgugMlcOOEBmpK/ZalpAiha0jflEX5qY5eSggwv8Tc2mCKA8Ja+aY/wwOhAxuG8Cm+/RkagrN83PAhHAOB5k6kCOEtl/TMeofW3zXAFMLh5PzBTJoDw5QOe4ceXf1D37Jr2PlwBkFg5rF4AD4YrBj3Djy5tUWKh3WcqwR0fDHgqrlzgiX1M2x+MLG5RQoHd+Z1qAeD8fUKlwODCd23/4cVNineHB2YI4EcWZQKYyxyd/qEdMTGrEWteeeYlZgjguVK2bVmNwJ3yLnrY9Ili81rY780QAHL9rKQJBcIsgYSKoastEFvUcbUFMO5g8X+uwPb+Ma3vHYTM4clvUwQAbqesAArLoip5KUZqrl6o4CcsVuBxyygd6M5cuGA+NLm+S2nP23xqhUNcaS8vADBvv23pVEJOaYdYGroW+SpBR/YrcBXAo8grLQD+C1wsVvoH+m9Wo3rXM98AAAAASUVORK5CYII=" Selector="[string.Format(&quot;&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='*{0}*- Tax' /&gt;&quot;, in_out_ClientId)]" Title="2022I:KQD20:V1 - Anderson, Jack - Tax" />
+                  <uix:TargetApp Area="420, 88, 1250, 875" FilePath="[in_Config(&quot;CCH_FilePath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPDSURBVGhD7ZlZTxNRGIb5aYIoq+wQb/QHeGm88cbEC68FZDFCEYhEkEWw0CJLQGSVLQbLJmDYEQSCsqt8nrftmUzbr2XanimQ2OQJ03aG731mzplzzjQq+mkzubBSdK74K7jm3o551ko3X3ygpFejlNYwQ9m2FcppXTNMtn3VdKKicxHWqoWWAhwx+XaKt/RRau2kIRmuoGqiEAxn3xUysACQkrg6iRVDlNG0wIYHXEHV+G1C/pD76Ikr6XE1MfEPL1DAjQiEK+EP7/B60F/SG2YjK8Cd5UBwwb2Js/RS5rtvbEHVeAqgM7s7tD+4wCx5Lc67Fzo7V1gVXldANhX9Z544w+mbUoBt7H+juJPSG+fY4iowpQlJtGPE1UiuGmcDhIt5TUjgfSzuVlnNS2yQUDG9CXkTW9hOGY3zbJhQiEgT8gYjelr9NBsoWMRUgi+uAi68JDq3hVJqJthQwcAKJBe1UvXIHH2cW1dC18wqPbKOMBLNdOv1ZzaYUVgBFFTxOjs70/greNAwqFyCFdg7OnFHCO+lFwBvRud9BKRESnVozYkV+HV86o5A1Da5QpWDsyEzt7mnCdSOLbACAH0itW6KDRmIcwXu1w/4fG8UBLM7lgwJgJh8m7jFBjdqXyoBcL2wTQx2i2xYjksnADBic2E5Lkwgq6Rd2/YGxxqdO0VcAJ8XdDtoX9S4V93rE16CTm2kP0RUoE4IFPU4nGMC3u8eHNPdii6f8BJMxc9bT7BzIQjIohDg9jGKXmDj56EWHjjWdiil+D17HMBJSK4aY4NLIiqg54sIjykLd4yemDwbZVr9L08vRGBiddtQeEl8WR8bHpgugMlcOOEBmpK/ZalpAiha0jflEX5qY5eSggwv8Tc2mCKA8Ja+aY/wwOhAxuG8Cm+/RkagrN83PAhHAOB5k6kCOEtl/TMeofW3zXAFMLh5PzBTJoDw5QOe4ceXf1D37Jr2PlwBkFg5rF4AD4YrBj3Djy5tUWKh3WcqwR0fDHgqrlzgiX1M2x+MLG5RQoHd+Z1qAeD8fUKlwODCd23/4cVNineHB2YI4EcWZQKYyxyd/qEdMTGrEWteeeYlZgjguVK2bVmNwJ3yLnrY9Ili81rY780QAHL9rKQJBcIsgYSKoastEFvUcbUFMO5g8X+uwPb+Ma3vHYTM4clvUwQAbqesAArLoip5KUZqrl6o4CcsVuBxyygd6M5cuGA+NLm+S2nP23xqhUNcaS8vADBvv23pVEJOaYdYGroW+SpBR/YrcBXAo8grLQD+C1wsVvoH+m9Wo3rXM98AAAAASUVORK5CYII=" Selector="[string.Format(&quot;&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='*{0}*- Tax' /&gt;&quot;, in_out_ClientId)]" Title="2022I:KQD20:V1 - Anderson, Jack - Tax" />
                 </uix:NApplicationCard.TargetApp>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -443,13 +447,13 @@
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.ToLower.Contains(&quot;fiduciary&quot;) and out_CurrentRow(&quot;Proforma Details&quot;).ToString.ToLower.Contains(&quot;yes&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
             <ui:IfElseIfBlock.Then>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Fiduciary (1041)" sap:VirtualizedContainerService.HintSize="206.4,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_87" OpenMode="Never" ScopeGuid="e7008adc-46e5-4bc2-8c55-ff4a2ddc6736" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Fiduciary (1041)" sap:VirtualizedContainerService.HintSize="545.6,2836.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_87" OpenMode="Never" ScopeGuid="e7008adc-46e5-4bc2-8c55-ff4a2ddc6736" Version="V2" WindowResize="Maximize">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,2657.6" sap2010:WorkflowViewState.IdRef="Sequence_328">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,2630.4" sap2010:WorkflowViewState.IdRef="Sequence_328">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -682,11 +686,11 @@
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
                 <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="420, 88, 1250, 875" FilePath="[in_DictCredentials(&quot;Application Path&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPDSURBVGhD7ZlZTxNRGIb5aYIoq+wQb/QHeGm88cbEC68FZDFCEYhEkEWw0CJLQGSVLQbLJmDYEQSCsqt8nrftmUzbr2XanimQ2OQJ03aG731mzplzzjQq+mkzubBSdK74K7jm3o551ko3X3ygpFejlNYwQ9m2FcppXTNMtn3VdKKicxHWqoWWAhwx+XaKt/RRau2kIRmuoGqiEAxn3xUysACQkrg6iRVDlNG0wIYHXEHV+G1C/pD76Ikr6XE1MfEPL1DAjQiEK+EP7/B60F/SG2YjK8Cd5UBwwb2Js/RS5rtvbEHVeAqgM7s7tD+4wCx5Lc67Fzo7V1gVXldANhX9Z544w+mbUoBt7H+juJPSG+fY4iowpQlJtGPE1UiuGmcDhIt5TUjgfSzuVlnNS2yQUDG9CXkTW9hOGY3zbJhQiEgT8gYjelr9NBsoWMRUgi+uAi68JDq3hVJqJthQwcAKJBe1UvXIHH2cW1dC18wqPbKOMBLNdOv1ZzaYUVgBFFTxOjs70/greNAwqFyCFdg7OnFHCO+lFwBvRud9BKRESnVozYkV+HV86o5A1Da5QpWDsyEzt7mnCdSOLbACAH0itW6KDRmIcwXu1w/4fG8UBLM7lgwJgJh8m7jFBjdqXyoBcL2wTQx2i2xYjksnADBic2E5Lkwgq6Rd2/YGxxqdO0VcAJ8XdDtoX9S4V93rE16CTm2kP0RUoE4IFPU4nGMC3u8eHNPdii6f8BJMxc9bT7BzIQjIohDg9jGKXmDj56EWHjjWdiil+D17HMBJSK4aY4NLIiqg54sIjykLd4yemDwbZVr9L08vRGBiddtQeEl8WR8bHpgugMlcOOEBmpK/ZalpAiha0jflEX5qY5eSggwv8Tc2mCKA8Ja+aY/wwOhAxuG8Cm+/RkagrN83PAhHAOB5k6kCOEtl/TMeofW3zXAFMLh5PzBTJoDw5QOe4ceXf1D37Jr2PlwBkFg5rF4AD4YrBj3Djy5tUWKh3WcqwR0fDHgqrlzgiX1M2x+MLG5RQoHd+Z1qAeD8fUKlwODCd23/4cVNineHB2YI4EcWZQKYyxyd/qEdMTGrEWteeeYlZgjguVK2bVmNwJ3yLnrY9Ili81rY780QAHL9rKQJBcIsgYSKoastEFvUcbUFMO5g8X+uwPb+Ma3vHYTM4clvUwQAbqesAArLoip5KUZqrl6o4CcsVuBxyygd6M5cuGA+NLm+S2nP23xqhUNcaS8vADBvv23pVEJOaYdYGroW+SpBR/YrcBXAo8grLQD+C1wsVvoH+m9Wo3rXM98AAAAASUVORK5CYII=" InformativeScreenshot="5defefc4f6cda6a0dcaabe68f8361bcc.png" Selector="[string.Format(&quot;&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='*{0}*- Tax' /&gt;&quot;, in_out_ClientId)]" Title="2022F:SDFE12:V1 - ABD34 - Tax" />
+                  <uix:TargetApp Area="420, 88, 1250, 875" FilePath="[in_Config(&quot;CCH_FilePath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPDSURBVGhD7ZlZTxNRGIb5aYIoq+wQb/QHeGm88cbEC68FZDFCEYhEkEWw0CJLQGSVLQbLJmDYEQSCsqt8nrftmUzbr2XanimQ2OQJ03aG731mzplzzjQq+mkzubBSdK74K7jm3o551ko3X3ygpFejlNYwQ9m2FcppXTNMtn3VdKKicxHWqoWWAhwx+XaKt/RRau2kIRmuoGqiEAxn3xUysACQkrg6iRVDlNG0wIYHXEHV+G1C/pD76Ikr6XE1MfEPL1DAjQiEK+EP7/B60F/SG2YjK8Cd5UBwwb2Js/RS5rtvbEHVeAqgM7s7tD+4wCx5Lc67Fzo7V1gVXldANhX9Z544w+mbUoBt7H+juJPSG+fY4iowpQlJtGPE1UiuGmcDhIt5TUjgfSzuVlnNS2yQUDG9CXkTW9hOGY3zbJhQiEgT8gYjelr9NBsoWMRUgi+uAi68JDq3hVJqJthQwcAKJBe1UvXIHH2cW1dC18wqPbKOMBLNdOv1ZzaYUVgBFFTxOjs70/greNAwqFyCFdg7OnFHCO+lFwBvRud9BKRESnVozYkV+HV86o5A1Da5QpWDsyEzt7mnCdSOLbACAH0itW6KDRmIcwXu1w/4fG8UBLM7lgwJgJh8m7jFBjdqXyoBcL2wTQx2i2xYjksnADBic2E5Lkwgq6Rd2/YGxxqdO0VcAJ8XdDtoX9S4V93rE16CTm2kP0RUoE4IFPU4nGMC3u8eHNPdii6f8BJMxc9bT7BzIQjIohDg9jGKXmDj56EWHjjWdiil+D17HMBJSK4aY4NLIiqg54sIjykLd4yemDwbZVr9L08vRGBiddtQeEl8WR8bHpgugMlcOOEBmpK/ZalpAiha0jflEX5qY5eSggwv8Tc2mCKA8Ja+aY/wwOhAxuG8Cm+/RkagrN83PAhHAOB5k6kCOEtl/TMeofW3zXAFMLh5PzBTJoDw5QOe4ceXf1D37Jr2PlwBkFg5rF4AD4YrBj3Djy5tUWKh3WcqwR0fDHgqrlzgiX1M2x+MLG5RQoHd+Z1qAeD8fUKlwODCd23/4cVNineHB2YI4EcWZQKYyxyd/qEdMTGrEWteeeYlZgjguVK2bVmNwJ3yLnrY9Ili81rY780QAHL9rKQJBcIsgYSKoastEFvUcbUFMO5g8X+uwPb+Ma3vHYTM4clvUwQAbqesAArLoip5KUZqrl6o4CcsVuBxyygd6M5cuGA+NLm+S2nP23xqhUNcaS8vADBvv23pVEJOaYdYGroW+SpBR/YrcBXAo8grLQD+C1wsVvoH+m9Wo3rXM98AAAAASUVORK5CYII=" InformativeScreenshot="5defefc4f6cda6a0dcaabe68f8361bcc.png" Selector="[string.Format(&quot;&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='*{0}*- Tax' /&gt;&quot;, in_out_ClientId)]" Title="2022F:SDFE12:V1 - ABD34 - Tax" />
                 </uix:NApplicationCard.TargetApp>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
