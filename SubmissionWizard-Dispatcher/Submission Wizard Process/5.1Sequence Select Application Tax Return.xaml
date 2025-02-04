@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1793,6274</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112.8,6282.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Select_Application_Tax_Return_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -107,7 +107,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Sequence bifurcating the flow for selection of specific tax file path based on tax software." DisplayName="Sequence_Select_Application_Tax_Return" sap:VirtualizedContainerService.HintSize="721,6209" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Sequence bifurcating the flow for selection of specific tax file path based on tax software." DisplayName="Sequence_Select_Application_Tax_Return" sap:VirtualizedContainerService.HintSize="721.6,6217.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strAccountReturn" />
       <Variable x:TypeArguments="x:String" Name="strSPClientID" />
@@ -127,8 +127,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="659,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;-----------------------------------------------------------------------------------------------------------------------------------------------&quot;]" />
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initializing variables required for the consecutive workflows from the Orchestrator Transaction item variable." DisplayName="Multiple Assign Tax File Selection Detail" sap:VirtualizedContainerService.HintSize="659,500" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="659.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;-----------------------------------------------------------------------------------------------------------------------------------------------&quot;]" />
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initializing variables required for the consecutive workflows from the Orchestrator Transaction item variable." DisplayName="Multiple Assign Tax File Selection Detail" sap:VirtualizedContainerService.HintSize="659.2,505.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -229,13 +229,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="659,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot; Creating binder for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]" />
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Selecting the sequence to be executed based on the tax software input using Else If activity." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659,2751" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="659.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot; Creating binder for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]" />
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Selecting the sequence to be executed based on the tax software input using Else If activity." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="659.2,2750.4" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[strTaxSoftware = &quot;GoSystem Tax RS&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="GoSystem Tax RS Binder Creation" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="GoSystem Tax RS Binder Creation" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ui:UiElement" Name="ui_Createbinderapp" />
                 </Sequence.Variables>
@@ -245,7 +245,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" OutUiElement="[ui_Createbinderapp]" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" OutUiElement="[ui_Createbinderapp]" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -432,13 +432,14 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Select Ultra Tax Return workflow" sap:VirtualizedContainerService.HintSize="354,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Ultra\Ultra_TaxReturnSelection.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Select Ultra Tax Return workflow" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Ultra\Ultra_TaxReturnSelection.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_SPClientID">[strSPClientID]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_PsProject">[strPsProject]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFilePath">[strTaxFilePath]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFileName" />
                     <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -453,7 +454,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Select Lacerte Tax Return workflow" sap:VirtualizedContainerService.HintSize="354,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Lacerte\Lacerte_SelectLacerteTaxReturn.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Select Lacerte Tax Return workflow" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Lacerte\Lacerte_SelectLacerteTaxReturn.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_PsProject">[strPsProject]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFilePath">[strTaxFilePath]</InArgument>
