@@ -3,6 +3,8 @@
     <x:Property Name="in_str_Taxfilepath" Type="InArgument(x:String)" />
     <x:Property Name="in_str_Taxfilename" Type="InArgument(x:String)" />
     <x:Property Name="in_str_Completepath" Type="InArgument(x:String)" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <this:Sequence_Browse_File.in_str_Taxfilename>
     <InArgument x:TypeArguments="x:String" />
@@ -13,7 +15,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1149.6,1996.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1149.6,2508</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Browse_File_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -101,19 +103,19 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Browse_File" sap:VirtualizedContainerService.HintSize="1160,1932" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Browse_File" sap:VirtualizedContainerService.HintSize="1160,2443.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="1097.6,1843.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1097.6,2354.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1064,1528.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1064,2040" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="uiElementButton" />
               <Variable x:TypeArguments="x:Boolean" Name="elementExistsFlag" />
@@ -124,20 +126,59 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1001.6,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-              <ui:MultipleAssign.AssignOperations>
-                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[in_str_Completepath]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_str_Taxfilepath+"\"+in_str_Taxfilename]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                </scg:List>
-              </ui:MultipleAssign.AssignOperations>
-            </ui:MultipleAssign>
+            <If sap2010:Annotation.AnnotationText="Confition to check Service type and change path for OS Binder." Condition="[in_TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString() = &quot;Outsource Offshore&quot;]" sap:VirtualizedContainerService.HintSize="1001.6,660.8" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="540.8,229.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,140.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[in_str_Completepath]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[in_Config("Ultra_BackupFilePath").ToString+"\"+in_str_Taxfilename]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="540.8,229.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,140.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.4,24.799999999999997" sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[in_str_Completepath]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[in_str_Taxfilepath+"\"+in_str_Taxfilename]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                </Sequence>
+              </If.Else>
+            </If>
             <uix:NCheckState DisplayName="Check App State 'Browse'" Exists="[elementExistsFlag]" sap:VirtualizedContainerService.HintSize="1001.6,1288.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" OutUiElement="[uiElementButton]" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Timeout="2" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Browse Button appears" sap:VirtualizedContainerService.HintSize="449.6,792.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -147,7 +188,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot; The Browse Button Exists : &quot;+elementExistsFlag.ToString]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Browse Click" sap:VirtualizedContainerService.HintSize="387.2,169.6" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="[uiElementButton]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Browse Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,169.6" sap2010:WorkflowViewState.IdRef="NClick_1" InUiElement="[uiElementButton]" KeyModifiers="None" MouseButton="Left" Version="V3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -155,7 +196,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="True" DisplayName="Type Filename" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Text="[in_str_Completepath]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="True" DisplayName="Type Filename" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Text="[in_str_Completepath]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="201, 415, 237, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='File name:' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;ctrl name='File name:' role='editable text' automationid='' /&gt;" Guid="e7c53520-be6d-4d97-950d-93ca0be1d85e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPEAAAATCAYAAABBR+uAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVHhe7dMBDQAADMOg+ze962gCHrgBaRJDnMQQJzHESQxxEkOcxBAnMcRJDHESQ5zEECcxxEkMcRJDnMQQJzHESQxxEkOcxJC2PbJASJ4qgGHOAAAAAElFTkSuQmCC" InformativeScreenshot="25ccf6809e90565a7e6fd828222481c9.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='#32770' title='Select UltraTax CS tax files' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -172,7 +213,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Open" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Open" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="470, 439, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="c96aeaea-1a4c-45a4-9eba-224c6b8065cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVGhD7ZbBEYQgDEXpiW6oZG+0QitUsWc7sIOsKChB3HFGN8LOP7xDMHB4gT+qcRwJyAHhwkC4MEy4er3BD2COWVFpBtdhjlkRG4ZhADcA4cJAuDAQLgyEC9OucGdIKbWira/3dUabwmfZmqxPa56s/g/pDQpf5BpXrHtLWhly+VqHtCf8UGwYRLr1jkx4AS70ViJnPiPFUTor7rFbVD3xYtoUri353bf85gd5k7TUNwsuhpHiaIqnRWzcY9y6vg1DjjaFn73ha8YP5EwcBrvdkVlyuWd/hgTtCT+V4aWsbM/hwCD8mN1zD3LyzC3q3TBq+Qzh3yn+w/mNX2QZo+vfy1hBpFzlGVl3AOHCQLgwnQrvFwgXBsKFOS0c3AtzzIpKM7gOc5wX4PdAuDAQLspIHzXPr3L4gVkTAAAAAElFTkSuQmCC" InformativeScreenshot="423f71a1d917875e6c698d71e74b3aac.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='#32770' title='Select UltraTax CS tax files' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -192,7 +233,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot; Tax file path is incorrect &quot;]" />
-                        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Closing Create new binder" sap:VirtualizedContainerService.HintSize="433.6,339.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="ac9f75e0-42e2-43f2-882c-a83ffa227c15" Version="V2">
+                        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Closing Create new binder" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="433.6,339.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="ac9f75e0-42e2-43f2-882c-a83ffa227c15" Version="V2">
                           <uix:NApplicationCard.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -201,7 +242,7 @@
                             </ActivityAction>
                           </uix:NApplicationCard.Body>
                           <uix:NApplicationCard.TargetApp>
-                            <uix:TargetApp Area="1676, 73, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="ac1a17c531f335db005705cee528a184.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+                            <uix:TargetApp Area="1676, 73, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="ac1a17c531f335db005705cee528a184.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" />
                           </uix:NApplicationCard.TargetApp>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -249,7 +290,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot; The Browse Button Exists : &quot;+elementExistsFlag.ToString]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Select filepath dropdown'" sap:VirtualizedContainerService.HintSize="436.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Select filepath dropdown'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="436.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="192, 498, 667, 19" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='cmbultrataxfilepath' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='cmbultrataxfilepath' role='combo box' /&gt;" Guid="0570556f-dc17-4afc-8800-00c4a67bb48f" ImageBase64="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" InformativeScreenshot="41175f4b4a313c6a50b2a1a164a94785.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
@@ -268,7 +309,7 @@
                   </uix:NClick>
                   <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,420.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <TryCatch.Try>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DelayBefore="1" DisplayName="Click 'SPbinderLibrary.AutoDro…'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" CursorMotionType="Smooth" DelayBefore="1" DisplayName="Click 'SPbinderLibrary.AutoDro…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3d14a7b4-99c7-475b-9f4e-d8dd98c50a4f" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable Accuracy="0.68" DesignTimeRectangle="-1, 1, 669, 20" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='{0}' /&gt;&quot;, in_str_Taxfilepath)]" FuzzySelectorArgument="&lt;ctrl automationid='W:\UT22' role='list item' check:text='SPbinderLibrary.AutoDropDownValues' /&gt;" Guid="aeb981ec-0fdd-4dbe-ad70-d3ad508552eb" ImageBase64="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" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                         </uix:NClick.Target>
@@ -331,7 +372,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="1676, 73, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="b9f3f46bd6e37137e41bd87cc729fcd3.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+        <uix:TargetApp Area="1676, 73, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="b9f3f46bd6e37137e41bd87cc729fcd3.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

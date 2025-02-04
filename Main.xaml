@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ConfigFilePath="C:\Automation Team\REF_Integration\RPA-Folder\2023\Config-Main.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ConfigFilePath="C:\Automation Team\RPA-Folder 2023\RPA-Folder\2023\Config-Main.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file." Name="in_OrchestratorQueueFolder" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file." Name="in_OrchestratorQueueName" Type="InArgument(x:String)" />
@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,844</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1037.6,848.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -126,18 +126,18 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title: SubmissionWizard BinderCreation]&#xA;[Process description: Log into fileroom application with the provided credentials, select service type, select engagement type and create binder by providing the required information]&#xA;TFS Checkin" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1468.8000000000002,563.2" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title: SubmissionWizard BinderCreation]&#xA;[Process description: Log into fileroom application with the provided credentials, select service type, select engagement type and create binder by providing the required information]&#xA;TFS Checkin" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="633.6,784" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">70,22.5</av:Point>
         <x:Double x:Key="StateContainerWidth">600</x:Double>
         <x:Double x:Key="StateContainerHeight">671.2</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">119.6,47.3 149.6,47.3 149.6,48.666666666666664 223,48.666666666666664</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">130,45.06 159.99999999999997,45.06 159.99999999999997,45.02666666666666 223,45.02666666666666</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="228.8,108.8" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="250.4,114.4" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
         <Sequence sap2010:Annotation.AnnotationText="Retrieve a new transaction data to be processed.&#xA;The TransactionNumber variable holds the current transaction number and incrementing this variable makes the framework retrieve the next transaction. If the framework is retrying a failed transaction, this variable is not incremented until the maximum number of retry attempts is reached." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="572,1155" sap2010:WorkflowViewState.IdRef="Sequence_25">
           <Sequence.Variables>
@@ -232,7 +232,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">224.333333333333,222.333333333333</av:Point>
-          <av:Size x:Key="ShapeSize">228.8,108.8</av:Size>
+          <av:Size x:Key="ShapeSize">250.4,114.4</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Double x:Key="StateContainerWidth">217</x:Double>
           <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -243,7 +243,7 @@
         <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="450,800" sap2010:WorkflowViewState.IdRef="Transition_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">338.733333333333,331.133333333333 338.733333333333,361.133333333333 339.2,361.133333333333 339.2,432.79999999999995</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">349.533333333333,336.733333333333 349.533333333333,366.733333333333 339.2,366.733333333333 339.2,432.79999999999995</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -611,7 +611,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                               <InArgument x:TypeArguments="ui:BusinessRuleException">[Exception]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Closing Create new binder" sap:VirtualizedContainerService.HintSize="603,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ff8b03c2-6c12-444b-b2d9-97f63c45cde5" Version="V2">
+                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Closing Create new binder" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="603,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ff8b03c2-6c12-444b-b2d9-97f63c45cde5" Version="V2">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -627,7 +627,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                               </ActivityAction>
                             </uix:NApplicationCard.Body>
                             <uix:NApplicationCard.TargetApp>
-                              <uix:TargetApp Area="199, 7, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAW5SURBVFhHrZd5bBRlGIcXAgjIoQbb3QUs3e5hSYyBmABRIQqJiv7hX/yhMYpRpIWAiIWelBsLpBFSelq6OAutAaTszBSiwUQhJg0IGg+UoMFAiQEPROTqMT7v7ky7OzvLJW/yZNNN9/s9M/PN972f62aVo610hbQiPlfd79PWPOXT1hVlaxU7srX1n2dpG78aq1UeHqO+v9+rbq5yq1WvZapbcjPUmoEZarUrU60xR7mDCmrLXLkEB7TycTnaisUIHETgLwS6s7X3DAQMBAwEDAQMBAwEriNwimDFo9bOdO+rv9c3Vxnuy1d8acg24/oqpBe7gnoplIwI6mXzEDju11b0IGAgAOsITytgZKrVUGN41LpLnj3183x5SiVBHXDagUozNl5BvZDbLQJFAQR2InIdAQMB47YFtNpjWcvDZQhcJMhw4CD03YGQviQmENSXTuSznTthIGDckYBWc2FMY0MR4d/YQi3OwJMQD39YfxeBAmE8IkcQMG4icBmBDgROIPAzAr8j0NUrsKe2zjdfURICE7kC+ci5+IwL5OqLhVGI6AgQ7CjQhcDXPm3tCgRmIBBAwIvAGAQeReBlBJoztC1tWSXhcgL+TQjtI0+py5mjDGFyWuGLYH6/XP2dcgR60gic5XVc6tNWu7O0KhcS8R+bRbAr47PNrpHnKwZklTdNJehESnCcL0dvjeRltkXGu9WIyx3dYQksmohABwIE2wWW/eDXlk8fp63tx+toRqaWXBEM4wpbHILlyk+P3aAUEPyLO7q90RttHugRgfH6/P65+tubEDASBLpCbcUXgm2l3wX2lz4e2L3KFTo+x4xKLQIs5sG1WGBy+JVxS5TV7uiHn7ijioHAeW90x2QQgYUhBE4mCWiFe/2bKt/KWVW9gAGegWcTkL+9kBgsPAanIDlcYEJ6Pg5XI9AtAp7odoM7sN4d3SYCC/IR6EwSaCtszymtK/DlRc4zwHWQq7LohCYYAlb4fRCF1PB8pX10OFzmUcN/I8DV9woc8UZbMkRgJwKG7RFcC7aWzvLNjWxwGFC4DK+AJVAAImb/v9+yFyoz3drWXZ5omPAkgT8RmCYCPzoInA7uW+r3vd7yIIMcsA1q8T3kwBQ4a36XiNy5xaO+3cpb0lTmINCFQL4IXHQQOBTQiobllNXK1U2GX81B7XwE6QQjMMzbHBaBFxHotAlAS4UIdDsI7PXrRQP8TWusW/wGyG23h3RDj+074Sj4QcKFJxC45CBQlU6gVQQC7A0yCAyGarAHOSET9zmI/fZWBNI+giD9QMJ7PhpkB3MKtZCJWAj9IfZbU+CGj+Anx0mosSUnCwiyzMpO5hQuyCo4AmK/c6syAWNzoPRGk9DpNewK6UWvQqxBkZJBTWS1uwr2cNl6gxD7Pym32igMR+SAg0Dva5i6EMX3gv3sBXRFJbHBpMzBh0IjJIb/AS9Ab7hH/cASeB6BfxwEDiMgC5HDUhwXuIrAm3IXAnpZbFApMyQL2kHC5bmXQO9zl/KoDcIoRD5FgFBLIGIJVJhLsWzFKZuRCPBZeordcCq9oTSnsYElxGQGnINdMFK+s8qj1kPdYAQ2ItBtFzA3o0mxzcjcjicgcMZBwHE7ljCQK54FuebfLtpxgmuFkQisQ+AqArRqKQIN3P74dpzQkCxDoDtVoLchWSINyUNaXawh8U9rTUKaEpDzwBSa0lYEOhGgO7YLKCeReATiDYnUbbRkxwhfTks2nZbMb2vJXkIggsA5sy2HFAEWI2V2ZpRXE4HeIvjuNqXOAteYdCsRGISImZxQBFtt+QQ+/19bnipwGYE1nui2obGZn65E4K4dTPoEOhDIZ0W8R5blmxZXjsBdOpqp9bsRmEQ31M/DonRb5XA4PYSAHE57biCQdDhFYCgivB0N5qh3UPHjebEczx9A4GkEijmeNyPwBQJHEUg8ns82j+eDbu147nL9BzHV9JE6K7fwAAAAAElFTkSuQmCC" InformativeScreenshot="b512e7242e823e230cc9d5c3fd833efe.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+                              <uix:TargetApp Area="199, 7, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="b512e7242e823e230cc9d5c3fd833efe.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" />
                             </uix:NApplicationCard.TargetApp>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -784,7 +784,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                               <InArgument x:TypeArguments="s:Exception">[Exception]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="SubmissionWizard" sap:VirtualizedContainerService.HintSize="679,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="ff8b03c2-6c12-444b-b2d9-97f63c45cde5" Version="V2">
+                          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="SubmissionWizard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="679,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="ff8b03c2-6c12-444b-b2d9-97f63c45cde5" Version="V2">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -800,7 +800,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                               </ActivityAction>
                             </uix:NApplicationCard.Body>
                             <uix:NApplicationCard.TargetApp>
-                              <uix:TargetApp Area="199, 7, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="b512e7242e823e230cc9d5c3fd833efe.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
+                              <uix:TargetApp Area="199, 7, 968, 714" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="b512e7242e823e230cc9d5c3fd833efe.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" />
                             </uix:NApplicationCard.TargetApp>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -978,7 +978,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                 <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">297.44,637.5999999999999 297.44,667.5999999999999 485,667.5999999999999 485,72.66666666666666 455,72.66666666666666</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">297.44,637.5999999999999 297.44,666.9466666666667 506.59999999999997,666.9466666666667 506.59999999999997,66.94666666666666 476.6,66.94666666666666</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">23</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -986,7 +986,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="529.6,3100.8" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="253.6,109.6" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="484.8,2680.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -1195,7 +1195,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">223,6.66666666666666</av:Point>
-                          <av:Size x:Key="ShapeSize">232,120</av:Size>
+                          <av:Size x:Key="ShapeSize">253.6,109.6</av:Size>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Double x:Key="StateContainerWidth">220</x:Double>
                           <x:Double x:Key="StateContainerHeight">29</x:Double>
@@ -1208,7 +1208,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
-                              <av:PointCollection x:Key="ConnectorLocation">339,126.66666666666666 339,156.66666666666666 338.733333333333,156.66666666666666 338.733333333333,222.333333333333</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">349.8,116.26666666666665 349.8,146.26666666666665 349.533333333333,146.26666666666665 349.533333333333,222.333333333333</av:PointCollection>
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -1223,14 +1223,14 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                         <Transition DisplayName="System Exception (failed initialization)" sap:VirtualizedContainerService.HintSize="450,800" sap2010:WorkflowViewState.IdRef="Transition_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:PointCollection x:Key="ConnectorLocation">339,126.66666666666666 339,156.66666666666666 85.32,156.66666666666666 85.32,208</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">349.8,116.26666666666665 349.8,146.26666666666665 95.03999999999999,146.26666666666665 95.03999999999999,208</av:PointCollection>
                               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
                               <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="149.6,120" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="171.2,109.6" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
                                 <Sequence DisplayName="End State" sap:VirtualizedContainerService.HintSize="500,616" sap2010:WorkflowViewState.IdRef="Sequence_83">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -1367,7 +1367,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">18,208</av:Point>
-                                  <av:Size x:Key="ShapeSize">149.6,120</av:Size>
+                                  <av:Size x:Key="ShapeSize">171.2,109.6</av:Size>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <x:Double x:Key="StateContainerWidth">138</x:Double>
                                   <x:Double x:Key="StateContainerHeight">29</x:Double>
@@ -1388,7 +1388,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                 <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="448.8,540.8" sap2010:WorkflowViewState.IdRef="Transition_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">349.64,637.5999999999999 349.64,667.5999999999999 483.133333333333,667.5999999999999 483.133333333333,254.97333333333302 453.133333333333,254.97333333333302</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">349.64,637.5999999999999 349.64,667.5999999999999 504.733333333333,667.5999999999999 504.733333333333,256.653333333333 474.733333333333,256.653333333333</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1403,7 +1403,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                 <Transition sap2010:Annotation.AnnotationText="There is no need for any action in case of successful transaction.&#xA;The process should simply go to next transaction." DisplayName="Success" sap:VirtualizedContainerService.HintSize="452,553.6" sap2010:WorkflowViewState.IdRef="Transition_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">391.4,637.5999999999999 391.4,658.493333333333 483.133333333333,658.493333333333 483.133333333333,298.493333333333 453.133333333333,298.493333333333</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">391.4,637.5999999999999 391.4,662.413333333333 504.733333333333,662.413333333333 504.733333333333,302.413333333333 474.733333333333,302.413333333333</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">59</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">52</x:Int32>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1435,7 +1435,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
         <Transition sap2010:Annotation.AnnotationText="This is a simple mecanism to stop the process.&#xA;In reallife scenario you can stop the process when there is no more data to process or on a schedule." DisplayName="No Data" sap:VirtualizedContainerService.HintSize="429.6,969.6" sap2010:WorkflowViewState.IdRef="Transition_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">338.733333333333,331.133333333333 338.733333333333,361.133333333333 92.8,361.133333333333 92.8,328</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">349.533333333333,336.733333333333 349.533333333333,366.733333333333 103.6,366.733333333333 103.6,317.6</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">39</x:Int32>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
