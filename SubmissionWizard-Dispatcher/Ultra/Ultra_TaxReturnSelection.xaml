@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1100,3265.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1100,3880.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Select_CCH_Tax_Return_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -48,6 +48,11 @@
       <x:String>System.Reflection</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -95,16 +100,22 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Select_Ultra_Tax_Return" sap:VirtualizedContainerService.HintSize="1110.4,3200.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Select_Ultra_Tax_Return" sap:VirtualizedContainerService.HintSize="1110.4,3816" sap2010:WorkflowViewState.IdRef="Sequence_10">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot; Filling Ultra Tax Return &quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot; Filling Ultra Tax Return &quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_str_TaxFilePath]</OutArgument>
       </Assign.To>
@@ -112,7 +123,7 @@
         <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("TaxFilePath").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_str_TaxFileName]</OutArgument>
       </Assign.To>
@@ -120,7 +131,7 @@
         <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("TaxFileName").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[In_Str_SPClientID]</OutArgument>
       </Assign.To>
@@ -128,7 +139,7 @@
         <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("SPClientID").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[In_Str_PsProject]</OutArgument>
       </Assign.To>
@@ -136,28 +147,28 @@
         <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("PsProject").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1048,2483.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Create New Binder" sap:VirtualizedContainerService.HintSize="1048,3098.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1014.4,2168.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap:VirtualizedContainerService.HintSize="1014.4,2784" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check for Ultra Client ID pop up" sap:VirtualizedContainerService.HintSize="952,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check for Ultra Client ID pop up" sap:VirtualizedContainerService.HintSize="952,699.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,456.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,448.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has appeared &quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cancel'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has appeared &quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="278, 132, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='btnCancel' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;ctrl automationid='btnCancel' role='push button' check:text='Cancel' /&gt;" Guid="43cb5536-a5c5-4e37-9cc0-1715e38430be" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAdCAYAAADrcjF6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKBSURBVGhD7ZnLTxNRFMb9X4y4MMqCRONSdybGnXHJTjEGjRHdgAlRFj42ulATTVSkBmkgEgiQEBUQnzxSEUEESWspjbUP+qK0nZZjv0NmUtNZjHNTkiHnJF8m9557Zub+es69M51dJGbbBJ6CMbyVSIru9nlEFtT9fonBwRjesOcX7T79VGRBDfffMDiYwPtPCTwFCTwFCTwFCTwFCTwFCTwFbQu8xoejFIylqbi5yReCza9ETcdWS49fzdGcP0oHzj839dtR1eHV3xkmrVCkWCpL17s+054z7dx/oq2/Ymw1NfYtwPdx8NILU78dVR0ebhoZ1+aeMPUPTftoPatRNl+gvFakL96wATicyFAmp1GhuJWxOHaMfGff/kYXeUMJymkFypTiEQswo7MB7tPP92DoK493JLxA6V05sZ6jWgvl8nrGzzeCMkcb8PCufay1l2H5QknjXLO+CAO60T1lxLe4PvAP1ftpmdtLwTWKl8ajVB0JDwAiyQ3ad67D1F+uC4/GePKukQVuI/ZnMG74ywEAij+cpL1nnxn+8flV9h9p7uE2shR2+Ip7Z2Ze59sftJbOcumi/GBW4OFY7oMWAjGOx3n0pQCGTHYkPKxhML0Uy3W0pYfXpYnF31TT0G4r83QfhGthXTzU1PVPP+RIeACCCSG7sMNi7brq+kj3Bmb44vANTHqNsVbhIcsw9vKTcfadvDlI7neLPBH8z6bHnLo1yBuQI+FBt19Oc6bohrJClmAdxLOX3ofHGavwjl/ro1A8w7GpjTzHYjKe5T9bO3Bpl0bprkbTVHex07nwdqoEnoIEnoIEnoIEnoIEnoIEnoIq4MlHb+uq+OgtZseI/gLI30VMuORbiAAAAABJRU5ErkJggg==" InformativeScreenshot="3448ca7c1f2070df02454933c03491ff.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Search UltraTax CS file' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -171,13 +182,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,259.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="337.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has not appeared &quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has not appeared &quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -191,30 +202,38 @@
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Browse File workflow" sap:VirtualizedContainerService.HintSize="952,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Ultra\Ultra_BrowseFile.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Browse File workflow" sap:VirtualizedContainerService.HintSize="952,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Ultra\Ultra_BrowseFile.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_Taxfilepath">[in_str_TaxFilePath]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_str_Taxfilename">[in_str_TaxFileName]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_Completepath" />
-                <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Taxfilepath">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_TaxFilePath" />
+                </InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                  <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                </InArgument>
+                <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
+                  <VisualBasicValue x:TypeArguments="ui:QueueItem" ExpressionText="in_TransactionItem" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_str_Taxfilename">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_TaxFileName" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <uix:NCheckState DisplayName="Check Valid file path pop up" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="952,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Timeout="10" Version="V3">
+            <uix:NCheckState DisplayName="Check Valid file path pop up" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="952,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Timeout="10" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,448.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,448.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Provide valid Ultra tax installation path&quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Provide valid Ultra tax installation path&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="259, 95, 80, 25" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='OK' role='push button' automationid='' check:text='OK' /&gt;" Guid="c6198d0e-8233-49c9-a044-bc2491b08076" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAdCAYAAAA0PEtlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHWSURBVGhD7ZZNS0JREIb7GVEYRKugfe0KWrUKot/QpjJqES4iN9YiIvIHtIoWEVFERSoJliVKlBBplkZhpWkqih/4dSfPgOLNVjHoEeaVBzzjXBkezr3ndgCHNCyUOCj0KvYEnWfTzD+ZcG2iTBEWSgALJYaFEsNCiWGhxLBQYlgoMSyUGCmF9pjn4DLmg3y5iIOJJItZMAZMtZ4R+woO322ardUmXcaGWrORUqgz7oeSUgZz5B4GrDoYvVqF91wclMrH4DvEHnfyDQpKCYbtBlyfht1QVhQ4+LxhofX0ny9CtpSHl0xEVR+60KNAT+oD1/VCj8N3KNsRf26pTIF0QnWeXRxG7Lj6usakhVAuAfFCGtdVoTvBa9yZrkQANGat6ppWIJ3QZe8+DnMUum347TUbhUxl94rvQqiIkClqgzZ9Q38rkE7olHsLh7FGH1T1LtMMBLMx1Q4VieZTKDVQeUS0+nYXtP0zdMyxho8HGWYXSCdUIE55Edv3I/RZFvCUD6S/8ORf959gT/2hVF2Lg2nJu6f6r2YjpdC/3kMjlVt7O2iv9fwW2muZx1erQrkE486NWl+zkVJoO8NCiWGhxLBQYlgoMSyUGBZKTINQDl1YKGkAfgBnaLN38K7N9QAAAABJRU5ErkJggg==" InformativeScreenshot="3a5a32c37d5cae480d0352a92f342d46.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='SPbinder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -245,7 +264,7 @@
             </uix:NCheckState>
             <uix:NCheckState DisplayName="Check for Ultra Client ID pop up" sap:VirtualizedContainerService.HintSize="952,985.6" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Timeout="1" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,735.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,735.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -253,7 +272,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has appeared &quot;]" />
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'indicator titleThumb'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[in_str_TaxFileName]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'indicator titleThumb'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[in_str_TaxFileName]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="11, 89, 342, 22" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='txtclientnumber' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;ctrl automationid='txtclientnumber' role='editable text' /&gt;" Guid="cd997fe6-6a93-4831-b25a-6b5d73ad7c9a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVoAAAAaCAYAAAD2fpSuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVHhe7d1BCsQgFERB73/AeJgQ/xCYBGYxCIm9q4IG0f3b2vZ9r+M4aoxRAKwntABhd2i3baveu5mZLdrlJ7QArCG0AGHT0J53ADw3DW1r7XsC4AmhBQgTWoAwoQUIE1qAMKEFCBNagDChBQgTWoAwoQUIE1qAMKEFCBNagDChBQgTWoCwaWjPOwCem4YWgHf+hvZ8MDOzNbvcofXdOECG0AJEVX0Ak5qJGgzmESkAAAAASUVORK5CYII=" InformativeScreenshot="4b753139f04a09fa4f3714d3f988fce1.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Search UltraTax CS file' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
@@ -264,7 +283,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="216, 137, 38, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnSearch' /&gt;&lt;ctrl name='Search' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnSearch' /&gt;&lt;ctrl name='Search' role='text' automationid='' check:text='Search' /&gt;" Guid="8071e506-1a95-40a1-9cba-eccf2d1c7317" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAUCAYAAAD7s6+GAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI/SURBVEhL7VRLa1NBGPVniIKILtyI6E4FQRCXLtWlrkRIpSoUFMEHWnHjQumiLnyAi+qiUBc+ktjah62lwRr70hTbKhqTJm3TJmmT3Nx7j3M+uMMdDUIwLRUy4ZB8851v5nyPyYaNrwL4H1AXWmvUhdYa60Lovt6reBofxOGBWxX9hCH0UP9NJIuL8K/XqTEjYDVwOvoAjuvi4beein7CEDqRjaPoWDg5fM8grTaqFpoqZTFfymFb+JxBIo5F7iKt/EyEh35dSWve+8UZ5O0iSk5Z8CIZlX1PQLZckO70zH3Gnakgcsq2HFu43PN4tL2VKGQMHYbQSGZaSEOZKRx826z3iS/5JDLWMnZ3X0Lj6GM5mHPl5xBj2e+wXBs7uy5oAd1zE9jR2YTjkRbYroNYLoEtoUYd4/Fezn7E5uAZ3Ih1iN3+c0hzDKHbw+cRSo1K1bgo7KiqJPd5ef/8pOayukzMH0+0znRK7Kno/T9a2vbjnfguf2o3Yn7nEbyP1fZsQ6gfbFHBtpBQjysw8kgOYrvYYoL2ZD4h3GBqRNrJfS/JSkK70uPa57/rn4QSfFwMODHcKi3zV9RD03ibXPJEVWtTsGFtKrq/75r+fWTwtlQoXljA1tBZLFh5eWi73lwU/97eK9ij5rVlOiyXN8eeyf7fhHo2Z5RJcY4P9F2vXihfvbcYOFtckodDH785s2VVWSawVF6RKnJ+mQz5y3ZJEnLVp5JQ4nnyg/534DkDqktVC13PqAutNepCa4sAfgE5oFDdXg2F+gAAAABJRU5ErkJggg==" InformativeScreenshot="57a97c800dee125cc84596d78c563a78.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Search UltraTax CS file' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
@@ -303,13 +322,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has not appeared &quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot; Pop up for Ultra tax client ID has not appeared &quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -328,7 +347,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <If Condition="[In_Str_SPClientID=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="952,755.2" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[In_Str_SPClientID=&quot;&quot;]" sap:VirtualizedContainerService.HintSize="952,756.8" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -336,23 +355,23 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;SP client ID is blank hence it is an business exception &quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;SP client ID is blank hence it is an business exception &quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,330.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,330.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SP Client ID'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[In_Str_SPClientID]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SP Client ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,241.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[In_Str_SPClientID]" Version="V1">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="112, 597, 140, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtclientid' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtclientid' role='editable text' /&gt;" Guid="3e3bf78f-9341-466c-9aee-0c1679b9df35" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAXCAYAAADk88bYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMdSURBVGhD7ZjtS1RBFMb9+/oQ9CWIqIQoSDLBPhgpFkIlSWwh9CJlkBFIC5KUvQhmmJbFZq24K7VYaSIlJYlQSDH1HHouc+/ejTPu4hfPAw/3zpmXnb3nNzN3t86ZTFXIADJVpQigYrFoNqtNxQBydX+LtMlUQUEALaxuHa///velTf+VAVTBBpBOBlAFG0A6bRignQea3bZdB92zwkIsXlhcFfuxd19+lMVqbXzG0Hje5T9+i8W7bwzIPK9lH8biaD89v+I+rPyKYrhnzADSaUMAjeTeSlK272lwPf1DURw+3NopdWjDWN/gYwHOb1dr50qf5XOzw8+jGEDA52Ke+460xtpjTmh//no2inGM0amSAaTUhgDCQ9/d0OLaui6XJYYAoZ4xLUBIeKb3tiQcY6CPDwRivv0x0wAi6Gev3JLrxMx8VEeA4LH8+9gYBpBewQBxVeNoGHzyqiwxAKjldLfEeWxoAcKYaDc5uyhlwIBx7o69ljLufUB8pwFE0GeX1qTO3y05J8x3f/OJ2BgGkF7BAHFVP5osuJlP38sSg4QABMRQh3ckLUD1TW2yW/gx9GMM42kBIujsC6j93ZJzAvzoB9gNoHAFA4RVjQcPeFAGMH5iCBASiJWNshYgJA99/Rj6I/ms1wJE0Ll7YQ4oc7f050TYsShwNYD0CgKIqxoPOWkmhgDhnqsbfTQAoU3Hhd5YzN+V9jYel/FwPZm5GkEMJwEC6Jybb+6WPkCEnd/NANIrCCCu6jujuShx+NnsJ8YHCMY96jUAsS1gQPne0zdS5i5CT80tu6b2LnnZLi3/lNjAyEtpi+QT9PZzPbF+Rzsy0W6Z3BXRD/05hgGkUxBA2AnwUor/UPjgYRwxTEYSICQTfTQAoS1+he2ob5REok//g/HUtjxu0AZXwNR56aaMwbrhF8VYH+xOBCTtWCXABpBeQQD5D3uzDTDmvq7LPa6AGQAk/zislQ0gnTYdILzTpPnMxb7U9jSOLe5M8KFjp9z9ienUtrWwAaRTEEBLa1vHBpBOQQCZTElVBMhs1pqyrcZUlQwgUxVy7g+f67mPNYXhsgAAAABJRU5ErkJggg==" InformativeScreenshot="f723bc85270048530235633f1dfc5ab3.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
@@ -372,7 +391,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'PS Project #'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="952,48" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[In_Str_PsProject]" Timeout="2" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into 'PS Project #'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,49.6" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="59199657-a2cb-45f6-bb2c-cd6f52a3d549" Text="[In_Str_PsProject]" Timeout="2" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="335, 597, 140, 19" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtpsproject' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='txtpsproject' role='editable text' /&gt;" Guid="06958f84-73f6-46a7-8011-15649ccc4138" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAXCAYAAADk88bYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVGhD7dSxCcAwEARB9d+gypGdyOBAINh0Bi74fPmxIBAQyRfQnNPsetsvoDXecw8OBEQiIBIBkQiIREAkAiIREImASAREIiASAZEIiERAJAIiERCJgEiOAZndbvNqSAREsNYDvPKWZXnIC5MAAAAASUVORK5CYII=" InformativeScreenshot="ce7d24029f4b4537f3e0c2f3783d3eda.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Visible">
                   <uix:TargetAnchorable.Anchors>
@@ -393,7 +412,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="236, 73, 968, 714" FilePath="C:\\SurePrepStageFolder\\SPbinder\\submissionwizard.exe" IconBase64="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" InformativeScreenshot="94c511908964130012ed4af2e48b5990.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" />
+        <uix:TargetApp Area="236, 73, 968, 714" FilePath="C:\\SurePrepStageFolder\\SPbinder\\submissionwizard.exe" IconBase64="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" InformativeScreenshot="94c511908964130012ed4af2e48b5990.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" Title="Create New Binder" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
