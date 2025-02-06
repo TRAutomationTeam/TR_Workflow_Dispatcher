@@ -154,7 +154,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="Lacerte" sap:VirtualizedContainerService.HintSize="1098.4,312.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Lacerte" sap:VirtualizedContainerService.HintSize="1062.4,589.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
       <Variable x:TypeArguments="x:Int32" Name="indx_Duplicate" />
@@ -461,13 +461,13 @@
                                   <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="1708.8,40163.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V2" WindowResize="Maximize">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V2" WindowResize="Maximize">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1675.2,39872" sap2010:WorkflowViewState.IdRef="Sequence_256">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1675.2,39867.2" sap2010:WorkflowViewState.IdRef="Sequence_256">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3415,9 +3415,9 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:IfElseIf>
-                                      <If Condition="[in_TransactionItem(&quot;ServiceType&quot;).ToString.Equals(&quot;Outsource Offshore&quot;)]" DisplayName="If Service type is OS" sap:VirtualizedContainerService.HintSize="1612.8,5765.6" sap2010:WorkflowViewState.IdRef="If_35">
+                                      <If Condition="[in_TransactionItem(&quot;ServiceType&quot;).ToString.Equals(&quot;Outsource Offshore&quot;)]" DisplayName="If Service type is OS" sap:VirtualizedContainerService.HintSize="1612.8,5762.4" sap2010:WorkflowViewState.IdRef="If_35">
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1579.2,5497.6" sap2010:WorkflowViewState.IdRef="Sequence_362">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1579.2,5496" sap2010:WorkflowViewState.IdRef="Sequence_362">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3436,7 +3436,7 @@
                                               </uix:NClick.Target>
                                             </uix:NClick>
                                             <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="1516.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1516.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[&quot;Creating Backup for Client &quot;+ out_ClientId]" />
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1516.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[&quot;Creating Backup for Client &quot;+ out_ClientId]" />
                                             <uix:NCheckState DisplayName="Check App State 'Print Tax Return'" sap:VirtualizedContainerService.HintSize="1516.8,509.6" sap2010:WorkflowViewState.IdRef="NCheckState_39" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Timeout="8" Version="V4">
                                               <uix:NCheckState.IfExists>
                                                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_368">
@@ -3461,7 +3461,7 @@
                                               <uix:NCheckState.Target>
                                                 <uix:TargetAnchorable CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvTextArea="6, 8, 105, 15" CvTextArgument="Print Tax Return" CvType="Text" DesignTimeRectangle="8, 8, 103, 13" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="114a89fa-e0e2-458f-8cf1-f44f7c8a13b8" ImageBase64="" InformativeScreenshot="743df93494fa63f9a2f0b9bda33ea278.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print Tax Return' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                                                   <uix:TargetAnchorable.Anchors>
-                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                       <uix:Target CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvTextArea="15, 36, 43, 15" CvTextArgument="Return" CvType="Text" DesignTimeRectangle="16, 36, 42, 16" ElementType="Text" Guid="014a52ab-c4c6-4a92-bb65-eeb756788d60" SearchSteps="CV" TargetType="ComputerVisionBased" />
                                                     </scg:List>
                                                   </uix:TargetAnchorable.Anchors>
@@ -3528,7 +3528,7 @@
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvElementArea="65, 266, 17, 17" CvTextArea="86, 266, 40, 15" CvTextArgument="Printer" CvType="CheckBox" DesignTimeRectangle="66, 265, 89, 21" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='Printer' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='Printer' check:fulltext='Printer' /&gt;" Guid="8909e1e8-4f4d-46f7-9360-434f135b8c11" InformativeScreenshot="2c3abe39ce8f5df2307be9b50b5dcd8d.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                         <uix:TargetAnchorable.Anchors>
-                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                             <uix:Target CVScreenId="0954ad9d-51f0-4f98-a7a9-1aa3daef5879" CvElementArea="65, 291, 17, 16" CvTextArea="86, 291, 61, 17" CvTextArgument="File (PDF)" CvType="CheckBox" DesignTimeRectangle="66, 290, 89, 21" ElementType="CheckBox" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='File (PDF)' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='File (PDF)' check:fulltext='File (PDF)' /&gt;" Guid="e2f77462-8ce9-4120-8854-5d4b068fbf48" SearchSteps="Selector, FuzzySelector, CV" />
                                                           </scg:List>
                                                         </uix:TargetAnchorable.Anchors>
@@ -3539,7 +3539,7 @@
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable CVScreenId="0954ad9d-51f0-4f98-a7a9-1aa3daef5879" CvElementArea="65, 291, 17, 16" CvTextArea="86, 291, 61, 17" CvTextArgument="File (PDF)" CvType="CheckBox" DesignTimeRectangle="66, 290, 89, 21" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='File (PDF)' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='File (PDF)' check:fulltext='File (PDF)' /&gt;" Guid="acae0b3d-12f1-4126-af4c-752c2a3faaae" InformativeScreenshot="435085392fba829bf53214b767e85178.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                         <uix:TargetAnchorable.Anchors>
-                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                             <uix:Target CVScreenId="0954ad9d-51f0-4f98-a7a9-1aa3daef5879" CvElementArea="64, 266, 17, 17" CvTextArea="88, 266, 38, 15" CvTextArgument="Printer" CvType="CheckBox" DesignTimeRectangle="66, 265, 89, 21" ElementType="CheckBox" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='Printer' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Return Options' /&gt;&lt;wnd cls='TGroupBox' title='Preparer Review Copy' /&gt;&lt;wnd cls='TCheckBox' title='Printer' check:fulltext='Printer' /&gt;" Guid="99da9918-7c8b-44c4-86c1-cf4974a71668" SearchSteps="Selector, FuzzySelector, CV" />
                                                           </scg:List>
                                                         </uix:TargetAnchorable.Anchors>
@@ -3548,7 +3548,13 @@
                                                   </uix:NClick>
                                                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'File (PDF)'" sap:VirtualizedContainerService.HintSize="952,189.6" sap2010:WorkflowViewState.IdRef="NClick_144" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V4">
                                                     <uix:NClick.Target>
-                                                      <uix:TargetAnchorable CVScreenId="0954ad9d-51f0-4f98-a7a9-1aa3daef5879" CvElementArea="535, 691, 94, 32" CvTextArea="571, 697, 23, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="537, 692, 94, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='OK' cls='TButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='TButton' title='&amp;amp;OK' check:text='&amp;amp;OK' /&gt;" Guid="c41293b0-73eb-4d94-9e04-91a90b038888" InformativeScreenshot="4be66929b97ff5ef317a29a4b5dde936.png" ScopeSelectorArgument="&lt;wnd app='wtax.exe' title='Print Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                      <uix:TargetAnchorable CVScreenId="e4b2d366-8175-452c-8a07-fb29462deedf" CvElementArea="535, 691, 94, 32" CvTextArea="571, 697, 23, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="537, 692, 94, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='OK' cls='TButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='TButton' title='&amp;amp;OK' check:text='&amp;amp;OK' /&gt;" Guid="bd502104-fbfd-4c1d-836c-fa16e16cfcc9" InformativeScreenshot="7dfd6f0987f72307c1fb1797a7f30414.png" ScopeSelectorArgument="&lt;wnd app='w23tax.exe' cls='TfrmPrintReturn' title='Print Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                                        <uix:TargetAnchorable.Anchors>
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                            <uix:Target CVScreenId="e4b2d366-8175-452c-8a07-fb29462deedf" CvElementArea="635, 691, 93, 33" CvTextArea="661, 698, 42, 13" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="637, 692, 94, 31" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Cancel' cls='TButton' title='&amp;amp;Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Cancel' cls='TButton' title='&amp;amp;Cancel' check:text='&amp;amp;Cancel' /&gt;" Guid="769e96e3-d28d-436d-8d8f-db1af0761562" SearchSteps="Selector, FuzzySelector, CV" />
+                                                          </scg:List>
+                                                        </uix:TargetAnchorable.Anchors>
+                                                      </uix:TargetAnchorable>
                                                     </uix:NClick.Target>
                                                   </uix:NClick>
                                                   <uix:NCheckState DisplayName="Check App State 'Print To PDF File As'" sap:VirtualizedContainerService.HintSize="952,1254.4" sap2010:WorkflowViewState.IdRef="NCheckState_41" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Timeout="8" Version="V4">
@@ -3563,7 +3569,7 @@
                                                           <uix:NTypeInto.Target>
                                                             <uix:TargetAnchorable CVScreenId="735a4a5b-7514-4146-8d8e-900a95dcecf5" CvElementArea="254, 448, 304, 26" CvType="InputBox" DesignTimeRectangle="257, 455, 280, 18" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" Guid="49185790-d7dd-4967-8d32-926318bda35b" InformativeScreenshot="85084d2bfb1a8e0278471536781d8be7.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print To PDF File As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                               <uix:TargetAnchorable.Anchors>
-                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                                   <uix:Target CVScreenId="735a4a5b-7514-4146-8d8e-900a95dcecf5" CvTextArea="134, 453, 60, 15" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="136, 455, 109, 16" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" Guid="c81574b4-a70f-489d-b564-3738c1212083" SearchSteps="Selector, FuzzySelector, CV" />
                                                                 </scg:List>
                                                               </uix:TargetAnchorable.Anchors>
@@ -3574,14 +3580,14 @@
                                                           <uix:NClick.Target>
                                                             <uix:TargetAnchorable CVScreenId="3bdc9487-6439-4dbe-90cb-54aea05726e7" CvElementArea="599, 446, 95, 30" CvTextArea="630, 452, 33, 15" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="602, 448, 94, 29" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd title='&amp;amp;Save' check:text='&amp;amp;Save' /&gt;" Guid="b1cd32b0-63fc-4b72-b0a2-7219bd470435" InformativeScreenshot="a124957675366dda1cb335acd2127314.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print To PDF File As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                               <uix:TargetAnchorable.Anchors>
-                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                                   <uix:Target CVScreenId="3bdc9487-6439-4dbe-90cb-54aea05726e7" CvElementArea="600, 478, 95, 30" CvTextArea="624, 485, 45, 15" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="602, 481, 94, 29" ElementType="Button" FullSelectorArgument="&lt;wnd title='Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd title='Cancel' check:text='Cancel' /&gt;" Guid="15bacc90-c5f0-4fda-9ab7-04804789b627" SearchSteps="Selector, FuzzySelector, CV" />
                                                                 </scg:List>
                                                               </uix:TargetAnchorable.Anchors>
                                                             </uix:TargetAnchorable>
                                                           </uix:NClick.Target>
                                                         </uix:NClick>
-                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_145" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V4">
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_145" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V4">
                                                           <uix:NClick.Target>
                                                             <uix:TargetAnchorable CVScreenId="f662b5fb-25c9-4dff-b962-d35d0f398987" CvElementArea="62, 114, 94, 32" CvTextArea="95, 122, 23, 15" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="62, 115, 94, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Yes' cls='TButton' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Yes' cls='TButton' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="87129d2c-342e-4dff-b742-090a35a545d0" InformativeScreenshot="ad4a096317707b7f471c76f096a3f4fd.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' cls='TMessageForm' title='Confirm' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                           </uix:NClick.Target>
@@ -3603,7 +3609,7 @@
                                                     <uix:NCheckState.Target>
                                                       <uix:TargetAnchorable CVScreenId="d368e8aa-0d59-4db3-b194-578254c537c6" CvTextArea="42, 11, 130, 15" CvTextArgument="Print To PDF File As" CvType="Text" DesignTimeRectangle="44, 11, 128, 15" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="36dabab9-b38f-4c9f-804e-50c217134066" InformativeScreenshot="2edf944d104f21e73d1232146d779ec3.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' omit:cls='#32770' title='Print To PDF File As' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                                                         <uix:TargetAnchorable.Anchors>
-                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                             <uix:Target CVScreenId="d368e8aa-0d59-4db3-b194-578254c537c6" CvTextArea="74, 52, 49, 17" CvTextArgument="Save in:" CvType="Text" DesignTimeRectangle="17, 52, 108, 16" ElementType="Text" FullSelectorArgument="&lt;wnd title='Save &amp;amp;in:' /&gt;" FuzzySelectorArgument="&lt;wnd title='Save &amp;amp;in:' check:text='Save &amp;amp;in:' /&gt;" Guid="2a7be99d-61b9-426f-b5b4-022dd81ceed9" SearchSteps="Selector, FuzzySelector, CV" />
                                                           </scg:List>
                                                         </uix:TargetAnchorable.Anchors>
@@ -3625,7 +3631,7 @@
                                               <uix:NCheckState.Target>
                                                 <uix:TargetAnchorable CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvTextArea="6, 8, 105, 15" CvTextArgument="Print Tax Return" CvType="Text" DesignTimeRectangle="8, 8, 103, 13" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="4316deed-c66a-45d1-bef3-115c94a9337f" ImageBase64="" InformativeScreenshot="743df93494fa63f9a2f0b9bda33ea278.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print Tax Return' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
                                                   <uix:TargetAnchorable.Anchors>
-                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                       <uix:Target CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvTextArea="15, 36, 43, 15" CvTextArgument="Return" CvType="Text" DesignTimeRectangle="16, 36, 42, 16" ElementType="Text" Guid="94593718-e8d6-4204-942c-c9c101a6f95a" SearchSteps="CV" TargetType="ComputerVisionBased" />
                                                     </scg:List>
                                                   </uix:TargetAnchorable.Anchors>
