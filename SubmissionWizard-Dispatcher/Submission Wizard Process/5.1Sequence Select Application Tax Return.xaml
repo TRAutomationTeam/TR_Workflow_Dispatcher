@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>941.6,1910.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1038.4,1910.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_Select_Application_Tax_Return_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -230,7 +230,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
     <ui:LogMessage DisplayName="Logging input details of binder" sap:VirtualizedContainerService.HintSize="545.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot; Creating binder for &quot;+strSPClientID+&quot; for &quot;+strPsProject+&quot; for &quot;+strTaxSoftware]" />
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Selecting the sequence to be executed based on the tax software input using Else If activity." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="545.6,132.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Selecting the sequence to be executed based on the tax software input using Else If activity." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="642.4,2800.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[strTaxSoftware = &quot;GoSystem Tax RS&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
@@ -439,6 +439,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFilePath">[strTaxFilePath]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_TaxFileName" />
                     <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
+                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -771,7 +772,7 @@
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="713, 774, 145, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="5ecb5b99-32ed-4e13-9710-3caf9afcd69c" InformativeScreenshot="938f2212a0a11dbf17b68d25abc5f30a.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Create New Binder' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="606, 778, 95, 23" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name='Client Name: ' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='4' /&gt;&lt;ctrl name='Client Name: ' role='text' automationid='' check:text='Client Name:' /&gt;" Guid="5883b4f5-8c0f-42d2-bd24-102bcbae6cd2" SearchSteps="Selector, FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>

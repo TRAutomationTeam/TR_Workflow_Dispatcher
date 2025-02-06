@@ -154,7 +154,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="Lacerte" sap:VirtualizedContainerService.HintSize="1062.4,589.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Lacerte" sap:VirtualizedContainerService.HintSize="1098.4,226.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
       <Variable x:TypeArguments="x:Int32" Name="indx_Duplicate" />
@@ -359,13 +359,13 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NCheckState DisplayName="Check App State 'push button'" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NCheckState_33" Timeout="10" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_298">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197.6" sap2010:WorkflowViewState.IdRef="Sequence_298">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign isLacerteOpen" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_87">
+                        <Assign DisplayName="Assign isLacerteOpen" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_87">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[isLacerteOpen]</OutArgument>
                           </Assign.To>
@@ -376,13 +376,13 @@
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_299">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,197.6" sap2010:WorkflowViewState.IdRef="Sequence_299">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign isLacerteOpen" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_88">
+                        <Assign DisplayName="Assign isLacerteOpen" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_88">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[isLacerteOpen]</OutArgument>
                           </Assign.To>
@@ -461,13 +461,13 @@
                                   <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V2" WindowResize="Maximize">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="1708.8,39653.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Version="V2" WindowResize="Maximize">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1675.2,39867.2" sap2010:WorkflowViewState.IdRef="Sequence_256">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1675.2,39362.4" sap2010:WorkflowViewState.IdRef="Sequence_256">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3415,9 +3415,9 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:IfElseIf>
-                                      <If Condition="[in_TransactionItem(&quot;ServiceType&quot;).ToString.Equals(&quot;Outsource Offshore&quot;)]" DisplayName="If Service type is OS" sap:VirtualizedContainerService.HintSize="1612.8,5762.4" sap2010:WorkflowViewState.IdRef="If_35">
+                                      <If Condition="[in_TransactionItem(&quot;ServiceType&quot;).ToString.Equals(&quot;Outsource Offshore&quot;)]" DisplayName="If Service type is OS" sap:VirtualizedContainerService.HintSize="1612.8,5256" sap2010:WorkflowViewState.IdRef="If_35">
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1579.2,5496" sap2010:WorkflowViewState.IdRef="Sequence_362">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1579.2,4988" sap2010:WorkflowViewState.IdRef="Sequence_362">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3436,38 +3436,7 @@
                                               </uix:NClick.Target>
                                             </uix:NClick>
                                             <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="1516.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1516.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[&quot;Creating Backup for Client &quot;+ out_ClientId]" />
-                                            <uix:NCheckState DisplayName="Check App State 'Print Tax Return'" sap:VirtualizedContainerService.HintSize="1516.8,509.6" sap2010:WorkflowViewState.IdRef="NCheckState_39" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Timeout="8" Version="V4">
-                                              <uix:NCheckState.IfExists>
-                                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_368">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_105" Level="Info" Message="[&quot;Print Window appeared&quot;]" />
-                                                </Sequence>
-                                              </uix:NCheckState.IfExists>
-                                              <uix:NCheckState.IfNotExists>
-                                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_369">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_106" Level="Error" Message="[&quot;Print Window failed to appeared&quot;]" />
-                                                </Sequence>
-                                              </uix:NCheckState.IfNotExists>
-                                              <uix:NCheckState.Target>
-                                                <uix:TargetAnchorable CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvTextArea="6, 8, 105, 15" CvTextArgument="Print Tax Return" CvType="Text" DesignTimeRectangle="8, 8, 103, 13" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="114a89fa-e0e2-458f-8cf1-f44f7c8a13b8" ImageBase64="" InformativeScreenshot="743df93494fa63f9a2f0b9bda33ea278.png" ScopeSelectorArgument="&lt;wnd app='w*tax.exe' title='Print Tax Return' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
-                                                  <uix:TargetAnchorable.Anchors>
-                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                      <uix:Target CVScreenId="3edf8922-6cee-4d34-b138-0aec5252816d" CvTextArea="15, 36, 43, 15" CvTextArgument="Return" CvType="Text" DesignTimeRectangle="16, 36, 42, 16" ElementType="Text" Guid="014a52ab-c4c6-4a92-bb65-eeb756788d60" SearchSteps="CV" TargetType="ComputerVisionBased" />
-                                                    </scg:List>
-                                                  </uix:TargetAnchorable.Anchors>
-                                                </uix:TargetAnchorable>
-                                              </uix:NCheckState.Target>
-                                            </uix:NCheckState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1516.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[&quot;Creating Backup for Client &quot;+ out_ClientId]" />
                                             <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="1516.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_47" Shortcuts="[d(hk)][d(ctrl)]b[u(ctrl)][u(hk)]" Version="V4" />
                                             <uix:NCheckState DisplayName="Check App State 'Source'" sap:VirtualizedContainerService.HintSize="1516.8,1248" sap2010:WorkflowViewState.IdRef="NCheckState_38" ScopeIdentifier="39b903f2-8271-4ade-b3cb-ebfa67a36ddb" Timeout="8" Version="V4">
                                               <uix:NCheckState.IfExists>
@@ -3550,7 +3519,7 @@
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable CVScreenId="e4b2d366-8175-452c-8a07-fb29462deedf" CvElementArea="535, 691, 94, 32" CvTextArea="571, 697, 23, 16" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="537, 692, 94, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='OK' cls='TButton' title='&amp;amp;OK' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='OK' cls='TButton' title='&amp;amp;OK' check:text='&amp;amp;OK' /&gt;" Guid="bd502104-fbfd-4c1d-836c-fa16e16cfcc9" InformativeScreenshot="7dfd6f0987f72307c1fb1797a7f30414.png" ScopeSelectorArgument="&lt;wnd app='w23tax.exe' cls='TfrmPrintReturn' title='Print Tax Return' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                         <uix:TargetAnchorable.Anchors>
-                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                             <uix:Target CVScreenId="e4b2d366-8175-452c-8a07-fb29462deedf" CvElementArea="635, 691, 93, 33" CvTextArea="661, 698, 42, 13" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="637, 692, 94, 31" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Cancel' cls='TButton' title='&amp;amp;Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Cancel' cls='TButton' title='&amp;amp;Cancel' check:text='&amp;amp;Cancel' /&gt;" Guid="769e96e3-d28d-436d-8d8f-db1af0761562" SearchSteps="Selector, FuzzySelector, CV" />
                                                           </scg:List>
                                                         </uix:TargetAnchorable.Anchors>
@@ -3679,13 +3648,13 @@
                           <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="RetryScope_3">
                             <ui:RetryScope.ActivityBody>
                               <ActivityAction>
-                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1254.4,3888.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" OpenMode="Always" ScopeGuid="9348849c-3832-460d-a5d2-5ff72700715e" Version="V2">
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1283.2,3917.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" OpenMode="Always" ScopeGuid="9348849c-3832-460d-a5d2-5ff72700715e" Version="V2">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1220.8,3596" sap2010:WorkflowViewState.IdRef="Sequence_170">
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1249.6,3626.4" sap2010:WorkflowViewState.IdRef="Sequence_170">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Name="Str_OTP" />
                                           <Variable x:TypeArguments="x:Boolean" Name="Bool_OtpExpired" />
