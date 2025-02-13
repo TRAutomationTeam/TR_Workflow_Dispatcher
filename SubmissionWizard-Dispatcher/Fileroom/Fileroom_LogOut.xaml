@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Fileroom_Log_Out" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1408.8,1552" sap2010:WorkflowViewState.IdRef="Sequence_Fileroom_Log_Out_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence_Fileroom_Log_Out" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1981.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_Fileroom_Log_Out_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
@@ -39,6 +47,7 @@
       <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,47 +97,51 @@
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence_Fileroom_Log_Out" sap:VirtualizedContainerService.HintSize="1172.8,562.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence_Fileroom_Log_Out" sap:VirtualizedContainerService.HintSize="548.8,1916.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Logging Out of Fileroom&quot;]" />
-    <TryCatch DisplayName="Try Catch - Fileroom Logout" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Logging Out of Fileroom&quot;]" />
+    <TryCatch DisplayName="Try Catch - Fileroom Logout" sap:VirtualizedContainerService.HintSize="486.4,1232.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Chrome: FileRoom Binder Listing" sap:VirtualizedContainerService.HintSize="483.2,940.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Chrome: FileRoom Binder Listing" sap:VirtualizedContainerService.HintSize="449.6,969.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Sequence Log Out" sap:VirtualizedContainerService.HintSize="449.6,724" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Sequence Log Out" sap:VirtualizedContainerService.HintSize="416,752.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NHover DisplayName="Hover 'Akshay Naik'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V3">
+                <uix:NHover DisplayName="Hover 'Akshay Naik'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V3">
                   <uix:NHover.Target>
                     <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1108, 93, 120, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl idx='4' tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='left-pad-five' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='left-pad-five' type='' tag='TD' aaname='                                                                              ' check:innerText='Akshay Naik' /&gt;" Guid="ea2cd2b0-880c-4050-9a69-817a5e373219" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHwAAAAYCAYAAAA4e5nyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUJSURBVGhD7ZcxbJxIFIbptnRJSUlJSUlji5KSElmKsm4iKovCbSSqaC03lFukQKmwlILiCppIXEfJdVxHE4VItoSiRPrvn4Fdw9re9Z0S3SrwSyub2WUY3vfe/2YUzJqUZuAT0wx8YpqBT0wz8IlpBj4xzcAnphn4xPQy4G2NPI2RFk0/INSiSkMEUY7h6HNqyxhhEKNs+4GfqaZEliTIq+HkDcosQVoeWl2LMg7hrzLU4upXrvMI9CLgbRHBURQs3PUgEC2KyIGxTGSgDqnJQ1hWgOwl2fEv1VYxPFWB6g1AtRViz4C7rrjSfWpR5wmStJSJ+yvXeQx6AfAGxcqGppvQNQdRsY3oGDhdoCpLVA2/5/8FqyuOY35SiCKTgTSWiLMMKcfTvBo4Qxf07vesVN4gntI2FcqqHgF7cqwHrigqvLgH/Ag434MuJZ+RZCjrhxnaukJVdasZA2/kO5X170P/MPAmR2ib8BmkNQNor4oe1APwqi74nQ7dowMweLGn4cRw4HoevGWIhFYrAmnSJRTVguM68n/DT9HFvUEe+fD4e9exoCoawbHiyjVc3cYq7wPOREqWJqxw3EYkcNOB7zvQmFTieY+A0/bjgOsRz7A0KCciecUs48TdAq/ZxlYOVNPv5vtNdBB4nQV9ANizkyUMK0QX/y5QuhMgZGA1J+rG6xS+SUijfj8IZD8sr80l0kf9gD117cIQ7YPV3AHOJOC2SrB8Ym4J3PIQF0w8V5OJVPHeZy29Txx7JRLnCeCGxz7uQuff+Mib+fv37/H69Wt8+vSpH3nQ7e0tHMfB9fV1P3IQeI3UN2CwcvOipCWu4GgmgkyERgTKpo2yanWC21QBKyvhPcrChOtHSIrOfneBt6xex2RA5X3cYKURguWmAlUo1gqCayMSTiQGLbeKPRhMrF0GW+CcS8zrsv1IR3IHwLmubB1iKVzHc2HrdJhAJNJj4NKJFBOhfM/j1qtXr3B6eoqzszN8+PBBjv348QM3NzdyXHx835fjQnuBy4oyVJiOK0HIQBmLzop74CcqE+JEhRttrF6o2yFHokpo4cKS9wFv8hUsWre/TplYOZKQewa7A46mQOQQXMT5PCbRuuwADjQELp4tAKqczza0HrhwDdo9EydKcxRFipWrw3wO+EKDqS/Yoo5/t/7582ecn59v4b579w5BEIxg39/f978+AHxTUUMHFRZvyj7ZBdZYxtygrWCrrKp0xz63fbTkpux54HXqw9wApsbX4tjksa8LJ9lAHWsMnJJJIqpUgSOBc48QWrAIuKtZcW3L6yctnetMiwSBqcJmOzn2Ov/y5cu20oefy8tLtO04XnuBC0t0op2KEps4S+em6i/8uQkUJxVQdN3F+o+P7OmdI0hrVjlGcvsqvGXfD0weqyxu9FjNsk30li4l9gW0YE0+qx8b6BFwqimYhFvgYtm8XtDG6VaOeSKf8Zylb9bZiOOoZmDJDeQTjz0qff36FRcXF1vYV1dX+PbtW//tg/ZXeFk9GeCm6o4q4jhT9scZUYm1GK/+RlVkSOTRqz+mya95bBsep1r25IpHs80AN1lFnsm9QsUd8ui3ciNo0EGeqbXduaS69WyfT7V1iZzHwkK8lziK9cet0XvsrLPhPWU5WMsR6+7uDm/evMHbt2/x/fv3fnSsA5u2/1l1jnUYsHpVqDutZdZ/03EDn/XTNQOfmGbgE9MMfGKagU9KwD8MOgG5Ynzl0gAAAABJRU5ErkJggg==" InformativeScreenshot="2e187f465d20e4c49e7e4620e9baa9e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                   </uix:NHover.Target>
                 </uix:NHover>
-                <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V3">
+                <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="68ef95e8-9dae-40a6-86ec-55f59444dcbd" Version="V3">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="1093, 151, 38, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='tblchangepassword' tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tblchangepassword' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Logout' check:innerText='Logout' /&gt;" Guid="523b818f-71a9-4ab4-b844-4c19eb57e858" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAATCAYAAADmtp8+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG+SURBVEhL7ZQrs4MwEIXzL5CVSCQyMhKJRCIj+xMiIyupQ1YikZHISiQSiTx3Q8Kr996ZTh/TYaZnJp1stmy+PSQw7ERf0FfrC/pq7RR06NEPfv5BNZpDGx94bUCNYuBF66NPqUOZMMh669h9oEODIhfgnIPHIcKswHWqQ7lTFiOOXS4Ilk3aWiG1z9AIQwFV9+M6uhIJk1hYDBTjKNoOlaT/Uo2DrcczlB7nDtAB9TGA0A3NXGxUDCbrMW50hFgZOISVG20BEeS4eDa0JdLAwtD8X1A7f9jRBjqiM9OsHiQIzhSVv80tm/RVDpZdfANW1LBkSMruXaDrIl7zRre5ZZOuTGbXJ8313+doSK750Mo6GpGjQ4uCM9Cb9/qoo+6MBit32kIgOpoxtmeU5ZUD6g00gY+b2DPKxOL2UEMGibscds6iVfMGx9WbMUfb0JbjFyg7xO52T8N+0IYrSino5ro1IQs0k1WUu6hsXM+kQj6BknqjkYYh4rFWCl21S7OVBA8OLpekEHTWJ9Ch0RAHm0tw8s1sQJ+XPSYCp/nb9TrNoIyRm08OzgVkeR1d+yv/yDifz45v/N2BdgIK/AB2LvoMPHAtWAAAAABJRU5ErkJggg==" InformativeScreenshot="f189cc6c378873a60a882c9ab435b507.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                   </uix:NClick.Target>
                 </uix:NClick>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logged Out of Fileroom&quot;]" />
-                <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="416,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logged Out of Fileroom&quot;]" />
+                <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="353.6,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
               </Sequence>
             </ActivityAction>
           </uix:NApplicationCard.Body>
@@ -149,7 +162,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - chrome" sap:VirtualizedContainerService.HintSize="483.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - chrome" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
@@ -163,5 +176,24 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Application: 2023 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="486.4,420.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="d103c32f-1246-4f53-9356-3931cd3bbb2c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,106.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-10, -10, 1940, 1040" FilePath="[in_Config(&quot;Lacerte_FilePath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAT9SURBVFhH1ZZbU1xVEIXPb3MG5gIowYQQxEjUB/0Dls8GCAIBckNCMMPVJFyM3EMgMUASwsAMUR/0yfLJy6NWyliVqt326u59zpmBEJLKg66qXVMFc6a/Wt299gn+V3o4cKR3c/BtevTlUcrn6l1+qIG2h0/Qzsg7VBhtouL4SXp8rTlnX3992viihu7zeXD5Ldq8csRtXqmjLYbYunqMtoeOu53hE25npDGE2P3qPXp8/RTZ46+utUvVhLPeV80A1S4GQZETx1w+d1ycKIw2usJYE+0KRDO7cYq+u/G+s597OX17oYruXcRRiI0+A+ivcYDgdjAIO3H1qFMnGmhnuIGdiNrBTjhAfP+yEHfOZ93d81UECJy1S1VOILwL/W+KEwIxWCdO+HZ4J4pjTU4gxrkd4sQHh2vJSm+GVs9liSHIQ3gnuBVuva+GQcog2AmFqBcn/GAWx941J046zMQL27Hck6HbvVla4bN6LuM8xF04UQLhZ2KvE7wd4WAWRrUdBQaJ2nGAEwBQiNAFhWAAHDixJhA1Mpg8F3Q/5sQjG0w44QdTZoIHE24cuB2LZ9N062zaLXen3W2GWGEHnv3zhMr19K8/DKLaYSYAwe2QwdxPuqIGwe3gnJCZsLKRFrvStASI7jQtd2ecPf9cxduxwY4cpN1rH3IrMBM2mOyElVXNd6ZyCwwACDhxb7DZHiVrR8ZpS6rsrwwQZkRp8YeXa8Owimt7CO3gsAoHs7nHygfBXGeKGIIWulICEVc0Ewrh9duPq5gJh3ZoTsS3QyDo1x/m7dsA8NvRGDph5YNgtqOS5vjMd1Q6D7HUnZF23OJPD4Ht8Pp5axyb4fyarosbyIpoReMqT0xAWPkgmGmvpNnPPUA6dALtWMJMAMCG0+sOu2Hr6TQtqxwg4ARWFMPqVbz+Ee4OTsxoOwBh5YPgm/YKALg5PnBD2tGZcgLAm+GHM64wJy5k2YUsQyhIuXRFa3lF61wUVpyYPBNWHgCV5A+cmOvwM6FuACAuhFU0mBzbAqFhtZ8e9O/NCUBY+SD4+kwF3TxT4QAwwwCzDOAhcOJCTqAlHNkujG3fDnFChxInrvLExN1h5YNgui1JAsGtQDsEgs/a0Mf2uMqHlWQF5kJA4IbdHXDCWiE5EYPwV3n87rDyQTDVmqTptgqB8K0oLnTaoyo4sdhlcyHboRBITBx8RyD8LWqx7aUvNaWxbeWDYLIl2ROH+GljxB4jevb0SUk7ZEPKnPAqTH/KAJgJhYgL7xO6ovo+sTlQW/rqBgCBaE2+MIahv//83XKidED30y/5cU1NW1NAWNlIEy0JmmpJOEAcRgDQwFKI/OQn9p9SbQzUa2LaS40PKytbqomWJHE7QifQDp0LP5gVTtrBgaXtwP2RYgBNzWgwo+tcZ0JzggEkrKzcXt04nSA4Menb4beDV3SmnY9th4SVj22eBwss3KIC4N8nwu0AxEWBkNi2cvtr4nTClTgRQUROICdsKHU7NDH9vSFO6HpKWIVBxcfKHCyG2OsEnzgEWiEXmG2GJCYDiBMhBNY0csJ+/nCa+OwNdkIHE/MQQviwQmzjFjUXpB2cE+KEuSEXmLQjc/DL6PMEAIGAE1wcOXGzLekUwmIbbjCABwmv8lhO2M+9umQmQghxwmk7kJpyk+pm2HYs8k26xG7Y469PU62JHB9tR/lgGgR/Rq9a/30Fwb+shyRJWXQBggAAAABJRU5ErkJggg==" InformativeScreenshot="52a700dc68f5b8f1e78989acc0049c5a.png" Selector="&lt;wnd app='w2*tax.exe' cls='TfrmMain' omit:title='2023 Lacerte Individual Tax' /&gt;" Title="2023 Lacerte Individual Tax" Version="V1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1038.4,848.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,848.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -252,7 +252,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="846.4,2410.4" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="230.4,194.4" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="801.6,1934.4" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1234,13 +1234,13 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                           <Transition.To>
                             <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="171.2,109.6" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <Sequence DisplayName="End State" sap:VirtualizedContainerService.HintSize="500,616" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                <Sequence DisplayName="End State" sap:VirtualizedContainerService.HintSize="670.4,1973.6" sap2010:WorkflowViewState.IdRef="Sequence_83">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="438,341" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                  <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="608,407.2" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1248,7 +1248,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CloseAllApplications workflow" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                           <OutArgument x:TypeArguments="x:Boolean" x:Key="Out_Is_FileroomLogout" />
@@ -1256,7 +1256,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                       </ui:InvokeWorkflowFile>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_14">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_14">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1267,14 +1267,14 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="450,405" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                          <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="450.4,376" sap2010:WorkflowViewState.IdRef="Sequence_78">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow (End process)" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                            <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="388,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke KillAllProcesses workflow (End process)" sap:VirtualizedContainerService.HintSize="388,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </ui:InvokeWorkflowFile.Arguments>
@@ -1291,48 +1291,48 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                       </If>
                                     </TryCatch.Finally>
                                   </TryCatch>
-                                  <If sap2010:Annotation.AnnotationText="Auto trigger the process if TriggerPerformer is True , else need to trigger perfromer manually" Condition="[CBool(Config(&quot;TriggerPerformer&quot;))]" DisplayName="If TriggerPerformer is true, Trigger performer process" sap:VirtualizedContainerService.HintSize="438,124" sap2010:WorkflowViewState.IdRef="If_16">
+                                  <If sap2010:Annotation.AnnotationText="Auto trigger the process if TriggerPerformer is True , else need to trigger perfromer manually" Condition="[CBool(Config(&quot;TriggerPerformer&quot;))]" DisplayName="If TriggerPerformer is true, Trigger performer process" sap:VirtualizedContainerService.HintSize="608,1477.6" sap2010:WorkflowViewState.IdRef="If_16">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="492,169" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="574.4,1180" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence DisplayName="Trigger Performer" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                        <Sequence DisplayName="Trigger Performer" sap:VirtualizedContainerService.HintSize="512,1091.2" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="Queue_Wizard" />
                                           </Sequence.Variables>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items - Wizard" FilterStrategy="StartsWith" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New" QueueName="[Config(&quot;OrchestratorQueueName_Wizard&quot;).ToString]" Reference="[if(String.IsNullOrEmpty(Config(&quot;UserName&quot;).ToString), Environment.UserName, Config(&quot;UserName&quot;).ToString)]" Result="[Queue_Wizard]" />
-                                          <If Condition="[Queue_Wizard.Count &gt; 0]" DisplayName="If Queue Items" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="If_18">
+                                          <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items - Wizard" FilterStrategy="StartsWith" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New" QueueName="[Config(&quot;OrchestratorQueueName_Wizard&quot;).ToString]" Reference="[if(String.IsNullOrEmpty(Config(&quot;UserName&quot;).ToString), Environment.UserName, Config(&quot;UserName&quot;).ToString)]" Result="[Queue_Wizard]" />
+                                          <If Condition="[Queue_Wizard.Count &gt; 0]" DisplayName="If Queue Items" sap:VirtualizedContainerService.HintSize="449.6,804" sap2010:WorkflowViewState.IdRef="If_18">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="376,379" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,537.6" sap2010:WorkflowViewState.IdRef="Sequence_79">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="[TimeSpan.FromMinutes(cdbl(Config(&quot;Postpone_PerformerQueue&quot;)))]" Buttons="Ok" Caption="Process Update" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Binder Creation completed. Next process will start in &quot; + Config(&quot;Postpone_PerformerQueue&quot;).ToString + &quot; minutes (~&quot; + now.AddMinutes(cint(Config(&quot;Postpone_PerformerQueue&quot;))).ToString + &quot;)&quot;]" TopMost="True" />
-                                                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process - TR_Aut_Performer" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="TR_Aut_Performer">
+                                                <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="[TimeSpan.FromMinutes(cdbl(Config(&quot;Postpone_PerformerQueue&quot;)))]" Buttons="Ok" Caption="Process Update" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Binder Creation completed. Next process will start in &quot; + Config(&quot;Postpone_PerformerQueue&quot;).ToString + &quot; minutes (~&quot; + now.AddMinutes(cint(Config(&quot;Postpone_PerformerQueue&quot;))).ToString + &quot;)&quot;]" TopMost="True" />
+                                                <ui:InvokeProcess ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process - TR_Aut_Performer" sap:VirtualizedContainerService.HintSize="353.6,331.2" sap2010:WorkflowViewState.IdRef="InvokeProcess_1" ProcessName="TR_Aut_Performer">
                                                   <ui:InvokeProcess.Arguments>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFilePath">[in_ConfigFilePath]</InArgument>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueFolder">[in_OrchestratorQueueFolder]</InArgument>
@@ -1342,7 +1342,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_80">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1355,7 +1355,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_82">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
