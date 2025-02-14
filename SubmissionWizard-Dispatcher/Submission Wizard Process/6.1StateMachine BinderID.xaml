@@ -108,25 +108,25 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID0}" DisplayName="StateMachine_BinderID" sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID0}" DisplayName="StateMachine_BinderID" sap:VirtualizedContainerService.HintSize="1468.8000000000002,563.2" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <x:Double x:Key="StateContainerWidth">600</x:Double>
         <x:Double x:Key="StateContainerHeight">600</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">270,47.50000000000001 90.30000000000001,47.50000000000001 90.30000000000001,132.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">270,27.3 97.32,27.3 97.32,132.5</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID0" DisplayName="Process State" sap:VirtualizedContainerService.HintSize="1064.8,1136.8" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID0" DisplayName="Process State" sap:VirtualizedContainerService.HintSize="1055.2,1511.2" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
-        <Sequence sap:VirtualizedContainerService.HintSize="1020,748" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="1010.4,1122.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="957.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap:VirtualizedContainerService.HintSize="976.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[strSubWizOpenOption]</OutArgument>
             </Assign.To>
@@ -134,8 +134,8 @@
               <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Submission wizard Open option").ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <Parallel sap:VirtualizedContainerService.HintSize="957.6,545.6" sap2010:WorkflowViewState.IdRef="Parallel_1">
-            <If Condition="[strSubWizOpenOption=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="489.6,476" sap2010:WorkflowViewState.IdRef="If_1">
+          <Parallel sap:VirtualizedContainerService.HintSize="976.8,948.8" sap2010:WorkflowViewState.IdRef="Parallel_1">
+            <If Condition="[strSubWizOpenOption=&quot;ON&quot;]" sap:VirtualizedContainerService.HintSize="508.8,879.2" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,20 +143,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,312.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,748" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Jobs in Queue" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dc916e24-a5c4-43b6-8965-5e235aaa6279" Version="V2">
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Jobs in Queue" sap:VirtualizedContainerService.HintSize="433.6,520.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dc916e24-a5c4-43b6-8965-5e235aaa6279" Version="V2">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create New Binder'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dc916e24-a5c4-43b6-8965-5e235aaa6279" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create New Binder'" sap:VirtualizedContainerService.HintSize="400,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dc916e24-a5c4-43b6-8965-5e235aaa6279" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="473, 333, 106, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Create New Binder' role='push button' /&gt;&lt;ctrl name='Create New Binder' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Create New Binder' role='push button' /&gt;&lt;ctrl name='Create New Binder' role='text' automationid='' check:text='Create New Binder' /&gt;" Guid="17f7f582-92a2-4e87-808d-c179a2d765e4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAATCAYAAABx5zjkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT1SURBVGhD7Zffb1RVEMf9M3wwIT4YHwwJajTEGH1AE39EjT7xZkzUBxGVGH8kokYhYmgkGDQhigalhChRiAIWsNjSn1ZoS2spTVsobLu7tb93S39sd/dwPhPn5ty7t3iVJuYm9zTftOfMOXNm5jsz5/amm2s2mATxQ0JcTJEQF1MkxMUUCXExRULc/4RPB4+bLX2HQmVRUEHcl0O/manCVVO2PzqqU42+PTeCzb0HzbTVv67po1D59fBM207zeGuVb+2Bxi0VaysFAsuYLxbM1eKiKZZLZrIwa17s/ErkZ6cvmSW79kjL9oqz/4TU3IQZmhsLlUWBj7jqVJMQ1j+bNU/+vkPWbq99w9xb/56350ZxOHP2Pzs7W1yQQG7tO+ytETwSYfWpt317VwJK3A/pNpk/3PyxEKgBJ2nWn/nMrDrxmu9cFKwocSjLLc2btaff920CGFgoFU3eyiG3bWpQyn3OOgLIxrrx897+vxZzEmjW0fmurbQDwy1moVSQ8wQgMz8lAf852y7rZHahXDR7r5z23a1Q4iYW8x5RQeKwCzvRh13ceyTbIee0UnpywzL/+nK9zGvHeiSZnrYVzVwRJA4QI73PTcJgfBjc/9TfBfBcxxdm3NrNHvwslcsecY+1VEksFktLEq/h+Umzpu4dkeGzVrtLtEfcuqZt4uyfuZQndKGGtU4OmDtOvWXuqtssSrtnUuaW4xslOBj8ROsnvnNULI7qpcGKe6Fzj8xrRrtk3jlzWYi+J6TKuY+EwOn68Quy5hK36+IJkX1+8aS59eQmCfKIDcKbPQdkHQJYJ7gM9XXAdpjRhRnR4d63XMX15kdkHkZc3XivxEf36h2ZhWkzZm3XJwJyNCbswWdkEIyeY9lOkeEzHZDqZq7wiNOLyVh3Q1CuTmzvPyJOadt6tn23VAtV6J4DbnCDxEE4c8121auZ6gInsI+KIUle7vrGpxvSZ5bmvGxFNyQ92LhVfhOgl87tFTsJJO/VnXYvsjC/lTgqgbvJev7GV+RhxAWrE3I0NpqcroxEguD26SFPBqlKuPqsMsW/rjg1DKMZlD3KuZxgIr+v4QOrZ1jWAUYvRxyBZ9BW2Is+Bi3OvR+oE+jnPtoLDqtugqFtmL34o3dBNkT9MnpOiNqfapZ7dg7WyJ6whAtW3N22yxBU7QhRiVuu5SLTc8RI4+W2RfVZzyl8bxyOaRDcdRA0bJ/90mS4HwoKMgsCXun6VubXq7jGiT4xlD7v6giD68TuS7VCEjapblqeW3Eu1N6srbS+fMZL1LQlHx0PNW+rOBMWcE1YEisqcdqqwypO7XArzkUk4n5M/yHBoFro02TYjoFjZqMlIGiYvk20J9441h61DvCFxUVkPZXBukuctsJXu/eJjHeJO4/atsYc8E6qThdBJyCKoboJDKOq/6jIaUOaINquGOoDwWNA3m2/vu7pVQSJQ9/53IjEgVYelTj9HuDfLJKKuPJWa1XRtkm4+xs+lDly/ZKPRByglWi7ohKowkPpM6GGfT/SKgTpG4Axm7qr5YFlruWPURpcnOCDAd1kP2sNturIOm27BJJ3ybULBJ3g/zfOqG4Cy4cD92rrvZBPi4z9+EKgn+/YI3O+Jhn6oRNE8I3DRnR8Z/1GHpU4/iZW6FF9xERl+sWJLo3XT5l2kQV9VlQQlyAeSIiLKRLiYoqEuFhig7kGZSsDspWehdIAAAAASUVORK5CYII=" InformativeScreenshot="37cf3218fca7ae4a041e53681ca9994d.png" ScopeSelectorArgument="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Jobs in Queue' /&gt;" SearchSteps="Selector, Image" Version="V1">
                               <uix:TargetAnchorable.Anchors>
@@ -170,16 +170,16 @@
                       </ActivityAction>
                     </uix:NApplicationCard.Body>
                     <uix:NApplicationCard.TargetApp>
-                      <uix:TargetApp Area="297, 268, 772, 369" FilePath="C:\SurePrepLocalFiles\SPbinder\submissionwizard.exe" IconBase64="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" InformativeScreenshot="2d40f6556374d6e653079b4e6cb3b7d5.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Jobs in Queue' /&gt;" Title="Jobs in Queue" />
+                      <uix:TargetApp Area="297, 268, 772, 369" FilePath="[in_Config(&quot;SubmissionWizard_FilePath&quot;).ToString]" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAW5SURBVFhHrZd5bBRlGIcXAgjIoQbb3QUs3e5hSYyBmABRIQqJiv7hX/yhMYpRpIWAiIWelBsLpBFSelq6OAutAaTszBSiwUQhJg0IGg+UoMFAiQEPROTqMT7v7ky7OzvLJW/yZNNN9/s9M/PN972f62aVo610hbQiPlfd79PWPOXT1hVlaxU7srX1n2dpG78aq1UeHqO+v9+rbq5yq1WvZapbcjPUmoEZarUrU60xR7mDCmrLXLkEB7TycTnaisUIHETgLwS6s7X3DAQMBAwEDAQMBAwEriNwimDFo9bOdO+rv9c3Vxnuy1d8acg24/oqpBe7gnoplIwI6mXzEDju11b0IGAgAOsITytgZKrVUGN41LpLnj3183x5SiVBHXDagUozNl5BvZDbLQJFAQR2InIdAQMB47YFtNpjWcvDZQhcJMhw4CD03YGQviQmENSXTuSznTthIGDckYBWc2FMY0MR4d/YQi3OwJMQD39YfxeBAmE8IkcQMG4icBmBDgROIPAzAr8j0NUrsKe2zjdfURICE7kC+ci5+IwL5OqLhVGI6AgQ7CjQhcDXPm3tCgRmIBBAwIvAGAQeReBlBJoztC1tWSXhcgL+TQjtI0+py5mjDGFyWuGLYH6/XP2dcgR60gic5XVc6tNWu7O0KhcS8R+bRbAr47PNrpHnKwZklTdNJehESnCcL0dvjeRltkXGu9WIyx3dYQksmohABwIE2wWW/eDXlk8fp63tx+toRqaWXBEM4wpbHILlyk+P3aAUEPyLO7q90RttHugRgfH6/P65+tubEDASBLpCbcUXgm2l3wX2lz4e2L3KFTo+x4xKLQIs5sG1WGBy+JVxS5TV7uiHn7ijioHAeW90x2QQgYUhBE4mCWiFe/2bKt/KWVW9gAGegWcTkL+9kBgsPAanIDlcYEJ6Pg5XI9AtAp7odoM7sN4d3SYCC/IR6EwSaCtszymtK/DlRc4zwHWQq7LohCYYAlb4fRCF1PB8pX10OFzmUcN/I8DV9woc8UZbMkRgJwKG7RFcC7aWzvLNjWxwGFC4DK+AJVAAImb/v9+yFyoz3drWXZ5omPAkgT8RmCYCPzoInA7uW+r3vd7yIIMcsA1q8T3kwBQ4a36XiNy5xaO+3cpb0lTmINCFQL4IXHQQOBTQiobllNXK1U2GX81B7XwE6QQjMMzbHBaBFxHotAlAS4UIdDsI7PXrRQP8TWusW/wGyG23h3RDj+074Sj4QcKFJxC45CBQlU6gVQQC7A0yCAyGarAHOSET9zmI/fZWBNI+giD9QMJ7PhpkB3MKtZCJWAj9IfZbU+CGj+Anx0mosSUnCwiyzMpO5hQuyCo4AmK/c6syAWNzoPRGk9DpNewK6UWvQqxBkZJBTWS1uwr2cNl6gxD7Pym32igMR+SAg0Dva5i6EMX3gv3sBXRFJbHBpMzBh0IjJIb/AS9Ab7hH/cASeB6BfxwEDiMgC5HDUhwXuIrAm3IXAnpZbFApMyQL2kHC5bmXQO9zl/KoDcIoRD5FgFBLIGIJVJhLsWzFKZuRCPBZeordcCq9oTSnsYElxGQGnINdMFK+s8qj1kPdYAQ2ItBtFzA3o0mxzcjcjicgcMZBwHE7ljCQK54FuebfLtpxgmuFkQisQ+AqArRqKQIN3P74dpzQkCxDoDtVoLchWSINyUNaXawh8U9rTUKaEpDzwBSa0lYEOhGgO7YLKCeReATiDYnUbbRkxwhfTks2nZbMb2vJXkIggsA5sy2HFAEWI2V2ZpRXE4HeIvjuNqXOAteYdCsRGISImZxQBFtt+QQ+/19bnipwGYE1nui2obGZn65E4K4dTPoEOhDIZ0W8R5blmxZXjsBdOpqp9bsRmEQ31M/DonRb5XA4PYSAHE57biCQdDhFYCgivB0N5qh3UPHjebEczx9A4GkEijmeNyPwBQJHEUg8ns82j+eDbu147nL9BzHV9JE6K7fwAAAAAElFTkSuQmCC" InformativeScreenshot="2d40f6556374d6e653079b4e6cb3b7d5.png" Selector="&lt;wnd app='submissionwizard.exe' cls='HwndWrapper*' title='Jobs in Queue' /&gt;" Title="Jobs in Queue" />
                     </uix:NApplicationCard.TargetApp>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NApplicationCard>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Submission wizard Open Option workflow" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\6.2SubmissionWizardOpenOption.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Submission wizard Open Option workflow" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\6.2SubmissionWizardOpenOption.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                     </ui:InvokeWorkflowFile.Arguments>
@@ -203,7 +203,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Get Binder ID workflow" sap:VirtualizedContainerService.HintSize="374.4,476" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\6.3GetBinderID.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sequence Get Binder ID workflow" sap:VirtualizedContainerService.HintSize="374.4,879.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SubmissionWizard-Dispatcher\Submission Wizard Process\6.3GetBinderID.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                 <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
@@ -217,27 +217,31 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">30,132.5</av:Point>
-          <av:Size x:Key="ShapeSize">133.6,61.6</av:Size>
+          <av:Size x:Key="ShapeSize">149.6,60</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Double x:Key="StateContainerWidth">138</x:Double>
+          <x:Double x:Key="StateContainerHeight">29</x:Double>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <State.Transitions>
         <Transition DisplayName="T1" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">97,193.5 97,223.5 83.30000000000001,223.5 83.30000000000001,279.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">104.8,192.5 104.8,222.5 90.32,222.5 90.32,279.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.Condition>[SystemException is Nothing]</Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="133.6,61.6" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
+            <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="149.6,60" sap2010:WorkflowViewState.IdRef="State_2" IsFinal="True">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">23,279.5</av:Point>
-                  <av:Size x:Key="ShapeSize">133.6,61.6</av:Size>
+                  <av:Size x:Key="ShapeSize">149.6,60</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Double x:Key="StateContainerWidth">138</x:Double>
+                  <x:Double x:Key="StateContainerHeight">29</x:Double>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </State>
@@ -246,14 +250,14 @@
         <Transition DisplayName="T2" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">164,175.2 194,175.2 194,169.15 393,169.15</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">179.6,174.5 209.6,174.5 209.6,168.5 393,168.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">52</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">49</x:Int32>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.Condition>[SystemException isNot Nothing]</Transition.Condition>
           <Transition.To>
-            <State x:Name="__ReferenceID2" DisplayName="Pre-condition State" sap:VirtualizedContainerService.HintSize="138.4,61.6" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" DisplayName="Pre-condition State" sap:VirtualizedContainerService.HintSize="152.8,60" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <Sequence sap:VirtualizedContainerService.HintSize="416,432" sap2010:WorkflowViewState.IdRef="Sequence_1">
                   <sap:WorkflowViewStateService.ViewState>
@@ -276,15 +280,17 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">393,129.5</av:Point>
-                  <av:Size x:Key="ShapeSize">138.4,61.6</av:Size>
+                  <av:Size x:Key="ShapeSize">152.8,60</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Double x:Key="StateContainerWidth">138</x:Double>
+                  <x:Double x:Key="StateContainerHeight">29</x:Double>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <State.Transitions>
                 <Transition DisplayName="T3" sap2010:WorkflowViewState.IdRef="Transition_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">469.12,191.1 469.12,221.1 116.84,221.1 116.84,194.1</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">477.04,189.5 477.04,219.5 127.24,219.5 127.24,192.5</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">51</x:Int32>
                     </scg:Dictionary>
