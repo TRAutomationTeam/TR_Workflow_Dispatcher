@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,848.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1103.2,848.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -1030,71 +1030,6 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="Sequence - Using assets" sap:VirtualizedContainerService.HintSize="449.6,869.6" sap2010:WorkflowViewState.IdRef="Sequence_89">
-                                      <Sequence.Variables>
-                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_Go" />
-                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_CCH" />
-                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_Lacerte" />
-                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_Ultra" />
-                                      </Sequence.Variables>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Go_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - Gosystem Login" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-                                        <ui:GetRobotAsset.Value>
-                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_Go]</OutArgument>
-                                        </ui:GetRobotAsset.Value>
-                                      </ui:GetRobotAsset>
-                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CCH_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - CCH Login" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
-                                        <ui:GetRobotAsset.Value>
-                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_CCH]</OutArgument>
-                                        </ui:GetRobotAsset.Value>
-                                      </ui:GetRobotAsset>
-                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Lacerte_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - Lacerte Login" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
-                                        <ui:GetRobotAsset.Value>
-                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_Lacerte]</OutArgument>
-                                        </ui:GetRobotAsset.Value>
-                                      </ui:GetRobotAsset>
-                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Ultra_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - Ultra Login" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
-                                        <ui:GetRobotAsset.Value>
-                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_Ultra]</OutArgument>
-                                        </ui:GetRobotAsset.Value>
-                                      </ui:GetRobotAsset>
-                                      <If Condition="[String.IsNullOrEmpty(bool_AssetValue_Go.ToString) Or bool_AssetValue_Go.ToString =&quot;False&quot; Or&#xA;String.IsNullOrEmpty(bool_AssetValue_CCH.ToString) Or bool_AssetValue_CCH.ToString =&quot;False&quot; Or&#xA;String.IsNullOrEmpty(bool_AssetValue_Lacerte.ToString) Or bool_AssetValue_Lacerte.ToString =&quot;False&quot; Or&#xA;String.IsNullOrEmpty(bool_AssetValue_Ultra.ToString) Or bool_AssetValue_Ultra.ToString =&quot;False&quot;]" DisplayName="Check conditions and set asset values" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="If_19">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,988.8" sap2010:WorkflowViewState.IdRef="Sequence_87">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Go_WrongCredentials" DisplayName="Set Asset - GoSystem" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,227.2" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[True]" />
-                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CCH_WrongCredentials" DisplayName="Set Asset - CCH" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,227.2" sap2010:WorkflowViewState.IdRef="SetAsset_2" Value="[True]" />
-                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Lacerte_WrongCredentials" DisplayName="Set Asset - Lacerte" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,227.2" sap2010:WorkflowViewState.IdRef="SetAsset_3" Value="[True]" />
-                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Ultra_WrongCredentials" DisplayName="Set Asset - Ultra" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[True]" />
-                                          </Sequence>
-                                        </If.Then>
-                                        <If.Else>
-                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_88">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </Sequence>
-                                        </If.Else>
-                                      </If>
-                                    </Sequence>
                                     <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
@@ -1159,7 +1094,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="353.6,228.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_36" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="449.6,228.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_36" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -1171,7 +1106,7 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="353.6,197.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                       <ui:AddLogFields.Fields>
                                         <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                       </ui:AddLogFields.Fields>
@@ -1183,15 +1118,80 @@ Select t=Tuple.Create(name, dt_InputDataUpdated(0)(i))).ToDictionary(Function (x
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:AddLogFields>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Client Creation Started&quot;]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dispatcher-Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="ClientCreation-Dispatcher\Dispatcher-Main.xaml">
+                                    <Sequence DisplayName="Sequence - Using assets" sap:VirtualizedContainerService.HintSize="449.6,869.6" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_Go" />
+                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_CCH" />
+                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_Lacerte" />
+                                        <Variable x:TypeArguments="x:Boolean" Name="bool_AssetValue_Ultra" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Go_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - Gosystem Login" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+                                        <ui:GetRobotAsset.Value>
+                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_Go]</OutArgument>
+                                        </ui:GetRobotAsset.Value>
+                                      </ui:GetRobotAsset>
+                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CCH_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - CCH Login" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+                                        <ui:GetRobotAsset.Value>
+                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_CCH]</OutArgument>
+                                        </ui:GetRobotAsset.Value>
+                                      </ui:GetRobotAsset>
+                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Lacerte_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - Lacerte Login" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+                                        <ui:GetRobotAsset.Value>
+                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_Lacerte]</OutArgument>
+                                        </ui:GetRobotAsset.Value>
+                                      </ui:GetRobotAsset>
+                                      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="Ultra_WrongCredentials" CacheStrategy="None" DisplayName="Get Asset - Ultra Login" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+                                        <ui:GetRobotAsset.Value>
+                                          <OutArgument x:TypeArguments="x:Boolean">[bool_AssetValue_Ultra]</OutArgument>
+                                        </ui:GetRobotAsset.Value>
+                                      </ui:GetRobotAsset>
+                                      <If Condition="[String.IsNullOrEmpty(bool_AssetValue_Go.ToString) Or bool_AssetValue_Go.ToString =&quot;False&quot; Or&#xA;String.IsNullOrEmpty(bool_AssetValue_CCH.ToString) Or bool_AssetValue_CCH.ToString =&quot;False&quot; Or&#xA;String.IsNullOrEmpty(bool_AssetValue_Lacerte.ToString) Or bool_AssetValue_Lacerte.ToString =&quot;False&quot; Or&#xA;String.IsNullOrEmpty(bool_AssetValue_Ultra.ToString) Or bool_AssetValue_Ultra.ToString =&quot;False&quot;]" DisplayName="Check conditions and set asset values" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="If_19">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,988.8" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Go_WrongCredentials" DisplayName="Set Asset - GoSystem" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,227.2" sap2010:WorkflowViewState.IdRef="SetAsset_1" Value="[True]" />
+                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CCH_WrongCredentials" DisplayName="Set Asset - CCH" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,227.2" sap2010:WorkflowViewState.IdRef="SetAsset_2" Value="[True]" />
+                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Lacerte_WrongCredentials" DisplayName="Set Asset - Lacerte" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,227.2" sap2010:WorkflowViewState.IdRef="SetAsset_3" Value="[True]" />
+                                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="Ultra_WrongCredentials" DisplayName="Set Asset - Ultra" FolderPath="Automation/Testing_Vishal" sap:VirtualizedContainerService.HintSize="353.6,218.4" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[True]" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Client Creation Started&quot;]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dispatcher-Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="ClientCreation-Dispatcher\Dispatcher-Main.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueName" />
                                         <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorQueueFolder" />
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFilePath">[in_ConfigFilePath]</InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Client Creation Completed&quot;]" />
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Client Creation Completed&quot;]" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
