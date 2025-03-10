@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1103.2,801.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,801.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CCH_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -77,6 +77,8 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -168,7 +170,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1163.2,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+    <Flowchart sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="Flowchart_2">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
         <Variable x:TypeArguments="x:Boolean" Default="False" Name="Exist_LoggedIn" />
@@ -196,13 +198,13 @@
             <av:PointCollection x:Key="ConnectorLocation">575,244 575,274 600,274 600,307</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope-For the client details" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
+        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope-For the client details" sap:VirtualizedContainerService.HintSize="721.6,1863.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
           <ueab:ExcelProcessScopeX.Body>
             <ActivityAction x:TypeArguments="ui:IExcelProcess">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="659.2,2060.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,1776.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="int_IndexCount" />
                 </Sequence.Variables>
@@ -212,29 +214,48 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="625.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Reading filed for the client id creation&quot;]" />
-                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="625.6,594.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
-                  <ueab:ExcelApplicationCard.Body>
-                    <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,252.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ClientDetails]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="625.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[in_Config(&quot;CCH_ClientSheet&quot;).ToString]" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]" />
+                <ui:CommentOut sap2010:Annotation.AnnotationText="If above read range failed then use this commented Activity" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="625.6,116.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_357">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]">
+                        <ueab:ExcelApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,281.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ReadRangeX DisplayName="Read Range- Client details" sap:VirtualizedContainerService.HintSize="443.2,192.8" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[Excel.Sheet(in_Config(&quot;CCH_ClientSheet&quot;).ToString)]" SaveTo="[dt_ClientDetails]" />
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelApplicationCard.Body>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ueab:ReadRangeX DisplayName="Read Range- Client details" sap:VirtualizedContainerService.HintSize="443.2,192.8" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[Excel.Sheet(in_Config(&quot;CCH_ClientSheet&quot;).ToString)]" SaveTo="[dt_ClientDetails]" />
-                      </Sequence>
-                    </ActivityAction>
-                  </ueab:ExcelApplicationCard.Body>
+                      </ueab:ExcelApplicationCard>
+                    </Sequence>
+                  </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ueab:ExcelApplicationCard>
+                </ui:CommentOut>
                 <ui:FilterDataTable DataTable="[dt_ClientDetails]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="625.6,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_ClientDetails]" SelectColumnsMode="Remove">
                   <ui:FilterDataTable.Filters>
                     <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
@@ -251,13 +272,13 @@
                     </scg:List>
                   </ui:FilterDataTable.SelectColumns>
                 </ui:FilterDataTable>
-                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_IndexCount]" DataTable="[dt_ClientDetails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,758.4" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_IndexCount]" DataTable="[dt_ClientDetails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,803.2" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="ExecuteRow" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="563.2,576.8" sap2010:WorkflowViewState.IdRef="Sequence_187">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,605.6" sap2010:WorkflowViewState.IdRef="Sequence_187">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -451,7 +472,7 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1872,15556.8" sap2010:WorkflowViewState.IdRef="Sequence_267">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1872,15516.8" sap2010:WorkflowViewState.IdRef="Sequence_267">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="Element_Exist" />
                                       <Variable x:TypeArguments="x:Boolean" Name="bool_CloseReturn" />
@@ -462,7 +483,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1809.6,1041.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_61" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1809.6,961.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_61" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
                                       <uix:NApplicationCard.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
@@ -602,27 +623,27 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:RetryScope>
-                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="1809.6,14199.2" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="1809.6,14239.2" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                       <uix:NCheckState.IfExists>
-                                        <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="1307.2,13908.8" sap2010:WorkflowViewState.IdRef="Sequence_247">
+                                        <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="1307.2,13988.8" sap2010:WorkflowViewState.IdRef="Sequence_247">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1244.8,12674.4" sap2010:WorkflowViewState.IdRef="RetryScope_11" NumberOfRetries="5">
+                                          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1244.8,12754.4" sap2010:WorkflowViewState.IdRef="RetryScope_11" NumberOfRetries="5">
                                             <ui:RetryScope.ActivityBody>
                                               <ActivityAction>
-                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1203.2,12466.4" sap2010:WorkflowViewState.IdRef="Sequence_244">
+                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1203.2,12546.4" sap2010:WorkflowViewState.IdRef="Sequence_244">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Element_Exist]" DisplayName="Do While - Check client exists or not " sap:VirtualizedContainerService.HintSize="1140.8,1737.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_13">
+                                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Element_Exist]" DisplayName="Do While - Check client exists or not " sap:VirtualizedContainerService.HintSize="1140.8,1777.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_13">
                                                     <ui:InterruptibleDoWhile.Body>
-                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1107.2,1591.2" sap2010:WorkflowViewState.IdRef="Sequence_236">
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1107.2,1631.2" sap2010:WorkflowViewState.IdRef="Sequence_236">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -702,7 +723,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </uix:NTypeInto>
-                                                        <uix:NCheckState DisplayName="Check App State Client id already exists or not" sap:VirtualizedContainerService.HintSize="1044.8,628.8" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                                        <uix:NCheckState DisplayName="Check App State Client id already exists or not" sap:VirtualizedContainerService.HintSize="1044.8,668.8" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                                           <uix:NCheckState.IfExists>
                                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,387.2" sap2010:WorkflowViewState.IdRef="Sequence_317">
                                                               <sap:WorkflowViewStateService.ViewState>
@@ -768,7 +789,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InterruptibleDoWhile>
-                                                  <TryCatch DisplayName="Try Catch - Add client" sap:VirtualizedContainerService.HintSize="1140.8,10640" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                                                  <TryCatch DisplayName="Try Catch - Add client" sap:VirtualizedContainerService.HintSize="1140.8,10680" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -776,18 +797,18 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <TryCatch.Try>
-                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Add Client" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="629.6,9841.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_63" OpenMode="Never" ScopeGuid="76bc84e7-7956-4176-a559-a838bd1964d8" Timeout="10" Version="V2">
+                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Add Client" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="580,9881.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_63" OpenMode="Never" ScopeGuid="76bc84e7-7956-4176-a559-a838bd1964d8" Timeout="10" Version="V2">
                                                         <uix:NApplicationCard.Body>
                                                           <ActivityAction x:TypeArguments="x:Object">
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                             </ActivityAction.Argument>
-                                                            <ui:IfElseIf DisplayName="Else If- Type of taxpayer" sap:VirtualizedContainerService.HintSize="596,9550.4" sap2010:WorkflowViewState.IdRef="IfElseIf_10">
+                                                            <ui:IfElseIf DisplayName="Else If- Type of taxpayer" sap:VirtualizedContainerService.HintSize="546.4,9590.4" sap2010:WorkflowViewState.IdRef="IfElseIf_10">
                                                               <ui:IfElseIf.ConditionBlocks>
                                                                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                                                   <ui:IfElseIfBlock BlockType="If" Condition="[out_CurrentRow(&quot;Type&quot;).ToString.ToLower.Contains(&quot;individual&quot;)]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_1">
                                                                     <ui:IfElseIfBlock.Then>
-                                                                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2a264080-8b93-488f-897a-d0bc1267f231" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="483.2,3173.6" sap2010:WorkflowViewState.IdRef="CVScope_24" SendOnPremData="False" Version="V6">
+                                                                      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2a264080-8b93-488f-897a-d0bc1267f231" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="483.2,3213.6" sap2010:WorkflowViewState.IdRef="CVScope_24" SendOnPremData="False" Version="V6">
                                                                         <p:CVScope.Body>
                                                                           <ActivityAction x:TypeArguments="x:Object">
                                                                             <ActivityAction.Argument>
@@ -986,7 +1007,7 @@
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                               </uix:NClick>
-                                                                              <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Application: Check Full Name" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,1272.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_62" OpenMode="Never" ScopeGuid="a0c2b8d5-ce28-43b8-8175-c048973acde1" Version="V2">
+                                                                              <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Use Application: Check Full Name" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,1312.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_62" OpenMode="Never" ScopeGuid="a0c2b8d5-ce28-43b8-8175-c048973acde1" Version="V2">
                                                                                 <uix:NApplicationCard.Body>
                                                                                   <ActivityAction x:TypeArguments="x:Object">
                                                                                     <ActivityAction.Argument>
@@ -3115,7 +3136,7 @@
                                                       </uix:NApplicationCard>
                                                     </TryCatch.Try>
                                                     <TryCatch.Catches>
-                                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="632.8,418.4" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="583.2,418.4" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3322,7 +3343,7 @@
                                 <av:PointCollection x:Key="ConnectorLocation">520.2,965.4 520.2,1005</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch DisplayName="TryCatch - CCH Login Purpose" sap:VirtualizedContainerService.HintSize="590.4,2860.8" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                            <TryCatch DisplayName="TryCatch - CCH Login Purpose" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                               <TryCatch.Try>
                                 <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CCH Axcess Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="553.6,1820" sap2010:WorkflowViewState.IdRef="NApplicationCard_57" ScopeGuid="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" Version="V2" WindowResize="Maximize">
                                   <uix:NApplicationCard.Body>
