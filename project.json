@@ -4,6 +4,7 @@
   "description": "Robotic Enterprise Framework for submission wizard general with incorporation of standardized workflows.",
   "main": "Main.xaml",
   "dependencies": {
+    "Fileroom_Login": "[1.0.2]",
     "LacerteLogin": "[1.0.4]",
     "UiPath.DataService.Activities": "[25.2.0]",
     "UiPath.Excel.Activities": "[2.24.3]",
@@ -16,9 +17,7 @@
   "entitiesStores": [
     {
       "serviceDocument": ".entities/EntitiesStore.json",
-      "tenantName": "DefaultTenant",
-      "namespace": "TR_Aut_Dispatcher_2023",
-      "uniqueReference": "OK8BRMVP8/07In5WFt8CUEvbeCM983zW1D0OX4PsTRs="
+      "namespace": "TR_Aut_Dispatcher_2023"
     }
   ],
   "schemaVersion": "4.0",
