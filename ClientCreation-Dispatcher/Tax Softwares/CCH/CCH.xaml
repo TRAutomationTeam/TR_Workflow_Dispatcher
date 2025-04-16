@@ -13,7 +13,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1103.2,801.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,801.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CCH_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -165,7 +165,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1547,778.04" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence sap:VirtualizedContainerService.HintSize="662.4,736.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,7 +182,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">590,2.3999999999999986</av:Point>
-          <av:Size x:Key="ShapeSize">50,50</av:Size>
+          <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">615,52.4 615,82.4 575,82.4 575,174</av:PointCollection>
           <x:Double x:Key="Width">1264.0300039028168</x:Double>
           <x:Double x:Key="Height">1197</x:Double>
@@ -195,11 +195,11 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">520,174</av:Point>
-            <av:Size x:Key="ShapeSize">110,70</av:Size>
+            <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">575,244 575,274 600,274 600,307</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope-For the client details" sap:VirtualizedContainerService.HintSize="694,1714" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
+        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope-For the client details" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
           <ueab:ExcelProcessScopeX.Body>
             <ActivityAction x:TypeArguments="ui:IExcelProcess">
               <ActivityAction.Argument>
@@ -358,11 +358,11 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">130,449</av:Point>
-                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                     <av:PointCollection x:Key="ConnectorLocation">240,484 305,484 305,593.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Assign_14">
+                <Assign sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Assign_14">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[out_isRowFound]</OutArgument>
                   </Assign.To>
@@ -380,11 +380,11 @@
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">250,593.5</av:Point>
-                        <av:Size x:Key="ShapeSize">110,70</av:Size>
+                        <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                         <av:PointCollection x:Key="ConnectorLocation">305.2,663.9 305.2,693.9 330.5,693.9 330.5,716.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="TryCatch Use Application: Return Manager" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                    <TryCatch DisplayName="TryCatch Use Application: Return Manager" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                       <TryCatch.Try>
                         <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="True" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,535.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_48" OpenMode="Never" ScopeGuid="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="5" Version="V2" WindowResize="Maximize">
                           <uix:NApplicationCard.Body>
@@ -463,16 +463,16 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">50,904</av:Point>
-                                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,572.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_60" OpenMode="Never" ScopeGuid="f62c411c-1045-489c-88d1-f99fef93226e" Version="V2">
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="649.6,2588.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_60" OpenMode="Never" ScopeGuid="f62c411c-1045-489c-88d1-f99fef93226e" Version="V2">
                               <uix:NApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,281.6" sap2010:WorkflowViewState.IdRef="Sequence_267">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="616,2297.6" sap2010:WorkflowViewState.IdRef="Sequence_267">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="Element_Exist" />
                                       <Variable x:TypeArguments="x:Boolean" Name="bool_CloseReturn" />
@@ -483,20 +483,20 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_61" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="553.6,616.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_61" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
                                       <uix:NApplicationCard.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,224.8" sap2010:WorkflowViewState.IdRef="Sequence_231">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,253.6" sap2010:WorkflowViewState.IdRef="Sequence_231">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click - Application Links" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_126" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V3">
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click - Application Links" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_126" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V3">
                                               <uix:NClick.Target>
                                                 <uix:TargetAnchorable CvElementArea="11, 86, 172, 27" CvTextArea="12, 92, 93, 15" CvTextArgument="Application Links" CvType="Button" DesignTimeRectangle="12, 88, 170, 23" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Application Links' role='outline item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Application Links' role='outline item' automationid='' check:text='Application Links' /&gt;" Guid="4e6667eb-0040-4a80-ba4b-11dacea46449" ImageBase64="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" InformativeScreenshot="3e8eff55fb6ff86d44a8961c089d4c59.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                               </uix:NClick.Target>
@@ -507,7 +507,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NClick>
-                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Return Manager" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_127" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V3">
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Return Manager" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_127" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V3">
                                               <uix:NClick.Target>
                                                 <uix:TargetAnchorable DesignTimeRectangle="85, 71, 24, 16" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='commonglyphs-arrow-right' idx='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='commonglyphs-arrow-right' type='' tag='SPAN' aaname=' ' /&gt;" Guid="fd8d6ad0-98d6-43ec-b2c6-ee1229018b76" InformativeScreenshot="952fc969e3ba6b13c0e868e833dc31e7.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                                                   <uix:TargetAnchorable.Anchors>
@@ -524,7 +524,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </uix:NClick>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,49.6" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Click on new return&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,49.6" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Click on new return&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -540,34 +540,50 @@
                                       </uix:NApplicationCard.TargetApp>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NApplicationCard>
-                                    <ui:RetryScope DisplayName="Retry Scope - Click new return" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="5">
+                                    <ui:RetryScope DisplayName="Retry Scope - Click new return" sap:VirtualizedContainerService.HintSize="553.6,1364.8" sap2010:WorkflowViewState.IdRef="RetryScope_16" NumberOfRetries="5">
                                       <ui:RetryScope.ActivityBody>
                                         <ActivityAction>
-                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="483.2,618.4" sap2010:WorkflowViewState.IdRef="Sequence_281">
+                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="512,985.6" sap2010:WorkflowViewState.IdRef="Sequence_281">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,558.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_69" ScopeGuid="bd695471-8530-4704-a6e0-611fc8b35b5a" Version="V2">
+                                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,896.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_69" ScopeGuid="bd695471-8530-4704-a6e0-611fc8b35b5a" Version="V2">
                                               <uix:NApplicationCard.Body>
                                                 <ActivityAction x:TypeArguments="x:Object">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,244" sap2010:WorkflowViewState.IdRef="Sequence_270">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,582.4" sap2010:WorkflowViewState.IdRef="Sequence_270">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'New Return'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,182.4" sap2010:WorkflowViewState.IdRef="NClick_151" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Version="V3">
+                                                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="353.6,312.8" sap2010:WorkflowViewState.IdRef="RetryScope_24" NumberOfRetries="3">
+                                                      <ui:RetryScope.ActivityBody>
+                                                        <ActivityAction>
+                                                          <ui:MaximizeWindow Window="{x:Null}" ContinueOnError="True" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                                                        </ActivityAction>
+                                                      </ui:RetryScope.ActivityBody>
+                                                      <ui:RetryScope.Condition>
+                                                        <ActivityFunc x:TypeArguments="x:Boolean" />
+                                                      </ui:RetryScope.Condition>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:RetryScope>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'New Return'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_151" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Version="V3">
                                                       <uix:NClick.Target>
                                                         <uix:TargetAnchorable Accuracy="0.92" DesignTimeRectangle="60, 70, 23, 34" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl parentid='newReturn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='newReturn' tag='SPAN' type='' class='commonglyphs commonglyphs-plus-circle text-primary-wkGray-base wk-font-size-18 wk-mb-12' aaname='' /&gt;" Guid="f9a66bf9-9651-4026-b6d3-40c02842842d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAmCAYAAAA1MOAmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJRSURBVFhH7ZYhk4MwEIXv32GiUKgYVBUKE1VVVYM6VY9CoTCoKhQGVRWFQaFQ7zaQptAGws11TvXN7ExLUr7dze42X/hHfWBv0QcGDD1kU6EqUiRJQpaiqCo0ssegt7jkhPWyxEWEYJ4HbzQGn3Nwn+nvZCyEuJQg7qY2YBLFkY8QFgpcyhtaSwhDe0N5EQiZgnIcC6lXXmWH9TUSTp6zA5Kq1Q9dalElB3KOgSc1bEG+whQoIC+DE66dfrZQN0Z8LKyL6K4nBJSNwAJ8gvWozj5FFCFfDahFHnmI1jegzSOK0Me5WuKWsOabvHrdtJQbZpz2v9HoJ0ozGKUnpvTFBX3a0h4YqSsQUzrjWbofsHGR4XR1dc1OGHXf9URFFuX0i0kGNtDBeh4VhbND98Lu7xQo9akYmEw5vENmvFjXfhjaDAePI9WtZ2B1QudlQp7Km6tJYTGfGpj59jVlpi3aHBGdG3XBqBVYjzpT889mZ0S+Bz86W9Ymy2qdtzXYmEae0pBy6RdplCm4LY3Ph7mu/bC+FIuiMzBagaCQ31v6dDSiNGPrAbv3RZg5UrkTJjOET307g5Eox2qDKLdmyB5Yh1Iox5c1sIRRdHUSvGkQB1SFyyN5gimpl6n/sgjpzVYtU1uY8l6oxy1VIGZ1xgJTkshjApJ3x7xxDGatrkF+pKwQKM7tp74CUyIvMzFOi+mOUbxebsZLUGHuKMwXyKzZmLQB0+rl445BL7TZdEeRpsTX5IbNNBC4oetbdbeGAK62nOlXsL/qA3uLPrC36B9hwA/ivuAqM37qbQAAAABJRU5ErkJggg==" InformativeScreenshot="1b2236dd3a6bd56d81b9af2fbc913b78.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
                                                           <uix:TargetAnchorable.Anchors>
@@ -618,12 +634,12 @@
                                       </ui:RetryScope.Condition>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:RetryScope>
-                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="553.6,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                       <uix:NCheckState.IfExists>
                                         <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="449.6,224.8" sap2010:WorkflowViewState.IdRef="Sequence_247">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -4016,7 +4032,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </uix:NCheckState>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ClientCreation-Dispatcher\Tax Softwares\CCH_BasicDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="382.4,49.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ClientCreation-Dispatcher\Tax Softwares\CCH\CCH_BasicDetails.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ClientCreation-Dispatcher\Tax Softwares\CCH_BasicDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="553.6,168.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ClientCreation-Dispatcher\Tax Softwares\CCH\CCH_BasicDetails.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="sd:DataRow" x:Key="out_CurrentRow">[out_CurrentRow]</InArgument>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_DictCredentials">[in_DictCredentials]</InArgument>
@@ -4027,8 +4043,8 @@
                                       </ui:InvokeWorkflowFile.Arguments>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
@@ -4052,7 +4068,7 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <av:Point x:Key="ShapeLocation">465,895</av:Point>
-                                <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                 <av:PointCollection x:Key="ConnectorLocation">520.2,965.4 520.2,1005</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -4324,7 +4340,7 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">465,1005</av:Point>
-                                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                    <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                     <av:PointCollection x:Key="ConnectorLocation">520.2,1075.4 520.2,1105.3999999999999 520,1105.3999999999999 520,1120</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -4354,7 +4370,7 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">655,1115</av:Point>
-                                            <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                            <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="LogMessage_69" Message="[&quot;&quot;]">
@@ -4384,11 +4400,11 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">653,448.5</av:Point>
-                    <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                     <av:PointCollection x:Key="ConnectorLocation">227,542 227,572 230,572 230,606</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Assign_15">
+                <Assign sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Assign_15">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[out_isRowFound]</OutArgument>
                   </Assign.To>
