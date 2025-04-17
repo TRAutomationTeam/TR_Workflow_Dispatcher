@@ -166,7 +166,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="ULTRA" sap:VirtualizedContainerService.HintSize="1468.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="ULTRA" sap:VirtualizedContainerService.HintSize="1468.8000000000002,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
       <Variable x:TypeArguments="x:Boolean" Name="isUltraOpen" />
@@ -11266,31 +11266,31 @@
                                   <av:PointCollection x:Key="ConnectorLocation">480.4,799.2 580.2,799.2 580.2,845</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="TryCatch - Ultra Login" sap:VirtualizedContainerService.HintSize="1830.4,6153.6" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                              <TryCatch DisplayName="TryCatch - Ultra Login" sap:VirtualizedContainerService.HintSize="2139.2,8072" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                                 <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="1793.6,4762.4" sap2010:WorkflowViewState.IdRef="Sequence_423">
+                                  <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="2137.6,6902.4" sap2010:WorkflowViewState.IdRef="Sequence_423">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:RetryScope DisplayName="Retry Scope- For login purpose" sap:VirtualizedContainerService.HintSize="1731.2,4332" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="2" RetryInterval="00:00:02">
+                                    <ui:RetryScope DisplayName="Retry Scope- For login purpose" sap:VirtualizedContainerService.HintSize="2104,6500.8" sap2010:WorkflowViewState.IdRef="RetryScope_4" NumberOfRetries="2" RetryInterval="00:00:02">
                                       <ui:RetryScope.ActivityBody>
                                         <ActivityAction>
-                                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1689.6,4044" sap2010:WorkflowViewState.IdRef="NApplicationCard_32" OpenMode="[NAppOpenMode.Never]" ScopeGuid="f7707b9a-6c0c-4c51-8a1c-90c4e8fbe47d" Timeout="60" Version="V2">
+                                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="2062.4,6292.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_32" OpenMode="[NAppOpenMode.Never]" ScopeGuid="f7707b9a-6c0c-4c51-8a1c-90c4e8fbe47d" Timeout="60" Version="V2">
                                             <uix:NApplicationCard.Body>
                                               <ActivityAction x:TypeArguments="x:Object">
                                                 <ActivityAction.Argument>
                                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                 </ActivityAction.Argument>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1656,3712.8" sap2010:WorkflowViewState.IdRef="Sequence_290">
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2028.8,6001.6" sap2010:WorkflowViewState.IdRef="Sequence_290">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1593.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log on to the ultra tax software&quot;]">
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1995.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log on to the ultra tax software&quot;]">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -11298,7 +11298,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:LogMessage>
-                                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1593.6,122.4" sap2010:WorkflowViewState.IdRef="Delay_13">
+                                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="1995.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_13">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -11306,7 +11306,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </Delay>
-                                                  <uix:NClick ActivateBefore="True" AlterIfDisabled="True" ClickType="Single" DelayAfter="0.5" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1593.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_65" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f7707b9a-6c0c-4c51-8a1c-90c4e8fbe47d" Version="V3">
+                                                  <uix:NClick ActivateBefore="True" AlterIfDisabled="True" ClickType="Single" DelayAfter="0.5" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1995.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_65" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f7707b9a-6c0c-4c51-8a1c-90c4e8fbe47d" Version="V3">
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable CvElementArea="89, 250, 156, 78" CvTextArea="120, 272, 92, 31" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="91, 251, 153, 76" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='SignInButton' aaname='Sign in' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SignInButton' aaname='Sign in' check:text='Sign in' /&gt;" Guid="17c90889-3718-42f1-8b19-c4b2e799d3d0" InformativeScreenshot="d2b11e6d59ca14d2cdd96a9af004e3b5.png" ScopeSelectorArgument="&lt;wnd app='utw*.exe' ctrlname='LoginDialog' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                     </uix:NClick.Target>
@@ -11317,22 +11317,22 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </uix:NClick>
-                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Onvio" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1593.6,2965.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_36" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="82a81d3f-6754-4c1a-b557-5013f3741aa2" Version="V2">
+                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Onvio" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1995.2,5283.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_36" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="82a81d3f-6754-4c1a-b557-5013f3741aa2" Version="V2">
                                                     <uix:NApplicationCard.Body>
                                                       <ActivityAction x:TypeArguments="x:Object">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1560,2716.8" sap2010:WorkflowViewState.IdRef="Sequence_323">
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1961.6,5034.4" sap2010:WorkflowViewState.IdRef="Sequence_323">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <uix:NCheckState DisplayName="Check App State 'You're signed in'" sap:VirtualizedContainerService.HintSize="1497.6,2626.4" sap2010:WorkflowViewState.IdRef="NCheckState_14" ScopeIdentifier="82a81d3f-6754-4c1a-b557-5013f3741aa2" Timeout="10" Version="V3">
+                                                          <uix:NCheckState DisplayName="Check App State 'You're signed in'" sap:VirtualizedContainerService.HintSize="1928,4972.8" sap2010:WorkflowViewState.IdRef="NCheckState_14" ScopeIdentifier="82a81d3f-6754-4c1a-b557-5013f3741aa2" Timeout="10" Version="V3">
                                                             <uix:NCheckState.IfExists>
-                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_324">
+                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_324">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -11341,20 +11341,20 @@
                                                               </Sequence>
                                                             </uix:NCheckState.IfExists>
                                                             <uix:NCheckState.IfNotExists>
-                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="995.2,2383.2" sap2010:WorkflowViewState.IdRef="Sequence_325">
+                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1425.6,4729.6" sap2010:WorkflowViewState.IdRef="Sequence_325">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sign in to CS Professional Suite | Thomson Reuters" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="932.8,2292.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_35" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V2">
+                                                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sign in to CS Professional Suite | Thomson Reuters" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1392,4668" sap2010:WorkflowViewState.IdRef="NApplicationCard_35" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V2">
                                                                   <uix:NApplicationCard.Body>
                                                                     <ActivityAction x:TypeArguments="x:Object">
                                                                       <ActivityAction.Argument>
                                                                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                       </ActivityAction.Argument>
-                                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="899.2,2051.2" sap2010:WorkflowViewState.IdRef="Sequence_319">
+                                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1358.4,4426.4" sap2010:WorkflowViewState.IdRef="Sequence_319">
                                                                         <Sequence.Variables>
                                                                           <Variable x:TypeArguments="x:String" Name="str_code" />
                                                                           <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_elementexists" />
@@ -11367,12 +11367,12 @@
                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="TR_EmailID" CacheStrategy="None" DisplayName="Get Asset - TR_EmailID" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="836.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+                                                                        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="TR_EmailID" CacheStrategy="None" DisplayName="Get Asset - TR_EmailID" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1324.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
                                                                           <ui:GetRobotAsset.Value>
                                                                             <OutArgument x:TypeArguments="x:String">[strTR_EmailID]</OutArgument>
                                                                           </ui:GetRobotAsset.Value>
                                                                         </ui:GetRobotAsset>
-                                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="836.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_47" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Text="[strTR_EmailID]" Version="V3">
+                                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1324.8,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_47" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Text="[strTR_EmailID]" Version="V3">
                                                                           <uix:NTypeInto.Target>
                                                                             <uix:TargetAnchorable BrowserURL="https://auth.thomsonreuters.com/u/login/identifier?state=hKFo2SBfUlJGSm5mb1JJaEZjbGJJX0R1VFFxNmFIWnllNXZXTKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHZFbkVZcWoyeVllVndOVlZWUVhCZ2V6ZnRtU0xlM29no2NpZNkgb0V5dDREcm9qM21rR0MwUjA0YzJSandkWU91b2tZbzQ" CvElementArea="757, 672, 403, 67" CvType="InputBox" DesignTimeRectangle="759, 673, 400, 65" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' aaname='*Email*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' aaname='*Email*' type='text' class='input c4c02e117 caf0d185a' /&gt;" Guid="402d14d5-0f27-4314-b8b7-c7dcdc18117b" InformativeScreenshot="f1be79dcd6a7affccbb2f599c6b9b9a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sign in to CS Professional Suite | Thomson Reuters' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                                                                           </uix:NTypeInto.Target>
@@ -11382,7 +11382,7 @@
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </uix:NTypeInto>
-                                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="836.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V3">
+                                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1324.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V3">
                                                                           <uix:NClick.Target>
                                                                             <uix:TargetAnchorable BrowserURL="https://auth.thomsonreuters.com/u/login/identifier?state=hKFo2SAzN3RGQkV6N3ZOQ2JLTU1adVAwRFFGLTVmd1NNelgtMqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHE5WTRCWVEtQ0E5YzJjSi10NUdhbzdtYW84b1lYcEhoo2NpZNkgb0V5dDREcm9qM21rR0MwUjA0YzJSandkWU91b2tZbzQ" CvElementArea="755, 764, 406, 71" CvTextArea="924, 790, 67, 23" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="759, 768, 400, 65" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sign in' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Sign in' type='submit' class='c320322a4 c480bc568 c20af198f ce9190a97 _button-login-id' check:text='Sign in' /&gt;" Guid="051fcb94-7708-4e7e-b13b-2e9a8f94db48" InformativeScreenshot="006cc40d08f9f6efade200a746a8c824.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sign in to CS Professional Suite | Thomson Reuters' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                                           </uix:NClick.Target>
@@ -11393,9 +11393,9 @@
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </uix:NClick>
-                                                                        <uix:NCheckState DisplayName="Check App State - CIAM Login" sap:VirtualizedContainerService.HintSize="836.8,1296" sap2010:WorkflowViewState.IdRef="NCheckState_20" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Timeout="5" Version="V3">
+                                                                        <uix:NCheckState DisplayName="Check App State - CIAM Login" sap:VirtualizedContainerService.HintSize="1324.8,3700" sap2010:WorkflowViewState.IdRef="NCheckState_20" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Timeout="5" Version="V3">
                                                                           <uix:NCheckState.IfExists>
-                                                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1005.6" sap2010:WorkflowViewState.IdRef="Sequence_389">
+                                                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="937.6,3449.6" sap2010:WorkflowViewState.IdRef="Sequence_389">
                                                                               <Sequence.Variables>
                                                                                 <Variable x:TypeArguments="x:String" Name="str_TRUserName" />
                                                                               </Sequence.Variables>
@@ -11405,8 +11405,8 @@
                                                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential - TR_SSOLogin" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="387.2,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ss_TRPassword]" Username="[str_TRUserName]" />
-                                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - INPUT username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_86" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Text="[str_TRUserName]" Version="V3">
+                                                                              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="TR_SSOLogin" CacheStrategy="None" DisplayName="Get Credential - TR_SSOLogin" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="904,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ss_TRPassword]" Username="[str_TRUserName]" />
+                                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - INPUT username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="904,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_86" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Text="[str_TRUserName]" Version="V3">
                                                                                 <uix:NTypeInto.Target>
                                                                                   <uix:TargetAnchorable BrowserURL="https://sso.thomsonreuters.com/as/authorization.oauth2?scope=trmfa+openid+profile+email&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Ftrtasso-nonprod.thomson.com%2Fsp%2FeyJpc3MiOiJodHRwczpcL1wvc3NvLnRob21zb25yZXV0ZXJzLmNvbSJ9%2Fcb.openid&amp;state=7UvPUHRCRFrUQyaD5X71StoKRbClQR&amp;nonce=A6C0zDUWPoKOHq74CnHkwC&amp;client_id=dc-RHt8m7k26emZQ9FCOJmNud" CVScreenId="21e2f7ae-019c-4e42-b797-846eb0128e5e" CvElementArea="776, 399, 384, 42" CvType="InputBox" DesignTimeRectangle="778, 400, 380, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="c7d1a687-1c82-4c07-8aa0-e3310059515a" InformativeScreenshot="9b592d94c2400793da3ae13b707dd336.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enterprise Single Sign-On' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                                                                     <uix:TargetAnchorable.Anchors>
@@ -11417,7 +11417,7 @@
                                                                                   </uix:TargetAnchorable>
                                                                                 </uix:NTypeInto.Target>
                                                                               </uix:NTypeInto>
-                                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - INPUT username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_87" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" SecureText="[ss_TRPassword]" Version="V3">
+                                                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - INPUT username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="904,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_87" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" SecureText="[ss_TRPassword]" Version="V3">
                                                                                 <uix:NTypeInto.Target>
                                                                                   <uix:TargetAnchorable BrowserURL="https://sso.thomsonreuters.com/as/authorization.oauth2?scope=trmfa+openid+profile+email&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Ftrtasso-nonprod.thomson.com%2Fsp%2FeyJpc3MiOiJodHRwczpcL1wvc3NvLnRob21zb25yZXV0ZXJzLmNvbSJ9%2Fcb.openid&amp;state=7UvPUHRCRFrUQyaD5X71StoKRbClQR&amp;nonce=A6C0zDUWPoKOHq74CnHkwC&amp;client_id=dc-RHt8m7k26emZQ9FCOJmNud" CVScreenId="002c233f-1b27-4929-8ecb-abcd0355c69c" CvElementArea="776, 479, 385, 43" CvType="InputBox" DesignTimeRectangle="778, 481, 380, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="545b9916-e1f7-4a42-8b4b-60d941a637ee" InformativeScreenshot="2de487e3460b24a353de2e15bbfd6d68.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enterprise Single Sign-On' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                                                                     <uix:TargetAnchorable.Anchors>
@@ -11428,27 +11428,27 @@
                                                                                   </uix:TargetAnchorable>
                                                                                 </uix:NTypeInto.Target>
                                                                               </uix:NTypeInto>
-                                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Sign On" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="387.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_110" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V3">
+                                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Sign On" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="904,189.6" sap2010:WorkflowViewState.IdRef="NClick_110" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V3">
                                                                                 <uix:NClick.Target>
                                                                                   <uix:TargetAnchorable BrowserURL="https://sso.thomsonreuters.com/as/authorization.oauth2?scope=trmfa+openid+profile+email&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Ftrtasso-nonprod.thomson.com%2Fsp%2FeyJpc3MiOiJodHRwczpcL1wvc3NvLnRob21zb25yZXV0ZXJzLmNvbSJ9%2Fcb.openid&amp;state=aUPPwLd6aT4fdJyqcgbzXtaO1T3SEr&amp;nonce=UR8cJZACGfbK6A7JXuSZjt&amp;client_id=dc-RHt8m7k26emZQ9FCOJmNud" DesignTimeRectangle="907, 633, 102, 45" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl id='signOnButton' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='signOnButton' tag='A' type='' class='ping-button normal allow' aaname='                                 Sign On                                 ' check:innerText='Sign On' /&gt;" Guid="e4200ace-8f7a-4925-87d5-637a5a040dc2" InformativeScreenshot="469a2f9c40bd96093c9f669153bdea02.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Enterprise Single Sign-On' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                                                                                 </uix:NClick.Target>
                                                                               </uix:NClick>
-                                                                              <uix:NCheckState DisplayName="Check App State 'Select a'" sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_26" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Timeout="30" Version="V3">
+                                                                              <uix:NCheckState DisplayName="Check App State - PING ID" sap:VirtualizedContainerService.HintSize="904,2522.4" sap2010:WorkflowViewState.IdRef="NCheckState_26" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Timeout="30" Version="V3">
                                                                                 <uix:NCheckState.IfExists>
-                                                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="512,2296.8" sap2010:WorkflowViewState.IdRef="Sequence_473">
+                                                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="516.8,2239.2" sap2010:WorkflowViewState.IdRef="Sequence_473">
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_161" Message="[&quot;SSO authentication required.&quot;]" />
-                                                                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: PingID" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,1597.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_41" ScopeGuid="934f0112-859b-4d56-973b-c43f93761ffa" Version="V2">
+                                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_161" Message="[&quot;SSO authentication required.&quot;]" />
+                                                                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: PingID" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1568.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_41" ScopeGuid="934f0112-859b-4d56-973b-c43f93761ffa" Version="V2">
                                                                                       <uix:NApplicationCard.Body>
                                                                                         <ActivityAction x:TypeArguments="x:Object">
                                                                                           <ActivityAction.Argument>
                                                                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                                           </ActivityAction.Argument>
-                                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1274.4" sap2010:WorkflowViewState.IdRef="Sequence_472">
+                                                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1245.6" sap2010:WorkflowViewState.IdRef="Sequence_472">
                                                                                             <Sequence.Variables>
                                                                                               <Variable x:TypeArguments="ss:SecureString" Name="ssPingId_Pin" />
                                                                                             </Sequence.Variables>
@@ -11457,8 +11457,8 @@
                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                               </scg:Dictionary>
                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                            <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="PingID_Password" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="353.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[ssPingId_Pin]" />
-                                                                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter PIN'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_90" ScopeIdentifier="934f0112-859b-4d56-973b-c43f93761ffa" SecureText="[ssPingId_Pin]" Version="V3">
+                                                                                            <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="PingID_Password" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="416,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[ssPingId_Pin]" />
+                                                                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter PIN'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_90" ScopeIdentifier="934f0112-859b-4d56-973b-c43f93761ffa" SecureText="[ssPingId_Pin]" Version="V3">
                                                                                               <uix:NTypeInto.Target>
                                                                                                 <uix:TargetAnchorable Accuracy="0.9" DesignTimeRectangle="155, 223, 94, 35" DesignTimeScaleFactor="1.25" Guid="1a178642-699c-4358-8429-dc47fe4a4813" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAjCAYAAAAdbr1xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHnSURBVGhD7ZcLjoQgDED31h7DY3AKb+ElPAVbKiifAmXjWkz6EpIZxNI+AWd+rCKCihdCxQuh4oVQ8UKoeCFUvBAqXggVL0QifjeLXRZGM7u/4wvs1lA1xI2oB11k/dvqxhuI2GE33XGl+E9J5XCKr5d1eKGr3Q7fBdTFMxxNJ56R0PP0xDu8/GhQTfxqjF2zh1Sg4h0c8aB+W+2ybv5bQzwYD2Or7lW8gyc+5BZoiQ875PxM8N/i4/H42Z1/viVhjg22Z3o9P1MdaQx6O5urP5zNPakDK54tHkC5lSPnHfGmLMyLLlZELaHwYJIgp7A8HxS/n+N5qT58xkc14RjqyHlFfKWosIKSS2RCrW17Souv4cOorTSSvvizjjQmRzyVH/In8VhYq90J4vjaSwZXcSaISqiTZP4iQ/EDiwMm8A+r0YgaeOIBzJ9RZ8ZjZ3wBU3z3FwLGue/prd4SzlFTwhYPFAvwC+IxRrz6yHbHmVF8mOO69hnxA3POKR6Ia/uCePIlHJPFmVY8cN3zBfHQ2RSTzzGz+Gsu+Ik9ofisz4H9ZVEYPxs/t/iwg13eo+Lxpk7zb/Bh8cA9R37t/id6NSL27OLvOgbEK++h4oVQ8UKoeCFUvBAqXggVL4SKF0LFC6HiRbD2F2qaZo+cE59iAAAAAElFTkSuQmCC" InformativeScreenshot="82e0eb8c696945a44b80475fbe300172.png" ScopeSelectorArgument="&lt;wnd app='pingid.exe' cls='GlassWndClass-GlassWindowClass-*' title='PingID' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive">
                                                                                                   <uix:TargetAnchorable.Anchors>
@@ -11475,7 +11475,7 @@
                                                                                                 </scg:Dictionary>
                                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                                             </uix:NTypeInto>
-                                                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                                                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
                                                                                             <ui:LogMessage DisplayName="Log Message - Pin" sap:VirtualizedContainerService.HintSize="353.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_162" Level="Info" Message="[&quot;Pin entered in the Ping id application&quot;]" />
                                                                                             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'pingid.exe PingID'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_131" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="934f0112-859b-4d56-973b-c43f93761ffa" Version="V3">
                                                                                               <uix:NClick.Target>
@@ -11568,8 +11568,8 @@
                                                                                 </uix:NCheckState.Target>
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                               </uix:NCheckState>
@@ -11588,7 +11588,7 @@
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                         </uix:NCheckState>
-                                                                        <uix:NCheckState DisplayName="Check App State 'Please try again.'" sap:VirtualizedContainerService.HintSize="836.8,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_25" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V4">
+                                                                        <uix:NCheckState DisplayName="Check App State 'Please try again.'" sap:VirtualizedContainerService.HintSize="1324.8,49.6" sap2010:WorkflowViewState.IdRef="NCheckState_25" ScopeIdentifier="a2094a01-e6df-4ec4-9cde-3e615126709f" Version="V4">
                                                                           <uix:NCheckState.IfExists>
                                                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_417">
                                                                               <sap:WorkflowViewStateService.ViewState>
@@ -11678,7 +11678,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </uix:NApplicationCard>
-                                                  <ui:LogMessage DisplayName="Log Message- Logged in to the Ultra software" sap:VirtualizedContainerService.HintSize="1593.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The Ultra tax software logged in.&quot;]">
+                                                  <ui:LogMessage DisplayName="Log Message- Logged in to the Ultra software" sap:VirtualizedContainerService.HintSize="1995.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The Ultra tax software logged in.&quot;]">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -11778,6 +11778,9 @@
                                     </ActivityAction>
                                   </Catch>
                                 </TryCatch.Catches>
+                                <TryCatch.Finally>
+                                  <Sequence DisplayName="Finally" sap2010:WorkflowViewState.IdRef="Sequence_474" />
+                                </TryCatch.Finally>
                               </TryCatch>
                               <FlowStep.Next>
                                 <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_1">
