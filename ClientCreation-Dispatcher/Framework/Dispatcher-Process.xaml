@@ -135,7 +135,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1468.8000000000002,337.704" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="938.4000000000001,589.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_SubmissionWizardQueueItem" />
       <Variable x:TypeArguments="x:String" Name="ApplicationName" />
@@ -3176,14 +3176,14 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
           <av:PointCollection x:Key="ConnectorLocation">3965.2,368.9 3965.2,398.9 3848.2,398.9 3848.2,431.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Add Row to Conso FIle" sap:VirtualizedContainerService.HintSize="668.8,2749.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+      <Sequence DisplayName="Add Row to Conso FIle" sap:VirtualizedContainerService.HintSize="630.4,2656.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="635.2,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="596.8,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -3226,7 +3226,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:MultipleAssign>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Input File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="635.2,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Input File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="596.8,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_strRefKey">[in_TransactionID]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_filePath">[str_InputFilePath]</InArgument>
@@ -3240,7 +3240,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reporter File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="635.2,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Reporter File" DisplayName="LookUpExcel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="596.8,207.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Framework\LookUpExcel.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_strRefKey">[in_TransactionID]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_filePath">[str_ReporterFilePath]</InArgument>
@@ -3254,14 +3254,14 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
-        <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="635.2,385.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+        <Sequence DisplayName="Update Input Status" sap:VirtualizedContainerService.HintSize="596.8,380.8" sap2010:WorkflowViewState.IdRef="Sequence_82">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,117.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -3275,16 +3275,16 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
+          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[dt_InputDataUpdated]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[str_InputSheetName]" StartingCell="[&quot;A&quot; + str_InputRowIndex]" WorkbookPath="[str_InputFilePath]" />
         </Sequence>
-        <Sequence DisplayName="Update Data" sap:VirtualizedContainerService.HintSize="635.2,1647.2" sap2010:WorkflowViewState.IdRef="Sequence_72">
+        <Sequence DisplayName="Update Data" sap:VirtualizedContainerService.HintSize="596.8,1559.2" sap2010:WorkflowViewState.IdRef="Sequence_72">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[dt_ReporterDataUpdated.RowCount.Equals(0)]" DisplayName="If Row Exists then Update, Else Add" sap:VirtualizedContainerService.HintSize="572.8,1535.2" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[dt_ReporterDataUpdated.RowCount.Equals(0)]" DisplayName="If Row Exists then Update, Else Add" sap:VirtualizedContainerService.HintSize="563.2,1476" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3292,13 +3292,13 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="539.2,1123.2" sap2010:WorkflowViewState.IdRef="Sequence_74">
+              <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="529.6,1085.6" sap2010:WorkflowViewState.IdRef="Sequence_74">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_22" Message="[&quot;Entry not found, Adding entry in reporter file&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_22" Message="[&quot;Entry not found, Adding entry in reporter file&quot;]" />
                 <Sequence DisplayName="Update Reporter Status" sap:VirtualizedContainerService.HintSize="496,851" sap2010:WorkflowViewState.IdRef="Sequence_83">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataRow" Name="dr_TempRow" />
@@ -3397,7 +3397,7 @@ Select t=Tuple.Create(name, in_TransactionItem(i))).ToDictionary(Function (x) x.
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_75">
+              <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_75">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
