@@ -16,14 +16,12 @@
   "entitiesStores": [
     {
       "serviceDocument": ".entities/EntitiesStore.json",
-      "tenantName": "DefaultTenant",
-      "namespace": "TR_Aut_Dispatcher_2024",
-      "uniqueReference": "PRP77WUIr966XhVSGrcYJf9chDZdFN9t34r4MM/r2GI="
+      "namespace": "TR_Aut_Dispatcher_2024"
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.4.0",
-  "projectVersion": "1.1.14",
+  "projectVersion": "1.0.8",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
