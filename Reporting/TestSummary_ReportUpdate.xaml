@@ -134,7 +134,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="TestSummary_ReportUpdate" sap:VirtualizedContainerService.HintSize="790.4000000000001,8296" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestSummary_ReportUpdate" sap:VirtualizedContainerService.HintSize="1024.8000000000002,8216" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_UniqueReference" />
       <Variable x:TypeArguments="x:String" Name="str_BinderID" />
@@ -177,9 +177,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Test Summary Output data update" sap:VirtualizedContainerService.HintSize="638.4,8272.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Test Summary Output data update" sap:VirtualizedContainerService.HintSize="638.4,8192.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="601.6,7724" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="601.6,7644" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -450,9 +450,9 @@
               <InArgument x:TypeArguments="scg:List(x:String)">[new list(Of String) from {str_StatusClientCreation,str_StatusSubmissionWizard,str_StatusSCD,str_StatusWizard,str_StatusBinderMenu,str_StatusIndexTree,str_StatusReviewTree,str_StatusAnnotation,str_StatusExport1,str_StatusExport2,str_StatusImportTR,str_StatusNotes,str_StatusDragDrop,str_StatusAdddocSPBinder,str_StatusAdddocFileRoom,str_StatusAdddocTaxCaddy,str_StatusPrint1,str_StatusPrint2,str_StatusPrint3}]</InArgument>
             </Assign.Value>
           </Assign>
-          <TryCatch DisplayName="Submission type from Job details" sap:VirtualizedContainerService.HintSize="568,1256.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Submission type from Job details" sap:VirtualizedContainerService.HintSize="568,1216.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="483.2,760" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence sap:VirtualizedContainerService.HintSize="483.2,720" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -464,7 +464,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="in_str_BinderID">[str_BinderID]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="fetch Submission Type" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,524" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="91f2ac16-f3d7-45fb-825c-5bb5efc06c98" Version="V2">
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="fetch Submission Type" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,484" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="91f2ac16-f3d7-45fb-825c-5bb5efc06c98" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -614,7 +614,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Write TC data to TestSummary Report Excel" sap:VirtualizedContainerService.HintSize="568,2155.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Write TC data to TestSummary Report Excel" sap:VirtualizedContainerService.HintSize="568,2115.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
             <ueab:ExcelProcessScopeX.Body>
               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                 <ActivityAction.Argument>
@@ -642,7 +642,7 @@
                           <ueab:WriteRangeX Destination="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Range(in_Config(&quot;TestSummary_StatusIndex&quot;).ToString)]" DisplayName="Write Exec Status DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dt_ExecStatusInfo]" />
                           <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_UserIndex&quot;).ToString)]" DisplayName="Write User Identity" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[str_UserIdentity]" />
                           <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_MachineIndex&quot;).ToString)]" DisplayName="Write Machine " sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[str_Machine]" />
-                          <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_UserEmailIndex&quot;).ToString)]" DisplayName="Write User email " sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[currentJobInfo.UserEmail]" />
+                          <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_UserEmailIndex&quot;).ToString)]" DisplayName="Write User email " sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[in_TransactionItem.SpecificContent(&quot;Owner&quot;).ToString]" />
                           <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_ExecStatusIndex&quot;).ToString)]" DisplayName="Write Exec Status" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[in_TransactionItem.Status]" />
                           <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_SubmissionTypeIndex&quot;).ToString)]" DisplayName="Write Submission Type" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_10" Value="[str_SubmissionType]" />
                           <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;TestSummary_Worksheet&quot;).ToString).Cell(in_Config(&quot;TestSummary_ModeIndex&quot;).ToString)]" DisplayName="Write Mode of execution" sap:VirtualizedContainerService.HintSize="433.6,192" sap2010:WorkflowViewState.IdRef="WriteCellX_8" Value="[currentJobInfo.RobotName]" />
