@@ -165,7 +165,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1452.0000000000002,671.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence sap:VirtualizedContainerService.HintSize="1119.2,671.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -466,7 +466,7 @@
                                 <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="625.6,1513.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_60" OpenMode="Never" ScopeGuid="f62c411c-1045-489c-88d1-f99fef93226e" Version="V2">
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Return Manager" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_60" OpenMode="Never" ScopeGuid="f62c411c-1045-489c-88d1-f99fef93226e" Version="V2">
                               <uix:NApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
@@ -623,7 +623,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:RetryScope>
-                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" sap:VirtualizedContainerService.HintSize="558.4,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                    <uix:NCheckState DisplayName="Check App State 'New Return'" Exists="[Element_Exist]" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="558.4,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                       <uix:NCheckState.IfExists>
                                         <Sequence DisplayName="Target appear" sap:VirtualizedContainerService.HintSize="449.6,224.8" sap2010:WorkflowViewState.IdRef="Sequence_247">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -723,7 +723,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </uix:NTypeInto>
-                                                        <uix:NCheckState DisplayName="Check App State Client id already exists or not" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
+                                                        <uix:NCheckState DisplayName="Check App State Client id already exists or not" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="NCheckState_18" ScopeIdentifier="f62c411c-1045-489c-88d1-f99fef93226e" Timeout="30" Version="V3">
                                                           <uix:NCheckState.IfExists>
                                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="467.2,358.4" sap2010:WorkflowViewState.IdRef="Sequence_317">
                                                               <sap:WorkflowViewStateService.ViewState>
@@ -4056,15 +4056,15 @@
                                 <av:PointCollection x:Key="ConnectorLocation">520.2,965.4 520.2,1005</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch DisplayName="TryCatch - CCH Login Purpose" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                            <TryCatch DisplayName="TryCatch - CCH Login Purpose" sap:VirtualizedContainerService.HintSize="628.8,4480.8" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                               <TryCatch.Try>
-                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CCH Axcess Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,1219.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_57" ScopeGuid="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" Version="V2" WindowResize="Maximize">
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CCH Axcess Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="592,3292.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_57" ScopeGuid="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" Version="V2" WindowResize="Maximize">
                                   <uix:NApplicationCard.Body>
                                     <ActivityAction x:TypeArguments="x:Object">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,928" sap2010:WorkflowViewState.IdRef="Sequence_230">
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558.4,3001.6" sap2010:WorkflowViewState.IdRef="Sequence_230">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Name="str_Captcha" />
                                           <Variable x:TypeArguments="x:Boolean" Name="Exist_phonenumber" />
@@ -4077,29 +4077,29 @@
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The CCH Application started&quot;]" />
-                                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CCH_Login" CacheStrategy="None" DisplayName="Get Credential - CCH_Login" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="382.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ssCCHPassword]" Username="[strCCHUsername]" />
-                                        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_23" NumberOfRetries="2">
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The CCH Application started&quot;]" />
+                                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CCH_Login" CacheStrategy="None" DisplayName="Get Credential - CCH_Login" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="524.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ssCCHPassword]" Username="[strCCHUsername]" />
+                                        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="524.8,2130.4" sap2010:WorkflowViewState.IdRef="RetryScope_23" NumberOfRetries="2">
                                           <ui:RetryScope.ActivityBody>
                                             <ActivityAction>
-                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_356">
+                                              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="483.2,1842.4" sap2010:WorkflowViewState.IdRef="Sequence_356">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Exist_LoggedIn  and Exist_phonenumber&lt;&gt;True]" DisplayName="Do While- Login purpose" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_12" MaxIterations="2">
+                                                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Exist_LoggedIn  and Exist_phonenumber&lt;&gt;True]" DisplayName="Do While- Login purpose" sap:VirtualizedContainerService.HintSize="449.6,1782.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_12" MaxIterations="2">
                                                   <ui:InterruptibleDoWhile.Body>
-                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1673.6" sap2010:WorkflowViewState.IdRef="Sequence_228">
+                                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1644.8" sap2010:WorkflowViewState.IdRef="Sequence_228">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_101" ScopeIdentifier="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" Text="[strCCHUsername]" Version="V3">
+                                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="3" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_101" ScopeIdentifier="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" Text="[strCCHUsername]" Version="V3">
                                                         <uix:NTypeInto.Target>
-                                                          <uix:TargetAnchorable DesignTimeRectangle="89, 238, 561, 48" DesignTimeScaleFactor="1.1299999952316284" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='User ID' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usernametxt' type='text' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="cfdff0a9-3121-44fb-a001-0ca5cb85eafa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjUAAAA0CAYAAABy1skUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEUSURBVHhe7dZBDYAwEABB/DuozRooPz6AgNvMJOthr733kSRJmp6pkSRJiZ6pWWtJkiSN63NqAAAmMTUAQIKpAQASTA0AkGBqAIAEUwMAJJgaACDB1AAACaYGAEgwNQBAgqkBABJMDQCQYGoAgARTAwAkmBoAIMHUAAAJpgYASDA1AECCqQEAEkwNAJBgagCABFMDACSYGgAgwdQAAAmmBgBIMDUAQIKpAQASTA0AkGBqAIAEUwMAJJgaACDB1AAACaYGAEgwNQBAgqkBABJMDQCQYGoAgARTAwAkmBoAIMHUAAAJpgYASDA1AECCqQEAEkwNAJBgagCABFMDACT8To0kSdK0XlMjSZI0OVMjSZIC7XMDqPk+pxMzeaoAAAAASUVORK5CYII=" IsResponsive="True" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='*Login*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
+                                                          <uix:TargetAnchorable DesignTimeRectangle="89, 238, 561, 48" DesignTimeScaleFactor="1.1299999952316284" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aaname='User ID' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='usernametxt' type='text' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="cfdff0a9-3121-44fb-a001-0ca5cb85eafa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjUAAAA0CAYAAABy1skUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEUSURBVHhe7dZBDYAwEABB/DuozRooPz6AgNvMJOthr733kSRJmp6pkSRJiZ6pWWtJkiSN63NqAAAmMTUAQIKpAQASTA0AkGBqAIAEUwMAJJgaACDB1AAACaYGAEgwNQBAgqkBABJMDQCQYGoAgARTAwAkmBoAIMHUAAAJpgYASDA1AECCqQEAEkwNAJBgagCABFMDACSYGgAgwdQAAAmmBgBIMDUAQIKpAQASTA0AkGBqAIAEUwMAJJgaACDB1AAACaYGAEgwNQBAgqkBABJMDQCQYGoAgARTAwAkmBoAIMHUAAAJpgYASDA1AECCqQEAEkwNAJBgagCABFMDACT8To0kSdK0XlMjSZI0OVMjSZIC7XMDqPk+pxMzeaoAAAAASUVORK5CYII=" IsResponsive="True" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='*Login*' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
                                                             <uix:TargetAnchorable.Anchors>
                                                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                                 <uix:Target DesignTimeRectangle="89, 212, 61, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='User ID' class='loginInputTitle' parentid='axcessLoginForm' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='User ID' class='loginInputTitle' parentid='axcessLoginForm' type='' tag='SPAN' check:text='User ID' /&gt;" Guid="797063f0-9e93-4092-b382-a3b7c08abf93" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAYCAYAAACldpB6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK7SURBVFhH7ZahlqswEIbvO8VEoapQKBQKhUJVVaGieADUKlQUqgoVhapCoVCoKF7g3wkNbSj0nHu3eyt2Eb+ATCaTL8nM/BnHEb9dOwTSDoG0QyDtEEgLCL1MwFgC2S+NbuolEsaQyH57/J1qBMXKIJr7v0aw6d9KXoD4+IG600sfVj8Qgo8ky5Hnd2VpiAM3YwGyeh37D4TwJP5BQQQ0zhNUD+OvQ9AtZBYj8EwADF4QI5MXDO48o16hSAN4ZMOYhyAVqFr3evaQCY2JGk0RTXZeIFAPjg9X/wrB6FLApzl+cVn8fxGCDTxIkcsaStWQIgInm6jsbvN0UyCk6+jFArJWULWEiD1aK6BNzCCsL87hRTkq40s2a5izvgJhbFGGZBNLdM7/1yDYb6FcO436xHFIK7tQhzJi4Fn9sCGyyzhYVFo7C4GdUGvX7om+BGHA+WhsBBrn/2sQtEJGJ8zp5Oq2h360N+okYpoT52e6KXQLHFUidNazEBKJfsvPo74EYbb5Tgik7nyarroJiPEDQnrrUrX3U7fBPhdHPm3kHRB6VNNtewWCPdVFYpw0oFUS+fGeIDltZrrmG8Fu6x0QLij89RoLCLrOro4Xb/zvx6/SaEsD00dxoe+2REhzwrLdsHX1Bgi2OrhJ22gBYRwqpGTEkg+0j8mJSuGHCZKfcLZlSzc5wkNw3axjq+vTHYJNjMwXUAufGkr44IfMlsH/DOHWJxxv8c9aQiB19CRMiTOtZmo7L3GMbMflIa0cirpBbhx71BuU1TXZlSdEJlkm1W0zmgIOJp8xiupaIvNjSOtwelqzv++CsNUxzv2JW5LvWkEw6huq47dWk2QTXnUZVrbj0KB0csEEr1Crjei2Ip9zMFRCwxSFcnPLd0FYix9COtAS6skz2YTw27RDIO0QSDsE0g6BtEMYR3wCvBB+MSTF/OAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
@@ -4114,7 +4114,7 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </uix:NTypeInto>
-                                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="353.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_102" ScopeIdentifier="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" SecureText="[ssCCHPassword]" Version="V3">
+                                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_102" ScopeIdentifier="a9682499-8cd9-4cd7-b3e0-92eda0f041c9" SecureText="[ssCCHPassword]" Version="V3">
                                                         <uix:NTypeInto.Target>
                                                           <uix:TargetAnchorable DesignTimeRectangle="89, 319, 561, 48" DesignTimeScaleFactor="1.1299999952316284" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' type='password' tag='INPUT' class='form-control loginInput ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required' aaname='' /&gt;" Guid="9a9680e4-a2bd-4b88-a6f1-a05cc5ad96b3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjUAAAA0CAYAAABy1skUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKsSURBVHhe7d2hc9pwGMfh/U+oKBxqClcVV4XCoaZwUXVVUXUoFK4Kh0LFVaFwUbh3BGjXHmObgvHe89x9rzTQ6s/9kl6/tW0bZmZmZvc+UWNmZmYp9hE1z8/PZmZmZne330YNAMA9ETUAQAqiBgBIQdQAACmIGgAgBVEDAKQgagCAFEQNAJCCqAEAUhA1AEAKogYASEHUAAApiBoAIAVRAwCkIGoAgBREDQDwH9jGev4Uk3IQRa8XvV4Rg3IST/P1/p1/I2oAgJvarup47Hchc2H9x6hXf08bUQMA3Mgumro8ncxcXlEU+69FlHWz/4nLRA0AcAO7WFfDY7Q8TGM67sLlQtSMq6jK4/vDan0xbEQNAHB1m/noeEIzrGK9W8dTsX/dH8dsNj0/uSmeDp+pht33RYzmm9Nv+UrUAADX1dQxPMTKKI590kXNY8wOr3exqr6fR0331mYeoy5+esOom+7CV6IGALiiXazr422n3uQ12tO11bQ7gXl/GHgTi/HgI2qK6ep0y6mN18nx2rA+vw0lagCA69o1UR+ekfl0K2m7iFG/jLrZ7d+uozycyOxXjGJxaJ1Pz+CUdew/dkbUAADX9/GMzDB+zJvjic12FS+TMgaHoOlHOXmJ419yb2NZPXx6Bqe7dk7UAAC38XFi0/0F1CRelm+xbX8Vy67dRLOoYzQ4febCCc07UQMA3FAbzWwc/e4U5uL6MZ6dTnP+QNQAALfXvsVyNo3xw6d/k/AwjulsGW9/q5kTUQMApCBqAIAURA0AkIKoAQBSEDUAQAqiBgBIQdQAACmIGgAgBVEDAKQgagCAFEQNAJCCqAEAUhA1AEAKogYASEHUAAApiBoAIAVRAwCkIGoAgBREDQCQwsWoMTMzM7u3nUWNmZmZ2T1P1JiZmVmCtfETjCJIlFD2AHoAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='Wolters Kluwer Login' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                                             <uix:TargetAnchorable.Anchors>
@@ -4125,7 +4125,7 @@
                                                           </uix:TargetAnchorable>
                                                         </uix:NTypeInto.Target>
                                                       </uix:NTypeInto>
-                                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog- Entering Captcha" sap:VirtualizedContainerService.HintSize="353.6,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please Enter Captcha for Login Purpose" Title="Please Enter Captcha">
+                                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog- Entering Captcha" sap:VirtualizedContainerService.HintSize="382.4,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please Enter Captcha for Login Purpose" Title="Please Enter Captcha">
                                                         <ui:InputDialog.Result>
                                                           <OutArgument x:TypeArguments="x:String">[str_Captcha]</OutArgument>
                                                         </ui:InputDialog.Result>
@@ -4176,8 +4176,8 @@
                                                   </ui:InterruptibleDoWhile.Body>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:InterruptibleDoWhile>
@@ -4189,12 +4189,12 @@
                                           </ui:RetryScope.Condition>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:RetryScope>
-                                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_75" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
+                                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524.8,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_75" OpenMode="Never" ScopeGuid="1d2176a9-95e9-4688-ad67-db918337eed3" Version="V2" WindowResize="Maximize">
                                           <uix:NApplicationCard.Body>
                                             <ActivityAction x:TypeArguments="x:Object">
                                               <ActivityAction.Argument>
@@ -4225,7 +4225,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NApplicationCard>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;The CCH appication logged in&quot;]">
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="524.8,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;The CCH appication logged in&quot;]">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4233,7 +4233,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:LogMessage>
-                                        <ui:LogMessage DisplayName="Log Message-Failed to Login" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[&quot;TC_01: Verify that user is able to open tax software: Pass&quot;]">
+                                        <ui:LogMessage DisplayName="Log Message-Failed to Login" sap:VirtualizedContainerService.HintSize="524.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[&quot;TC_01: Verify that user is able to open tax software: Pass&quot;]">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
